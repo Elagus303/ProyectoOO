@@ -10,3 +10,15 @@ C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO
 C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
 C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
 C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Form1.resources
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
