@@ -36,3 +36,18 @@ C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resou
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Ventas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
