@@ -23,3 +23,16 @@ C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Re
 C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
 C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache

@@ -33,6 +33,7 @@
             Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'guardo
 
             Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
+            Clientes.ClientesTableAdapter.Fill(Clientes.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
 
             Me.ClientesBindingSource.AddNew()
             NombreTextBox.Focus()
