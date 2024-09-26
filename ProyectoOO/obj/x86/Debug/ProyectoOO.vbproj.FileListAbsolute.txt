@@ -22,3 +22,4 @@ C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vb
 C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
 C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources

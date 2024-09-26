@@ -29,12 +29,6 @@ Partial Class Clientes
         Dim TelefonoLabel As System.Windows.Forms.Label
         Dim CorreoLabel As System.Windows.Forms.Label
         Dim DireccionLabel As System.Windows.Forms.Label
-        Dim Label1 As System.Windows.Forms.Label
-        Dim Label2 As System.Windows.Forms.Label
-        Dim Label3 As System.Windows.Forms.Label
-        Dim Label4 As System.Windows.Forms.Label
-        Dim Label5 As System.Windows.Forms.Label
-        Dim Label6 As System.Windows.Forms.Label
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter()
@@ -46,19 +40,13 @@ Partial Class Clientes
         Me.CorreoTextBox = New System.Windows.Forms.TextBox()
         Me.DireccionTextBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.ClientesDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -72,12 +60,6 @@ Partial Class Clientes
         TelefonoLabel = New System.Windows.Forms.Label()
         CorreoLabel = New System.Windows.Forms.Label()
         DireccionLabel = New System.Windows.Forms.Label()
-        Label1 = New System.Windows.Forms.Label()
-        Label2 = New System.Windows.Forms.Label()
-        Label3 = New System.Windows.Forms.Label()
-        Label4 = New System.Windows.Forms.Label()
-        Label5 = New System.Windows.Forms.Label()
-        Label6 = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,7 +68,7 @@ Partial Class Clientes
         'IdLabel
         '
         IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(62, 59)
+        IdLabel.Location = New System.Drawing.Point(353, 47)
         IdLabel.Name = "IdLabel"
         IdLabel.Size = New System.Drawing.Size(18, 13)
         IdLabel.TabIndex = 1
@@ -95,7 +77,7 @@ Partial Class Clientes
         'NombreLabel
         '
         NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(62, 85)
+        NombreLabel.Location = New System.Drawing.Point(353, 73)
         NombreLabel.Name = "NombreLabel"
         NombreLabel.Size = New System.Drawing.Size(45, 13)
         NombreLabel.TabIndex = 3
@@ -104,7 +86,7 @@ Partial Class Clientes
         'ApellidoLabel
         '
         ApellidoLabel.AutoSize = True
-        ApellidoLabel.Location = New System.Drawing.Point(62, 111)
+        ApellidoLabel.Location = New System.Drawing.Point(353, 99)
         ApellidoLabel.Name = "ApellidoLabel"
         ApellidoLabel.Size = New System.Drawing.Size(46, 13)
         ApellidoLabel.TabIndex = 5
@@ -113,7 +95,7 @@ Partial Class Clientes
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(62, 137)
+        TelefonoLabel.Location = New System.Drawing.Point(353, 125)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(48, 13)
         TelefonoLabel.TabIndex = 7
@@ -122,7 +104,7 @@ Partial Class Clientes
         'CorreoLabel
         '
         CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(62, 163)
+        CorreoLabel.Location = New System.Drawing.Point(353, 151)
         CorreoLabel.Name = "CorreoLabel"
         CorreoLabel.Size = New System.Drawing.Size(40, 13)
         CorreoLabel.TabIndex = 9
@@ -131,65 +113,11 @@ Partial Class Clientes
         'DireccionLabel
         '
         DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(62, 189)
+        DireccionLabel.Location = New System.Drawing.Point(353, 177)
         DireccionLabel.Name = "DireccionLabel"
         DireccionLabel.Size = New System.Drawing.Size(53, 13)
         DireccionLabel.TabIndex = 11
         DireccionLabel.Text = "direccion:"
-        '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(494, 58)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(18, 13)
-        Label1.TabIndex = 21
-        Label1.Text = "id:"
-        '
-        'Label2
-        '
-        Label2.AutoSize = True
-        Label2.Location = New System.Drawing.Point(494, 84)
-        Label2.Name = "Label2"
-        Label2.Size = New System.Drawing.Size(45, 13)
-        Label2.TabIndex = 22
-        Label2.Text = "nombre:"
-        '
-        'Label3
-        '
-        Label3.AutoSize = True
-        Label3.Location = New System.Drawing.Point(494, 110)
-        Label3.Name = "Label3"
-        Label3.Size = New System.Drawing.Size(46, 13)
-        Label3.TabIndex = 23
-        Label3.Text = "apellido:"
-        '
-        'Label4
-        '
-        Label4.AutoSize = True
-        Label4.Location = New System.Drawing.Point(494, 136)
-        Label4.Name = "Label4"
-        Label4.Size = New System.Drawing.Size(48, 13)
-        Label4.TabIndex = 24
-        Label4.Text = "telefono:"
-        '
-        'Label5
-        '
-        Label5.AutoSize = True
-        Label5.Location = New System.Drawing.Point(494, 162)
-        Label5.Name = "Label5"
-        Label5.Size = New System.Drawing.Size(40, 13)
-        Label5.TabIndex = 25
-        Label5.Text = "correo:"
-        '
-        'Label6
-        '
-        Label6.AutoSize = True
-        Label6.Location = New System.Drawing.Point(494, 188)
-        Label6.Name = "Label6"
-        Label6.Size = New System.Drawing.Size(53, 13)
-        Label6.TabIndex = 26
-        Label6.Text = "direccion:"
         '
         'BD_ImprentaDataSet
         '
@@ -219,7 +147,7 @@ Partial Class Clientes
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(121, 52)
+        Me.IdTextBox.Location = New System.Drawing.Point(412, 40)
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IdTextBox.TabIndex = 2
@@ -227,7 +155,7 @@ Partial Class Clientes
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(121, 82)
+        Me.NombreTextBox.Location = New System.Drawing.Point(412, 70)
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 4
@@ -235,7 +163,7 @@ Partial Class Clientes
         'ApellidoTextBox
         '
         Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
-        Me.ApellidoTextBox.Location = New System.Drawing.Point(121, 108)
+        Me.ApellidoTextBox.Location = New System.Drawing.Point(412, 96)
         Me.ApellidoTextBox.Name = "ApellidoTextBox"
         Me.ApellidoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.ApellidoTextBox.TabIndex = 6
@@ -243,7 +171,7 @@ Partial Class Clientes
         'TelefonoTextBox
         '
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(121, 134)
+        Me.TelefonoTextBox.Location = New System.Drawing.Point(412, 122)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
         Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoTextBox.TabIndex = 8
@@ -251,7 +179,7 @@ Partial Class Clientes
         'CorreoTextBox
         '
         Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "correo", True))
-        Me.CorreoTextBox.Location = New System.Drawing.Point(121, 160)
+        Me.CorreoTextBox.Location = New System.Drawing.Point(412, 148)
         Me.CorreoTextBox.Name = "CorreoTextBox"
         Me.CorreoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CorreoTextBox.TabIndex = 10
@@ -259,41 +187,23 @@ Partial Class Clientes
         'DireccionTextBox
         '
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "direccion", True))
-        Me.DireccionTextBox.Location = New System.Drawing.Point(121, 186)
+        Me.DireccionTextBox.Location = New System.Drawing.Point(412, 174)
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DireccionTextBox.TabIndex = 12
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(357, 51)
+        Me.Button1.Location = New System.Drawing.Point(645, 40)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 13
         Me.Button1.Text = "consulta"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(357, 86)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 14
-        Me.Button2.Text = "nuevo"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(357, 127)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "guardar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(65, 212)
+        Me.Button4.Location = New System.Drawing.Point(356, 200)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(38, 23)
         Me.Button4.TabIndex = 16
@@ -302,7 +212,7 @@ Partial Class Clientes
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(109, 212)
+        Me.Button5.Location = New System.Drawing.Point(400, 200)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(38, 23)
         Me.Button5.TabIndex = 17
@@ -311,7 +221,7 @@ Partial Class Clientes
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(152, 212)
+        Me.Button6.Location = New System.Drawing.Point(443, 200)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(38, 23)
         Me.Button6.TabIndex = 18
@@ -320,7 +230,7 @@ Partial Class Clientes
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(196, 212)
+        Me.Button7.Location = New System.Drawing.Point(487, 200)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(38, 23)
         Me.Button7.TabIndex = 19
@@ -329,63 +239,42 @@ Partial Class Clientes
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(251, 53)
+        Me.TextBox1.Location = New System.Drawing.Point(539, 40)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 20
         '
-        'TextBox2
+        'Button9
         '
-        Me.TextBox2.Location = New System.Drawing.Point(542, 55)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 27
+        Me.Button9.Location = New System.Drawing.Point(645, 70)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 38)
+        Me.Button9.TabIndex = 34
+        Me.Button9.Text = "consulta por nombre"
+        Me.Button9.UseVisualStyleBackColor = True
         '
-        'TextBox3
+        'Button10
         '
-        Me.TextBox3.Location = New System.Drawing.Point(542, 81)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 28
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(542, 108)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 29
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(542, 134)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 30
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(542, 160)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 31
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(553, 186)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 32
+        Me.Button10.Location = New System.Drawing.Point(645, 114)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 50)
+        Me.Button10.TabIndex = 35
+        Me.Button10.Text = "agregar o eliminar registros"
+        Me.Button10.UseVisualStyleBackColor = True
         '
         'ClientesDataGridView
         '
+        Me.ClientesDataGridView.AllowUserToAddRows = False
+        Me.ClientesDataGridView.AllowUserToDeleteRows = False
         Me.ClientesDataGridView.AutoGenerateColumns = False
         Me.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClientesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.ClientesDataGridView.DataSource = Me.ClientesBindingSource
-        Me.ClientesDataGridView.Location = New System.Drawing.Point(12, 256)
+        Me.ClientesDataGridView.Location = New System.Drawing.Point(29, 40)
         Me.ClientesDataGridView.Name = "ClientesDataGridView"
-        Me.ClientesDataGridView.Size = New System.Drawing.Size(300, 220)
-        Me.ClientesDataGridView.TabIndex = 32
+        Me.ClientesDataGridView.ReadOnly = True
+        Me.ClientesDataGridView.Size = New System.Drawing.Size(288, 220)
+        Me.ClientesDataGridView.TabIndex = 35
         '
         'DataGridViewTextBoxColumn1
         '
@@ -428,27 +317,15 @@ Partial Class Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(708, 488)
+        Me.ClientSize = New System.Drawing.Size(760, 316)
         Me.Controls.Add(Me.ClientesDataGridView)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Label1)
-        Me.Controls.Add(Label2)
-        Me.Controls.Add(Label3)
-        Me.Controls.Add(Label4)
-        Me.Controls.Add(Label5)
-        Me.Controls.Add(Label6)
+        Me.Controls.Add(Me.Button10)
+        Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(IdLabel)
         Me.Controls.Add(Me.IdTextBox)
@@ -482,19 +359,13 @@ Partial Class Clientes
     Friend WithEvents CorreoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DireccionTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents ClientesDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
