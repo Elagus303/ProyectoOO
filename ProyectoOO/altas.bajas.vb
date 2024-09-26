@@ -35,6 +35,7 @@
             Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
             Clientes.ClientesTableAdapter.Fill(Clientes.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
             'sos agustin?
+            'cambios en minrama1
             Me.ClientesBindingSource.AddNew()
             NombreTextBox.Focus()
             MsgBox("Se a guardado con exito")

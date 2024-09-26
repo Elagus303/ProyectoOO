@@ -203,7 +203,7 @@ Partial Class Clientes
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(356, 200)
+        Me.Button4.Location = New System.Drawing.Point(355, 237)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(38, 23)
         Me.Button4.TabIndex = 16
@@ -288,30 +288,35 @@ Partial Class Clientes
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
         Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "apellido"
         Me.DataGridViewTextBoxColumn3.HeaderText = "apellido"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "telefono"
         Me.DataGridViewTextBoxColumn4.HeaderText = "telefono"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "correo"
         Me.DataGridViewTextBoxColumn5.HeaderText = "correo"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "direccion"
         Me.DataGridViewTextBoxColumn6.HeaderText = "direccion"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'Clientes
         '
