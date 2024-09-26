@@ -8,6 +8,8 @@
     End Sub
 
     Private Sub altas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Roles' Puede moverla o quitarla según sea necesario.
+        Me.RolesTableAdapter.Fill(Me.BD_ImprentaDataSet.Roles)
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
         Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
 

@@ -1,6 +1,8 @@
 ﻿Public Class Clientes
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Venta' Puede moverla o quitarla según sea necesario.
+        Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
 
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
         Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)

@@ -43,6 +43,8 @@ Partial Class altas
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.RolesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RolesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.RolesTableAdapter()
         IdLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidoLabel = New System.Windows.Forms.Label()
@@ -51,6 +53,7 @@ Partial Class altas
         DireccionLabel = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IdLabel
@@ -135,9 +138,12 @@ Partial Class altas
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.LawnGreen
-        Me.Button1.Location = New System.Drawing.Point(198, 71)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Impact", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(198, 53)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 34)
+        Me.Button1.Size = New System.Drawing.Size(75, 52)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Nuevo registros"
         Me.Button1.UseVisualStyleBackColor = False
@@ -217,11 +223,24 @@ Partial Class altas
         Me.Button4.Text = "Volver"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'RolesBindingSource
+        '
+        Me.RolesBindingSource.DataMember = "Roles"
+        Me.RolesBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'RolesTableAdapter
+        '
+        Me.RolesTableAdapter.ClearBeforeFill = True
+        '
         'altas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(303, 277)
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.AutoValidate = System.Windows.Forms.AutoValidate.Disable
+        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(325, 339)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -239,9 +258,12 @@ Partial Class altas
         Me.Controls.Add(Me.DireccionTextBox)
         Me.Controls.Add(Me.Button1)
         Me.Name = "altas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "altas/bajas clientes"
+        Me.TransparencyKey = System.Drawing.Color.Transparent
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -260,4 +282,6 @@ Partial Class altas
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents RolesBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents RolesTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.RolesTableAdapter
 End Class
