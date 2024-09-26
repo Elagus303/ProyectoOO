@@ -107,6 +107,12 @@
       <DependentUpon>Clientes.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Finanzas.Designer.vb">
+      <DependentUpon>Finanzas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Finanzas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inventario.Designer.vb">
       <DependentUpon>inventario.vb</DependentUpon>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finanzas.resx">
+      <DependentUpon>Finanzas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inventario.resx">
       <DependentUpon>inventario.vb</DependentUpon>

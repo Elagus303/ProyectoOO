@@ -51,3 +51,4 @@ G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Ventas.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Finanzas.resources
