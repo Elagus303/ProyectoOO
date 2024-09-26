@@ -69,7 +69,7 @@
                 Me.ClientesBindingSource.Position = fila
 
                 ' Llenamos los TextBox con los datos del registro actual
-             
+
             Else
                 ' Si no se encuentra el registro
                 MsgBox("No se encontró ningún cliente con ese ID.")
@@ -95,7 +95,7 @@
     End Sub
 
     Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NombreTextBox.TextChanged
-       
+
     End Sub
 
     Private Sub ApellidoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ApellidoTextBox.KeyPress
@@ -161,7 +161,7 @@
     End Sub
 
     Private Sub Button8_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        
+
 
         ' Cancelamos cualquier edición pendiente en el BindingSource
         If ClientesBindingSource.Current IsNot Nothing Then
@@ -189,7 +189,7 @@
                     Me.ClientesBindingSource.Position = i
 
                     ' Llenamos los TextBox con los datos del registro encontrado
-                   
+
 
                     Exit Sub
                 End If

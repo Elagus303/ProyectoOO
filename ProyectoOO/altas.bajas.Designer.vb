@@ -134,12 +134,13 @@ Partial Class altas
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.LawnGreen
         Me.Button1.Location = New System.Drawing.Point(198, 71)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 34)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Nuevo registros"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'IdTextBox
         '
