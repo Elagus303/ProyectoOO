@@ -37,10 +37,13 @@ Partial Class Ventas
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnPrimero = New System.Windows.Forms.Button()
+        Me.btnAnt = New System.Windows.Forms.Button()
+        Me.btnSig = New System.Windows.Forms.Button()
+        Me.btnUltimo = New System.Windows.Forms.Button()
+        Me.btnAnadir = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -137,51 +140,81 @@ Partial Class Ventas
         Me.DataGridViewTextBoxColumn6.HeaderText = "id_cliente"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'Button1
+        'btnPrimero
         '
-        Me.Button1.Location = New System.Drawing.Point(61, 29)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "<<"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnPrimero.Location = New System.Drawing.Point(61, 29)
+        Me.btnPrimero.Name = "btnPrimero"
+        Me.btnPrimero.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrimero.TabIndex = 2
+        Me.btnPrimero.Text = "<<"
+        Me.btnPrimero.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnAnt
         '
-        Me.Button2.Location = New System.Drawing.Point(142, 29)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "<<"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnAnt.Location = New System.Drawing.Point(142, 29)
+        Me.btnAnt.Name = "btnAnt"
+        Me.btnAnt.Size = New System.Drawing.Size(75, 23)
+        Me.btnAnt.TabIndex = 3
+        Me.btnAnt.Text = "<"
+        Me.btnAnt.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnSig
         '
-        Me.Button3.Location = New System.Drawing.Point(223, 29)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "<<"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnSig.Location = New System.Drawing.Point(223, 29)
+        Me.btnSig.Name = "btnSig"
+        Me.btnSig.Size = New System.Drawing.Size(75, 23)
+        Me.btnSig.TabIndex = 4
+        Me.btnSig.Text = ">"
+        Me.btnSig.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnUltimo
         '
-        Me.Button4.Location = New System.Drawing.Point(304, 29)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "<<"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnUltimo.Location = New System.Drawing.Point(304, 29)
+        Me.btnUltimo.Name = "btnUltimo"
+        Me.btnUltimo.Size = New System.Drawing.Size(75, 23)
+        Me.btnUltimo.TabIndex = 5
+        Me.btnUltimo.Text = ">>"
+        Me.btnUltimo.UseVisualStyleBackColor = True
+        '
+        'btnAnadir
+        '
+        Me.btnAnadir.Location = New System.Drawing.Point(437, 29)
+        Me.btnAnadir.Name = "btnAnadir"
+        Me.btnAnadir.Size = New System.Drawing.Size(75, 23)
+        Me.btnAnadir.TabIndex = 6
+        Me.btnAnadir.Text = "Añadir"
+        Me.btnAnadir.UseVisualStyleBackColor = True
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(518, 29)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.TabIndex = 7
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(599, 29)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 8
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(911, 327)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.btnAnadir)
+        Me.Controls.Add(Me.btnUltimo)
+        Me.Controls.Add(Me.btnSig)
+        Me.Controls.Add(Me.btnAnt)
+        Me.Controls.Add(Me.btnPrimero)
         Me.Controls.Add(Me.VentaDataGridView)
         Me.Name = "Ventas"
         Me.Text = "Ventas"
@@ -205,8 +238,11 @@ Partial Class Ventas
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents btnPrimero As System.Windows.Forms.Button
+    Friend WithEvents btnAnt As System.Windows.Forms.Button
+    Friend WithEvents btnSig As System.Windows.Forms.Button
+    Friend WithEvents btnUltimo As System.Windows.Forms.Button
+    Friend WithEvents btnAnadir As System.Windows.Forms.Button
+    Friend WithEvents btnEditar As System.Windows.Forms.Button
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
 End Class
