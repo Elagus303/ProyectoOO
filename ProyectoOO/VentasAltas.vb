@@ -11,5 +11,24 @@
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Venta' Puede moverla o quitarla según sea necesario.
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
         Me.VentaBindingSource.AddNew()
+        Fecha_ventaDateTimePicker.Value = DateTime.Now
+    End Sub
+
+    Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
+        Close()
+    End Sub
+
+    Private Sub btnAnadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnadir.Click
+        Try
+            Me.VentaBindingSource.EndEdit()
+            Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
+            Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
+            Ventas.VentaTableAdapter.Fill(Ventas.BD_ImprentaDataSet.Venta)
+
+            MsgBox("Se añadió correctamente la venta")
+            Me.VentaBindingSource.AddNew()
+        Catch ex As System.Data.NoNullAllowedException
+            MsgBox("Hay campos vacios")
+        End Try
     End Sub
 End Class

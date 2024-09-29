@@ -60,6 +60,87 @@ Partial Class VentasAltas
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(193, 81)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(18, 13)
+        IdLabel.TabIndex = 1
+        IdLabel.Text = "id:"
+        '
+        'Fecha_ventaLabel
+        '
+        Fecha_ventaLabel.AutoSize = True
+        Fecha_ventaLabel.Location = New System.Drawing.Point(193, 108)
+        Fecha_ventaLabel.Name = "Fecha_ventaLabel"
+        Fecha_ventaLabel.Size = New System.Drawing.Size(67, 13)
+        Fecha_ventaLabel.TabIndex = 3
+        Fecha_ventaLabel.Text = "fecha venta:"
+        '
+        'Precio_ventaLabel
+        '
+        Precio_ventaLabel.AutoSize = True
+        Precio_ventaLabel.Location = New System.Drawing.Point(193, 133)
+        Precio_ventaLabel.Name = "Precio_ventaLabel"
+        Precio_ventaLabel.Size = New System.Drawing.Size(69, 13)
+        Precio_ventaLabel.TabIndex = 5
+        Precio_ventaLabel.Text = "precio venta:"
+        '
+        'Es_colorLabel
+        '
+        Es_colorLabel.AutoSize = True
+        Es_colorLabel.Location = New System.Drawing.Point(193, 161)
+        Es_colorLabel.Name = "Es_colorLabel"
+        Es_colorLabel.Size = New System.Drawing.Size(47, 13)
+        Es_colorLabel.TabIndex = 7
+        Es_colorLabel.Text = "es color:"
+        '
+        'Es_doble_fazLabel
+        '
+        Es_doble_fazLabel.AutoSize = True
+        Es_doble_fazLabel.Location = New System.Drawing.Point(193, 191)
+        Es_doble_fazLabel.Name = "Es_doble_fazLabel"
+        Es_doble_fazLabel.Size = New System.Drawing.Size(67, 13)
+        Es_doble_fazLabel.TabIndex = 9
+        Es_doble_fazLabel.Text = "es doble faz:"
+        '
+        'Es_anilladoLabel
+        '
+        Es_anilladoLabel.AutoSize = True
+        Es_anilladoLabel.Location = New System.Drawing.Point(193, 221)
+        Es_anilladoLabel.Name = "Es_anilladoLabel"
+        Es_anilladoLabel.Size = New System.Drawing.Size(60, 13)
+        Es_anilladoLabel.TabIndex = 11
+        Es_anilladoLabel.Text = "es anillado:"
+        '
+        'CantidadLabel
+        '
+        CantidadLabel.AutoSize = True
+        CantidadLabel.Location = New System.Drawing.Point(193, 249)
+        CantidadLabel.Name = "CantidadLabel"
+        CantidadLabel.Size = New System.Drawing.Size(51, 13)
+        CantidadLabel.TabIndex = 13
+        CantidadLabel.Text = "cantidad:"
+        '
+        'Id_vendedorLabel
+        '
+        Id_vendedorLabel.AutoSize = True
+        Id_vendedorLabel.Location = New System.Drawing.Point(193, 275)
+        Id_vendedorLabel.Name = "Id_vendedorLabel"
+        Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
+        Id_vendedorLabel.TabIndex = 15
+        Id_vendedorLabel.Text = "id vendedor:"
+        '
+        'Id_clienteLabel
+        '
+        Id_clienteLabel.AutoSize = True
+        Id_clienteLabel.Location = New System.Drawing.Point(193, 301)
+        Id_clienteLabel.Name = "Id_clienteLabel"
+        Id_clienteLabel.Size = New System.Drawing.Size(52, 13)
+        Id_clienteLabel.TabIndex = 17
+        Id_clienteLabel.Text = "id cliente:"
+        '
         'BD_ImprentaDataSet
         '
         Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
@@ -85,15 +166,6 @@ Partial Class VentasAltas
         Me.TableAdapterManager.VendedoresTableAdapter = Nothing
         Me.TableAdapterManager.VentaTableAdapter = Me.VentaTableAdapter
         '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(193, 81)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 1
-        IdLabel.Text = "id:"
-        '
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id", True))
@@ -101,15 +173,6 @@ Partial Class VentasAltas
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.Size = New System.Drawing.Size(200, 20)
         Me.IdTextBox.TabIndex = 2
-        '
-        'Fecha_ventaLabel
-        '
-        Fecha_ventaLabel.AutoSize = True
-        Fecha_ventaLabel.Location = New System.Drawing.Point(193, 108)
-        Fecha_ventaLabel.Name = "Fecha_ventaLabel"
-        Fecha_ventaLabel.Size = New System.Drawing.Size(67, 13)
-        Fecha_ventaLabel.TabIndex = 3
-        Fecha_ventaLabel.Text = "fecha venta:"
         '
         'Fecha_ventaDateTimePicker
         '
@@ -119,15 +182,6 @@ Partial Class VentasAltas
         Me.Fecha_ventaDateTimePicker.Size = New System.Drawing.Size(200, 20)
         Me.Fecha_ventaDateTimePicker.TabIndex = 4
         '
-        'Precio_ventaLabel
-        '
-        Precio_ventaLabel.AutoSize = True
-        Precio_ventaLabel.Location = New System.Drawing.Point(193, 133)
-        Precio_ventaLabel.Name = "Precio_ventaLabel"
-        Precio_ventaLabel.Size = New System.Drawing.Size(69, 13)
-        Precio_ventaLabel.TabIndex = 5
-        Precio_ventaLabel.Text = "precio venta:"
-        '
         'Precio_ventaTextBox
         '
         Me.Precio_ventaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "precio_venta", True))
@@ -135,15 +189,6 @@ Partial Class VentasAltas
         Me.Precio_ventaTextBox.Name = "Precio_ventaTextBox"
         Me.Precio_ventaTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Precio_ventaTextBox.TabIndex = 6
-        '
-        'Es_colorLabel
-        '
-        Es_colorLabel.AutoSize = True
-        Es_colorLabel.Location = New System.Drawing.Point(193, 161)
-        Es_colorLabel.Name = "Es_colorLabel"
-        Es_colorLabel.Size = New System.Drawing.Size(47, 13)
-        Es_colorLabel.TabIndex = 7
-        Es_colorLabel.Text = "es color:"
         '
         'Es_colorCheckBox
         '
@@ -155,15 +200,6 @@ Partial Class VentasAltas
         Me.Es_colorCheckBox.Text = "CheckBox1"
         Me.Es_colorCheckBox.UseVisualStyleBackColor = True
         '
-        'Es_doble_fazLabel
-        '
-        Es_doble_fazLabel.AutoSize = True
-        Es_doble_fazLabel.Location = New System.Drawing.Point(193, 191)
-        Es_doble_fazLabel.Name = "Es_doble_fazLabel"
-        Es_doble_fazLabel.Size = New System.Drawing.Size(67, 13)
-        Es_doble_fazLabel.TabIndex = 9
-        Es_doble_fazLabel.Text = "es doble faz:"
-        '
         'Es_doble_fazCheckBox
         '
         Me.Es_doble_fazCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.VentaBindingSource, "es_doble_faz", True))
@@ -173,15 +209,6 @@ Partial Class VentasAltas
         Me.Es_doble_fazCheckBox.TabIndex = 10
         Me.Es_doble_fazCheckBox.Text = "CheckBox1"
         Me.Es_doble_fazCheckBox.UseVisualStyleBackColor = True
-        '
-        'Es_anilladoLabel
-        '
-        Es_anilladoLabel.AutoSize = True
-        Es_anilladoLabel.Location = New System.Drawing.Point(193, 221)
-        Es_anilladoLabel.Name = "Es_anilladoLabel"
-        Es_anilladoLabel.Size = New System.Drawing.Size(60, 13)
-        Es_anilladoLabel.TabIndex = 11
-        Es_anilladoLabel.Text = "es anillado:"
         '
         'Es_anilladoCheckBox
         '
@@ -193,15 +220,6 @@ Partial Class VentasAltas
         Me.Es_anilladoCheckBox.Text = "CheckBox1"
         Me.Es_anilladoCheckBox.UseVisualStyleBackColor = True
         '
-        'CantidadLabel
-        '
-        CantidadLabel.AutoSize = True
-        CantidadLabel.Location = New System.Drawing.Point(193, 249)
-        CantidadLabel.Name = "CantidadLabel"
-        CantidadLabel.Size = New System.Drawing.Size(51, 13)
-        CantidadLabel.TabIndex = 13
-        CantidadLabel.Text = "cantidad:"
-        '
         'CantidadTextBox
         '
         Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "cantidad", True))
@@ -210,15 +228,6 @@ Partial Class VentasAltas
         Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
         Me.CantidadTextBox.TabIndex = 14
         '
-        'Id_vendedorLabel
-        '
-        Id_vendedorLabel.AutoSize = True
-        Id_vendedorLabel.Location = New System.Drawing.Point(193, 275)
-        Id_vendedorLabel.Name = "Id_vendedorLabel"
-        Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
-        Id_vendedorLabel.TabIndex = 15
-        Id_vendedorLabel.Text = "id vendedor:"
-        '
         'Id_vendedorTextBox
         '
         Me.Id_vendedorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_vendedor", True))
@@ -226,15 +235,6 @@ Partial Class VentasAltas
         Me.Id_vendedorTextBox.Name = "Id_vendedorTextBox"
         Me.Id_vendedorTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Id_vendedorTextBox.TabIndex = 16
-        '
-        'Id_clienteLabel
-        '
-        Id_clienteLabel.AutoSize = True
-        Id_clienteLabel.Location = New System.Drawing.Point(193, 301)
-        Id_clienteLabel.Name = "Id_clienteLabel"
-        Id_clienteLabel.Size = New System.Drawing.Size(52, 13)
-        Id_clienteLabel.TabIndex = 17
-        Id_clienteLabel.Text = "id cliente:"
         '
         'Id_clienteTextBox
         '

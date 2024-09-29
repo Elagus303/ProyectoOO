@@ -135,13 +135,13 @@ Partial Class Principal
         'AñadirVentaToolStripMenuItem
         '
         Me.AñadirVentaToolStripMenuItem.Name = "AñadirVentaToolStripMenuItem"
-        Me.AñadirVentaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AñadirVentaToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.AñadirVentaToolStripMenuItem.Text = "Ver ventas"
         '
         'EditarVentaToolStripMenuItem
         '
         Me.EditarVentaToolStripMenuItem.Name = "EditarVentaToolStripMenuItem"
-        Me.EditarVentaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EditarVentaToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.EditarVentaToolStripMenuItem.Text = "Añadir venta"
         '
         'Principal
@@ -153,6 +153,7 @@ Partial Class Principal
         Me.MainMenuStrip = Me.MenuStripPpal
         Me.Name = "Principal"
         Me.Text = "Principal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStripPpal.ResumeLayout(False)
         Me.MenuStripPpal.PerformLayout()
         Me.ResumeLayout(False)
