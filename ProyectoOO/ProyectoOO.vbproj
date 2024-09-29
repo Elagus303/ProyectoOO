@@ -113,6 +113,12 @@
     <Compile Include="Finanzas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Proveedores\FormProvAltas.Designer.vb">
+      <DependentUpon>FormProvAltas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedores\FormProvAltas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inventario.Designer.vb">
       <DependentUpon>inventario.vb</DependentUpon>
     </Compile>
@@ -141,16 +147,22 @@
     <Compile Include="Principal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventas.Designer.vb">
-      <DependentUpon>Ventas.vb</DependentUpon>
+    <Compile Include="Proveedores\FormProv.Designer.vb">
+      <DependentUpon>FormProv.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ventas.vb">
+    <Compile Include="Proveedores\FormProv.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentasAltas.Designer.vb">
-      <DependentUpon>VentasAltas.vb</DependentUpon>
+    <Compile Include="Ventas\FormVentas.Designer.vb">
+      <DependentUpon>FormVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="VentasAltas.vb">
+    <Compile Include="Ventas\FormVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventas\FormVentasAltas.Designer.vb">
+      <DependentUpon>FormVentasAltas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas\FormVentasAltas.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -176,11 +188,17 @@
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventas.resx">
-      <DependentUpon>Ventas.vb</DependentUpon>
+    <EmbeddedResource Include="Proveedores\FormProv.resx">
+      <DependentUpon>FormProv.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VentasAltas.resx">
-      <DependentUpon>VentasAltas.vb</DependentUpon>
+    <EmbeddedResource Include="Proveedores\FormProvAltas.resx">
+      <DependentUpon>FormProvAltas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\FormVentas.resx">
+      <DependentUpon>FormVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas\FormVentasAltas.resx">
+      <DependentUpon>FormVentasAltas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

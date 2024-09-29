@@ -1,4 +1,4 @@
-﻿Public Class VentasAltas
+﻿Public Class FormVentasAltas
 
     Private Sub VentaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
@@ -23,7 +23,7 @@
             Me.VentaBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
             Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
-            Ventas.VentaTableAdapter.Fill(Ventas.BD_ImprentaDataSet.Venta)
+            FormVentas.VentaTableAdapter.Fill(FormVentas.BD_ImprentaDataSet.Venta)
 
             MsgBox("Se añadió correctamente la venta")
             Me.VentaBindingSource.AddNew()

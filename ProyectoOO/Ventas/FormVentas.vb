@@ -1,4 +1,4 @@
-﻿Public Class Ventas
+﻿Public Class FormVentas
 
     Private Sub VentaBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Validate()
@@ -30,6 +30,6 @@
     End Sub
 
     Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnadir.Click
-        VentasAltas.ShowDialog()
+        FormVentasAltas.ShowDialog()
     End Sub
 End Class
