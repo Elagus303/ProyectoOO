@@ -49,6 +49,17 @@ G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
-G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Ventas.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
-G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Finanzas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Finanzas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Principal.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultacambio.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Principal.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
