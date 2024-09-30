@@ -7,6 +7,10 @@
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
         Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
 
+        ComboBox1.Items.Add("nombre")
+        ComboBox1.Items.Add("id")
+        ComboBox1.Items.Add("apellido")
+        ComboBox1.Text = "seleccione filtro"
 
     End Sub
 
@@ -35,28 +39,15 @@
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        If NombreTextBox.Text = "" Or ApellidoTextBox.Text = "" Or TelefonoTextBox.Text = "" Then
-            MsgBox("No deje los campos vacios en NOMBRE, APELLIDO O TELEFONO ")
-
-        Else
-            Me.ClientesBindingSource.EndEdit() 'cierro la base
-            Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'guardo
-
-            Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
-
-            Me.ClientesBindingSource.AddNew()
-            NombreTextBox.Focus()
-            MsgBox("Se a guardado con exito")
-        End If
+      
 
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.ClientesBindingSource.AddNew()
-        NombreTextBox.Focus()
+        
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim fila As Integer
 
         ' Verificamos si el TextBox1 no está vacío y si el valor ingresado es numérico
@@ -86,71 +77,47 @@
 
     End Sub
 
-    Private Sub NombreTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles NombreTextBox.KeyPress
+    Private Sub NombreTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
 
-        e.KeyChar = ChrW(SoloLetras(e))
-        If e.KeyChar = Chr(13) Or e.KeyChar = Chr(9) Then         'al precionar enter(13) se enviara al siguiente textbox en este caso apellido
-            ApellidoTextBox.Focus()
-            e.Handled = True
-
-        End If
-    End Sub
-
-    Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NombreTextBox.TextChanged
-
-    End Sub
-
-    Private Sub ApellidoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ApellidoTextBox.KeyPress
-
-        e.KeyChar = ChrW(SoloLetras(e))
-        If e.KeyChar = Chr(13) Or e.KeyChar = Chr(9) Then         'al precionar enter(13) se enviara al siguiente textbox en este caso apellido
-            TelefonoTextBox.Focus()
-            e.Handled = True
-
-        End If
-    End Sub
-
-    Private Sub ApellidoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ApellidoTextBox.TextChanged
-
-    End Sub
-
-    Private Sub TelefonoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TelefonoTextBox.KeyPress
-        If e.KeyChar = Chr(13) Then
-            ' Si es Enter, movemos el foco al siguiente TextBox (en este caso, TextBox2)
-            CorreoTextBox.Focus()
-            ' Evitamos que se procese la tecla Enter en el TextBox1
-            e.Handled = True
-        Else
-            ' Llamamos a la función para permitir solo números
-            If SoloNumeros(e) Then
-                e.Handled = True ' Cancelamos la tecla si no es válida
-            End If
-        End If
+       
 
 
     End Sub
 
-    Private Sub TelefonoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TelefonoTextBox.TextChanged
+    Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub CorreoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CorreoTextBox.KeyPress
-        If e.KeyChar = Chr(13) Then
-            DireccionTextBox.Focus()
-        End If
+    Private Sub ApellidoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+
+
+
     End Sub
 
-    Private Sub DireccionTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles DireccionTextBox.KeyPress
-        If e.KeyChar = Chr(13) Then
+    Private Sub ApellidoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        Else
-            If LetrasNumeros(e) Then
-                e.Handled = True ' Cancelamos la tecla si no es válida
-            End If
-        End If
     End Sub
 
-    Private Sub DireccionTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DireccionTextBox.TextChanged
+    Private Sub TelefonoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+       
+
+    End Sub
+
+    Private Sub TelefonoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub CorreoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+      
+
+    End Sub
+
+    Private Sub DireccionTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+       
+
+    End Sub
+
+    Private Sub DireccionTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
@@ -174,7 +141,7 @@
     End Sub
 
 
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         Dim nombreBuscado As String = TextBox1.Text.Trim()
 
@@ -216,6 +183,48 @@
     End Sub
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+
+        Dim vista As New DataView
+        vista.Table = Me.BD_ImprentaDataSet.Clientes
+
+        ' Seleccionar la columna en base a la opción del ComboBox
+        Select Case ComboBox1.Text.ToLower()
+            Case "nombre"
+                vista.RowFilter = "nombre LIKE '" & TextBox1.Text & "%'"
+
+            Case "apellido"
+                vista.RowFilter = "apellido LIKE '" & TextBox1.Text & "%'"
+
+            Case "id"
+                ' Filtrar las ID que comiencen con el número ingresado
+                If IsNumeric(TextBox1.Text) Then
+                    vista.RowFilter = "Convert(id, 'System.String') LIKE '" & TextBox1.Text & "%'"
+                Else
+                    vista.RowFilter = "" ' Limpiar el filtro si el id no es válido
+                End If
+
+            Case Else
+                vista.RowFilter = "" ' Limpiar el filtro si no hay selección válida en ComboBox
+        End Select
+
+        ' Asignar la vista al DataGridView
+        Me.ClientesDataGridView.DataSource = vista
+    End Sub
+
+    Private Sub IdTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Close()
+
+    End Sub
+
+    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
     End Sub
 End Class

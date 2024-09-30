@@ -123,4 +123,85 @@
     Private Sub DireccionTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DireccionTextBox.TextChanged
 
     End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Dim i As Integer
+        Dim codigodeconsulta As String
+        codigodeconsulta = InputBox("ingrese codigo de articulo")
+        i = 0
+        Me.ClientesBindingSource.MoveFirst() 'HACE QUE EL PUNTERO EMPIEZE DESDE LA FILA 1
+
+        If codigodeconsulta <> "" And IsNumeric(codigodeconsulta) Then
+            Do
+
+                If Me.ClientesBindingSource.Current("id") = codigodeconsulta Then
+                    IdTextBox.Text = Me.ClientesBindingSource.Current("id")
+                    NombreTextBox.Text = Me.ClientesBindingSource.Current("nombre")
+                    ApellidoTextBox.Text = Me.ClientesBindingSource.Current("Apellido")
+                    CorreoTextBox.Text = Me.ClientesBindingSource.Current("correo")
+                    TelefonoTextBox.Text = Me.ClientesBindingSource.Current("telefono")
+                    DireccionTextBox.Text = Me.ClientesBindingSource.Current("direccion")
+
+                    Exit Sub
+
+                End If
+                i = 1 + i
+                Me.ClientesBindingSource.MoveNext()
+            Loop Until i = Me.ClientesBindingSource.Count
+
+            MsgBox("NO SE ENCONTRO EL REGISTRO")
+
+        Else
+            MsgBox("el codigo ingresado no es valido")
+
+            'do while --> repita hasta, que...
+            'while -> repita mientras, que...
+            'try catch buscar en google
+        End If
+    End Sub
+
+
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+        Me.ClientesBindingSource.MoveLast()
+
+    End Sub
+
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+        Me.ClientesBindingSource.MoveFirst()
+
+    End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        Me.ClientesBindingSource.MovePrevious()
+
+    End Sub
+
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+        Me.ClientesBindingSource.MoveNext()
+
+    End Sub
+
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
+        If Me.ClientesDataGridView.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
+            Dim selectedRow = Me.ClientesDataGridView.SelectedRows(0)
+            Dim clientName As String = selectedRow.Cells(0).Value.ToString() ' Ajusta el índice de la columna si es necesario
+            Dim result As DialogResult = MessageBox.Show("¿Desea eliminar el registro de '" & clientName & "'?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If result = DialogResult.Yes Then
+                Dim x As Integer
+                For x = Me.ClientesDataGridView.SelectedRows.Count - 1 To 0 Step -1
+                    ' Eliminar el elemento seleccionado
+                    Me.ClientesBindingSource.RemoveAt(Me.ClientesDataGridView.SelectedRows(x).Index)
+                Next
+                Me.ClientesBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
+                MsgBox("Eliminación exitosa")
+            Else
+                ' El usuario eligió "No", no se realiza ninguna acción
+                MsgBox("Eliminación cancelada")
+            End If
+        Else
+            MsgBox("Seleccione, al menos, un elemento para borrar")
+        End If
+    End Sub
 End Class

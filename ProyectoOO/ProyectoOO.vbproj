@@ -90,10 +90,10 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="altas.bajas.Designer.vb">
+    <Compile Include="clientes\altas.bajas.Designer.vb">
       <DependentUpon>altas.bajas.vb</DependentUpon>
     </Compile>
-    <Compile Include="altas.bajas.vb">
+    <Compile Include="clientes\altas.bajas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BD_ImprentaDataSet.Designer.vb">
@@ -101,10 +101,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_ImprentaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.vb">
+    <Compile Include="clientes\Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.vb">
+    <Compile Include="clientes\Clientes.Designer.vb">
       <DependentUpon>Clientes.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +113,11 @@
     </Compile>
     <Compile Include="Inventario\Consultacambio.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Proveedores\FormProvEdicion.Designer.vb">
       <DependentUpon>FormProvEdicion.vb</DependentUpon>
@@ -137,11 +142,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -174,10 +174,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="altas.bajas.resx">
+    <EmbeddedResource Include="clientes\altas.bajas.resx">
       <DependentUpon>altas.bajas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Clientes.resx">
+    <EmbeddedResource Include="clientes\Clientes.resx">
       <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Consultacambio.resx">
@@ -188,9 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form Principal.resx">
       <DependentUpon>Form Principal.vb</DependentUpon>
@@ -238,6 +238,8 @@
     <Content Include="BD_Imprenta.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\borrar-usuario.png" />
+    <None Include="Resources\borrar-usuario.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -265,6 +267,9 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="vendedores\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
