@@ -74,6 +74,7 @@
                 '3) Obtener el indice de ese elemento y eliminar
                 Me.ProveedoresBindingSource.RemoveAt(Me.ProveedoresDataGridView.SelectedRows(x).Index)
             Next
+            Me.ProveedoresBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
             MsgBox("Eliminación exitosa")
         Else
@@ -87,5 +88,25 @@
 
     Private Sub pbTxtBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pbTxtBuscar.Click
         txtBuscar.Focus()
+    End Sub
+
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+        If txtBuscar.Text <> "" Then
+            buscarPorTexto()
+        End If
+    End Sub
+    Public dv As New DataView
+    Private Sub BuscarPorTexto()
+        dv.Table = Me.BD_ImprentaDataSet.Proveedores
+        dv.RowFilter = "nombre LIKE '" & txtBuscar.Text & "%'"
+        dv.Sort = "nombre ASC"
+        ' Asignar el DataView al DataGridView del FormPpal
+        Me.ProveedoresDataGridView.DataSource = dv
+    End Sub
+
+    Private Sub txtBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscar.TextChanged
+        If txtBuscar.Text = "" Then
+
+        End If
     End Sub
 End Class
