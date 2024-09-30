@@ -85,13 +85,13 @@ Partial Class Principal
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(53, 48)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(54, 48)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'VendedoresToolStripMenuItem
         '
         Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
-        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(80, 48)
+        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(81, 48)
         Me.VendedoresToolStripMenuItem.Text = "Vendedores"
         '
         'FinanzasToolStripMenuItem
