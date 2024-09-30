@@ -63,3 +63,4 @@ G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resour
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultacambio.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvEdicion.resources

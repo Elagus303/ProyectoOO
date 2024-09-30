@@ -29,14 +29,63 @@
         ProveedoresDataGridView.EnableHeadersVisualStyles = False
         ProveedoresDataGridView.ColumnHeadersDefaultCellStyle.BackColor = ColorSobreBase
         ProveedoresDataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        'ProveedoresDataGridView.ColumnHeadersDefaultCellStyle.Padding = New Padding(20)
-    End Sub
-
-    Private Sub btnOrdenarTabla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOrdenarTabla.Click
-        cboxOrdenarTabla.DroppedDown = Not cboxOrdenarTabla.DroppedDown
+        ProveedoresDataGridView.RowsDefaultCellStyle.BackColor = ColorBase
+        ProveedoresDataGridView.RowsDefaultCellStyle.SelectionBackColor = ColorControl
+        ProveedoresDataGridView.RowsDefaultCellStyle.SelectionForeColor = ColorTextoPrimario
+        ProveedoresDataGridView.GridColor = ColorSobreBase
     End Sub
 
     Private Sub btnAnadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnadir.Click
         FormProvAltas.ShowDialog()
+    End Sub
+
+    Private Sub btnPrimero_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrimero.Click
+        Me.ProveedoresBindingSource.MoveFirst()
+    End Sub
+
+    Private Sub btnAnt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnt.Click
+        Me.ProveedoresBindingSource.MovePrevious()
+    End Sub
+
+    Private Sub btnSig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSig.Click
+        Me.ProveedoresBindingSource.MoveNext()
+    End Sub
+
+    Private Sub btnUltimo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUltimo.Click
+        Me.ProveedoresBindingSource.MoveLast()
+    End Sub
+
+    Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
+        If Me.ProveedoresDataGridView.SelectedRows.Count < 1 Then
+            MsgBox("Seleccione un elemento para editar")
+        ElseIf Me.ProveedoresDataGridView.SelectedRows.Count > 1 Then
+            MsgBox("Seleccione solo un elemento para editar")
+        Else
+            FormProvEdicion.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
+        If Me.ProveedoresDataGridView.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
+            Dim x As Integer
+            For x = Me.ProveedoresDataGridView.SelectedRows.Count - 1 To 0 Step -1
+                '1) Obtener la lista de elementos seleccionados
+                '2) Apuntar al ultimo elemento de esa lista
+                '3) Obtener el indice de ese elemento y eliminar
+                Me.ProveedoresBindingSource.RemoveAt(Me.ProveedoresDataGridView.SelectedRows(x).Index)
+            Next
+            Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
+            MsgBox("Eliminación exitosa")
+        Else
+            MsgBox("Seleccione, al menos, un elemento para borrar")
+        End If
+    End Sub
+
+    Private Sub pbTxtBuscar_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles pbTxtBuscar.MouseMove
+        pbTxtBuscar.Cursor = Cursors.IBeam
+    End Sub
+
+    Private Sub pbTxtBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pbTxtBuscar.Click
+        txtBuscar.Focus()
     End Sub
 End Class
