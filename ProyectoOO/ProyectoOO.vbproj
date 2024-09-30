@@ -148,10 +148,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Principal.Designer.vb">
-      <DependentUpon>Principal.vb</DependentUpon>
+    <Compile Include="Form Principal.Designer.vb">
+      <DependentUpon>Form Principal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Principal.vb">
+    <Compile Include="Form Principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proveedores\FormProv.Designer.vb">
@@ -192,8 +192,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.vb</DependentUpon>
+    <EmbeddedResource Include="Form Principal.resx">
+      <DependentUpon>Form Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\FormProv.resx">
       <DependentUpon>FormProv.vb</DependentUpon>

@@ -150,6 +150,7 @@ Partial Class altas
         '
         'IdTextBox
         '
+        Me.IdTextBox.BackColor = System.Drawing.SystemColors.HighlightText
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id", True))
         Me.IdTextBox.Location = New System.Drawing.Point(81, 53)
         Me.IdTextBox.Name = "IdTextBox"
@@ -158,6 +159,7 @@ Partial Class altas
         '
         'NombreTextBox
         '
+        Me.NombreTextBox.BackColor = System.Drawing.SystemColors.HighlightText
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
         Me.NombreTextBox.Location = New System.Drawing.Point(81, 79)
         Me.NombreTextBox.Name = "NombreTextBox"
@@ -166,6 +168,7 @@ Partial Class altas
         '
         'ApellidoTextBox
         '
+        Me.ApellidoTextBox.BackColor = System.Drawing.SystemColors.HighlightText
         Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
         Me.ApellidoTextBox.Location = New System.Drawing.Point(81, 105)
         Me.ApellidoTextBox.Name = "ApellidoTextBox"
@@ -174,6 +177,7 @@ Partial Class altas
         '
         'TelefonoTextBox
         '
+        Me.TelefonoTextBox.BackColor = System.Drawing.SystemColors.HighlightText
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
         Me.TelefonoTextBox.Location = New System.Drawing.Point(81, 131)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
@@ -182,6 +186,7 @@ Partial Class altas
         '
         'CorreoTextBox
         '
+        Me.CorreoTextBox.BackColor = System.Drawing.SystemColors.HighlightText
         Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "correo", True))
         Me.CorreoTextBox.Location = New System.Drawing.Point(81, 157)
         Me.CorreoTextBox.Name = "CorreoTextBox"
@@ -190,6 +195,7 @@ Partial Class altas
         '
         'DireccionTextBox
         '
+        Me.DireccionTextBox.BackColor = System.Drawing.SystemColors.HighlightText
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "direccion", True))
         Me.DireccionTextBox.Location = New System.Drawing.Point(81, 183)
         Me.DireccionTextBox.Name = "DireccionTextBox"

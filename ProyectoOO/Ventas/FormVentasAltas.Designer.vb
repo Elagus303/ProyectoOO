@@ -24,8 +24,6 @@ Partial Class FormVentasAltas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim IdLabel As System.Windows.Forms.Label
-        Dim Fecha_ventaLabel As System.Windows.Forms.Label
-        Dim Precio_ventaLabel As System.Windows.Forms.Label
         Dim Es_colorLabel As System.Windows.Forms.Label
         Dim Es_doble_fazLabel As System.Windows.Forms.Label
         Dim Es_anilladoLabel As System.Windows.Forms.Label
@@ -37,19 +35,18 @@ Partial Class FormVentasAltas
         Me.VentaTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
-        Me.Fecha_ventaDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Precio_ventaTextBox = New System.Windows.Forms.TextBox()
         Me.Es_colorCheckBox = New System.Windows.Forms.CheckBox()
         Me.Es_doble_fazCheckBox = New System.Windows.Forms.CheckBox()
         Me.Es_anilladoCheckBox = New System.Windows.Forms.CheckBox()
         Me.CantidadTextBox = New System.Windows.Forms.TextBox()
         Me.Id_vendedorTextBox = New System.Windows.Forms.TextBox()
-        Me.Id_clienteTextBox = New System.Windows.Forms.TextBox()
         Me.btnAnadir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Id_clienteComboBox = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         IdLabel = New System.Windows.Forms.Label()
-        Fecha_ventaLabel = New System.Windows.Forms.Label()
-        Precio_ventaLabel = New System.Windows.Forms.Label()
         Es_colorLabel = New System.Windows.Forms.Label()
         Es_doble_fazLabel = New System.Windows.Forms.Label()
         Es_anilladoLabel = New System.Windows.Forms.Label()
@@ -68,24 +65,6 @@ Partial Class FormVentasAltas
         IdLabel.Size = New System.Drawing.Size(18, 13)
         IdLabel.TabIndex = 1
         IdLabel.Text = "id:"
-        '
-        'Fecha_ventaLabel
-        '
-        Fecha_ventaLabel.AutoSize = True
-        Fecha_ventaLabel.Location = New System.Drawing.Point(193, 108)
-        Fecha_ventaLabel.Name = "Fecha_ventaLabel"
-        Fecha_ventaLabel.Size = New System.Drawing.Size(67, 13)
-        Fecha_ventaLabel.TabIndex = 3
-        Fecha_ventaLabel.Text = "fecha venta:"
-        '
-        'Precio_ventaLabel
-        '
-        Precio_ventaLabel.AutoSize = True
-        Precio_ventaLabel.Location = New System.Drawing.Point(193, 133)
-        Precio_ventaLabel.Name = "Precio_ventaLabel"
-        Precio_ventaLabel.Size = New System.Drawing.Size(69, 13)
-        Precio_ventaLabel.TabIndex = 5
-        Precio_ventaLabel.Text = "precio venta:"
         '
         'Es_colorLabel
         '
@@ -132,15 +111,6 @@ Partial Class FormVentasAltas
         Id_vendedorLabel.TabIndex = 15
         Id_vendedorLabel.Text = "id vendedor:"
         '
-        'Id_clienteLabel
-        '
-        Id_clienteLabel.AutoSize = True
-        Id_clienteLabel.Location = New System.Drawing.Point(193, 301)
-        Id_clienteLabel.Name = "Id_clienteLabel"
-        Id_clienteLabel.Size = New System.Drawing.Size(52, 13)
-        Id_clienteLabel.TabIndex = 17
-        Id_clienteLabel.Text = "id cliente:"
-        '
         'BD_ImprentaDataSet
         '
         Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
@@ -173,22 +143,6 @@ Partial Class FormVentasAltas
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.Size = New System.Drawing.Size(200, 20)
         Me.IdTextBox.TabIndex = 2
-        '
-        'Fecha_ventaDateTimePicker
-        '
-        Me.Fecha_ventaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.VentaBindingSource, "fecha_venta", True))
-        Me.Fecha_ventaDateTimePicker.Location = New System.Drawing.Point(268, 104)
-        Me.Fecha_ventaDateTimePicker.Name = "Fecha_ventaDateTimePicker"
-        Me.Fecha_ventaDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Fecha_ventaDateTimePicker.TabIndex = 4
-        '
-        'Precio_ventaTextBox
-        '
-        Me.Precio_ventaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "precio_venta", True))
-        Me.Precio_ventaTextBox.Location = New System.Drawing.Point(268, 130)
-        Me.Precio_ventaTextBox.Name = "Precio_ventaTextBox"
-        Me.Precio_ventaTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Precio_ventaTextBox.TabIndex = 6
         '
         'Es_colorCheckBox
         '
@@ -236,14 +190,6 @@ Partial Class FormVentasAltas
         Me.Id_vendedorTextBox.Size = New System.Drawing.Size(200, 20)
         Me.Id_vendedorTextBox.TabIndex = 16
         '
-        'Id_clienteTextBox
-        '
-        Me.Id_clienteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_cliente", True))
-        Me.Id_clienteTextBox.Location = New System.Drawing.Point(268, 298)
-        Me.Id_clienteTextBox.Name = "Id_clienteTextBox"
-        Me.Id_clienteTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Id_clienteTextBox.TabIndex = 18
-        '
         'btnAnadir
         '
         Me.btnAnadir.Location = New System.Drawing.Point(213, 340)
@@ -262,19 +208,65 @@ Partial Class FormVentasAltas
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
-        'VentasAltas
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(474, 298)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(111, 20)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "Busq. Avanz."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Id_clienteLabel
+        '
+        Id_clienteLabel.AutoSize = True
+        Id_clienteLabel.Location = New System.Drawing.Point(210, 302)
+        Id_clienteLabel.Name = "Id_clienteLabel"
+        Id_clienteLabel.Size = New System.Drawing.Size(52, 13)
+        Id_clienteLabel.TabIndex = 21
+        Id_clienteLabel.Text = "id cliente:"
+        '
+        'Id_clienteComboBox
+        '
+        Me.Id_clienteComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_cliente", True))
+        Me.Id_clienteComboBox.FormattingEnabled = True
+        Me.Id_clienteComboBox.Location = New System.Drawing.Point(268, 299)
+        Me.Id_clienteComboBox.Name = "Id_clienteComboBox"
+        Me.Id_clienteComboBox.Size = New System.Drawing.Size(121, 21)
+        Me.Id_clienteComboBox.TabIndex = 22
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(559, 172)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.TabIndex = 23
+        Me.Label1.Text = "Unidad: $0"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(559, 197)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.TabIndex = 24
+        Me.Label2.Text = "Total: $0"
+        '
+        'FormVentasAltas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(632, 375)
+        Me.ClientSize = New System.Drawing.Size(734, 383)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Id_clienteLabel)
+        Me.Controls.Add(Me.Id_clienteComboBox)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAnadir)
         Me.Controls.Add(IdLabel)
         Me.Controls.Add(Me.IdTextBox)
-        Me.Controls.Add(Fecha_ventaLabel)
-        Me.Controls.Add(Me.Fecha_ventaDateTimePicker)
-        Me.Controls.Add(Precio_ventaLabel)
-        Me.Controls.Add(Me.Precio_ventaTextBox)
         Me.Controls.Add(Es_colorLabel)
         Me.Controls.Add(Me.Es_colorCheckBox)
         Me.Controls.Add(Es_doble_fazLabel)
@@ -285,9 +277,7 @@ Partial Class FormVentasAltas
         Me.Controls.Add(Me.CantidadTextBox)
         Me.Controls.Add(Id_vendedorLabel)
         Me.Controls.Add(Me.Id_vendedorTextBox)
-        Me.Controls.Add(Id_clienteLabel)
-        Me.Controls.Add(Me.Id_clienteTextBox)
-        Me.Name = "VentasAltas"
+        Me.Name = "FormVentasAltas"
         Me.Text = "VentasAltas"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -300,14 +290,15 @@ Partial Class FormVentasAltas
     Friend WithEvents VentaTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter
     Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Fecha_ventaDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Precio_ventaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Es_colorCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents Es_doble_fazCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents Es_anilladoCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents CantidadTextBox As System.Windows.Forms.TextBox
     Friend WithEvents Id_vendedorTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Id_clienteTextBox As System.Windows.Forms.TextBox
     Friend WithEvents btnAnadir As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Id_clienteComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

@@ -11,7 +11,6 @@
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Venta' Puede moverla o quitarla según sea necesario.
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
         Me.VentaBindingSource.AddNew()
-        Fecha_ventaDateTimePicker.Value = DateTime.Now
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
