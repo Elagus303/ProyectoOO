@@ -8,19 +8,10 @@
     End Sub
 
     Private Sub FormProvEdicion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Proveedores' Puede moverla o quitarla según sea necesario.
-        Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores)
-        Dim IdActual As Integer = CType(FormProv.ProveedoresBindingSource.Current, DataRowView)("id")
-        If FormProv.dv.Count > 0 Then
-
-        End If
-        For x As Integer = 0 To Me.ProveedoresBindingSource.Count - 1
-            Dim fila As DataRowView = CType(Me.ProveedoresBindingSource.Item(x), DataRowView)
-            If fila("id") = IdActual Then
-                Me.ProveedoresBindingSource.Position = x
-                Exit For
-            End If
-        Next x
+        Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores) 'Llenar datos, mover puntero al comienzo
+        Dim fila As Integer = Me.ProveedoresBindingSource.Find("id",
+                                                               FormProv.ProveedoresDataGridView.SelectedRows(0).Cells(0).Value)
+        Me.ProveedoresBindingSource.Position = fila
     End Sub
 
     Private Sub btnVolver_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnVolver.Click

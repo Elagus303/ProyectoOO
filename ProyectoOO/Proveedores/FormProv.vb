@@ -95,18 +95,28 @@
             buscarPorTexto()
         End If
     End Sub
-    Public dv As New DataView
+    Private dv As New DataView
     Private Sub BuscarPorTexto()
-        dv.Table = Me.BD_ImprentaDataSet.Proveedores
-        dv.RowFilter = "nombre LIKE '" & txtBuscar.Text & "%'"
-        dv.Sort = "nombre ASC"
-        ' Asignar el DataView al DataGridView del FormPpal
-        Me.ProveedoresDataGridView.DataSource = dv
+        'dv.Table = Me.BD_ImprentaDataSet.Proveedores
+        'dv.RowFilter = "nombre LIKE '" & txtBuscar.Text & "%'"
+        'dv.Sort = "nombre ASC"
+        '' Asignar el DataView al DataGridView del FormPpal
+        'Me.ProveedoresDataGridView.DataSource = dv
+        Me.ProveedoresBindingSource.Filter = "nombre LIKE '" & txtBuscar.Text & "%'"
     End Sub
 
     Private Sub txtBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscar.TextChanged
         If txtBuscar.Text = "" Then
+            'dv.RowFilter = ""
+            Me.ProveedoresBindingSource.RemoveFilter()
+        End If
+    End Sub
 
+    Private Sub ProveedoresDataGridView_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresDataGridView.SelectionChanged
+        If Me.ProveedoresDataGridView.SelectedRows.Count > 1 Then
+            btnEditar.Visible = False
+        Else
+            btnEditar.Visible = True
         End If
     End Sub
 End Class

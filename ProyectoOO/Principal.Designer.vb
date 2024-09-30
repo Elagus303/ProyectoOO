@@ -28,16 +28,11 @@ Partial Class Principal
         Me.EditarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AñadirProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarProveedorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AñadirInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AñadirVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditarVentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FinanzasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStripPpal.SuspendLayout()
@@ -49,7 +44,7 @@ Partial Class Principal
         Me.MenuStripPpal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.VentasToolStripMenuItem, Me.VendedoresToolStripMenuItem, Me.FinanzasToolStripMenuItem})
         Me.MenuStripPpal.Location = New System.Drawing.Point(0, 0)
         Me.MenuStripPpal.Name = "MenuStripPpal"
-        Me.MenuStripPpal.Size = New System.Drawing.Size(490, 30)
+        Me.MenuStripPpal.Size = New System.Drawing.Size(490, 52)
         Me.MenuStripPpal.TabIndex = 0
         Me.MenuStripPpal.Text = "MenuStrip1"
         '
@@ -57,7 +52,7 @@ Partial Class Principal
         '
         Me.ClientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirClienteToolStripMenuItem, Me.EditarClienteToolStripMenuItem, Me.EliminarClienteToolStripMenuItem})
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 26)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 48)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'AñadirClienteToolStripMenuItem
@@ -80,34 +75,15 @@ Partial Class Principal
         '
         'ProveedoresToolStripMenuItem
         '
-        Me.ProveedoresToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirProveedorToolStripMenuItem, Me.EditarProveedorToolStripMenuItem, Me.EliminarProveedorToolStripMenuItem})
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(84, 26)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(84, 48)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
-        '
-        'AñadirProveedorToolStripMenuItem
-        '
-        Me.AñadirProveedorToolStripMenuItem.Name = "AñadirProveedorToolStripMenuItem"
-        Me.AñadirProveedorToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.AñadirProveedorToolStripMenuItem.Text = "Añadir proveedor"
-        '
-        'EditarProveedorToolStripMenuItem
-        '
-        Me.EditarProveedorToolStripMenuItem.Name = "EditarProveedorToolStripMenuItem"
-        Me.EditarProveedorToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.EditarProveedorToolStripMenuItem.Text = "Editar proveedor"
-        '
-        'EliminarProveedorToolStripMenuItem
-        '
-        Me.EliminarProveedorToolStripMenuItem.Name = "EliminarProveedorToolStripMenuItem"
-        Me.EliminarProveedorToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.EliminarProveedorToolStripMenuItem.Text = "Eliminar proveedor"
         '
         'InsumosToolStripMenuItem
         '
         Me.InsumosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirInsumoToolStripMenuItem, Me.EditarInsumoToolStripMenuItem, Me.EliminarInsumoToolStripMenuItem})
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
-        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
+        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(64, 48)
         Me.InsumosToolStripMenuItem.Text = "Insumos"
         '
         'AñadirInsumoToolStripMenuItem
@@ -130,33 +106,20 @@ Partial Class Principal
         '
         'VentasToolStripMenuItem
         '
-        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirVentaToolStripMenuItem, Me.EditarVentaToolStripMenuItem})
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(54, 26)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(54, 48)
         Me.VentasToolStripMenuItem.Text = "Ventas"
-        '
-        'AñadirVentaToolStripMenuItem
-        '
-        Me.AñadirVentaToolStripMenuItem.Name = "AñadirVentaToolStripMenuItem"
-        Me.AñadirVentaToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
-        Me.AñadirVentaToolStripMenuItem.Text = "Ver ventas"
-        '
-        'EditarVentaToolStripMenuItem
-        '
-        Me.EditarVentaToolStripMenuItem.Name = "EditarVentaToolStripMenuItem"
-        Me.EditarVentaToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
-        Me.EditarVentaToolStripMenuItem.Text = "Añadir venta"
         '
         'VendedoresToolStripMenuItem
         '
         Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
-        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(81, 26)
+        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(81, 48)
         Me.VendedoresToolStripMenuItem.Text = "Vendedores"
         '
         'FinanzasToolStripMenuItem
         '
         Me.FinanzasToolStripMenuItem.Name = "FinanzasToolStripMenuItem"
-        Me.FinanzasToolStripMenuItem.Size = New System.Drawing.Size(64, 26)
+        Me.FinanzasToolStripMenuItem.Size = New System.Drawing.Size(64, 48)
         Me.FinanzasToolStripMenuItem.Text = "Finanzas"
         '
         'Principal
@@ -180,16 +143,11 @@ Partial Class Principal
     Friend WithEvents EditarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EliminarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AñadirProveedorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EditarProveedorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EliminarProveedorToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InsumosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AñadirInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EditarInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EliminarInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AñadirVentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EditarVentaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VendedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FinanzasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
