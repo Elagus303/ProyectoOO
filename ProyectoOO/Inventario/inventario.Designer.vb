@@ -38,6 +38,22 @@ Partial Class inventario
         Me.Cantaddanillos = New System.Windows.Forms.TextBox()
         Me.TapTrans = New System.Windows.Forms.Label()
         Me.TapOsc = New System.Windows.Forms.Label()
+        Me.PrecHoja = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Titlprec = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Prichangehoj = New System.Windows.Forms.Button()
+        Me.Changeprictinta = New System.Windows.Forms.Button()
+        Me.Changepricani = New System.Windows.Forms.Button()
+        Me.Pricchangetaposc = New System.Windows.Forms.Button()
+        Me.Prichangetaposc = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Hojas
@@ -87,7 +103,7 @@ Partial Class inventario
         '
         'addtinta
         '
-        Me.addtinta.Location = New System.Drawing.Point(216, 94)
+        Me.addtinta.Location = New System.Drawing.Point(216, 90)
         Me.addtinta.Name = "addtinta"
         Me.addtinta.Size = New System.Drawing.Size(75, 23)
         Me.addtinta.TabIndex = 5
@@ -174,12 +190,163 @@ Partial Class inventario
         Me.TapOsc.TabIndex = 15
         Me.TapOsc.Text = "Tapa Oscura:"
         '
+        'PrecHoja
+        '
+        Me.PrecHoja.AutoSize = True
+        Me.PrecHoja.Location = New System.Drawing.Point(341, 70)
+        Me.PrecHoja.Name = "PrecHoja"
+        Me.PrecHoja.Size = New System.Drawing.Size(40, 13)
+        Me.PrecHoja.TabIndex = 16
+        Me.PrecHoja.Text = "Actual:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(341, 97)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "Label2"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(341, 123)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Label3"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(341, 149)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "Label5"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(341, 173)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.TabIndex = 20
+        Me.Label6.Text = "Label6"
+        '
+        'Titlprec
+        '
+        Me.Titlprec.AutoSize = True
+        Me.Titlprec.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Titlprec.Location = New System.Drawing.Point(440, 9)
+        Me.Titlprec.Name = "Titlprec"
+        Me.Titlprec.Size = New System.Drawing.Size(95, 29)
+        Me.Titlprec.TabIndex = 21
+        Me.Titlprec.Text = "Precios"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(395, 70)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 22
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(395, 97)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 23
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(395, 121)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 24
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(395, 146)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 25
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(395, 171)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox5.TabIndex = 26
+        '
+        'Prichangehoj
+        '
+        Me.Prichangehoj.Location = New System.Drawing.Point(501, 67)
+        Me.Prichangehoj.Name = "Prichangehoj"
+        Me.Prichangehoj.Size = New System.Drawing.Size(75, 23)
+        Me.Prichangehoj.TabIndex = 27
+        Me.Prichangehoj.Text = "Cambiar"
+        Me.Prichangehoj.UseVisualStyleBackColor = True
+        '
+        'Changeprictinta
+        '
+        Me.Changeprictinta.Location = New System.Drawing.Point(501, 94)
+        Me.Changeprictinta.Name = "Changeprictinta"
+        Me.Changeprictinta.Size = New System.Drawing.Size(75, 23)
+        Me.Changeprictinta.TabIndex = 28
+        Me.Changeprictinta.Text = "Cambiar"
+        Me.Changeprictinta.UseVisualStyleBackColor = True
+        '
+        'Changepricani
+        '
+        Me.Changepricani.Location = New System.Drawing.Point(501, 119)
+        Me.Changepricani.Name = "Changepricani"
+        Me.Changepricani.Size = New System.Drawing.Size(75, 23)
+        Me.Changepricani.TabIndex = 29
+        Me.Changepricani.Text = "Cambiar"
+        Me.Changepricani.UseVisualStyleBackColor = True
+        '
+        'Pricchangetaposc
+        '
+        Me.Pricchangetaposc.Location = New System.Drawing.Point(501, 144)
+        Me.Pricchangetaposc.Name = "Pricchangetaposc"
+        Me.Pricchangetaposc.Size = New System.Drawing.Size(75, 23)
+        Me.Pricchangetaposc.TabIndex = 30
+        Me.Pricchangetaposc.Text = "Cambiar"
+        Me.Pricchangetaposc.UseVisualStyleBackColor = True
+        '
+        'Prichangetaposc
+        '
+        Me.Prichangetaposc.Location = New System.Drawing.Point(501, 169)
+        Me.Prichangetaposc.Name = "Prichangetaposc"
+        Me.Prichangetaposc.Size = New System.Drawing.Size(75, 23)
+        Me.Prichangetaposc.TabIndex = 31
+        Me.Prichangetaposc.Text = "Cambiar"
+        Me.Prichangetaposc.UseVisualStyleBackColor = True
+        '
         'inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(400, 261)
+        Me.ClientSize = New System.Drawing.Size(719, 258)
+        Me.Controls.Add(Me.Prichangetaposc)
+        Me.Controls.Add(Me.Pricchangetaposc)
+        Me.Controls.Add(Me.Changepricani)
+        Me.Controls.Add(Me.Changeprictinta)
+        Me.Controls.Add(Me.Prichangehoj)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Titlprec)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.PrecHoja)
         Me.Controls.Add(Me.TapOsc)
         Me.Controls.Add(Me.TapTrans)
         Me.Controls.Add(Me.Cantaddanillos)
@@ -218,4 +385,20 @@ Partial Class inventario
     Friend WithEvents Cantaddanillos As System.Windows.Forms.TextBox
     Friend WithEvents TapTrans As System.Windows.Forms.Label
     Friend WithEvents TapOsc As System.Windows.Forms.Label
+    Friend WithEvents PrecHoja As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Titlprec As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents Prichangehoj As System.Windows.Forms.Button
+    Friend WithEvents Changeprictinta As System.Windows.Forms.Button
+    Friend WithEvents Changepricani As System.Windows.Forms.Button
+    Friend WithEvents Pricchangetaposc As System.Windows.Forms.Button
+    Friend WithEvents Prichangetaposc As System.Windows.Forms.Button
 End Class

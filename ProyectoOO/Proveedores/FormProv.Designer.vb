@@ -28,12 +28,6 @@ Partial Class FormProv
         Me.ProveedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ProveedoresTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         Me.ProveedoresDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnAnadir = New System.Windows.Forms.Button()
@@ -45,17 +39,17 @@ Partial Class FormProv
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.pnlControlesTabla = New System.Windows.Forms.Panel()
         Me.btnOrdenarTabla = New System.Windows.Forms.Button()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.AzToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ZAToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FavoritosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FavoritosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.cboxOrdenarTabla = New System.Windows.Forms.ComboBox()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlControlesTabla.SuspendLayout()
-        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'BD_ImprentaDataSet
@@ -91,181 +85,135 @@ Partial Class FormProv
         Me.ProveedoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProveedoresDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.ProveedoresDataGridView.DataSource = Me.ProveedoresBindingSource
-        Me.ProveedoresDataGridView.Location = New System.Drawing.Point(12, 102)
+        Me.ProveedoresDataGridView.Location = New System.Drawing.Point(14, 110)
         Me.ProveedoresDataGridView.Name = "ProveedoresDataGridView"
         Me.ProveedoresDataGridView.ReadOnly = True
-        Me.ProveedoresDataGridView.Size = New System.Drawing.Size(611, 220)
+        Me.ProveedoresDataGridView.Size = New System.Drawing.Size(713, 254)
         Me.ProveedoresDataGridView.TabIndex = 1
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "nombre"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "telefono"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "telefono"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "correo"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "correo"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "direccion"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "direccion"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "localidad"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "localidad"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "id"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(551, 12)
+        Me.btnEliminar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnEliminar.FlatAppearance.BorderSize = 0
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Location = New System.Drawing.Point(643, 14)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.Size = New System.Drawing.Size(87, 29)
         Me.btnEliminar.TabIndex = 15
         Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
+        Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(470, 12)
+        Me.btnEditar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnEditar.FlatAppearance.BorderSize = 0
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.Location = New System.Drawing.Point(550, 14)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.Size = New System.Drawing.Size(87, 29)
         Me.btnEditar.TabIndex = 14
         Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnEditar.UseVisualStyleBackColor = False
         '
         'btnAnadir
         '
-        Me.btnAnadir.Location = New System.Drawing.Point(389, 12)
+        Me.btnAnadir.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnAnadir.FlatAppearance.BorderSize = 0
+        Me.btnAnadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnadir.Location = New System.Drawing.Point(457, 14)
         Me.btnAnadir.Name = "btnAnadir"
-        Me.btnAnadir.Size = New System.Drawing.Size(75, 23)
+        Me.btnAnadir.Size = New System.Drawing.Size(87, 29)
         Me.btnAnadir.TabIndex = 13
         Me.btnAnadir.Text = "Añadir"
-        Me.btnAnadir.UseVisualStyleBackColor = True
+        Me.btnAnadir.UseVisualStyleBackColor = False
         '
         'btnUltimo
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(246, 2)
+        Me.btnUltimo.FlatAppearance.BorderSize = 0
+        Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUltimo.Location = New System.Drawing.Point(287, 2)
         Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(75, 23)
+        Me.btnUltimo.Size = New System.Drawing.Size(87, 27)
         Me.btnUltimo.TabIndex = 12
         Me.btnUltimo.Text = ">>"
         Me.btnUltimo.UseVisualStyleBackColor = True
         '
         'btnSig
         '
-        Me.btnSig.Location = New System.Drawing.Point(165, 2)
+        Me.btnSig.FlatAppearance.BorderSize = 0
+        Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSig.Location = New System.Drawing.Point(192, 2)
         Me.btnSig.Name = "btnSig"
-        Me.btnSig.Size = New System.Drawing.Size(75, 23)
+        Me.btnSig.Size = New System.Drawing.Size(87, 27)
         Me.btnSig.TabIndex = 11
         Me.btnSig.Text = ">"
         Me.btnSig.UseVisualStyleBackColor = True
         '
         'btnAnt
         '
-        Me.btnAnt.Location = New System.Drawing.Point(84, 2)
+        Me.btnAnt.FlatAppearance.BorderSize = 0
+        Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnt.Location = New System.Drawing.Point(98, 2)
         Me.btnAnt.Name = "btnAnt"
-        Me.btnAnt.Size = New System.Drawing.Size(75, 23)
+        Me.btnAnt.Size = New System.Drawing.Size(87, 27)
         Me.btnAnt.TabIndex = 10
         Me.btnAnt.Text = "<"
         Me.btnAnt.UseVisualStyleBackColor = True
         '
         'btnPrimero
         '
+        Me.btnPrimero.FlatAppearance.BorderSize = 0
+        Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrimero.Location = New System.Drawing.Point(3, 2)
         Me.btnPrimero.Name = "btnPrimero"
-        Me.btnPrimero.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrimero.Size = New System.Drawing.Size(87, 27)
         Me.btnPrimero.TabIndex = 9
         Me.btnPrimero.Text = "<<"
         Me.btnPrimero.UseVisualStyleBackColor = True
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(15, 12)
+        Me.txtBuscar.Location = New System.Drawing.Point(14, 17)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(237, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(318, 21)
         Me.txtBuscar.TabIndex = 16
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(258, 9)
+        Me.btnBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Location = New System.Drawing.Point(337, 14)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnBuscar.Size = New System.Drawing.Size(87, 29)
         Me.btnBuscar.TabIndex = 17
         Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
         'pnlControlesTabla
         '
-        Me.pnlControlesTabla.BackColor = System.Drawing.Color.SteelBlue
+        Me.pnlControlesTabla.BackColor = System.Drawing.Color.DarkKhaki
         Me.pnlControlesTabla.Controls.Add(Me.btnOrdenarTabla)
         Me.pnlControlesTabla.Controls.Add(Me.cboxOrdenarTabla)
         Me.pnlControlesTabla.Controls.Add(Me.btnPrimero)
         Me.pnlControlesTabla.Controls.Add(Me.btnAnt)
         Me.pnlControlesTabla.Controls.Add(Me.btnSig)
         Me.pnlControlesTabla.Controls.Add(Me.btnUltimo)
-        Me.pnlControlesTabla.Location = New System.Drawing.Point(12, 68)
+        Me.pnlControlesTabla.Location = New System.Drawing.Point(14, 78)
         Me.pnlControlesTabla.Name = "pnlControlesTabla"
-        Me.pnlControlesTabla.Size = New System.Drawing.Size(611, 28)
+        Me.pnlControlesTabla.Size = New System.Drawing.Size(713, 32)
         Me.pnlControlesTabla.TabIndex = 18
         '
         'btnOrdenarTabla
         '
-        Me.btnOrdenarTabla.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.btnOrdenarTabla.Location = New System.Drawing.Point(513, 2)
+        Me.btnOrdenarTabla.FlatAppearance.BorderSize = 0
+        Me.btnOrdenarTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOrdenarTabla.Location = New System.Drawing.Point(598, 2)
         Me.btnOrdenarTabla.Name = "btnOrdenarTabla"
-        Me.btnOrdenarTabla.Size = New System.Drawing.Size(75, 23)
+        Me.btnOrdenarTabla.Size = New System.Drawing.Size(87, 27)
         Me.btnOrdenarTabla.TabIndex = 14
-        Me.btnOrdenarTabla.Text = "Ordenar por"
+        Me.btnOrdenarTabla.Text = "V"
         Me.btnOrdenarTabla.UseVisualStyleBackColor = True
-        '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AzToolStripMenuItem, Me.ZAToolStripMenuItem, Me.FavoritosToolStripMenuItem, Me.FavoritosToolStripMenuItem1})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(132, 92)
-        '
-        'AzToolStripMenuItem
-        '
-        Me.AzToolStripMenuItem.Name = "AzToolStripMenuItem"
-        Me.AzToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
-        Me.AzToolStripMenuItem.Text = "A-Z"
-        '
-        'ZAToolStripMenuItem
-        '
-        Me.ZAToolStripMenuItem.Name = "ZAToolStripMenuItem"
-        Me.ZAToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
-        Me.ZAToolStripMenuItem.Text = "Z-A"
-        '
-        'FavoritosToolStripMenuItem
-        '
-        Me.FavoritosToolStripMenuItem.Name = "FavoritosToolStripMenuItem"
-        Me.FavoritosToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
-        Me.FavoritosToolStripMenuItem.Text = "Frecuentes"
-        '
-        'FavoritosToolStripMenuItem1
-        '
-        Me.FavoritosToolStripMenuItem1.Name = "FavoritosToolStripMenuItem1"
-        Me.FavoritosToolStripMenuItem1.Size = New System.Drawing.Size(131, 22)
-        Me.FavoritosToolStripMenuItem1.Text = "Favoritos"
         '
         'cboxOrdenarTabla
         '
@@ -274,16 +222,66 @@ Partial Class FormProv
         Me.cboxOrdenarTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cboxOrdenarTabla.FormattingEnabled = True
         Me.cboxOrdenarTabla.Items.AddRange(New Object() {"A-Z", "Z-A", "Frecuentes", "Favoritos"})
-        Me.cboxOrdenarTabla.Location = New System.Drawing.Point(570, 4)
+        Me.cboxOrdenarTabla.Location = New System.Drawing.Point(665, 5)
         Me.cboxOrdenarTabla.Name = "cboxOrdenarTabla"
-        Me.cboxOrdenarTabla.Size = New System.Drawing.Size(18, 21)
+        Me.cboxOrdenarTabla.Size = New System.Drawing.Size(19, 23)
         Me.cboxOrdenarTabla.TabIndex = 13
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn1.FillWeight = 350.0!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Nombre/Razon"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "telefono"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Teléfono"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "correo"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Correo"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "direccion"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Direccion"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "localidad"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Localidad"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "id"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
         '
         'FormProv
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(636, 334)
+        Me.BackColor = System.Drawing.Color.LemonChiffon
+        Me.ClientSize = New System.Drawing.Size(742, 385)
         Me.Controls.Add(Me.pnlControlesTabla)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.txtBuscar)
@@ -291,13 +289,13 @@ Partial Class FormProv
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnAnadir)
         Me.Controls.Add(Me.ProveedoresDataGridView)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Name = "FormProv"
         Me.Text = "FormProv"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedoresDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlControlesTabla.ResumeLayout(False)
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -307,12 +305,6 @@ Partial Class FormProv
     Friend WithEvents ProveedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.ProveedoresTableAdapter
     Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
     Friend WithEvents ProveedoresDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnEditar As System.Windows.Forms.Button
     Friend WithEvents btnAnadir As System.Windows.Forms.Button
@@ -325,9 +317,10 @@ Partial Class FormProv
     Friend WithEvents pnlControlesTabla As System.Windows.Forms.Panel
     Friend WithEvents cboxOrdenarTabla As System.Windows.Forms.ComboBox
     Friend WithEvents btnOrdenarTabla As System.Windows.Forms.Button
-    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents AzToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ZAToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FavoritosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FavoritosToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

@@ -51,6 +51,60 @@ Partial Class FormProvAltas
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(63, 57)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(45, 13)
+        NombreLabel.TabIndex = 3
+        NombreLabel.Text = "nombre:"
+        '
+        'TelefonoLabel
+        '
+        TelefonoLabel.AutoSize = True
+        TelefonoLabel.Location = New System.Drawing.Point(63, 83)
+        TelefonoLabel.Name = "TelefonoLabel"
+        TelefonoLabel.Size = New System.Drawing.Size(48, 13)
+        TelefonoLabel.TabIndex = 5
+        TelefonoLabel.Text = "telefono:"
+        '
+        'CorreoLabel
+        '
+        CorreoLabel.AutoSize = True
+        CorreoLabel.Location = New System.Drawing.Point(63, 109)
+        CorreoLabel.Name = "CorreoLabel"
+        CorreoLabel.Size = New System.Drawing.Size(40, 13)
+        CorreoLabel.TabIndex = 7
+        CorreoLabel.Text = "correo:"
+        '
+        'DireccionLabel
+        '
+        DireccionLabel.AutoSize = True
+        DireccionLabel.Location = New System.Drawing.Point(63, 135)
+        DireccionLabel.Name = "DireccionLabel"
+        DireccionLabel.Size = New System.Drawing.Size(53, 13)
+        DireccionLabel.TabIndex = 9
+        DireccionLabel.Text = "direccion:"
+        '
+        'LocalidadLabel
+        '
+        LocalidadLabel.AutoSize = True
+        LocalidadLabel.Location = New System.Drawing.Point(63, 161)
+        LocalidadLabel.Name = "LocalidadLabel"
+        LocalidadLabel.Size = New System.Drawing.Size(52, 13)
+        LocalidadLabel.TabIndex = 11
+        LocalidadLabel.Text = "localidad:"
+        '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(63, 187)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(18, 13)
+        IdLabel.TabIndex = 13
+        IdLabel.Text = "id:"
+        '
         'btnAnadir
         '
         Me.btnAnadir.Location = New System.Drawing.Point(43, 226)
@@ -94,15 +148,6 @@ Partial Class FormProvAltas
         Me.TableAdapterManager.VendedoresTableAdapter = Nothing
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(63, 57)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
-        NombreLabel.TabIndex = 3
-        NombreLabel.Text = "nombre:"
-        '
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "nombre", True))
@@ -110,15 +155,6 @@ Partial Class FormProvAltas
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 4
-        '
-        'TelefonoLabel
-        '
-        TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(63, 83)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(48, 13)
-        TelefonoLabel.TabIndex = 5
-        TelefonoLabel.Text = "telefono:"
         '
         'TelefonoTextBox
         '
@@ -128,15 +164,6 @@ Partial Class FormProvAltas
         Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoTextBox.TabIndex = 6
         '
-        'CorreoLabel
-        '
-        CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(63, 109)
-        CorreoLabel.Name = "CorreoLabel"
-        CorreoLabel.Size = New System.Drawing.Size(40, 13)
-        CorreoLabel.TabIndex = 7
-        CorreoLabel.Text = "correo:"
-        '
         'CorreoTextBox
         '
         Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "correo", True))
@@ -144,15 +171,6 @@ Partial Class FormProvAltas
         Me.CorreoTextBox.Name = "CorreoTextBox"
         Me.CorreoTextBox.Size = New System.Drawing.Size(100, 20)
         Me.CorreoTextBox.TabIndex = 8
-        '
-        'DireccionLabel
-        '
-        DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(63, 135)
-        DireccionLabel.Name = "DireccionLabel"
-        DireccionLabel.Size = New System.Drawing.Size(53, 13)
-        DireccionLabel.TabIndex = 9
-        DireccionLabel.Text = "direccion:"
         '
         'DireccionTextBox
         '
@@ -162,15 +180,6 @@ Partial Class FormProvAltas
         Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DireccionTextBox.TabIndex = 10
         '
-        'LocalidadLabel
-        '
-        LocalidadLabel.AutoSize = True
-        LocalidadLabel.Location = New System.Drawing.Point(63, 161)
-        LocalidadLabel.Name = "LocalidadLabel"
-        LocalidadLabel.Size = New System.Drawing.Size(52, 13)
-        LocalidadLabel.TabIndex = 11
-        LocalidadLabel.Text = "localidad:"
-        '
         'LocalidadTextBox
         '
         Me.LocalidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "localidad", True))
@@ -178,15 +187,6 @@ Partial Class FormProvAltas
         Me.LocalidadTextBox.Name = "LocalidadTextBox"
         Me.LocalidadTextBox.Size = New System.Drawing.Size(100, 20)
         Me.LocalidadTextBox.TabIndex = 12
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(63, 187)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 13
-        IdLabel.Text = "id:"
         '
         'IdTextBox
         '

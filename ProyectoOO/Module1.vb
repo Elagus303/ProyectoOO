@@ -1,4 +1,11 @@
 ﻿Module Module1
+    'Variables de Colores
+    Public ColorBase As Color = Color.LemonChiffon
+    Public ColorControl As Color = Color.PaleGoldenrod
+    Public ColorSobreBase As Color = Color.DarkKhaki
+    Public ColorTextoPrimario As Color = Color.Black
+    Public ColorTextoSecundario As Color = Color.White
+
     Public Sub limpiar(ByVal formx As Form)
         Dim aux As Control
         For Each aux In formx.Controls
