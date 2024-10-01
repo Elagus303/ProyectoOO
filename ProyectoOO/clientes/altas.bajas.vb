@@ -5,6 +5,10 @@
         Me.ClientesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
 
+        ComboBox1.Items.Add("nombre")
+        ComboBox1.Items.Add("id")
+        ComboBox1.Items.Add("apellido")
+        ComboBox1.Text = "seleccione filtro"
     End Sub
 
     Private Sub altas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -21,8 +25,7 @@
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
-        Clientes.Show()
-        Close()
+        Me.Close()
 
     End Sub
 
@@ -35,7 +38,7 @@
             Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'guardo
 
             Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
-            Clientes.ClientesTableAdapter.Fill(Clientes.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
+
             'sos agustin?
             'cambios en minrama1
             Me.ClientesBindingSource.AddNew()
@@ -203,5 +206,9 @@
         Else
             MsgBox("Seleccione, al menos, un elemento para borrar")
         End If
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class
