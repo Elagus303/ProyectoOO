@@ -39,19 +39,19 @@
         FormProvAltas.ShowDialog()
     End Sub
 
-    Private Sub btnPrimero_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrimero.Click
+    Private Sub btnPrimero_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ProveedoresBindingSource.MoveFirst()
     End Sub
 
-    Private Sub btnAnt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnt.Click
+    Private Sub btnAnt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ProveedoresBindingSource.MovePrevious()
     End Sub
 
-    Private Sub btnSig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSig.Click
+    Private Sub btnSig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ProveedoresBindingSource.MoveNext()
     End Sub
 
-    Private Sub btnUltimo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUltimo.Click
+    Private Sub btnUltimo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ProveedoresBindingSource.MoveLast()
     End Sub
 
@@ -128,5 +128,9 @@
 
     Private Sub btnFiltrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFiltrar.Click
         cbFiltrar.DroppedDown = True
+    End Sub
+
+    Private Sub btnPrimero_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrimero.Click
+
     End Sub
 End Class

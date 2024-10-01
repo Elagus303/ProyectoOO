@@ -28,25 +28,25 @@ Partial Class FormProv
         Me.ProveedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ProveedoresTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         Me.ProveedoresDataGridView = New System.Windows.Forms.DataGridView()
-        Me.btnEliminar = New System.Windows.Forms.Button()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnAnadir = New System.Windows.Forms.Button()
-        Me.btnUltimo = New System.Windows.Forms.Button()
-        Me.btnSig = New System.Windows.Forms.Button()
-        Me.btnAnt = New System.Windows.Forms.Button()
-        Me.btnPrimero = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
-        Me.lblTabla = New System.Windows.Forms.Label()
-        Me.cbFiltrar = New System.Windows.Forms.ComboBox()
-        Me.btnFiltrar = New System.Windows.Forms.Button()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnAnadir = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.lblTabla = New System.Windows.Forms.Label()
+        Me.cbFiltrar = New System.Windows.Forms.ComboBox()
+        Me.btnFiltrar = New System.Windows.Forms.Button()
+        Me.btnPrimero = New System.Windows.Forms.Button()
+        Me.btnAnt = New System.Windows.Forms.Button()
+        Me.btnSig = New System.Windows.Forms.Button()
+        Me.btnUltimo = New System.Windows.Forms.Button()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,6 +92,57 @@ Partial Class FormProv
         Me.ProveedoresDataGridView.Size = New System.Drawing.Size(919, 291)
         Me.ProveedoresDataGridView.TabIndex = 0
         '
+        'id
+        '
+        Me.id.DataPropertyName = "id"
+        Me.id.FillWeight = 20.0!
+        Me.id.HeaderText = "id"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn1.FillWeight = 240.0!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "Nombre/Razon"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "telefono"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 70.0!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Teléfono"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "correo"
+        Me.DataGridViewTextBoxColumn3.FillWeight = 160.0!
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Correo"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "direccion"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "Direccion"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "localidad"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Localidad"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
         'btnEliminar
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.PaleGoldenrod
@@ -128,60 +179,8 @@ Partial Class FormProv
         Me.btnAnadir.Size = New System.Drawing.Size(87, 29)
         Me.btnAnadir.TabIndex = 13
         Me.btnAnadir.TabStop = False
-        Me.btnAnadir.Text = "Añadir"
+        Me.btnAnadir.Text = "Agregar"
         Me.btnAnadir.UseVisualStyleBackColor = False
-        '
-        'btnUltimo
-        '
-        Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.btnUltimo.FlatAppearance.BorderSize = 0
-        Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUltimo.Location = New System.Drawing.Point(894, 346)
-        Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
-        Me.btnUltimo.TabIndex = 12
-        Me.btnUltimo.TabStop = False
-        Me.btnUltimo.Text = ">>"
-        Me.btnUltimo.UseVisualStyleBackColor = False
-        '
-        'btnSig
-        '
-        Me.btnSig.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.btnSig.FlatAppearance.BorderSize = 0
-        Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSig.Location = New System.Drawing.Point(851, 346)
-        Me.btnSig.Name = "btnSig"
-        Me.btnSig.Size = New System.Drawing.Size(37, 27)
-        Me.btnSig.TabIndex = 11
-        Me.btnSig.TabStop = False
-        Me.btnSig.Text = ">"
-        Me.btnSig.UseVisualStyleBackColor = False
-        '
-        'btnAnt
-        '
-        Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.btnAnt.FlatAppearance.BorderSize = 0
-        Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnt.Location = New System.Drawing.Point(808, 346)
-        Me.btnAnt.Name = "btnAnt"
-        Me.btnAnt.Size = New System.Drawing.Size(37, 27)
-        Me.btnAnt.TabIndex = 10
-        Me.btnAnt.TabStop = False
-        Me.btnAnt.Text = "<"
-        Me.btnAnt.UseVisualStyleBackColor = False
-        '
-        'btnPrimero
-        '
-        Me.btnPrimero.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.btnPrimero.FlatAppearance.BorderSize = 0
-        Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrimero.Location = New System.Drawing.Point(765, 346)
-        Me.btnPrimero.Name = "btnPrimero"
-        Me.btnPrimero.Size = New System.Drawing.Size(37, 27)
-        Me.btnPrimero.TabIndex = 9
-        Me.btnPrimero.TabStop = False
-        Me.btnPrimero.Text = "<<"
-        Me.btnPrimero.UseVisualStyleBackColor = False
         '
         'btnBuscar
         '
@@ -248,56 +247,57 @@ Partial Class FormProv
         Me.btnFiltrar.Text = "Filtrar"
         Me.btnFiltrar.UseVisualStyleBackColor = False
         '
-        'id
+        'btnPrimero
         '
-        Me.id.DataPropertyName = "id"
-        Me.id.FillWeight = 20.0!
-        Me.id.HeaderText = "id"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
+        Me.btnPrimero.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnPrimero.FlatAppearance.BorderSize = 0
+        Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrimero.Location = New System.Drawing.Point(765, 349)
+        Me.btnPrimero.Name = "btnPrimero"
+        Me.btnPrimero.Size = New System.Drawing.Size(37, 27)
+        Me.btnPrimero.TabIndex = 23
+        Me.btnPrimero.TabStop = False
+        Me.btnPrimero.Text = "<<"
+        Me.btnPrimero.UseVisualStyleBackColor = False
         '
-        'DataGridViewTextBoxColumn1
+        'btnAnt
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn1.FillWeight = 240.0!
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Nombre/Razon"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnAnt.FlatAppearance.BorderSize = 0
+        Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnt.Location = New System.Drawing.Point(808, 349)
+        Me.btnAnt.Name = "btnAnt"
+        Me.btnAnt.Size = New System.Drawing.Size(37, 27)
+        Me.btnAnt.TabIndex = 24
+        Me.btnAnt.TabStop = False
+        Me.btnAnt.Text = "<"
+        Me.btnAnt.UseVisualStyleBackColor = False
         '
-        'DataGridViewTextBoxColumn2
+        'btnSig
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "telefono"
-        Me.DataGridViewTextBoxColumn2.FillWeight = 70.0!
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Teléfono"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.btnSig.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnSig.FlatAppearance.BorderSize = 0
+        Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSig.Location = New System.Drawing.Point(851, 349)
+        Me.btnSig.Name = "btnSig"
+        Me.btnSig.Size = New System.Drawing.Size(37, 27)
+        Me.btnSig.TabIndex = 25
+        Me.btnSig.TabStop = False
+        Me.btnSig.Text = ">"
+        Me.btnSig.UseVisualStyleBackColor = False
         '
-        'DataGridViewTextBoxColumn3
+        'btnUltimo
         '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "correo"
-        Me.DataGridViewTextBoxColumn3.FillWeight = 160.0!
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Correo"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "direccion"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Direccion"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "localidad"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Localidad"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnUltimo.FlatAppearance.BorderSize = 0
+        Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUltimo.Location = New System.Drawing.Point(894, 348)
+        Me.btnUltimo.Name = "btnUltimo"
+        Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
+        Me.btnUltimo.TabIndex = 26
+        Me.btnUltimo.TabStop = False
+        Me.btnUltimo.Text = ">>"
+        Me.btnUltimo.UseVisualStyleBackColor = False
         '
         'FormProv
         '
@@ -305,16 +305,16 @@ Partial Class FormProv
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(943, 385)
+        Me.Controls.Add(Me.btnPrimero)
+        Me.Controls.Add(Me.btnAnt)
+        Me.Controls.Add(Me.btnSig)
+        Me.Controls.Add(Me.btnUltimo)
         Me.Controls.Add(Me.btnFiltrar)
         Me.Controls.Add(Me.cbFiltrar)
         Me.Controls.Add(Me.lblTabla)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.pbTxtBuscar)
-        Me.Controls.Add(Me.btnPrimero)
-        Me.Controls.Add(Me.btnAnt)
         Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.btnSig)
-        Me.Controls.Add(Me.btnUltimo)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnAnadir)
@@ -340,10 +340,6 @@ Partial Class FormProv
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnEditar As System.Windows.Forms.Button
     Friend WithEvents btnAnadir As System.Windows.Forms.Button
-    Friend WithEvents btnUltimo As System.Windows.Forms.Button
-    Friend WithEvents btnSig As System.Windows.Forms.Button
-    Friend WithEvents btnAnt As System.Windows.Forms.Button
-    Friend WithEvents btnPrimero As System.Windows.Forms.Button
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents pbTxtBuscar As System.Windows.Forms.PictureBox
     Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
@@ -356,4 +352,8 @@ Partial Class FormProv
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnPrimero As System.Windows.Forms.Button
+    Friend WithEvents btnAnt As System.Windows.Forms.Button
+    Friend WithEvents btnSig As System.Windows.Forms.Button
+    Friend WithEvents btnUltimo As System.Windows.Forms.Button
 End Class

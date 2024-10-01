@@ -23,12 +23,6 @@ Partial Class FormVentas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim IdLabel As System.Windows.Forms.Label
-        Dim Fecha_ventaLabel As System.Windows.Forms.Label
-        Dim Precio_ventaLabel As System.Windows.Forms.Label
-        Dim CantidadLabel As System.Windows.Forms.Label
-        Dim Id_vendedorLabel As System.Windows.Forms.Label
-        Dim Id_clienteLabel As System.Windows.Forms.Label
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.VentaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VentaTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter()
@@ -41,21 +35,21 @@ Partial Class FormVentas
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdTextBox = New System.Windows.Forms.TextBox()
-        Me.Fecha_ventaDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.Precio_ventaTextBox = New System.Windows.Forms.TextBox()
-        Me.CantidadTextBox = New System.Windows.Forms.TextBox()
-        Me.Id_vendedorComboBox = New System.Windows.Forms.ComboBox()
-        Me.Id_clienteComboBox = New System.Windows.Forms.ComboBox()
-        IdLabel = New System.Windows.Forms.Label()
-        Fecha_ventaLabel = New System.Windows.Forms.Label()
-        Precio_ventaLabel = New System.Windows.Forms.Label()
-        CantidadLabel = New System.Windows.Forms.Label()
-        Id_vendedorLabel = New System.Windows.Forms.Label()
-        Id_clienteLabel = New System.Windows.Forms.Label()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.btnFiltrar = New System.Windows.Forms.Button()
+        Me.cbFiltrar = New System.Windows.Forms.ComboBox()
+        Me.btnPrimero = New System.Windows.Forms.Button()
+        Me.btnAnt = New System.Windows.Forms.Button()
+        Me.btnSig = New System.Windows.Forms.Button()
+        Me.btnUltimo = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnEditar = New System.Windows.Forms.Button()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BD_ImprentaDataSet
@@ -85,12 +79,15 @@ Partial Class FormVentas
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(558, 13)
+        Me.btnAgregar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnAgregar.FlatAppearance.BorderSize = 0
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.Location = New System.Drawing.Point(793, 12)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.Size = New System.Drawing.Size(87, 29)
         Me.btnAgregar.TabIndex = 2
         Me.btnAgregar.Text = "Agregar"
-        Me.btnAgregar.UseVisualStyleBackColor = True
+        Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'VentaDataGridView
         '
@@ -100,10 +97,10 @@ Partial Class FormVentas
         Me.VentaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.VentaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.VentaDataGridView.DataSource = Me.VentaBindingSource
-        Me.VentaDataGridView.Location = New System.Drawing.Point(359, 75)
+        Me.VentaDataGridView.Location = New System.Drawing.Point(12, 47)
         Me.VentaDataGridView.Name = "VentaDataGridView"
         Me.VentaDataGridView.ReadOnly = True
-        Me.VentaDataGridView.Size = New System.Drawing.Size(513, 220)
+        Me.VentaDataGridView.Size = New System.Drawing.Size(868, 253)
         Me.VentaDataGridView.TabIndex = 2
         '
         'DataGridViewTextBoxColumn1
@@ -118,152 +115,186 @@ Partial Class FormVentas
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "fecha_venta"
         Me.DataGridViewTextBoxColumn2.HeaderText = "fecha_venta"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "precio_venta"
         Me.DataGridViewTextBoxColumn3.HeaderText = "precio_venta"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidad"
         Me.DataGridViewTextBoxColumn4.HeaderText = "cantidad"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "id_vendedor"
         Me.DataGridViewTextBoxColumn5.HeaderText = "id_vendedor"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "id_cliente"
         Me.DataGridViewTextBoxColumn6.HeaderText = "id_cliente"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
-        'IdLabel
+        'txtBuscar
         '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(78, 103)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 2
-        IdLabel.Text = "id:"
+        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtBuscar.Location = New System.Drawing.Point(17, 18)
+        Me.txtBuscar.MaxLength = 20
+        Me.txtBuscar.Multiline = True
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(243, 20)
+        Me.txtBuscar.TabIndex = 22
         '
-        'IdTextBox
+        'pbTxtBuscar
         '
-        Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(153, 100)
-        Me.IdTextBox.Name = "IdTextBox"
-        Me.IdTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.IdTextBox.TabIndex = 3
+        Me.pbTxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.pbTxtBuscar.Location = New System.Drawing.Point(12, 12)
+        Me.pbTxtBuscar.Name = "pbTxtBuscar"
+        Me.pbTxtBuscar.Size = New System.Drawing.Size(254, 29)
+        Me.pbTxtBuscar.TabIndex = 21
+        Me.pbTxtBuscar.TabStop = False
         '
-        'Fecha_ventaLabel
+        'btnBuscar
         '
-        Fecha_ventaLabel.AutoSize = True
-        Fecha_ventaLabel.Location = New System.Drawing.Point(78, 130)
-        Fecha_ventaLabel.Name = "Fecha_ventaLabel"
-        Fecha_ventaLabel.Size = New System.Drawing.Size(67, 13)
-        Fecha_ventaLabel.TabIndex = 4
-        Fecha_ventaLabel.Text = "fecha venta:"
+        Me.btnBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Location = New System.Drawing.Point(266, 12)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(87, 29)
+        Me.btnBuscar.TabIndex = 20
+        Me.btnBuscar.TabStop = False
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'Fecha_ventaDateTimePicker
+        'btnFiltrar
         '
-        Me.Fecha_ventaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.VentaBindingSource, "fecha_venta", True))
-        Me.Fecha_ventaDateTimePicker.Location = New System.Drawing.Point(153, 126)
-        Me.Fecha_ventaDateTimePicker.Name = "Fecha_ventaDateTimePicker"
-        Me.Fecha_ventaDateTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.Fecha_ventaDateTimePicker.TabIndex = 5
+        Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnFiltrar.FlatAppearance.BorderSize = 0
+        Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFiltrar.Location = New System.Drawing.Point(700, 12)
+        Me.btnFiltrar.Name = "btnFiltrar"
+        Me.btnFiltrar.Size = New System.Drawing.Size(87, 29)
+        Me.btnFiltrar.TabIndex = 24
+        Me.btnFiltrar.TabStop = False
+        Me.btnFiltrar.Text = "Filtrar"
+        Me.btnFiltrar.UseVisualStyleBackColor = False
         '
-        'Precio_ventaLabel
+        'cbFiltrar
         '
-        Precio_ventaLabel.AutoSize = True
-        Precio_ventaLabel.Location = New System.Drawing.Point(78, 155)
-        Precio_ventaLabel.Name = "Precio_ventaLabel"
-        Precio_ventaLabel.Size = New System.Drawing.Size(69, 13)
-        Precio_ventaLabel.TabIndex = 6
-        Precio_ventaLabel.Text = "precio venta:"
+        Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbFiltrar.FormattingEnabled = True
+        Me.cbFiltrar.Items.AddRange(New Object() {"Fecha", "Vendedor", "Monto"})
+        Me.cbFiltrar.Location = New System.Drawing.Point(700, 18)
+        Me.cbFiltrar.Name = "cbFiltrar"
+        Me.cbFiltrar.Size = New System.Drawing.Size(87, 21)
+        Me.cbFiltrar.TabIndex = 23
         '
-        'Precio_ventaTextBox
+        'btnPrimero
         '
-        Me.Precio_ventaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "precio_venta", True))
-        Me.Precio_ventaTextBox.Location = New System.Drawing.Point(153, 152)
-        Me.Precio_ventaTextBox.Name = "Precio_ventaTextBox"
-        Me.Precio_ventaTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Precio_ventaTextBox.TabIndex = 7
+        Me.btnPrimero.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnPrimero.FlatAppearance.BorderSize = 0
+        Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrimero.Location = New System.Drawing.Point(765, 306)
+        Me.btnPrimero.Name = "btnPrimero"
+        Me.btnPrimero.Size = New System.Drawing.Size(37, 27)
+        Me.btnPrimero.TabIndex = 25
+        Me.btnPrimero.TabStop = False
+        Me.btnPrimero.Text = "<<"
+        Me.btnPrimero.UseVisualStyleBackColor = False
         '
-        'CantidadLabel
+        'btnAnt
         '
-        CantidadLabel.AutoSize = True
-        CantidadLabel.Location = New System.Drawing.Point(78, 181)
-        CantidadLabel.Name = "CantidadLabel"
-        CantidadLabel.Size = New System.Drawing.Size(51, 13)
-        CantidadLabel.TabIndex = 8
-        CantidadLabel.Text = "cantidad:"
+        Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnAnt.FlatAppearance.BorderSize = 0
+        Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnt.Location = New System.Drawing.Point(808, 306)
+        Me.btnAnt.Name = "btnAnt"
+        Me.btnAnt.Size = New System.Drawing.Size(37, 27)
+        Me.btnAnt.TabIndex = 26
+        Me.btnAnt.TabStop = False
+        Me.btnAnt.Text = "<"
+        Me.btnAnt.UseVisualStyleBackColor = False
         '
-        'CantidadTextBox
+        'btnSig
         '
-        Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "cantidad", True))
-        Me.CantidadTextBox.Location = New System.Drawing.Point(153, 178)
-        Me.CantidadTextBox.Name = "CantidadTextBox"
-        Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.CantidadTextBox.TabIndex = 9
+        Me.btnSig.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnSig.FlatAppearance.BorderSize = 0
+        Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSig.Location = New System.Drawing.Point(851, 306)
+        Me.btnSig.Name = "btnSig"
+        Me.btnSig.Size = New System.Drawing.Size(37, 27)
+        Me.btnSig.TabIndex = 27
+        Me.btnSig.TabStop = False
+        Me.btnSig.Text = ">"
+        Me.btnSig.UseVisualStyleBackColor = False
         '
-        'Id_vendedorLabel
+        'btnUltimo
         '
-        Id_vendedorLabel.AutoSize = True
-        Id_vendedorLabel.Location = New System.Drawing.Point(78, 207)
-        Id_vendedorLabel.Name = "Id_vendedorLabel"
-        Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
-        Id_vendedorLabel.TabIndex = 10
-        Id_vendedorLabel.Text = "id vendedor:"
+        Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnUltimo.FlatAppearance.BorderSize = 0
+        Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUltimo.Location = New System.Drawing.Point(894, 306)
+        Me.btnUltimo.Name = "btnUltimo"
+        Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
+        Me.btnUltimo.TabIndex = 28
+        Me.btnUltimo.TabStop = False
+        Me.btnUltimo.Text = ">>"
+        Me.btnUltimo.UseVisualStyleBackColor = False
         '
-        'Id_vendedorComboBox
+        'btnEliminar
         '
-        Me.Id_vendedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_vendedor", True))
-        Me.Id_vendedorComboBox.FormattingEnabled = True
-        Me.Id_vendedorComboBox.Location = New System.Drawing.Point(153, 204)
-        Me.Id_vendedorComboBox.Name = "Id_vendedorComboBox"
-        Me.Id_vendedorComboBox.Size = New System.Drawing.Size(200, 21)
-        Me.Id_vendedorComboBox.TabIndex = 11
+        Me.btnEliminar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnEliminar.FlatAppearance.BorderSize = 0
+        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEliminar.Location = New System.Drawing.Point(12, 306)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(87, 29)
+        Me.btnEliminar.TabIndex = 30
+        Me.btnEliminar.TabStop = False
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = False
         '
-        'Id_clienteLabel
+        'btnEditar
         '
-        Id_clienteLabel.AutoSize = True
-        Id_clienteLabel.Location = New System.Drawing.Point(78, 234)
-        Id_clienteLabel.Name = "Id_clienteLabel"
-        Id_clienteLabel.Size = New System.Drawing.Size(52, 13)
-        Id_clienteLabel.TabIndex = 12
-        Id_clienteLabel.Text = "id cliente:"
-        '
-        'Id_clienteComboBox
-        '
-        Me.Id_clienteComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_cliente", True))
-        Me.Id_clienteComboBox.FormattingEnabled = True
-        Me.Id_clienteComboBox.Location = New System.Drawing.Point(153, 231)
-        Me.Id_clienteComboBox.Name = "Id_clienteComboBox"
-        Me.Id_clienteComboBox.Size = New System.Drawing.Size(200, 21)
-        Me.Id_clienteComboBox.TabIndex = 13
+        Me.btnEditar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnEditar.FlatAppearance.BorderSize = 0
+        Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEditar.Location = New System.Drawing.Point(105, 306)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(87, 29)
+        Me.btnEditar.TabIndex = 29
+        Me.btnEditar.TabStop = False
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = False
         '
         'FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(892, 347)
-        Me.Controls.Add(IdLabel)
-        Me.Controls.Add(Me.IdTextBox)
-        Me.Controls.Add(Fecha_ventaLabel)
-        Me.Controls.Add(Me.Fecha_ventaDateTimePicker)
-        Me.Controls.Add(Precio_ventaLabel)
-        Me.Controls.Add(Me.Precio_ventaTextBox)
-        Me.Controls.Add(CantidadLabel)
-        Me.Controls.Add(Me.CantidadTextBox)
-        Me.Controls.Add(Id_vendedorLabel)
-        Me.Controls.Add(Me.Id_vendedorComboBox)
-        Me.Controls.Add(Id_clienteLabel)
-        Me.Controls.Add(Me.Id_clienteComboBox)
+        Me.Controls.Add(Me.btnPrimero)
+        Me.Controls.Add(Me.btnAnt)
+        Me.Controls.Add(Me.btnSig)
+        Me.Controls.Add(Me.btnUltimo)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnEditar)
+        Me.Controls.Add(Me.btnFiltrar)
+        Me.Controls.Add(Me.cbFiltrar)
+        Me.Controls.Add(Me.txtBuscar)
+        Me.Controls.Add(Me.pbTxtBuscar)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.VentaDataGridView)
         Me.Controls.Add(Me.btnAgregar)
         Me.Name = "FormVentas"
@@ -271,6 +302,7 @@ Partial Class FormVentas
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -290,10 +322,15 @@ Partial Class FormVentas
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Fecha_ventaDateTimePicker As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Precio_ventaTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents CantidadTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Id_vendedorComboBox As System.Windows.Forms.ComboBox
-    Friend WithEvents Id_clienteComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
+    Friend WithEvents pbTxtBuscar As System.Windows.Forms.PictureBox
+    Friend WithEvents btnBuscar As System.Windows.Forms.Button
+    Friend WithEvents btnFiltrar As System.Windows.Forms.Button
+    Friend WithEvents cbFiltrar As System.Windows.Forms.ComboBox
+    Friend WithEvents btnPrimero As System.Windows.Forms.Button
+    Friend WithEvents btnAnt As System.Windows.Forms.Button
+    Friend WithEvents btnSig As System.Windows.Forms.Button
+    Friend WithEvents btnUltimo As System.Windows.Forms.Button
+    Friend WithEvents btnEliminar As System.Windows.Forms.Button
+    Friend WithEvents btnEditar As System.Windows.Forms.Button
 End Class
