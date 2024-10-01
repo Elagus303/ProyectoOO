@@ -23,27 +23,36 @@ Partial Class FormVentas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim IdLabel As System.Windows.Forms.Label
+        Dim Fecha_ventaLabel As System.Windows.Forms.Label
+        Dim Precio_ventaLabel As System.Windows.Forms.Label
+        Dim CantidadLabel As System.Windows.Forms.Label
+        Dim Id_vendedorLabel As System.Windows.Forms.Label
+        Dim Id_clienteLabel As System.Windows.Forms.Label
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.VentaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VentaTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.VentaDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewCheckBoxColumn1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewCheckBoxColumn2 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.DataGridViewCheckBoxColumn3 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.btnPrimero = New System.Windows.Forms.Button()
-        Me.btnAnt = New System.Windows.Forms.Button()
-        Me.btnSig = New System.Windows.Forms.Button()
-        Me.btnUltimo = New System.Windows.Forms.Button()
-        Me.btnAnadir = New System.Windows.Forms.Button()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.IdTextBox = New System.Windows.Forms.TextBox()
+        Me.Fecha_ventaDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.Precio_ventaTextBox = New System.Windows.Forms.TextBox()
+        Me.CantidadTextBox = New System.Windows.Forms.TextBox()
+        Me.Id_vendedorComboBox = New System.Windows.Forms.ComboBox()
+        Me.Id_clienteComboBox = New System.Windows.Forms.ComboBox()
+        IdLabel = New System.Windows.Forms.Label()
+        Fecha_ventaLabel = New System.Windows.Forms.Label()
+        Precio_ventaLabel = New System.Windows.Forms.Label()
+        CantidadLabel = New System.Windows.Forms.Label()
+        Id_vendedorLabel = New System.Windows.Forms.Label()
+        Id_clienteLabel = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -74,16 +83,28 @@ Partial Class FormVentas
         Me.TableAdapterManager.VendedoresTableAdapter = Nothing
         Me.TableAdapterManager.VentaTableAdapter = Me.VentaTableAdapter
         '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(558, 13)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
+        Me.btnAgregar.TabIndex = 2
+        Me.btnAgregar.Text = "Agregar"
+        Me.btnAgregar.UseVisualStyleBackColor = True
+        '
         'VentaDataGridView
         '
+        Me.VentaDataGridView.AllowUserToAddRows = False
+        Me.VentaDataGridView.AllowUserToDeleteRows = False
         Me.VentaDataGridView.AutoGenerateColumns = False
         Me.VentaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.VentaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewCheckBoxColumn1, Me.DataGridViewCheckBoxColumn2, Me.DataGridViewCheckBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.VentaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.VentaDataGridView.DataSource = Me.VentaBindingSource
-        Me.VentaDataGridView.Location = New System.Drawing.Point(-16, 78)
+        Me.VentaDataGridView.Location = New System.Drawing.Point(359, 75)
         Me.VentaDataGridView.Name = "VentaDataGridView"
-        Me.VentaDataGridView.Size = New System.Drawing.Size(938, 220)
-        Me.VentaDataGridView.TabIndex = 1
+        Me.VentaDataGridView.ReadOnly = True
+        Me.VentaDataGridView.Size = New System.Drawing.Size(513, 220)
+        Me.VentaDataGridView.TabIndex = 2
         '
         'DataGridViewTextBoxColumn1
         '
@@ -104,24 +125,6 @@ Partial Class FormVentas
         Me.DataGridViewTextBoxColumn3.HeaderText = "precio_venta"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
         '
-        'DataGridViewCheckBoxColumn1
-        '
-        Me.DataGridViewCheckBoxColumn1.DataPropertyName = "es_color"
-        Me.DataGridViewCheckBoxColumn1.HeaderText = "es_color"
-        Me.DataGridViewCheckBoxColumn1.Name = "DataGridViewCheckBoxColumn1"
-        '
-        'DataGridViewCheckBoxColumn2
-        '
-        Me.DataGridViewCheckBoxColumn2.DataPropertyName = "es_doble_faz"
-        Me.DataGridViewCheckBoxColumn2.HeaderText = "es_doble_faz"
-        Me.DataGridViewCheckBoxColumn2.Name = "DataGridViewCheckBoxColumn2"
-        '
-        'DataGridViewCheckBoxColumn3
-        '
-        Me.DataGridViewCheckBoxColumn3.DataPropertyName = "es_anillado"
-        Me.DataGridViewCheckBoxColumn3.HeaderText = "es_anillado"
-        Me.DataGridViewCheckBoxColumn3.Name = "DataGridViewCheckBoxColumn3"
-        '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidad"
@@ -140,109 +143,157 @@ Partial Class FormVentas
         Me.DataGridViewTextBoxColumn6.HeaderText = "id_cliente"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         '
-        'btnPrimero
+        'IdLabel
         '
-        Me.btnPrimero.Location = New System.Drawing.Point(61, 29)
-        Me.btnPrimero.Name = "btnPrimero"
-        Me.btnPrimero.Size = New System.Drawing.Size(75, 23)
-        Me.btnPrimero.TabIndex = 2
-        Me.btnPrimero.Text = "<<"
-        Me.btnPrimero.UseVisualStyleBackColor = True
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(78, 103)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(18, 13)
+        IdLabel.TabIndex = 2
+        IdLabel.Text = "id:"
         '
-        'btnAnt
+        'IdTextBox
         '
-        Me.btnAnt.Location = New System.Drawing.Point(142, 29)
-        Me.btnAnt.Name = "btnAnt"
-        Me.btnAnt.Size = New System.Drawing.Size(75, 23)
-        Me.btnAnt.TabIndex = 3
-        Me.btnAnt.Text = "<"
-        Me.btnAnt.UseVisualStyleBackColor = True
+        Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id", True))
+        Me.IdTextBox.Location = New System.Drawing.Point(153, 100)
+        Me.IdTextBox.Name = "IdTextBox"
+        Me.IdTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.IdTextBox.TabIndex = 3
         '
-        'btnSig
+        'Fecha_ventaLabel
         '
-        Me.btnSig.Location = New System.Drawing.Point(223, 29)
-        Me.btnSig.Name = "btnSig"
-        Me.btnSig.Size = New System.Drawing.Size(75, 23)
-        Me.btnSig.TabIndex = 4
-        Me.btnSig.Text = ">"
-        Me.btnSig.UseVisualStyleBackColor = True
+        Fecha_ventaLabel.AutoSize = True
+        Fecha_ventaLabel.Location = New System.Drawing.Point(78, 130)
+        Fecha_ventaLabel.Name = "Fecha_ventaLabel"
+        Fecha_ventaLabel.Size = New System.Drawing.Size(67, 13)
+        Fecha_ventaLabel.TabIndex = 4
+        Fecha_ventaLabel.Text = "fecha venta:"
         '
-        'btnUltimo
+        'Fecha_ventaDateTimePicker
         '
-        Me.btnUltimo.Location = New System.Drawing.Point(304, 29)
-        Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(75, 23)
-        Me.btnUltimo.TabIndex = 5
-        Me.btnUltimo.Text = ">>"
-        Me.btnUltimo.UseVisualStyleBackColor = True
+        Me.Fecha_ventaDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.VentaBindingSource, "fecha_venta", True))
+        Me.Fecha_ventaDateTimePicker.Location = New System.Drawing.Point(153, 126)
+        Me.Fecha_ventaDateTimePicker.Name = "Fecha_ventaDateTimePicker"
+        Me.Fecha_ventaDateTimePicker.Size = New System.Drawing.Size(200, 20)
+        Me.Fecha_ventaDateTimePicker.TabIndex = 5
         '
-        'btnAnadir
+        'Precio_ventaLabel
         '
-        Me.btnAnadir.Location = New System.Drawing.Point(437, 29)
-        Me.btnAnadir.Name = "btnAnadir"
-        Me.btnAnadir.Size = New System.Drawing.Size(75, 23)
-        Me.btnAnadir.TabIndex = 6
-        Me.btnAnadir.Text = "Añadir"
-        Me.btnAnadir.UseVisualStyleBackColor = True
+        Precio_ventaLabel.AutoSize = True
+        Precio_ventaLabel.Location = New System.Drawing.Point(78, 155)
+        Precio_ventaLabel.Name = "Precio_ventaLabel"
+        Precio_ventaLabel.Size = New System.Drawing.Size(69, 13)
+        Precio_ventaLabel.TabIndex = 6
+        Precio_ventaLabel.Text = "precio venta:"
         '
-        'btnEditar
+        'Precio_ventaTextBox
         '
-        Me.btnEditar.Location = New System.Drawing.Point(518, 29)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEditar.TabIndex = 7
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.Precio_ventaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "precio_venta", True))
+        Me.Precio_ventaTextBox.Location = New System.Drawing.Point(153, 152)
+        Me.Precio_ventaTextBox.Name = "Precio_ventaTextBox"
+        Me.Precio_ventaTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.Precio_ventaTextBox.TabIndex = 7
         '
-        'btnEliminar
+        'CantidadLabel
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(599, 29)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEliminar.TabIndex = 8
-        Me.btnEliminar.Text = "Eliminar"
-        Me.btnEliminar.UseVisualStyleBackColor = True
+        CantidadLabel.AutoSize = True
+        CantidadLabel.Location = New System.Drawing.Point(78, 181)
+        CantidadLabel.Name = "CantidadLabel"
+        CantidadLabel.Size = New System.Drawing.Size(51, 13)
+        CantidadLabel.TabIndex = 8
+        CantidadLabel.Text = "cantidad:"
         '
-        'Ventas
+        'CantidadTextBox
+        '
+        Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "cantidad", True))
+        Me.CantidadTextBox.Location = New System.Drawing.Point(153, 178)
+        Me.CantidadTextBox.Name = "CantidadTextBox"
+        Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.CantidadTextBox.TabIndex = 9
+        '
+        'Id_vendedorLabel
+        '
+        Id_vendedorLabel.AutoSize = True
+        Id_vendedorLabel.Location = New System.Drawing.Point(78, 207)
+        Id_vendedorLabel.Name = "Id_vendedorLabel"
+        Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
+        Id_vendedorLabel.TabIndex = 10
+        Id_vendedorLabel.Text = "id vendedor:"
+        '
+        'Id_vendedorComboBox
+        '
+        Me.Id_vendedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_vendedor", True))
+        Me.Id_vendedorComboBox.FormattingEnabled = True
+        Me.Id_vendedorComboBox.Location = New System.Drawing.Point(153, 204)
+        Me.Id_vendedorComboBox.Name = "Id_vendedorComboBox"
+        Me.Id_vendedorComboBox.Size = New System.Drawing.Size(200, 21)
+        Me.Id_vendedorComboBox.TabIndex = 11
+        '
+        'Id_clienteLabel
+        '
+        Id_clienteLabel.AutoSize = True
+        Id_clienteLabel.Location = New System.Drawing.Point(78, 234)
+        Id_clienteLabel.Name = "Id_clienteLabel"
+        Id_clienteLabel.Size = New System.Drawing.Size(52, 13)
+        Id_clienteLabel.TabIndex = 12
+        Id_clienteLabel.Text = "id cliente:"
+        '
+        'Id_clienteComboBox
+        '
+        Me.Id_clienteComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_cliente", True))
+        Me.Id_clienteComboBox.FormattingEnabled = True
+        Me.Id_clienteComboBox.Location = New System.Drawing.Point(153, 231)
+        Me.Id_clienteComboBox.Name = "Id_clienteComboBox"
+        Me.Id_clienteComboBox.Size = New System.Drawing.Size(200, 21)
+        Me.Id_clienteComboBox.TabIndex = 13
+        '
+        'FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(911, 327)
-        Me.Controls.Add(Me.btnEliminar)
-        Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btnAnadir)
-        Me.Controls.Add(Me.btnUltimo)
-        Me.Controls.Add(Me.btnSig)
-        Me.Controls.Add(Me.btnAnt)
-        Me.Controls.Add(Me.btnPrimero)
+        Me.ClientSize = New System.Drawing.Size(892, 347)
+        Me.Controls.Add(IdLabel)
+        Me.Controls.Add(Me.IdTextBox)
+        Me.Controls.Add(Fecha_ventaLabel)
+        Me.Controls.Add(Me.Fecha_ventaDateTimePicker)
+        Me.Controls.Add(Precio_ventaLabel)
+        Me.Controls.Add(Me.Precio_ventaTextBox)
+        Me.Controls.Add(CantidadLabel)
+        Me.Controls.Add(Me.CantidadTextBox)
+        Me.Controls.Add(Id_vendedorLabel)
+        Me.Controls.Add(Me.Id_vendedorComboBox)
+        Me.Controls.Add(Id_clienteLabel)
+        Me.Controls.Add(Me.Id_clienteComboBox)
         Me.Controls.Add(Me.VentaDataGridView)
-        Me.Name = "Ventas"
-        Me.Text = "Ventas"
+        Me.Controls.Add(Me.btnAgregar)
+        Me.Name = "FormVentas"
+        Me.Text = "FormVentas"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents BD_ImprentaDataSet As ProyectoOO.BD_ImprentaDataSet
     Friend WithEvents VentaBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents VentaTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter
     Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents VentaDataGridView As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn1 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn2 As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents DataGridViewCheckBoxColumn3 As System.Windows.Forms.DataGridViewCheckBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents btnPrimero As System.Windows.Forms.Button
-    Friend WithEvents btnAnt As System.Windows.Forms.Button
-    Friend WithEvents btnSig As System.Windows.Forms.Button
-    Friend WithEvents btnUltimo As System.Windows.Forms.Button
-    Friend WithEvents btnAnadir As System.Windows.Forms.Button
-    Friend WithEvents btnEditar As System.Windows.Forms.Button
-    Friend WithEvents btnEliminar As System.Windows.Forms.Button
+    Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Fecha_ventaDateTimePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Precio_ventaTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents CantidadTextBox As System.Windows.Forms.TextBox
+    Friend WithEvents Id_vendedorComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Id_clienteComboBox As System.Windows.Forms.ComboBox
 End Class

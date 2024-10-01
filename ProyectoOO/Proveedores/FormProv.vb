@@ -92,7 +92,12 @@
 
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
         If txtBuscar.Text <> "" Then
-            buscarPorTexto()
+            BuscarPorTexto()
+            If Me.ProveedoresDataGridView.RowCount <= 0 Then
+                lblTabla.Visible = True
+            Else
+                lblTabla.Visible = False
+            End If
         End If
     End Sub
     Private dv As New DataView
@@ -109,6 +114,7 @@
         If txtBuscar.Text = "" Then
             'dv.RowFilter = ""
             Me.ProveedoresBindingSource.RemoveFilter()
+            lblTabla.Visible = False
         End If
     End Sub
 

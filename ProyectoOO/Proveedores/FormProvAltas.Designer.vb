@@ -51,7 +51,7 @@ Partial Class FormProvAltas
         'NombreLabel
         '
         NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(63, 57)
+        NombreLabel.Location = New System.Drawing.Point(61, 57)
         NombreLabel.Name = "NombreLabel"
         NombreLabel.Size = New System.Drawing.Size(47, 13)
         NombreLabel.TabIndex = 3
@@ -60,7 +60,7 @@ Partial Class FormProvAltas
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(63, 83)
+        TelefonoLabel.Location = New System.Drawing.Point(61, 83)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(52, 13)
         TelefonoLabel.TabIndex = 5
@@ -69,7 +69,7 @@ Partial Class FormProvAltas
         'CorreoLabel
         '
         CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(63, 109)
+        CorreoLabel.Location = New System.Drawing.Point(61, 109)
         CorreoLabel.Name = "CorreoLabel"
         CorreoLabel.Size = New System.Drawing.Size(41, 13)
         CorreoLabel.TabIndex = 7
@@ -78,7 +78,7 @@ Partial Class FormProvAltas
         'DireccionLabel
         '
         DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(63, 135)
+        DireccionLabel.Location = New System.Drawing.Point(61, 135)
         DireccionLabel.Name = "DireccionLabel"
         DireccionLabel.Size = New System.Drawing.Size(55, 13)
         DireccionLabel.TabIndex = 9
@@ -87,7 +87,7 @@ Partial Class FormProvAltas
         'LocalidadLabel
         '
         LocalidadLabel.AutoSize = True
-        LocalidadLabel.Location = New System.Drawing.Point(63, 161)
+        LocalidadLabel.Location = New System.Drawing.Point(61, 161)
         LocalidadLabel.Name = "LocalidadLabel"
         LocalidadLabel.Size = New System.Drawing.Size(56, 13)
         LocalidadLabel.TabIndex = 11
@@ -95,23 +95,29 @@ Partial Class FormProvAltas
         '
         'btnAnadir
         '
-        Me.btnAnadir.Location = New System.Drawing.Point(43, 226)
+        Me.btnAnadir.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnAnadir.FlatAppearance.BorderSize = 0
+        Me.btnAnadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnadir.Location = New System.Drawing.Point(44, 218)
         Me.btnAnadir.Name = "btnAnadir"
-        Me.btnAnadir.Size = New System.Drawing.Size(75, 23)
+        Me.btnAnadir.Size = New System.Drawing.Size(87, 29)
         Me.btnAnadir.TabIndex = 0
         Me.btnAnadir.TabStop = False
         Me.btnAnadir.Text = "Añadir"
-        Me.btnAnadir.UseVisualStyleBackColor = True
+        Me.btnAnadir.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(157, 225)
+        Me.btnCancelar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnCancelar.FlatAppearance.BorderSize = 0
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Location = New System.Drawing.Point(158, 217)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(87, 29)
         Me.btnCancelar.TabIndex = 1
         Me.btnCancelar.TabStop = False
         Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'BD_ImprentaDataSet
         '
@@ -141,7 +147,7 @@ Partial Class FormProvAltas
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(122, 54)
+        Me.NombreTextBox.Location = New System.Drawing.Point(120, 54)
         Me.NombreTextBox.MaxLength = 20
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
@@ -150,7 +156,7 @@ Partial Class FormProvAltas
         'TelefonoTextBox
         '
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "telefono", True))
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(122, 80)
+        Me.TelefonoTextBox.Location = New System.Drawing.Point(120, 80)
         Me.TelefonoTextBox.MaxLength = 10
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
         Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
@@ -159,7 +165,7 @@ Partial Class FormProvAltas
         'CorreoTextBox
         '
         Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "correo", True))
-        Me.CorreoTextBox.Location = New System.Drawing.Point(122, 106)
+        Me.CorreoTextBox.Location = New System.Drawing.Point(120, 106)
         Me.CorreoTextBox.MaxLength = 100
         Me.CorreoTextBox.Name = "CorreoTextBox"
         Me.CorreoTextBox.Size = New System.Drawing.Size(100, 20)
@@ -168,7 +174,7 @@ Partial Class FormProvAltas
         'DireccionTextBox
         '
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "direccion", True))
-        Me.DireccionTextBox.Location = New System.Drawing.Point(122, 132)
+        Me.DireccionTextBox.Location = New System.Drawing.Point(120, 132)
         Me.DireccionTextBox.MaxLength = 100
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
@@ -177,7 +183,7 @@ Partial Class FormProvAltas
         'LocalidadTextBox
         '
         Me.LocalidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ProveedoresBindingSource, "localidad", True))
-        Me.LocalidadTextBox.Location = New System.Drawing.Point(122, 158)
+        Me.LocalidadTextBox.Location = New System.Drawing.Point(120, 158)
         Me.LocalidadTextBox.MaxLength = 100
         Me.LocalidadTextBox.Name = "LocalidadTextBox"
         Me.LocalidadTextBox.Size = New System.Drawing.Size(100, 20)
@@ -187,6 +193,7 @@ Partial Class FormProvAltas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(284, 269)
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(Me.NombreTextBox)
@@ -200,8 +207,11 @@ Partial Class FormProvAltas
         Me.Controls.Add(Me.LocalidadTextBox)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAnadir)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormProvAltas"
-        Me.Text = "FormProvAltas"
+        Me.Text = "Agregar proveedor"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

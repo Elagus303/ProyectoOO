@@ -38,30 +38,37 @@ Partial Class Principal
         'MenuStripPpal
         '
         Me.MenuStripPpal.AutoSize = False
+        Me.MenuStripPpal.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.MenuStripPpal.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStripPpal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.VentasToolStripMenuItem, Me.VendedoresToolStripMenuItem, Me.FinanzasToolStripMenuItem})
+        Me.MenuStripPpal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow
         Me.MenuStripPpal.Location = New System.Drawing.Point(0, 0)
         Me.MenuStripPpal.Name = "MenuStripPpal"
-        Me.MenuStripPpal.Size = New System.Drawing.Size(490, 52)
+        Me.MenuStripPpal.Padding = New System.Windows.Forms.Padding(6, 2, 6, 2)
+        Me.MenuStripPpal.Size = New System.Drawing.Size(169, 384)
         Me.MenuStripPpal.TabIndex = 0
         Me.MenuStripPpal.Text = "MenuStrip1"
         '
         'ClientesToolStripMenuItem
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 48)
+        Me.ClientesToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(84, 48)
+        Me.ProveedoresToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'InsumosToolStripMenuItem
         '
         Me.InsumosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirInsumoToolStripMenuItem, Me.EditarInsumoToolStripMenuItem, Me.EliminarInsumoToolStripMenuItem})
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
-        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(64, 48)
+        Me.InsumosToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
         Me.InsumosToolStripMenuItem.Text = "Insumos"
         '
         'AñadirInsumoToolStripMenuItem
@@ -85,26 +92,30 @@ Partial Class Principal
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(54, 48)
+        Me.VentasToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'VendedoresToolStripMenuItem
         '
         Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
-        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(81, 48)
+        Me.VendedoresToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
         Me.VendedoresToolStripMenuItem.Text = "Vendedores"
         '
         'FinanzasToolStripMenuItem
         '
         Me.FinanzasToolStripMenuItem.Name = "FinanzasToolStripMenuItem"
-        Me.FinanzasToolStripMenuItem.Size = New System.Drawing.Size(64, 48)
+        Me.FinanzasToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        Me.FinanzasToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
         Me.FinanzasToolStripMenuItem.Text = "Finanzas"
         '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(490, 296)
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ClientSize = New System.Drawing.Size(490, 384)
         Me.Controls.Add(Me.MenuStripPpal)
         Me.MainMenuStrip = Me.MenuStripPpal
         Me.Name = "Principal"

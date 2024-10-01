@@ -41,9 +41,9 @@ Partial Public Class BD_ImprentaDataSet
     
     Private relationFK_Proveedores_Insumo As Global.System.Data.DataRelation
     
-    Private relationFK_Vendedores_Venta As Global.System.Data.DataRelation
-    
     Private relationFK_Clientes_Venta As Global.System.Data.DataRelation
+    
+    Private relationFK_Vendedores_Venta As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -324,8 +324,8 @@ Partial Public Class BD_ImprentaDataSet
         End If
         Me.relationFK_Roles_Vendedores = Me.Relations("FK_Roles_Vendedores")
         Me.relationFK_Proveedores_Insumo = Me.Relations("FK_Proveedores_Insumo")
-        Me.relationFK_Vendedores_Venta = Me.Relations("FK_Vendedores_Venta")
         Me.relationFK_Clientes_Venta = Me.Relations("FK_Clientes_Venta")
+        Me.relationFK_Vendedores_Venta = Me.Relations("FK_Vendedores_Venta")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -359,12 +359,12 @@ Partial Public Class BD_ImprentaDataSet
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn})
+        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn})
         Me.tableVenta.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn})
+        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn})
         Me.tableVenta.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
@@ -373,10 +373,10 @@ Partial Public Class BD_ImprentaDataSet
         Me.Relations.Add(Me.relationFK_Roles_Vendedores)
         Me.relationFK_Proveedores_Insumo = New Global.System.Data.DataRelation("FK_Proveedores_Insumo", New Global.System.Data.DataColumn() {Me.tableProveedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableInsumo.id_proovedorColumn}, false)
         Me.Relations.Add(Me.relationFK_Proveedores_Insumo)
-        Me.relationFK_Vendedores_Venta = New Global.System.Data.DataRelation("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn}, false)
-        Me.Relations.Add(Me.relationFK_Vendedores_Venta)
         Me.relationFK_Clientes_Venta = New Global.System.Data.DataRelation("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn}, false)
         Me.Relations.Add(Me.relationFK_Clientes_Venta)
+        Me.relationFK_Vendedores_Venta = New Global.System.Data.DataRelation("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn}, false)
+        Me.Relations.Add(Me.relationFK_Vendedores_Venta)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2092,12 +2092,6 @@ Partial Public Class BD_ImprentaDataSet
         
         Private columnprecio_venta As Global.System.Data.DataColumn
         
-        Private columnes_color As Global.System.Data.DataColumn
-        
-        Private columnes_doble_faz As Global.System.Data.DataColumn
-        
-        Private columnes_anillado As Global.System.Data.DataColumn
-        
         Private columncantidad As Global.System.Data.DataColumn
         
         Private columnid_vendedor As Global.System.Data.DataColumn
@@ -2165,30 +2159,6 @@ Partial Public Class BD_ImprentaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property es_colorColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnes_color
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property es_doble_fazColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnes_doble_faz
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property es_anilladoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnes_anillado
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property cantidadColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columncantidad
@@ -2248,14 +2218,14 @@ Partial Public Class BD_ImprentaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddVentaRow(ByVal fecha_venta As Date, ByVal precio_venta As Integer, ByVal es_color As Boolean, ByVal es_doble_faz As Boolean, ByVal es_anillado As Boolean, ByVal cantidad As Integer, ByVal parentVendedoresRowByFK_Vendedores_Venta As VendedoresRow, ByVal parentClientesRowByFK_Clientes_Venta As ClientesRow) As VentaRow
+        Public Overloads Function AddVentaRow(ByVal fecha_venta As Date, ByVal precio_venta As Integer, ByVal cantidad As Integer, ByVal parentVendedoresRowByFK_Vendedores_Venta As VendedoresRow, ByVal parentClientesRowByFK_Clientes_Venta As ClientesRow) As VentaRow
             Dim rowVentaRow As VentaRow = CType(Me.NewRow,VentaRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, fecha_venta, precio_venta, es_color, es_doble_faz, es_anillado, cantidad, Nothing, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, fecha_venta, precio_venta, cantidad, Nothing, Nothing}
             If (Not (parentVendedoresRowByFK_Vendedores_Venta) Is Nothing) Then
-                columnValuesArray(7) = parentVendedoresRowByFK_Vendedores_Venta(0)
+                columnValuesArray(4) = parentVendedoresRowByFK_Vendedores_Venta(0)
             End If
             If (Not (parentClientesRowByFK_Clientes_Venta) Is Nothing) Then
-                columnValuesArray(8) = parentClientesRowByFK_Clientes_Venta(0)
+                columnValuesArray(5) = parentClientesRowByFK_Clientes_Venta(0)
             End If
             rowVentaRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowVentaRow)
@@ -2288,9 +2258,6 @@ Partial Public Class BD_ImprentaDataSet
             Me.columnid = MyBase.Columns("id")
             Me.columnfecha_venta = MyBase.Columns("fecha_venta")
             Me.columnprecio_venta = MyBase.Columns("precio_venta")
-            Me.columnes_color = MyBase.Columns("es_color")
-            Me.columnes_doble_faz = MyBase.Columns("es_doble_faz")
-            Me.columnes_anillado = MyBase.Columns("es_anillado")
             Me.columncantidad = MyBase.Columns("cantidad")
             Me.columnid_vendedor = MyBase.Columns("id_vendedor")
             Me.columnid_cliente = MyBase.Columns("id_cliente")
@@ -2305,12 +2272,6 @@ Partial Public Class BD_ImprentaDataSet
             MyBase.Columns.Add(Me.columnfecha_venta)
             Me.columnprecio_venta = New Global.System.Data.DataColumn("precio_venta", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnprecio_venta)
-            Me.columnes_color = New Global.System.Data.DataColumn("es_color", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnes_color)
-            Me.columnes_doble_faz = New Global.System.Data.DataColumn("es_doble_faz", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnes_doble_faz)
-            Me.columnes_anillado = New Global.System.Data.DataColumn("es_anillado", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnes_anillado)
             Me.columncantidad = New Global.System.Data.DataColumn("cantidad", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columncantidad)
             Me.columnid_vendedor = New Global.System.Data.DataColumn("id_vendedor", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
@@ -2326,9 +2287,6 @@ Partial Public Class BD_ImprentaDataSet
             Me.columnid.Unique = true
             Me.columnfecha_venta.AllowDBNull = false
             Me.columnprecio_venta.AllowDBNull = false
-            Me.columnes_color.AllowDBNull = false
-            Me.columnes_doble_faz.AllowDBNull = false
-            Me.columnes_anillado.AllowDBNull = false
             Me.columncantidad.AllowDBNull = false
             Me.columnid_vendedor.AllowDBNull = false
             Me.columnid_cliente.AllowDBNull = false
@@ -3066,39 +3024,6 @@ Partial Public Class BD_ImprentaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property es_color() As Boolean
-            Get
-                Return CType(Me(Me.tableVenta.es_colorColumn),Boolean)
-            End Get
-            Set
-                Me(Me.tableVenta.es_colorColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property es_doble_faz() As Boolean
-            Get
-                Return CType(Me(Me.tableVenta.es_doble_fazColumn),Boolean)
-            End Get
-            Set
-                Me(Me.tableVenta.es_doble_fazColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property es_anillado() As Boolean
-            Get
-                Return CType(Me(Me.tableVenta.es_anilladoColumn),Boolean)
-            End Get
-            Set
-                Me(Me.tableVenta.es_anilladoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property cantidad() As Integer
             Get
                 Return CType(Me(Me.tableVenta.cantidadColumn),Integer)
@@ -3132,23 +3057,23 @@ Partial Public Class BD_ImprentaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property VendedoresRow() As VendedoresRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Vendedores_Venta")),VendedoresRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK_Vendedores_Venta"))
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ClientesRow() As ClientesRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Clientes_Venta")),ClientesRow)
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("FK_Clientes_Venta"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property VendedoresRow() As VendedoresRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Vendedores_Venta")),VendedoresRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_Vendedores_Venta"))
             End Set
         End Property
     End Class
@@ -5148,9 +5073,6 @@ Namespace BD_ImprentaDataSetTableAdapters
             tableMapping.ColumnMappings.Add("id", "id")
             tableMapping.ColumnMappings.Add("fecha_venta", "fecha_venta")
             tableMapping.ColumnMappings.Add("precio_venta", "precio_venta")
-            tableMapping.ColumnMappings.Add("es_color", "es_color")
-            tableMapping.ColumnMappings.Add("es_doble_faz", "es_doble_faz")
-            tableMapping.ColumnMappings.Add("es_anillado", "es_anillado")
             tableMapping.ColumnMappings.Add("cantidad", "cantidad")
             tableMapping.ColumnMappings.Add("id_vendedor", "id_vendedor")
             tableMapping.ColumnMappings.Add("id_cliente", "id_cliente")
@@ -5162,33 +5084,25 @@ Namespace BD_ImprentaDataSetTableAdapters
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Venta] ([fecha_venta], [precio_venta], [es_color], [es_doble_faz], ["& _ 
-                "es_anillado], [cantidad], [id_vendedor], [id_cliente]) VALUES (@p1, @p2, @p3, @p"& _ 
-                "4, @p5, @p6, @p7, @p8)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Venta] ([fecha_venta], [precio_venta], [cantidad], [id_vendedor], [i"& _ 
+                "d_cliente]) VALUES (@p1, @p2, @p3, @p4, @p5)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "fecha_venta", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "precio_venta", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "es_color", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "es_doble_faz", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "es_anillado", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cantidad", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p7", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_vendedor", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p8", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cantidad", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_vendedor", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [Venta] SET [fecha_venta] = @p1, [precio_venta] = @p2, [es_color] = @p3, ["& _ 
-                "es_doble_faz] = @p4, [es_anillado] = @p5, [cantidad] = @p6, [id_vendedor] = @p7,"& _ 
-                " [id_cliente] = @p8 WHERE (([id] = @p9))"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [Venta] SET [fecha_venta] = @p1, [precio_venta] = @p2, [cantidad] = @p3, ["& _ 
+                "id_vendedor] = @p4, [id_cliente] = @p5 WHERE (([id] = @p6))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p1", Global.System.Data.SqlDbType.DateTime, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "fecha_venta", Global.System.Data.DataRowVersion.Current, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p2", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "precio_venta", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "es_color", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "es_doble_faz", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Bit, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "es_anillado", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cantidad", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p7", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_vendedor", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p8", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Current, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p9", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p3", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "cantidad", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p4", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_vendedor", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p5", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id_cliente", Global.System.Data.DataRowVersion.Current, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlServerCe.SqlCeParameter("@p6", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, true, 0, 0, "id", Global.System.Data.DataRowVersion.Original, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -5204,8 +5118,8 @@ Namespace BD_ImprentaDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlServerCe.SqlCeCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT [id], [fecha_venta], [precio_venta], [es_color], [es_doble_faz], [es_anill"& _ 
-                "ado], [cantidad], [id_vendedor], [id_cliente] FROM [Venta]"
+            Me._commandCollection(0).CommandText = "SELECT id, fecha_venta, precio_venta, cantidad, id_vendedor, id_cliente FROM Vent"& _ 
+                "a"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5286,15 +5200,16 @@ Namespace BD_ImprentaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal p1 As Date, ByVal p2 As Integer, ByVal p3 As Boolean, ByVal p4 As Boolean, ByVal p5 As Boolean, ByVal p6 As Integer, ByVal p7 As Integer, ByVal p8 As Integer) As Integer
+        Public Overloads Overridable Function Insert(ByVal p1 As Date, ByVal p2 As Integer, ByVal p3 As Integer, ByVal p4 As Global.System.Nullable(Of Integer), ByVal p5 As Integer) As Integer
             Me.Adapter.InsertCommand.Parameters(0).Value = CType(p1,Date)
             Me.Adapter.InsertCommand.Parameters(1).Value = CType(p2,Integer)
-            Me.Adapter.InsertCommand.Parameters(2).Value = CType(p3,Boolean)
-            Me.Adapter.InsertCommand.Parameters(3).Value = CType(p4,Boolean)
-            Me.Adapter.InsertCommand.Parameters(4).Value = CType(p5,Boolean)
-            Me.Adapter.InsertCommand.Parameters(5).Value = CType(p6,Integer)
-            Me.Adapter.InsertCommand.Parameters(6).Value = CType(p7,Integer)
-            Me.Adapter.InsertCommand.Parameters(7).Value = CType(p8,Integer)
+            Me.Adapter.InsertCommand.Parameters(2).Value = CType(p3,Integer)
+            If (p4.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(p4.Value,Integer)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.InsertCommand.Parameters(4).Value = CType(p5,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5314,16 +5229,17 @@ Namespace BD_ImprentaDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal p1 As Date, ByVal p2 As Integer, ByVal p3 As Boolean, ByVal p4 As Boolean, ByVal p5 As Boolean, ByVal p6 As Integer, ByVal p7 As Integer, ByVal p8 As Integer, ByVal p9 As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal p1 As Date, ByVal p2 As Integer, ByVal p3 As Integer, ByVal p4 As Global.System.Nullable(Of Integer), ByVal p5 As Integer, ByVal p6 As Integer) As Integer
             Me.Adapter.UpdateCommand.Parameters(0).Value = CType(p1,Date)
             Me.Adapter.UpdateCommand.Parameters(1).Value = CType(p2,Integer)
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4,Boolean)
-            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,Boolean)
+            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(p3,Integer)
+            If (p4.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(p4.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(p5,Integer)
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(p6,Integer)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(p7,Integer)
-            Me.Adapter.UpdateCommand.Parameters(7).Value = CType(p8,Integer)
-            Me.Adapter.UpdateCommand.Parameters(8).Value = CType(p9,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then

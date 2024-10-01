@@ -44,6 +44,7 @@ Partial Class FormProv
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.lblTabla = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -83,10 +84,10 @@ Partial Class FormProv
         Me.ProveedoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProveedoresDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.ProveedoresDataGridView.DataSource = Me.ProveedoresBindingSource
-        Me.ProveedoresDataGridView.Location = New System.Drawing.Point(14, 110)
+        Me.ProveedoresDataGridView.Location = New System.Drawing.Point(12, 49)
         Me.ProveedoresDataGridView.Name = "ProveedoresDataGridView"
         Me.ProveedoresDataGridView.ReadOnly = True
-        Me.ProveedoresDataGridView.Size = New System.Drawing.Size(917, 229)
+        Me.ProveedoresDataGridView.Size = New System.Drawing.Size(919, 291)
         Me.ProveedoresDataGridView.TabIndex = 0
         '
         'id
@@ -260,12 +261,23 @@ Partial Class FormProv
         Me.txtBuscar.Size = New System.Drawing.Size(307, 20)
         Me.txtBuscar.TabIndex = 19
         '
+        'lblTabla
+        '
+        Me.lblTabla.AutoSize = True
+        Me.lblTabla.Location = New System.Drawing.Point(415, 96)
+        Me.lblTabla.Name = "lblTabla"
+        Me.lblTabla.Size = New System.Drawing.Size(155, 15)
+        Me.lblTabla.TabIndex = 20
+        Me.lblTabla.Text = "Sin resultados compatibles"
+        Me.lblTabla.Visible = False
+        '
         'FormProv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(943, 385)
+        Me.Controls.Add(Me.lblTabla)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.pbTxtBuscar)
         Me.Controls.Add(Me.btnPrimero)
@@ -278,7 +290,9 @@ Partial Class FormProv
         Me.Controls.Add(Me.btnAnadir)
         Me.Controls.Add(Me.ProveedoresDataGridView)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormProv"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormProv"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -309,4 +323,5 @@ Partial Class FormProv
     Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents lblTabla As System.Windows.Forms.Label
 End Class

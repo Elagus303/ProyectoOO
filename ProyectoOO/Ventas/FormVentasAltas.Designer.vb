@@ -24,91 +24,59 @@ Partial Class FormVentasAltas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim IdLabel As System.Windows.Forms.Label
-        Dim Es_colorLabel As System.Windows.Forms.Label
-        Dim Es_doble_fazLabel As System.Windows.Forms.Label
-        Dim Es_anilladoLabel As System.Windows.Forms.Label
         Dim CantidadLabel As System.Windows.Forms.Label
         Dim Id_vendedorLabel As System.Windows.Forms.Label
-        Dim Id_clienteLabel As System.Windows.Forms.Label
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.VentaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VentaTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
-        Me.Es_colorCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Es_doble_fazCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Es_anilladoCheckBox = New System.Windows.Forms.CheckBox()
         Me.CantidadTextBox = New System.Windows.Forms.TextBox()
-        Me.Id_vendedorTextBox = New System.Windows.Forms.TextBox()
-        Me.btnAnadir = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Id_clienteComboBox = New System.Windows.Forms.ComboBox()
+        Me.Id_vendedorComboBox = New System.Windows.Forms.ComboBox()
+        Me.rBtnBlancoNegro = New System.Windows.Forms.RadioButton()
+        Me.rBtnColor = New System.Windows.Forms.RadioButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.rBtnSimple = New System.Windows.Forms.RadioButton()
+        Me.rBtnDoble = New System.Windows.Forms.RadioButton()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.cBoxAnillado = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         IdLabel = New System.Windows.Forms.Label()
-        Es_colorLabel = New System.Windows.Forms.Label()
-        Es_doble_fazLabel = New System.Windows.Forms.Label()
-        Es_anilladoLabel = New System.Windows.Forms.Label()
         CantidadLabel = New System.Windows.Forms.Label()
         Id_vendedorLabel = New System.Windows.Forms.Label()
-        Id_clienteLabel = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'IdLabel
         '
         IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(193, 81)
+        IdLabel.Location = New System.Drawing.Point(101, 15)
         IdLabel.Name = "IdLabel"
         IdLabel.Size = New System.Drawing.Size(18, 13)
         IdLabel.TabIndex = 1
         IdLabel.Text = "id:"
         '
-        'Es_colorLabel
-        '
-        Es_colorLabel.AutoSize = True
-        Es_colorLabel.Location = New System.Drawing.Point(193, 161)
-        Es_colorLabel.Name = "Es_colorLabel"
-        Es_colorLabel.Size = New System.Drawing.Size(47, 13)
-        Es_colorLabel.TabIndex = 7
-        Es_colorLabel.Text = "es color:"
-        '
-        'Es_doble_fazLabel
-        '
-        Es_doble_fazLabel.AutoSize = True
-        Es_doble_fazLabel.Location = New System.Drawing.Point(193, 191)
-        Es_doble_fazLabel.Name = "Es_doble_fazLabel"
-        Es_doble_fazLabel.Size = New System.Drawing.Size(67, 13)
-        Es_doble_fazLabel.TabIndex = 9
-        Es_doble_fazLabel.Text = "es doble faz:"
-        '
-        'Es_anilladoLabel
-        '
-        Es_anilladoLabel.AutoSize = True
-        Es_anilladoLabel.Location = New System.Drawing.Point(193, 221)
-        Es_anilladoLabel.Name = "Es_anilladoLabel"
-        Es_anilladoLabel.Size = New System.Drawing.Size(60, 13)
-        Es_anilladoLabel.TabIndex = 11
-        Es_anilladoLabel.Text = "es anillado:"
-        '
         'CantidadLabel
         '
         CantidadLabel.AutoSize = True
-        CantidadLabel.Location = New System.Drawing.Point(193, 249)
+        CantidadLabel.Location = New System.Drawing.Point(101, 174)
         CantidadLabel.Name = "CantidadLabel"
         CantidadLabel.Size = New System.Drawing.Size(51, 13)
-        CantidadLabel.TabIndex = 13
+        CantidadLabel.TabIndex = 9
         CantidadLabel.Text = "cantidad:"
         '
         'Id_vendedorLabel
         '
         Id_vendedorLabel.AutoSize = True
-        Id_vendedorLabel.Location = New System.Drawing.Point(193, 275)
+        Id_vendedorLabel.Location = New System.Drawing.Point(101, 41)
         Id_vendedorLabel.Name = "Id_vendedorLabel"
         Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
-        Id_vendedorLabel.TabIndex = 15
+        Id_vendedorLabel.TabIndex = 11
         Id_vendedorLabel.Text = "id vendedor:"
         '
         'BD_ImprentaDataSet
@@ -139,148 +107,159 @@ Partial Class FormVentasAltas
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(268, 78)
+        Me.IdTextBox.Location = New System.Drawing.Point(192, 12)
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.Size = New System.Drawing.Size(200, 20)
         Me.IdTextBox.TabIndex = 2
         '
-        'Es_colorCheckBox
-        '
-        Me.Es_colorCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.VentaBindingSource, "es_color", True))
-        Me.Es_colorCheckBox.Location = New System.Drawing.Point(268, 156)
-        Me.Es_colorCheckBox.Name = "Es_colorCheckBox"
-        Me.Es_colorCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.Es_colorCheckBox.TabIndex = 8
-        Me.Es_colorCheckBox.Text = "CheckBox1"
-        Me.Es_colorCheckBox.UseVisualStyleBackColor = True
-        '
-        'Es_doble_fazCheckBox
-        '
-        Me.Es_doble_fazCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.VentaBindingSource, "es_doble_faz", True))
-        Me.Es_doble_fazCheckBox.Location = New System.Drawing.Point(268, 186)
-        Me.Es_doble_fazCheckBox.Name = "Es_doble_fazCheckBox"
-        Me.Es_doble_fazCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.Es_doble_fazCheckBox.TabIndex = 10
-        Me.Es_doble_fazCheckBox.Text = "CheckBox1"
-        Me.Es_doble_fazCheckBox.UseVisualStyleBackColor = True
-        '
-        'Es_anilladoCheckBox
-        '
-        Me.Es_anilladoCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.VentaBindingSource, "es_anillado", True))
-        Me.Es_anilladoCheckBox.Location = New System.Drawing.Point(268, 216)
-        Me.Es_anilladoCheckBox.Name = "Es_anilladoCheckBox"
-        Me.Es_anilladoCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.Es_anilladoCheckBox.TabIndex = 12
-        Me.Es_anilladoCheckBox.Text = "CheckBox1"
-        Me.Es_anilladoCheckBox.UseVisualStyleBackColor = True
-        '
         'CantidadTextBox
         '
         Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "cantidad", True))
-        Me.CantidadTextBox.Location = New System.Drawing.Point(268, 246)
+        Me.CantidadTextBox.Location = New System.Drawing.Point(192, 171)
         Me.CantidadTextBox.Name = "CantidadTextBox"
         Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.CantidadTextBox.TabIndex = 14
+        Me.CantidadTextBox.TabIndex = 10
         '
-        'Id_vendedorTextBox
+        'Id_vendedorComboBox
         '
-        Me.Id_vendedorTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_vendedor", True))
-        Me.Id_vendedorTextBox.Location = New System.Drawing.Point(268, 272)
-        Me.Id_vendedorTextBox.Name = "Id_vendedorTextBox"
-        Me.Id_vendedorTextBox.Size = New System.Drawing.Size(200, 20)
-        Me.Id_vendedorTextBox.TabIndex = 16
+        Me.Id_vendedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_vendedor", True))
+        Me.Id_vendedorComboBox.DataSource = Me.VentaBindingSource
+        Me.Id_vendedorComboBox.DisplayMember = "id"
+        Me.Id_vendedorComboBox.FormattingEnabled = True
+        Me.Id_vendedorComboBox.Location = New System.Drawing.Point(192, 38)
+        Me.Id_vendedorComboBox.Name = "Id_vendedorComboBox"
+        Me.Id_vendedorComboBox.Size = New System.Drawing.Size(200, 21)
+        Me.Id_vendedorComboBox.TabIndex = 12
+        Me.Id_vendedorComboBox.ValueMember = "id"
         '
-        'btnAnadir
+        'rBtnBlancoNegro
         '
-        Me.btnAnadir.Location = New System.Drawing.Point(213, 340)
-        Me.btnAnadir.Name = "btnAnadir"
-        Me.btnAnadir.Size = New System.Drawing.Size(75, 23)
-        Me.btnAnadir.TabIndex = 19
-        Me.btnAnadir.Text = "Añadir"
-        Me.btnAnadir.UseVisualStyleBackColor = True
+        Me.rBtnBlancoNegro.AutoSize = True
+        Me.rBtnBlancoNegro.Location = New System.Drawing.Point(23, 19)
+        Me.rBtnBlancoNegro.Name = "rBtnBlancoNegro"
+        Me.rBtnBlancoNegro.Size = New System.Drawing.Size(98, 17)
+        Me.rBtnBlancoNegro.TabIndex = 13
+        Me.rBtnBlancoNegro.TabStop = True
+        Me.rBtnBlancoNegro.Text = "Blanco y Negro"
+        Me.rBtnBlancoNegro.UseVisualStyleBackColor = True
         '
-        'btnCancelar
+        'rBtnColor
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(325, 340)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 20
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.rBtnColor.AutoSize = True
+        Me.rBtnColor.Location = New System.Drawing.Point(23, 42)
+        Me.rBtnColor.Name = "rBtnColor"
+        Me.rBtnColor.Size = New System.Drawing.Size(49, 17)
+        Me.rBtnColor.TabIndex = 14
+        Me.rBtnColor.TabStop = True
+        Me.rBtnColor.Text = "Color"
+        Me.rBtnColor.UseVisualStyleBackColor = True
         '
-        'Button1
+        'GroupBox1
         '
-        Me.Button1.Location = New System.Drawing.Point(474, 298)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(111, 20)
-        Me.Button1.TabIndex = 21
-        Me.Button1.Text = "Busq. Avanz."
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.GroupBox1.Controls.Add(Me.rBtnBlancoNegro)
+        Me.GroupBox1.Controls.Add(Me.rBtnColor)
+        Me.GroupBox1.Location = New System.Drawing.Point(76, 65)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(146, 100)
+        Me.GroupBox1.TabIndex = 18
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "GroupBox1"
         '
-        'Id_clienteLabel
+        'GroupBox2
         '
-        Id_clienteLabel.AutoSize = True
-        Id_clienteLabel.Location = New System.Drawing.Point(210, 302)
-        Id_clienteLabel.Name = "Id_clienteLabel"
-        Id_clienteLabel.Size = New System.Drawing.Size(52, 13)
-        Id_clienteLabel.TabIndex = 21
-        Id_clienteLabel.Text = "id cliente:"
+        Me.GroupBox2.Controls.Add(Me.rBtnSimple)
+        Me.GroupBox2.Controls.Add(Me.rBtnDoble)
+        Me.GroupBox2.Location = New System.Drawing.Point(246, 65)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(146, 100)
+        Me.GroupBox2.TabIndex = 19
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "GroupBox2"
         '
-        'Id_clienteComboBox
+        'rBtnSimple
         '
-        Me.Id_clienteComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_cliente", True))
-        Me.Id_clienteComboBox.FormattingEnabled = True
-        Me.Id_clienteComboBox.Location = New System.Drawing.Point(268, 299)
-        Me.Id_clienteComboBox.Name = "Id_clienteComboBox"
-        Me.Id_clienteComboBox.Size = New System.Drawing.Size(121, 21)
-        Me.Id_clienteComboBox.TabIndex = 22
+        Me.rBtnSimple.AutoSize = True
+        Me.rBtnSimple.Location = New System.Drawing.Point(23, 19)
+        Me.rBtnSimple.Name = "rBtnSimple"
+        Me.rBtnSimple.Size = New System.Drawing.Size(56, 17)
+        Me.rBtnSimple.TabIndex = 13
+        Me.rBtnSimple.TabStop = True
+        Me.rBtnSimple.Text = "Simple"
+        Me.rBtnSimple.UseVisualStyleBackColor = True
+        '
+        'rBtnDoble
+        '
+        Me.rBtnDoble.AutoSize = True
+        Me.rBtnDoble.Location = New System.Drawing.Point(23, 42)
+        Me.rBtnDoble.Name = "rBtnDoble"
+        Me.rBtnDoble.Size = New System.Drawing.Size(53, 17)
+        Me.rBtnDoble.TabIndex = 14
+        Me.rBtnDoble.TabStop = True
+        Me.rBtnDoble.Text = "Doble"
+        Me.rBtnDoble.UseVisualStyleBackColor = True
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Location = New System.Drawing.Point(223, 248)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.TabIndex = 20
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
+        'cBoxAnillado
+        '
+        Me.cBoxAnillado.AutoSize = True
+        Me.cBoxAnillado.Location = New System.Drawing.Point(183, 197)
+        Me.cBoxAnillado.Name = "cBoxAnillado"
+        Me.cBoxAnillado.Size = New System.Drawing.Size(63, 17)
+        Me.cBoxAnillado.TabIndex = 21
+        Me.cBoxAnillado.Text = "Anillado"
+        Me.cBoxAnillado.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(559, 172)
+        Me.Label1.Location = New System.Drawing.Point(206, 221)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "Unidad: $0"
+        Me.Label1.Size = New System.Drawing.Size(58, 13)
+        Me.Label1.TabIndex = 22
+        Me.Label1.Text = "Precio: $ 0"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(559, 197)
+        Me.Label2.Location = New System.Drawing.Point(290, 221)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
-        Me.Label2.TabIndex = 24
-        Me.Label2.Text = "Total: $0"
+        Me.Label2.Size = New System.Drawing.Size(52, 13)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "Total: $ 0"
         '
         'FormVentasAltas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(734, 383)
+        Me.ClientSize = New System.Drawing.Size(463, 283)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Id_clienteLabel)
-        Me.Controls.Add(Me.Id_clienteComboBox)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnAnadir)
+        Me.Controls.Add(Me.cBoxAnillado)
+        Me.Controls.Add(Me.btnGuardar)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(IdLabel)
         Me.Controls.Add(Me.IdTextBox)
-        Me.Controls.Add(Es_colorLabel)
-        Me.Controls.Add(Me.Es_colorCheckBox)
-        Me.Controls.Add(Es_doble_fazLabel)
-        Me.Controls.Add(Me.Es_doble_fazCheckBox)
-        Me.Controls.Add(Es_anilladoLabel)
-        Me.Controls.Add(Me.Es_anilladoCheckBox)
         Me.Controls.Add(CantidadLabel)
         Me.Controls.Add(Me.CantidadTextBox)
         Me.Controls.Add(Id_vendedorLabel)
-        Me.Controls.Add(Me.Id_vendedorTextBox)
+        Me.Controls.Add(Me.Id_vendedorComboBox)
         Me.Name = "FormVentasAltas"
-        Me.Text = "VentasAltas"
+        Me.Text = "FormVentasAltas"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -290,15 +269,16 @@ Partial Class FormVentasAltas
     Friend WithEvents VentaTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter
     Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Es_colorCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents Es_doble_fazCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents Es_anilladoCheckBox As System.Windows.Forms.CheckBox
     Friend WithEvents CantidadTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Id_vendedorTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents btnAnadir As System.Windows.Forms.Button
-    Friend WithEvents btnCancelar As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Id_clienteComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents Id_vendedorComboBox As System.Windows.Forms.ComboBox
+    Friend WithEvents rBtnBlancoNegro As System.Windows.Forms.RadioButton
+    Friend WithEvents rBtnColor As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents rBtnSimple As System.Windows.Forms.RadioButton
+    Friend WithEvents rBtnDoble As System.Windows.Forms.RadioButton
+    Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents cBoxAnillado As System.Windows.Forms.CheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
