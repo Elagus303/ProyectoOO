@@ -40,6 +40,7 @@
         Catch ex As System.ArgumentException
             MsgBox(ex.Message)
         End Try
+        NombreTextBox.Focus()
     End Sub
 
     Private Sub TelefonoTextBox_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TelefonoTextBox.KeyPress

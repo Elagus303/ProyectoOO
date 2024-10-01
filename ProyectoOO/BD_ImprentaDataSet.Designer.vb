@@ -41,9 +41,9 @@ Partial Public Class BD_ImprentaDataSet
     
     Private relationFK_Proveedores_Insumo As Global.System.Data.DataRelation
     
-    Private relationFK_Clientes_Venta As Global.System.Data.DataRelation
-    
     Private relationFK_Vendedores_Venta As Global.System.Data.DataRelation
+    
+    Private relationFK_Clientes_Venta As Global.System.Data.DataRelation
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -324,8 +324,8 @@ Partial Public Class BD_ImprentaDataSet
         End If
         Me.relationFK_Roles_Vendedores = Me.Relations("FK_Roles_Vendedores")
         Me.relationFK_Proveedores_Insumo = Me.Relations("FK_Proveedores_Insumo")
-        Me.relationFK_Clientes_Venta = Me.Relations("FK_Clientes_Venta")
         Me.relationFK_Vendedores_Venta = Me.Relations("FK_Vendedores_Venta")
+        Me.relationFK_Clientes_Venta = Me.Relations("FK_Clientes_Venta")
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -359,12 +359,12 @@ Partial Public Class BD_ImprentaDataSet
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn})
+        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn})
         Me.tableVenta.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn})
+        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn})
         Me.tableVenta.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
@@ -373,10 +373,10 @@ Partial Public Class BD_ImprentaDataSet
         Me.Relations.Add(Me.relationFK_Roles_Vendedores)
         Me.relationFK_Proveedores_Insumo = New Global.System.Data.DataRelation("FK_Proveedores_Insumo", New Global.System.Data.DataColumn() {Me.tableProveedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableInsumo.id_proovedorColumn}, false)
         Me.Relations.Add(Me.relationFK_Proveedores_Insumo)
-        Me.relationFK_Clientes_Venta = New Global.System.Data.DataRelation("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn}, false)
-        Me.Relations.Add(Me.relationFK_Clientes_Venta)
         Me.relationFK_Vendedores_Venta = New Global.System.Data.DataRelation("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn}, false)
         Me.Relations.Add(Me.relationFK_Vendedores_Venta)
+        Me.relationFK_Clientes_Venta = New Global.System.Data.DataRelation("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn}, false)
+        Me.Relations.Add(Me.relationFK_Clientes_Venta)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3057,23 +3057,23 @@ Partial Public Class BD_ImprentaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property ClientesRow() As ClientesRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Clientes_Venta")),ClientesRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK_Clientes_Venta"))
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property VendedoresRow() As VendedoresRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Vendedores_Venta")),VendedoresRow)
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("FK_Vendedores_Venta"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClientesRow() As ClientesRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Clientes_Venta")),ClientesRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_Clientes_Venta"))
             End Set
         End Property
     End Class
@@ -4451,7 +4451,7 @@ Namespace BD_ImprentaDataSetTableAdapters
             Me._commandCollection(0) = New Global.System.Data.SqlServerCe.SqlCeCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT [nombre], [telefono], [correo], [direccion], [localidad], [id] FROM [Prove"& _ 
-                "edores]"
+                "edores]"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY [nombre] ASC"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
