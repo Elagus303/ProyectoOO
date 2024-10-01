@@ -125,4 +125,8 @@
             btnEditar.Visible = True
         End If
     End Sub
+
+    Private Sub btnFiltrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFiltrar.Click
+        cbFiltrar.DroppedDown = True
+    End Sub
 End Class

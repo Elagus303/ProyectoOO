@@ -45,6 +45,8 @@ Partial Class FormProv
         Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.lblTabla = New System.Windows.Forms.Label()
+        Me.cbFiltrar = New System.Windows.Forms.ComboBox()
+        Me.btnFiltrar = New System.Windows.Forms.Button()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProveedoresDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -143,7 +145,7 @@ Partial Class FormProv
         Me.btnEliminar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnEliminar.FlatAppearance.BorderSize = 0
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminar.Location = New System.Drawing.Point(550, 14)
+        Me.btnEliminar.Location = New System.Drawing.Point(12, 346)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(87, 29)
         Me.btnEliminar.TabIndex = 15
@@ -156,7 +158,7 @@ Partial Class FormProv
         Me.btnEditar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnEditar.FlatAppearance.BorderSize = 0
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditar.Location = New System.Drawing.Point(643, 14)
+        Me.btnEditar.Location = New System.Drawing.Point(105, 346)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(87, 29)
         Me.btnEditar.TabIndex = 14
@@ -169,7 +171,7 @@ Partial Class FormProv
         Me.btnAnadir.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnadir.FlatAppearance.BorderSize = 0
         Me.btnAnadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnadir.Location = New System.Drawing.Point(457, 14)
+        Me.btnAnadir.Location = New System.Drawing.Point(844, 14)
         Me.btnAnadir.Name = "btnAnadir"
         Me.btnAnadir.Size = New System.Drawing.Size(87, 29)
         Me.btnAnadir.TabIndex = 13
@@ -182,9 +184,9 @@ Partial Class FormProv
         Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnUltimo.FlatAppearance.BorderSize = 0
         Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUltimo.Location = New System.Drawing.Point(588, 346)
+        Me.btnUltimo.Location = New System.Drawing.Point(894, 346)
         Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(87, 27)
+        Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
         Me.btnUltimo.TabIndex = 12
         Me.btnUltimo.TabStop = False
         Me.btnUltimo.Text = ">>"
@@ -195,9 +197,9 @@ Partial Class FormProv
         Me.btnSig.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnSig.FlatAppearance.BorderSize = 0
         Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSig.Location = New System.Drawing.Point(493, 346)
+        Me.btnSig.Location = New System.Drawing.Point(851, 346)
         Me.btnSig.Name = "btnSig"
-        Me.btnSig.Size = New System.Drawing.Size(87, 27)
+        Me.btnSig.Size = New System.Drawing.Size(37, 27)
         Me.btnSig.TabIndex = 11
         Me.btnSig.TabStop = False
         Me.btnSig.Text = ">"
@@ -208,9 +210,9 @@ Partial Class FormProv
         Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnt.FlatAppearance.BorderSize = 0
         Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnt.Location = New System.Drawing.Point(399, 346)
+        Me.btnAnt.Location = New System.Drawing.Point(808, 346)
         Me.btnAnt.Name = "btnAnt"
-        Me.btnAnt.Size = New System.Drawing.Size(87, 27)
+        Me.btnAnt.Size = New System.Drawing.Size(37, 27)
         Me.btnAnt.TabIndex = 10
         Me.btnAnt.TabStop = False
         Me.btnAnt.Text = "<"
@@ -221,9 +223,9 @@ Partial Class FormProv
         Me.btnPrimero.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnPrimero.FlatAppearance.BorderSize = 0
         Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrimero.Location = New System.Drawing.Point(304, 346)
+        Me.btnPrimero.Location = New System.Drawing.Point(765, 346)
         Me.btnPrimero.Name = "btnPrimero"
-        Me.btnPrimero.Size = New System.Drawing.Size(87, 27)
+        Me.btnPrimero.Size = New System.Drawing.Size(37, 27)
         Me.btnPrimero.TabIndex = 9
         Me.btnPrimero.TabStop = False
         Me.btnPrimero.Text = "<<"
@@ -234,7 +236,7 @@ Partial Class FormProv
         Me.btnBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnBuscar.FlatAppearance.BorderSize = 0
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Location = New System.Drawing.Point(337, 14)
+        Me.btnBuscar.Location = New System.Drawing.Point(266, 14)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(87, 29)
         Me.btnBuscar.TabIndex = 17
@@ -247,7 +249,7 @@ Partial Class FormProv
         Me.pbTxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.pbTxtBuscar.Location = New System.Drawing.Point(12, 14)
         Me.pbTxtBuscar.Name = "pbTxtBuscar"
-        Me.pbTxtBuscar.Size = New System.Drawing.Size(318, 29)
+        Me.pbTxtBuscar.Size = New System.Drawing.Size(254, 29)
         Me.pbTxtBuscar.TabIndex = 18
         Me.pbTxtBuscar.TabStop = False
         '
@@ -258,7 +260,7 @@ Partial Class FormProv
         Me.txtBuscar.MaxLength = 20
         Me.txtBuscar.Multiline = True
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(307, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(243, 20)
         Me.txtBuscar.TabIndex = 19
         '
         'lblTabla
@@ -271,12 +273,37 @@ Partial Class FormProv
         Me.lblTabla.Text = "Sin resultados compatibles"
         Me.lblTabla.Visible = False
         '
+        'cbFiltrar
+        '
+        Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbFiltrar.FormattingEnabled = True
+        Me.cbFiltrar.Items.AddRange(New Object() {"Razon", "Localidad", "Favoritos"})
+        Me.cbFiltrar.Location = New System.Drawing.Point(751, 20)
+        Me.cbFiltrar.Name = "cbFiltrar"
+        Me.cbFiltrar.Size = New System.Drawing.Size(87, 23)
+        Me.cbFiltrar.TabIndex = 21
+        '
+        'btnFiltrar
+        '
+        Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnFiltrar.FlatAppearance.BorderSize = 0
+        Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFiltrar.Location = New System.Drawing.Point(751, 14)
+        Me.btnFiltrar.Name = "btnFiltrar"
+        Me.btnFiltrar.Size = New System.Drawing.Size(87, 29)
+        Me.btnFiltrar.TabIndex = 22
+        Me.btnFiltrar.TabStop = False
+        Me.btnFiltrar.Text = "Filtrar"
+        Me.btnFiltrar.UseVisualStyleBackColor = False
+        '
         'FormProv
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(943, 385)
+        Me.Controls.Add(Me.btnFiltrar)
+        Me.Controls.Add(Me.cbFiltrar)
         Me.Controls.Add(Me.lblTabla)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.pbTxtBuscar)
@@ -324,4 +351,6 @@ Partial Class FormProv
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents lblTabla As System.Windows.Forms.Label
+    Friend WithEvents cbFiltrar As System.Windows.Forms.ComboBox
+    Friend WithEvents btnFiltrar As System.Windows.Forms.Button
 End Class
