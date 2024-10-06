@@ -24,9 +24,6 @@ Partial Class Principal
     Private Sub InitializeComponent()
         Me.MenuStripPpal = New System.Windows.Forms.MenuStrip()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AñadirClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AñadirInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -50,28 +47,9 @@ Partial Class Principal
         '
         'ClientesToolStripMenuItem
         '
-        Me.ClientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirClienteToolStripMenuItem, Me.EditarClienteToolStripMenuItem, Me.EliminarClienteToolStripMenuItem})
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(61, 48)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
-        '
-        'AñadirClienteToolStripMenuItem
-        '
-        Me.AñadirClienteToolStripMenuItem.Name = "AñadirClienteToolStripMenuItem"
-        Me.AñadirClienteToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.AñadirClienteToolStripMenuItem.Text = "Añadir cliente"
-        '
-        'EditarClienteToolStripMenuItem
-        '
-        Me.EditarClienteToolStripMenuItem.Name = "EditarClienteToolStripMenuItem"
-        Me.EditarClienteToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.EditarClienteToolStripMenuItem.Text = "Editar cliente"
-        '
-        'EliminarClienteToolStripMenuItem
-        '
-        Me.EliminarClienteToolStripMenuItem.Name = "EliminarClienteToolStripMenuItem"
-        Me.EliminarClienteToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.EliminarClienteToolStripMenuItem.Text = "Eliminar cliente"
         '
         'ProveedoresToolStripMenuItem
         '
@@ -107,13 +85,13 @@ Partial Class Principal
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(54, 48)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(53, 48)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'VendedoresToolStripMenuItem
         '
         Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
-        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(81, 48)
+        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(80, 48)
         Me.VendedoresToolStripMenuItem.Text = "Vendedores"
         '
         'FinanzasToolStripMenuItem
@@ -139,9 +117,6 @@ Partial Class Principal
     End Sub
     Friend WithEvents MenuStripPpal As System.Windows.Forms.MenuStrip
     Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AñadirClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EditarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EliminarClienteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InsumosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AñadirInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

@@ -10,4 +10,8 @@
     End Sub
 
     
+    Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
+        Clientes.Show()
+
+    End Sub
 End Class
