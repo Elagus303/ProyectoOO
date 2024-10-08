@@ -30,9 +30,9 @@ Partial Class altas
         Dim CorreoLabel As System.Windows.Forms.Label
         Dim DireccionLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(altas))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter()
@@ -50,7 +50,10 @@ Partial Class altas
         Me.RolesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RolesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.RolesTableAdapter()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.ClientesDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -58,12 +61,12 @@ Partial Class altas
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button10 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         IdLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidoLabel = New System.Windows.Forms.Label()
@@ -73,9 +76,10 @@ Partial Class altas
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'IdLabel
@@ -284,6 +288,155 @@ Partial Class altas
         Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(143, 197)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(31, 23)
+        Me.Button9.TabIndex = 22
+        Me.Button9.Text = ">l"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(107, 197)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(30, 23)
+        Me.Button8.TabIndex = 21
+        Me.Button8.Text = ">"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(74, 197)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(27, 23)
+        Me.Button7.TabIndex = 20
+        Me.Button7.Text = "<"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(41, 197)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(27, 23)
+        Me.Button6.TabIndex = 19
+        Me.Button6.Text = "l<"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'ClientesDataGridView
+        '
+        Me.ClientesDataGridView.AllowUserToAddRows = False
+        Me.ClientesDataGridView.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientesDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.ClientesDataGridView.AutoGenerateColumns = False
+        Me.ClientesDataGridView.BackgroundColor = System.Drawing.Color.AntiqueWhite
+        Me.ClientesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.ClientesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ClientesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.ClientesDataGridView.DataSource = Me.ClientesBindingSource
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle2
+        Me.ClientesDataGridView.GridColor = System.Drawing.SystemColors.ControlText
+        Me.ClientesDataGridView.Location = New System.Drawing.Point(358, -3)
+        Me.ClientesDataGridView.Name = "ClientesDataGridView"
+        Me.ClientesDataGridView.ReadOnly = True
+        Me.ClientesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
+        Me.ClientesDataGridView.RowHeadersVisible = False
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.ClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.ClientesDataGridView.Size = New System.Drawing.Size(605, 465)
+        Me.ClientesDataGridView.TabIndex = 19
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.FillWeight = 62.82722!
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn2.FillWeight = 79.90055!
+        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.Width = 127
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "apellido"
+        Me.DataGridViewTextBoxColumn3.FillWeight = 95.18609!
+        Me.DataGridViewTextBoxColumn3.HeaderText = "apellido"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.Width = 152
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "telefono"
+        Me.DataGridViewTextBoxColumn4.FillWeight = 108.871!
+        Me.DataGridViewTextBoxColumn4.HeaderText = "telefono"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.Width = 173
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "correo"
+        Me.DataGridViewTextBoxColumn5.FillWeight = 121.123!
+        Me.DataGridViewTextBoxColumn5.HeaderText = "correo"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.Width = 193
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "direccion"
+        Me.DataGridViewTextBoxColumn6.FillWeight = 132.0921!
+        Me.DataGridViewTextBoxColumn6.HeaderText = "direccion"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.Width = 210
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.Red
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button10.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
+        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button10.Location = New System.Drawing.Point(54, 19)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(167, 45)
+        Me.Button10.TabIndex = 0
+        Me.Button10.Text = "Eliminar"
+        Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button10.UseCompatibleTextRendering = True
+        Me.Button10.UseMnemonic = False
+        Me.Button10.UseVisualStyleBackColor = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Button10)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 377)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(297, 113)
+        Me.GroupBox2.TabIndex = 20
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Eliminar registro"
+        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button9)
@@ -314,143 +467,34 @@ Partial Class altas
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "añadir registro / actualizacion"
         '
-        'ClientesDataGridView
+        'GroupBox3
         '
-        Me.ClientesDataGridView.AllowUserToAddRows = False
-        Me.ClientesDataGridView.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientesDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.ClientesDataGridView.AutoGenerateColumns = False
-        Me.ClientesDataGridView.BackgroundColor = System.Drawing.Color.AntiqueWhite
-        Me.ClientesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ClientesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ClientesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
-        Me.ClientesDataGridView.DataSource = Me.ClientesBindingSource
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle5
-        Me.ClientesDataGridView.GridColor = System.Drawing.SystemColors.ControlText
-        Me.ClientesDataGridView.Location = New System.Drawing.Point(358, -3)
-        Me.ClientesDataGridView.Name = "ClientesDataGridView"
-        Me.ClientesDataGridView.ReadOnly = True
-        Me.ClientesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        Me.ClientesDataGridView.RowHeadersVisible = False
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle6
-        Me.ClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ClientesDataGridView.Size = New System.Drawing.Size(605, 465)
-        Me.ClientesDataGridView.TabIndex = 19
+        Me.GroupBox3.Controls.Add(Me.TextBox1)
+        Me.GroupBox3.Controls.Add(Me.ComboBox1)
+        Me.GroupBox3.Location = New System.Drawing.Point(141, 12)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(183, 77)
+        Me.GroupBox3.TabIndex = 40
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "busqueda"
         '
-        'DataGridViewTextBoxColumn1
+        'TextBox1
         '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Location = New System.Drawing.Point(19, 55)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(121, 16)
+        Me.TextBox1.TabIndex = 20
         '
-        'DataGridViewTextBoxColumn2
+        'ComboBox1
         '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "apellido"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "apellido"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "telefono"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "telefono"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "correo"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "correo"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "direccion"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "direccion"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(41, 197)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(27, 23)
-        Me.Button6.TabIndex = 19
-        Me.Button6.Text = "l<"
-        Me.Button6.UseVisualStyleBackColor = True
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(74, 197)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(27, 23)
-        Me.Button7.TabIndex = 20
-        Me.Button7.Text = "<"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(107, 197)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(30, 23)
-        Me.Button8.TabIndex = 21
-        Me.Button8.Text = ">"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Location = New System.Drawing.Point(143, 197)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(31, 23)
-        Me.Button9.TabIndex = 22
-        Me.Button9.Text = ">l"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Button10)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 377)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(297, 113)
-        Me.GroupBox2.TabIndex = 20
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Eliminar registro"
-        '
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.Red
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
-        Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button10.Location = New System.Drawing.Point(54, 19)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(167, 45)
-        Me.Button10.TabIndex = 0
-        Me.Button10.Text = "Eliminar"
-        Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.UseCompatibleTextRendering = True
-        Me.Button10.UseMnemonic = False
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(19, 28)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 36
         '
         'altas
         '
@@ -461,6 +505,7 @@ Partial Class altas
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(956, 502)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.ClientesDataGridView)
         Me.Controls.Add(Me.GroupBox1)
@@ -472,10 +517,12 @@ Partial Class altas
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -496,7 +543,6 @@ Partial Class altas
     Friend WithEvents RolesBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents RolesTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.RolesTableAdapter
     Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
@@ -508,6 +554,10 @@ Partial Class altas
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class

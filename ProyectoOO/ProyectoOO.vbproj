@@ -101,13 +101,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_ImprentaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="clientes\Clientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="clientes\Clientes.Designer.vb">
-      <DependentUpon>Clientes.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Inventario\Consultacambio.Designer.vb">
       <DependentUpon>Consultacambio.vb</DependentUpon>
     </Compile>
@@ -160,6 +153,12 @@
     <Compile Include="Proveedores\FormProv.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vendedores\vendedores.Designer.vb">
+      <DependentUpon>vendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vendedores\vendedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventas\FormVentas.Designer.vb">
       <DependentUpon>FormVentas.vb</DependentUpon>
     </Compile>
@@ -176,9 +175,6 @@
   <ItemGroup>
     <EmbeddedResource Include="clientes\altas.bajas.resx">
       <DependentUpon>altas.bajas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="clientes\Clientes.resx">
-      <DependentUpon>Clientes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Consultacambio.resx">
       <DependentUpon>Consultacambio.vb</DependentUpon>
@@ -203,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\FormProvEdicion.resx">
       <DependentUpon>FormProvEdicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendedores\vendedores.resx">
+      <DependentUpon>vendedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventas\FormVentas.resx">
       <DependentUpon>FormVentas.vb</DependentUpon>
@@ -268,9 +267,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="vendedores\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

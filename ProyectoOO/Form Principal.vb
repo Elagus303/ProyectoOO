@@ -12,10 +12,10 @@ Public Class Principal
 
 
     Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
-        Clientes.Show()
+        altas.Show()
     End Sub
 
     Private Sub VendedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendedoresToolStripMenuItem.Click
-        'VEndedoresA.Show()
+        Vendedores.Show()
     End Sub
 End Class
