@@ -46,6 +46,7 @@ Partial Class FormVentas
         Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,7 +206,7 @@ Partial Class FormVentas
         Me.btnPrimero.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnPrimero.FlatAppearance.BorderSize = 0
         Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrimero.Location = New System.Drawing.Point(765, 306)
+        Me.btnPrimero.Location = New System.Drawing.Point(714, 308)
         Me.btnPrimero.Name = "btnPrimero"
         Me.btnPrimero.Size = New System.Drawing.Size(37, 27)
         Me.btnPrimero.TabIndex = 25
@@ -218,7 +219,7 @@ Partial Class FormVentas
         Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnt.FlatAppearance.BorderSize = 0
         Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnt.Location = New System.Drawing.Point(808, 306)
+        Me.btnAnt.Location = New System.Drawing.Point(757, 308)
         Me.btnAnt.Name = "btnAnt"
         Me.btnAnt.Size = New System.Drawing.Size(37, 27)
         Me.btnAnt.TabIndex = 26
@@ -231,7 +232,7 @@ Partial Class FormVentas
         Me.btnSig.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnSig.FlatAppearance.BorderSize = 0
         Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSig.Location = New System.Drawing.Point(851, 306)
+        Me.btnSig.Location = New System.Drawing.Point(800, 308)
         Me.btnSig.Name = "btnSig"
         Me.btnSig.Size = New System.Drawing.Size(37, 27)
         Me.btnSig.TabIndex = 27
@@ -278,12 +279,26 @@ Partial Class FormVentas
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(843, 308)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(37, 27)
+        Me.Button1.TabIndex = 31
+        Me.Button1.TabStop = False
+        Me.Button1.Text = ">>"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(892, 347)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnPrimero)
         Me.Controls.Add(Me.btnAnt)
         Me.Controls.Add(Me.btnSig)
@@ -333,4 +348,5 @@ Partial Class FormVentas
     Friend WithEvents btnUltimo As System.Windows.Forms.Button
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnEditar As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

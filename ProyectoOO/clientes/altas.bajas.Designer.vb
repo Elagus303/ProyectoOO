@@ -414,7 +414,7 @@ Partial Class altas
         '
         Me.Button10.BackColor = System.Drawing.Color.Red
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Cooper Black", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.Image = CType(resources.GetObject("Button10.Image"), System.Drawing.Image)
         Me.Button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button10.Location = New System.Drawing.Point(54, 19)

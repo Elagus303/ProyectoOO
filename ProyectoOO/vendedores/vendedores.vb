@@ -16,7 +16,7 @@
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
         Me.VendedoresBindingSource.Current("id_rol") = ComboBox1.SelectedValue
         Me.VendedoresBindingSource.AddNew()
         NombreTextBox.Focus()
@@ -37,5 +37,15 @@
             NombreTextBox.Focus()
             MsgBox("Se a guardado con exito")
         End If
+    End Sub
+
+
+
+    Private Sub btnFiltrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFiltrar.Click
+        cbFiltrar.DroppedDown = True
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+
     End Sub
 End Class
