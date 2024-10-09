@@ -32,6 +32,7 @@ Partial Class FormPrincipal
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VendedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FinanzasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PanelPrincipal = New System.Windows.Forms.Panel()
         Me.MenuStripPpal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -110,15 +111,24 @@ Partial Class FormPrincipal
         Me.FinanzasToolStripMenuItem.Size = New System.Drawing.Size(156, 59)
         Me.FinanzasToolStripMenuItem.Text = "Finanzas"
         '
-        'Principal
+        'PanelPrincipal
+        '
+        Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelPrincipal.Location = New System.Drawing.Point(169, 0)
+        Me.PanelPrincipal.Name = "PanelPrincipal"
+        Me.PanelPrincipal.Size = New System.Drawing.Size(321, 384)
+        Me.PanelPrincipal.TabIndex = 1
+        '
+        'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(490, 384)
+        Me.Controls.Add(Me.PanelPrincipal)
         Me.Controls.Add(Me.MenuStripPpal)
         Me.MainMenuStrip = Me.MenuStripPpal
-        Me.Name = "Principal"
+        Me.Name = "FormPrincipal"
         Me.Text = "Principal"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStripPpal.ResumeLayout(False)
@@ -136,4 +146,5 @@ Partial Class FormPrincipal
     Friend WithEvents VentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VendedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FinanzasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PanelPrincipal As System.Windows.Forms.Panel
 End Class

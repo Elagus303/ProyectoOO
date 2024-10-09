@@ -19,7 +19,12 @@ Public Class FormPrincipal
         Vendedores.Show()
     End Sub
 
+    Private Sub FormPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        Application.Exit() 'Cerrar definitivamente todas las ventanas
+    End Sub
+
     Private Sub Principal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MenuStripPpal.Renderer = New RenderPersonalizadoMenuStrip() 'Instanciar para poder cambiar Render
+        MostrarFormPanel(FormVentas) 'Cargar automaticamente la ventana de ventas
     End Sub
 End Class

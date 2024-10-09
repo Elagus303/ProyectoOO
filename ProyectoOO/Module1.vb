@@ -6,6 +6,16 @@
     Public ColorTextoPrimario As Color = Color.Black
     Public ColorTextoSecundario As Color = Color.White
 
+
+    Public Sub MostrarFormPanel(ByVal form As Form)
+        FormPrincipal.PanelPrincipal.Controls.Clear() 'Borrar todos los controles
+        form.TopLevel = False 'Para que pueda ser contenido por el pnl
+        form.FormBorderStyle = Windows.Forms.FormBorderStyle.None 'Quitar bordes
+        form.Dock = DockStyle.Fill 'Expandir totalmente
+        FormPrincipal.PanelPrincipal.Controls.Add(form) 'Agregar el form como control del pnl
+        form.Show()
+    End Sub
+
     Public Sub limpiar(ByVal formx As Form)
         Dim aux As Control
         For Each aux In formx.Controls
