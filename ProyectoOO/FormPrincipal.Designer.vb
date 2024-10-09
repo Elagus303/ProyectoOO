@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Principal
+Partial Class FormPrincipal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -38,7 +38,7 @@ Partial Class Principal
         'MenuStripPpal
         '
         Me.MenuStripPpal.AutoSize = False
-        Me.MenuStripPpal.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.MenuStripPpal.BackColor = System.Drawing.Color.Gainsboro
         Me.MenuStripPpal.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStripPpal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.VentasToolStripMenuItem, Me.VendedoresToolStripMenuItem, Me.FinanzasToolStripMenuItem})
         Me.MenuStripPpal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow
@@ -53,14 +53,14 @@ Partial Class Principal
         '
         Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
         Me.ClientesToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(156, 59)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         Me.ProveedoresToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(156, 59)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'InsumosToolStripMenuItem
@@ -68,7 +68,7 @@ Partial Class Principal
         Me.InsumosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirInsumoToolStripMenuItem, Me.EditarInsumoToolStripMenuItem, Me.EliminarInsumoToolStripMenuItem})
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
         Me.InsumosToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
-        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
+        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(156, 59)
         Me.InsumosToolStripMenuItem.Text = "Insumos"
         '
         'AñadirInsumoToolStripMenuItem
@@ -93,21 +93,21 @@ Partial Class Principal
         '
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
         Me.VentasToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(156, 59)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'VendedoresToolStripMenuItem
         '
         Me.VendedoresToolStripMenuItem.Name = "VendedoresToolStripMenuItem"
         Me.VendedoresToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
-        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
+        Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(156, 59)
         Me.VendedoresToolStripMenuItem.Text = "Vendedores"
         '
         'FinanzasToolStripMenuItem
         '
         Me.FinanzasToolStripMenuItem.Name = "FinanzasToolStripMenuItem"
         Me.FinanzasToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
-        Me.FinanzasToolStripMenuItem.Size = New System.Drawing.Size(133, 59)
+        Me.FinanzasToolStripMenuItem.Size = New System.Drawing.Size(156, 59)
         Me.FinanzasToolStripMenuItem.Text = "Finanzas"
         '
         'Principal

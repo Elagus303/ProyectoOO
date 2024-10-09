@@ -49,7 +49,6 @@ G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
 G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
-C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Principal.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
@@ -105,3 +104,5 @@ C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\Proyecto
 C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Vendedores.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Vendedores.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormInicioSesion.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormPrincipal.resources

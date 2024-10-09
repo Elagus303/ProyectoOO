@@ -323,7 +323,7 @@ ORDER BY [nombre] ASC</CommandText>
   <xs:element name="BD_ImprentaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BD_ImprentaDataSet" msprop:Generator_UserDSName="BD_ImprentaDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Roles" msprop:Generator_TableClassName="RolesDataTable" msprop:Generator_TableVarName="tableRoles" msprop:Generator_TablePropName="Roles" msprop:Generator_RowDeletingName="RolesRowDeleting" msprop:Generator_RowChangingName="RolesRowChanging" msprop:Generator_RowEvHandlerName="RolesRowChangeEventHandler" msprop:Generator_RowDeletedName="RolesRowDeleted" msprop:Generator_UserTableName="Roles" msprop:Generator_RowChangedName="RolesRowChanged" msprop:Generator_RowEvArgName="RolesRowChangeEvent" msprop:Generator_RowClassName="RolesRow">
+        <xs:element name="Roles" msprop:Generator_TableClassName="RolesDataTable" msprop:Generator_TableVarName="tableRoles" msprop:Generator_RowChangedName="RolesRowChanged" msprop:Generator_TablePropName="Roles" msprop:Generator_RowDeletingName="RolesRowDeleting" msprop:Generator_RowChangingName="RolesRowChanging" msprop:Generator_RowEvHandlerName="RolesRowChangeEventHandler" msprop:Generator_RowDeletedName="RolesRowDeleted" msprop:Generator_RowClassName="RolesRow" msprop:Generator_UserTableName="Roles" msprop:Generator_RowEvArgName="RolesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -337,7 +337,7 @@ ORDER BY [nombre] ASC</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Vendedores" msprop:Generator_TableClassName="VendedoresDataTable" msprop:Generator_TableVarName="tableVendedores" msprop:Generator_TablePropName="Vendedores" msprop:Generator_RowDeletingName="VendedoresRowDeleting" msprop:Generator_RowChangingName="VendedoresRowChanging" msprop:Generator_RowEvHandlerName="VendedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="VendedoresRowDeleted" msprop:Generator_UserTableName="Vendedores" msprop:Generator_RowChangedName="VendedoresRowChanged" msprop:Generator_RowEvArgName="VendedoresRowChangeEvent" msprop:Generator_RowClassName="VendedoresRow">
+        <xs:element name="Vendedores" msprop:Generator_TableClassName="VendedoresDataTable" msprop:Generator_TableVarName="tableVendedores" msprop:Generator_RowChangedName="VendedoresRowChanged" msprop:Generator_TablePropName="Vendedores" msprop:Generator_RowDeletingName="VendedoresRowDeleting" msprop:Generator_RowChangingName="VendedoresRowChanging" msprop:Generator_RowEvHandlerName="VendedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="VendedoresRowDeleted" msprop:Generator_RowClassName="VendedoresRow" msprop:Generator_UserTableName="Vendedores" msprop:Generator_RowEvArgName="VendedoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -359,7 +359,7 @@ ORDER BY [nombre] ASC</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_RowEvArgName="ClientesRowChangeEvent" msprop:Generator_RowClassName="ClientesRow">
+        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_RowClassName="ClientesRow" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowEvArgName="ClientesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -401,7 +401,7 @@ ORDER BY [nombre] ASC</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Proveedores" msprop:Generator_TableClassName="ProveedoresDataTable" msprop:Generator_TableVarName="tableProveedores" msprop:Generator_TablePropName="Proveedores" msprop:Generator_RowDeletingName="ProveedoresRowDeleting" msprop:Generator_RowChangingName="ProveedoresRowChanging" msprop:Generator_RowEvHandlerName="ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedoresRowDeleted" msprop:Generator_UserTableName="Proveedores" msprop:Generator_RowChangedName="ProveedoresRowChanged" msprop:Generator_RowEvArgName="ProveedoresRowChangeEvent" msprop:Generator_RowClassName="ProveedoresRow">
+        <xs:element name="Proveedores" msprop:Generator_TableClassName="ProveedoresDataTable" msprop:Generator_TableVarName="tableProveedores" msprop:Generator_RowChangedName="ProveedoresRowChanged" msprop:Generator_TablePropName="Proveedores" msprop:Generator_RowDeletingName="ProveedoresRowDeleting" msprop:Generator_RowChangingName="ProveedoresRowChanging" msprop:Generator_RowEvHandlerName="ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedoresRowDeleted" msprop:Generator_RowClassName="ProveedoresRow" msprop:Generator_UserTableName="Proveedores" msprop:Generator_RowEvArgName="ProveedoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
@@ -443,7 +443,7 @@ ORDER BY [nombre] ASC</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Insumo" msprop:Generator_TableClassName="InsumoDataTable" msprop:Generator_TableVarName="tableInsumo" msprop:Generator_TablePropName="Insumo" msprop:Generator_RowDeletingName="InsumoRowDeleting" msprop:Generator_RowChangingName="InsumoRowChanging" msprop:Generator_RowEvHandlerName="InsumoRowChangeEventHandler" msprop:Generator_RowDeletedName="InsumoRowDeleted" msprop:Generator_UserTableName="Insumo" msprop:Generator_RowChangedName="InsumoRowChanged" msprop:Generator_RowEvArgName="InsumoRowChangeEvent" msprop:Generator_RowClassName="InsumoRow">
+        <xs:element name="Insumo" msprop:Generator_TableClassName="InsumoDataTable" msprop:Generator_TableVarName="tableInsumo" msprop:Generator_RowChangedName="InsumoRowChanged" msprop:Generator_TablePropName="Insumo" msprop:Generator_RowDeletingName="InsumoRowDeleting" msprop:Generator_RowChangingName="InsumoRowChanging" msprop:Generator_RowEvHandlerName="InsumoRowChangeEventHandler" msprop:Generator_RowDeletedName="InsumoRowDeleted" msprop:Generator_RowClassName="InsumoRow" msprop:Generator_UserTableName="Insumo" msprop:Generator_RowEvArgName="InsumoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -460,7 +460,7 @@ ORDER BY [nombre] ASC</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Venta" msprop:Generator_TableClassName="VentaDataTable" msprop:Generator_TableVarName="tableVenta" msprop:Generator_TablePropName="Venta" msprop:Generator_RowDeletingName="VentaRowDeleting" msprop:Generator_RowChangingName="VentaRowChanging" msprop:Generator_RowEvHandlerName="VentaRowChangeEventHandler" msprop:Generator_RowDeletedName="VentaRowDeleted" msprop:Generator_UserTableName="Venta" msprop:Generator_RowChangedName="VentaRowChanged" msprop:Generator_RowEvArgName="VentaRowChangeEvent" msprop:Generator_RowClassName="VentaRow">
+        <xs:element name="Venta" msprop:Generator_TableClassName="VentaDataTable" msprop:Generator_TableVarName="tableVenta" msprop:Generator_RowChangedName="VentaRowChanged" msprop:Generator_TablePropName="Venta" msprop:Generator_RowDeletingName="VentaRowDeleting" msprop:Generator_RowChangingName="VentaRowChanging" msprop:Generator_RowEvHandlerName="VentaRowChangeEventHandler" msprop:Generator_RowDeletedName="VentaRowDeleted" msprop:Generator_RowClassName="VentaRow" msprop:Generator_UserTableName="Venta" msprop:Generator_RowEvArgName="VentaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -498,21 +498,22 @@ ORDER BY [nombre] ASC</CommandText>
       <xs:selector xpath=".//mstns:Venta" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:keyref name="FK_Vendedores_Venta" refer="Vendedores_Constraint1" msprop:rel_Generator_UserChildTable="Venta" msprop:rel_Generator_ChildPropName="GetVentaRows" msprop:rel_Generator_UserRelationName="FK_Vendedores_Venta" msprop:rel_Generator_ParentPropName="VendedoresRow" msprop:rel_Generator_RelationVarName="relationFK_Vendedores_Venta" msprop:rel_Generator_UserParentTable="Vendedores">
-      <xs:selector xpath=".//mstns:Venta" />
-      <xs:field xpath="mstns:id_vendedor" />
-    </xs:keyref>
-    <xs:keyref name="FK_Clientes_Venta" refer="Clientes_Constraint1" msprop:rel_Generator_UserChildTable="Venta" msprop:rel_Generator_ChildPropName="GetVentaRows" msprop:rel_Generator_UserRelationName="FK_Clientes_Venta" msprop:rel_Generator_ParentPropName="ClientesRow" msprop:rel_Generator_RelationVarName="relationFK_Clientes_Venta" msprop:rel_Generator_UserParentTable="Clientes">
+    <xs:keyref name="FK_Clientes_Venta" refer="Clientes_Constraint1" msprop:rel_Generator_UserChildTable="Venta" msprop:rel_Generator_ChildPropName="GetVentaRows" msprop:rel_Generator_UserRelationName="FK_Clientes_Venta" msprop:rel_Generator_RelationVarName="relationFK_Clientes_Venta" msprop:rel_Generator_UserParentTable="Clientes" msprop:rel_Generator_ParentPropName="ClientesRow">
       <xs:selector xpath=".//mstns:Venta" />
       <xs:field xpath="mstns:id_cliente" />
     </xs:keyref>
-    <xs:keyref name="FK_Proveedores_Insumo" refer="Proveedores_Constraint1" msprop:rel_Generator_UserChildTable="Insumo" msprop:rel_Generator_ChildPropName="GetInsumoRows" msprop:rel_Generator_UserRelationName="FK_Proveedores_Insumo" msprop:rel_Generator_ParentPropName="ProveedoresRow" msprop:rel_Generator_RelationVarName="relationFK_Proveedores_Insumo" msprop:rel_Generator_UserParentTable="Proveedores">
+    <xs:keyref name="FK_Vendedores_Venta" refer="Vendedores_Constraint1" msprop:rel_Generator_UserChildTable="Venta" msprop:rel_Generator_ChildPropName="GetVentaRows" msprop:rel_Generator_UserRelationName="FK_Vendedores_Venta" msprop:rel_Generator_RelationVarName="relationFK_Vendedores_Venta" msprop:rel_Generator_UserParentTable="Vendedores" msprop:rel_Generator_ParentPropName="VendedoresRow">
+      <xs:selector xpath=".//mstns:Venta" />
+      <xs:field xpath="mstns:id_vendedor" />
+    </xs:keyref>
+    <xs:keyref name="FK_Proveedores_Insumo" refer="Proveedores_Constraint1" msprop:rel_Generator_UserChildTable="Insumo" msprop:rel_Generator_ChildPropName="GetInsumoRows" msprop:rel_Generator_UserRelationName="FK_Proveedores_Insumo" msprop:rel_Generator_RelationVarName="relationFK_Proveedores_Insumo" msprop:rel_Generator_UserParentTable="Proveedores" msprop:rel_Generator_ParentPropName="ProveedoresRow">
       <xs:selector xpath=".//mstns:Insumo" />
       <xs:field xpath="mstns:id_proovedor" />
     </xs:keyref>
-    <xs:keyref name="FK_Roles_Vendedores" refer="Constraint1" msprop:rel_Generator_UserChildTable="Vendedores" msprop:rel_Generator_ChildPropName="GetVendedoresRows" msprop:rel_Generator_UserRelationName="FK_Roles_Vendedores" msprop:rel_Generator_ParentPropName="RolesRow" msprop:rel_Generator_RelationVarName="relationFK_Roles_Vendedores" msprop:rel_Generator_UserParentTable="Roles">
-      <xs:selector xpath=".//mstns:Vendedores" />
-      <xs:field xpath="mstns:id_rol" />
-    </xs:keyref>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_Roles_Vendedores" msdata:parent="Roles" msdata:child="Vendedores" msdata:parentkey="id" msdata:childkey="id_rol" msprop:Generator_UserChildTable="Vendedores" msprop:Generator_ChildPropName="GetVendedoresRows" msprop:Generator_UserRelationName="FK_Roles_Vendedores" msprop:Generator_ParentPropName="RolesRow" msprop:Generator_RelationVarName="relationFK_Roles_Vendedores" msprop:Generator_UserParentTable="Roles" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

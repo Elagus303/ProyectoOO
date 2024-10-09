@@ -1,5 +1,5 @@
 ﻿
-Public Class Principal
+Public Class FormPrincipal
     'Click en el Menu Strip Ventas
     Private Sub VentasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VentasToolStripMenuItem.Click
         FormVentas.Show()
@@ -17,5 +17,9 @@ Public Class Principal
 
     Private Sub VendedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendedoresToolStripMenuItem.Click
         Vendedores.Show()
+    End Sub
+
+    Private Sub Principal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        MenuStripPpal.Renderer = New RenderPersonalizadoMenuStrip() 'Instanciar para poder cambiar Render
     End Sub
 End Class

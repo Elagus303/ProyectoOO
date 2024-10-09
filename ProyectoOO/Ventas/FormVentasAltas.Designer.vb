@@ -32,7 +32,6 @@ Partial Class FormVentasAltas
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         Me.IdTextBox = New System.Windows.Forms.TextBox()
         Me.CantidadTextBox = New System.Windows.Forms.TextBox()
-        Me.Id_vendedorComboBox = New System.Windows.Forms.ComboBox()
         Me.rBtnBlancoNegro = New System.Windows.Forms.RadioButton()
         Me.rBtnColor = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -43,6 +42,9 @@ Partial Class FormVentasAltas
         Me.cBoxAnillado = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.VendedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter()
+        Me.VendedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         IdLabel = New System.Windows.Forms.Label()
         CantidadLabel = New System.Windows.Forms.Label()
         Id_vendedorLabel = New System.Windows.Forms.Label()
@@ -50,6 +52,7 @@ Partial Class FormVentasAltas
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IdLabel
@@ -69,15 +72,6 @@ Partial Class FormVentasAltas
         CantidadLabel.Size = New System.Drawing.Size(51, 13)
         CantidadLabel.TabIndex = 9
         CantidadLabel.Text = "cantidad:"
-        '
-        'Id_vendedorLabel
-        '
-        Id_vendedorLabel.AutoSize = True
-        Id_vendedorLabel.Location = New System.Drawing.Point(101, 41)
-        Id_vendedorLabel.Name = "Id_vendedorLabel"
-        Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
-        Id_vendedorLabel.TabIndex = 11
-        Id_vendedorLabel.Text = "id vendedor:"
         '
         'BD_ImprentaDataSet
         '
@@ -119,18 +113,6 @@ Partial Class FormVentasAltas
         Me.CantidadTextBox.Name = "CantidadTextBox"
         Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
         Me.CantidadTextBox.TabIndex = 10
-        '
-        'Id_vendedorComboBox
-        '
-        Me.Id_vendedorComboBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id_vendedor", True))
-        Me.Id_vendedorComboBox.DataSource = Me.VentaBindingSource
-        Me.Id_vendedorComboBox.DisplayMember = "id"
-        Me.Id_vendedorComboBox.FormattingEnabled = True
-        Me.Id_vendedorComboBox.Location = New System.Drawing.Point(192, 38)
-        Me.Id_vendedorComboBox.Name = "Id_vendedorComboBox"
-        Me.Id_vendedorComboBox.Size = New System.Drawing.Size(200, 21)
-        Me.Id_vendedorComboBox.TabIndex = 12
-        Me.Id_vendedorComboBox.ValueMember = "id"
         '
         'rBtnBlancoNegro
         '
@@ -235,11 +217,41 @@ Partial Class FormVentasAltas
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Total: $ 0"
         '
+        'VendedoresTableAdapter
+        '
+        Me.VendedoresTableAdapter.ClearBeforeFill = True
+        '
+        'VendedoresBindingSource
+        '
+        Me.VendedoresBindingSource.DataMember = "Vendedores"
+        Me.VendedoresBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'Id_vendedorLabel
+        '
+        Id_vendedorLabel.AutoSize = True
+        Id_vendedorLabel.Location = New System.Drawing.Point(101, 41)
+        Id_vendedorLabel.Name = "Id_vendedorLabel"
+        Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
+        Id_vendedorLabel.TabIndex = 11
+        Id_vendedorLabel.Text = "id vendedor:"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataSource = Me.VendedoresBindingSource
+        Me.ComboBox1.DisplayMember = "nombre"
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(192, 41)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.TabIndex = 24
+        Me.ComboBox1.ValueMember = "id"
+        '
         'FormVentasAltas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(463, 283)
+        Me.ClientSize = New System.Drawing.Size(580, 291)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cBoxAnillado)
@@ -251,7 +263,6 @@ Partial Class FormVentasAltas
         Me.Controls.Add(CantidadLabel)
         Me.Controls.Add(Me.CantidadTextBox)
         Me.Controls.Add(Id_vendedorLabel)
-        Me.Controls.Add(Me.Id_vendedorComboBox)
         Me.Name = "FormVentasAltas"
         Me.Text = "FormVentasAltas"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -260,6 +271,7 @@ Partial Class FormVentasAltas
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -270,7 +282,6 @@ Partial Class FormVentasAltas
     Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
     Friend WithEvents CantidadTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Id_vendedorComboBox As System.Windows.Forms.ComboBox
     Friend WithEvents rBtnBlancoNegro As System.Windows.Forms.RadioButton
     Friend WithEvents rBtnColor As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -281,4 +292,7 @@ Partial Class FormVentasAltas
     Friend WithEvents cBoxAnillado As System.Windows.Forms.CheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents VendedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter
+    Friend WithEvents VendedoresBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class

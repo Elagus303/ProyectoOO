@@ -101,6 +101,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_ImprentaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormInicioSesion.Designer.vb">
+      <DependentUpon>FormInicioSesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInicioSesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inventario\Consultacambio.Designer.vb">
       <DependentUpon>Consultacambio.vb</DependentUpon>
     </Compile>
@@ -141,10 +147,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Form Principal.Designer.vb">
-      <DependentUpon>Form Principal.vb</DependentUpon>
+    <Compile Include="FormPrincipal.Designer.vb">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form Principal.vb">
+    <Compile Include="FormPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Proveedores\FormProv.Designer.vb">
@@ -153,6 +159,7 @@
     <Compile Include="Proveedores\FormProv.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="RenderPersonalizadoMenuStrip.vb" />
     <Compile Include="vendedores\vendedores.Designer.vb">
       <DependentUpon>vendedores.vb</DependentUpon>
     </Compile>
@@ -176,6 +183,9 @@
     <EmbeddedResource Include="clientes\altas.bajas.resx">
       <DependentUpon>altas.bajas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormInicioSesion.resx">
+      <DependentUpon>FormInicioSesion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Consultacambio.resx">
       <DependentUpon>Consultacambio.vb</DependentUpon>
     </EmbeddedResource>
@@ -188,8 +198,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form Principal.resx">
-      <DependentUpon>Form Principal.vb</DependentUpon>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\FormProv.resx">
       <DependentUpon>FormProv.vb</DependentUpon>
