@@ -35,22 +35,22 @@ Partial Class FormVentas
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
-        Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnFiltrar = New System.Windows.Forms.Button()
+        Me.btnOrdenar = New System.Windows.Forms.Button()
         Me.cbFiltrar = New System.Windows.Forms.ComboBox()
         Me.btnPrimero = New System.Windows.Forms.Button()
         Me.btnAnt = New System.Windows.Forms.Button()
         Me.btnSig = New System.Windows.Forms.Button()
-        Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnUltimo = New System.Windows.Forms.Button()
+        Me.dTimePickerInicio = New System.Windows.Forms.DateTimePicker()
+        Me.dTimePickerFinal = New System.Windows.Forms.DateTimePicker()
+        Me.lblDesde = New System.Windows.Forms.Label()
+        Me.lblHasta = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BD_ImprentaDataSet
@@ -146,31 +146,12 @@ Partial Class FormVentas
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
-        'txtBuscar
-        '
-        Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBuscar.Location = New System.Drawing.Point(17, 18)
-        Me.txtBuscar.MaxLength = 20
-        Me.txtBuscar.Multiline = True
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(243, 20)
-        Me.txtBuscar.TabIndex = 22
-        '
-        'pbTxtBuscar
-        '
-        Me.pbTxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.pbTxtBuscar.Location = New System.Drawing.Point(12, 12)
-        Me.pbTxtBuscar.Name = "pbTxtBuscar"
-        Me.pbTxtBuscar.Size = New System.Drawing.Size(254, 29)
-        Me.pbTxtBuscar.TabIndex = 21
-        Me.pbTxtBuscar.TabStop = False
-        '
         'btnBuscar
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnBuscar.FlatAppearance.BorderSize = 0
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Location = New System.Drawing.Point(266, 12)
+        Me.btnBuscar.Location = New System.Drawing.Point(320, 12)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(87, 29)
         Me.btnBuscar.TabIndex = 20
@@ -178,18 +159,18 @@ Partial Class FormVentas
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'btnFiltrar
+        'btnOrdenar
         '
-        Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.btnFiltrar.FlatAppearance.BorderSize = 0
-        Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFiltrar.Location = New System.Drawing.Point(700, 12)
-        Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.Size = New System.Drawing.Size(87, 29)
-        Me.btnFiltrar.TabIndex = 24
-        Me.btnFiltrar.TabStop = False
-        Me.btnFiltrar.Text = "Filtrar"
-        Me.btnFiltrar.UseVisualStyleBackColor = False
+        Me.btnOrdenar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnOrdenar.FlatAppearance.BorderSize = 0
+        Me.btnOrdenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOrdenar.Location = New System.Drawing.Point(700, 12)
+        Me.btnOrdenar.Name = "btnOrdenar"
+        Me.btnOrdenar.Size = New System.Drawing.Size(87, 29)
+        Me.btnOrdenar.TabIndex = 24
+        Me.btnOrdenar.TabStop = False
+        Me.btnOrdenar.Text = "Ordenar por"
+        Me.btnOrdenar.UseVisualStyleBackColor = False
         '
         'cbFiltrar
         '
@@ -240,19 +221,6 @@ Partial Class FormVentas
         Me.btnSig.Text = ">"
         Me.btnSig.UseVisualStyleBackColor = False
         '
-        'btnUltimo
-        '
-        Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.btnUltimo.FlatAppearance.BorderSize = 0
-        Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUltimo.Location = New System.Drawing.Point(894, 306)
-        Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
-        Me.btnUltimo.TabIndex = 28
-        Me.btnUltimo.TabStop = False
-        Me.btnUltimo.Text = ">>"
-        Me.btnUltimo.UseVisualStyleBackColor = False
-        '
         'btnEliminar
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.PaleGoldenrod
@@ -279,18 +247,54 @@ Partial Class FormVentas
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnUltimo
         '
-        Me.Button1.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(843, 308)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(37, 27)
-        Me.Button1.TabIndex = 31
-        Me.Button1.TabStop = False
-        Me.Button1.Text = ">>"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnUltimo.FlatAppearance.BorderSize = 0
+        Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUltimo.Location = New System.Drawing.Point(843, 308)
+        Me.btnUltimo.Name = "btnUltimo"
+        Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
+        Me.btnUltimo.TabIndex = 31
+        Me.btnUltimo.TabStop = False
+        Me.btnUltimo.Text = ">>"
+        Me.btnUltimo.UseVisualStyleBackColor = False
+        '
+        'dTimePickerInicio
+        '
+        Me.dTimePickerInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dTimePickerInicio.Location = New System.Drawing.Point(63, 15)
+        Me.dTimePickerInicio.MinDate = New Date(2024, 10, 1, 0, 0, 0, 0)
+        Me.dTimePickerInicio.Name = "dTimePickerInicio"
+        Me.dTimePickerInicio.Size = New System.Drawing.Size(89, 20)
+        Me.dTimePickerInicio.TabIndex = 32
+        '
+        'dTimePickerFinal
+        '
+        Me.dTimePickerFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dTimePickerFinal.Location = New System.Drawing.Point(225, 15)
+        Me.dTimePickerFinal.MinDate = New Date(2024, 10, 1, 0, 0, 0, 0)
+        Me.dTimePickerFinal.Name = "dTimePickerFinal"
+        Me.dTimePickerFinal.Size = New System.Drawing.Size(89, 20)
+        Me.dTimePickerFinal.TabIndex = 33
+        '
+        'lblDesde
+        '
+        Me.lblDesde.AutoSize = True
+        Me.lblDesde.Location = New System.Drawing.Point(13, 18)
+        Me.lblDesde.Name = "lblDesde"
+        Me.lblDesde.Size = New System.Drawing.Size(44, 13)
+        Me.lblDesde.TabIndex = 34
+        Me.lblDesde.Text = "Desde: "
+        '
+        'lblHasta
+        '
+        Me.lblHasta.AutoSize = True
+        Me.lblHasta.Location = New System.Drawing.Point(181, 18)
+        Me.lblHasta.Name = "lblHasta"
+        Me.lblHasta.Size = New System.Drawing.Size(38, 13)
+        Me.lblHasta.TabIndex = 35
+        Me.lblHasta.Text = "Hasta:"
         '
         'FormVentas
         '
@@ -298,17 +302,18 @@ Partial Class FormVentas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(892, 347)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.lblHasta)
+        Me.Controls.Add(Me.lblDesde)
+        Me.Controls.Add(Me.dTimePickerFinal)
+        Me.Controls.Add(Me.dTimePickerInicio)
+        Me.Controls.Add(Me.btnUltimo)
         Me.Controls.Add(Me.btnPrimero)
         Me.Controls.Add(Me.btnAnt)
         Me.Controls.Add(Me.btnSig)
-        Me.Controls.Add(Me.btnUltimo)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
-        Me.Controls.Add(Me.btnFiltrar)
+        Me.Controls.Add(Me.btnOrdenar)
         Me.Controls.Add(Me.cbFiltrar)
-        Me.Controls.Add(Me.txtBuscar)
-        Me.Controls.Add(Me.pbTxtBuscar)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.VentaDataGridView)
         Me.Controls.Add(Me.btnAgregar)
@@ -317,7 +322,6 @@ Partial Class FormVentas
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -337,16 +341,17 @@ Partial Class FormVentas
     Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
-    Friend WithEvents pbTxtBuscar As System.Windows.Forms.PictureBox
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
-    Friend WithEvents btnFiltrar As System.Windows.Forms.Button
+    Friend WithEvents btnOrdenar As System.Windows.Forms.Button
     Friend WithEvents cbFiltrar As System.Windows.Forms.ComboBox
     Friend WithEvents btnPrimero As System.Windows.Forms.Button
     Friend WithEvents btnAnt As System.Windows.Forms.Button
     Friend WithEvents btnSig As System.Windows.Forms.Button
-    Friend WithEvents btnUltimo As System.Windows.Forms.Button
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnEditar As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnUltimo As System.Windows.Forms.Button
+    Friend WithEvents dTimePickerInicio As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dTimePickerFinal As System.Windows.Forms.DateTimePicker
+    Friend WithEvents lblDesde As System.Windows.Forms.Label
+    Friend WithEvents lblHasta As System.Windows.Forms.Label
 End Class

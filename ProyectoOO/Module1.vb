@@ -66,4 +66,21 @@
             Return True
         End If
     End Function
+
+    Public Sub EstilosDataGridView(ByVal x As DataGridView)
+        x.BackgroundColor = ColorBase
+        x.BorderStyle = BorderStyle.None
+        x.RowHeadersVisible = False
+        x.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        x.AllowUserToResizeColumns = False
+        x.AllowUserToResizeRows = False
+        x.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        x.EnableHeadersVisualStyles = False
+        x.ColumnHeadersDefaultCellStyle.BackColor = ColorSobreBase
+        x.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        x.RowsDefaultCellStyle.BackColor = ColorBase
+        x.RowsDefaultCellStyle.SelectionBackColor = ColorControl
+        x.RowsDefaultCellStyle.SelectionForeColor = ColorTextoPrimario
+        x.GridColor = ColorSobreBase
+    End Sub
 End Module
