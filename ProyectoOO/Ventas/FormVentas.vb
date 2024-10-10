@@ -1,5 +1,5 @@
 ﻿Public Class FormVentas
-    '1) FORMULARIO PROVEEDORES
+    '1) FORMULARIO VENTAS
     '1.1) Load del formulario ventas
     Private Sub FormVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta) 'Llenar datos en DataGridView

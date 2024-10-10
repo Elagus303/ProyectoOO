@@ -163,3 +163,7 @@ C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\Proyecto
 C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Agregarinventario.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
+C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
