@@ -27,11 +27,11 @@ Partial Class FormInicioSesion
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.btnIngresar = New System.Windows.Forms.Button()
         Me.txtContraseña = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pbTxtContrasena = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         CType(Me.pbTxtNombre, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbTxtContrasena, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -84,15 +84,15 @@ Partial Class FormInicioSesion
         Me.txtContraseña.TabIndex = 2
         Me.txtContraseña.UseSystemPasswordChar = True
         '
-        'PictureBox1
+        'pbTxtContrasena
         '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.Window
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PictureBox1.Location = New System.Drawing.Point(94, 83)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(188, 25)
-        Me.PictureBox1.TabIndex = 23
-        Me.PictureBox1.TabStop = False
+        Me.pbTxtContrasena.BackColor = System.Drawing.SystemColors.Window
+        Me.pbTxtContrasena.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.pbTxtContrasena.Location = New System.Drawing.Point(94, 83)
+        Me.pbTxtContrasena.Name = "pbTxtContrasena"
+        Me.pbTxtContrasena.Size = New System.Drawing.Size(188, 25)
+        Me.pbTxtContrasena.TabIndex = 23
+        Me.pbTxtContrasena.TabStop = False
         '
         'Label2
         '
@@ -121,17 +121,18 @@ Partial Class FormInicioSesion
         Me.ClientSize = New System.Drawing.Size(294, 217)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.txtContraseña)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.pbTxtContrasena)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnIngresar)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.pbTxtNombre)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.KeyPreview = True
         Me.Name = "FormInicioSesion"
         Me.Text = "Iniciar Sesión"
         CType(Me.pbTxtNombre, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbTxtContrasena, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -141,7 +142,7 @@ Partial Class FormInicioSesion
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents btnIngresar As System.Windows.Forms.Button
     Friend WithEvents txtContraseña As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents pbTxtContrasena As System.Windows.Forms.PictureBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 End Class
