@@ -32,7 +32,7 @@
     '4) BOTÓN DE INGRESAR A LA APLICACIÓN 
     Private Sub btnIngresar_Click() Handles btnIngresar.Click
         If txtNombre.Text = "agustin" And txtContraseña.Text = "1234" Then
-            Me.Hide()
+            Me.Hide() 'cma
             FormPrincipal.Show()
         ElseIf txtContraseña.Text <> "" AndAlso txtNombre.Text <> "" Then
             Dim indice_fila As Integer = Me.VendedoresBindingSource.Find("nombre", txtNombre.Text)
