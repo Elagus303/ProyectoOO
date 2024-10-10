@@ -101,6 +101,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD_ImprentaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="clientes\clientes.Designer.vb">
+      <DependentUpon>clientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clientes\clientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientes\modificar.Designer.vb">
+      <DependentUpon>modificar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clientes\modificar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormInicioSesion.Designer.vb">
       <DependentUpon>FormInicioSesion.vb</DependentUpon>
     </Compile>
@@ -182,6 +194,12 @@
   <ItemGroup>
     <EmbeddedResource Include="clientes\altas.bajas.resx">
       <DependentUpon>altas.bajas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes\clientes.resx">
+      <DependentUpon>clientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes\modificar.resx">
+      <DependentUpon>modificar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicioSesion.resx">
       <DependentUpon>FormInicioSesion.vb</DependentUpon>

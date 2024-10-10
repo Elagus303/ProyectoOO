@@ -10,14 +10,15 @@ Public Class FormPrincipal
     'Click en el Menu Strip Proveedores
     Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem2.Click
         FormVentas.Close() : FormVentas.Dispose()
-        altas.Close() : altas.Dispose()
+        clientes.Close() : clientes.Dispose()
         MostrarFormPanel(FormProv)
         FormProv.Show()
     End Sub
 
 
     Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
-        altas.Show()
+        MostrarFormPanel(clientes)
+        clientes.Show()
     End Sub
 
     Private Sub VendedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
