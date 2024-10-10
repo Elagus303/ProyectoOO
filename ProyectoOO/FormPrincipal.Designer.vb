@@ -25,13 +25,10 @@ Partial Class FormPrincipal
         Me.MenuStripPpal = New System.Windows.Forms.MenuStrip()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AñadirInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditarInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PanelPrincipal = New System.Windows.Forms.Panel()
         Me.VendedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PanelPrincipal = New System.Windows.Forms.Panel()
         Me.MenuStripPpal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,30 +56,11 @@ Partial Class FormPrincipal
         '
         'InsumosToolStripMenuItem
         '
-        Me.InsumosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirInsumoToolStripMenuItem, Me.EditarInsumoToolStripMenuItem, Me.EliminarInsumoToolStripMenuItem})
         Me.InsumosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
         Me.InsumosToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
         Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(112, 59)
         Me.InsumosToolStripMenuItem.Text = "Insumos"
-        '
-        'AñadirInsumoToolStripMenuItem
-        '
-        Me.AñadirInsumoToolStripMenuItem.Name = "AñadirInsumoToolStripMenuItem"
-        Me.AñadirInsumoToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.AñadirInsumoToolStripMenuItem.Text = "Añadir insumo"
-        '
-        'EditarInsumoToolStripMenuItem
-        '
-        Me.EditarInsumoToolStripMenuItem.Name = "EditarInsumoToolStripMenuItem"
-        Me.EditarInsumoToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.EditarInsumoToolStripMenuItem.Text = "Editar insumo"
-        '
-        'EliminarInsumoToolStripMenuItem
-        '
-        Me.EliminarInsumoToolStripMenuItem.Name = "EliminarInsumoToolStripMenuItem"
-        Me.EliminarInsumoToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.EliminarInsumoToolStripMenuItem.Text = "Eliminar insumo"
         '
         'ToolStripMenuItem7
         '
@@ -100,14 +78,6 @@ Partial Class FormPrincipal
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(112, 59)
         Me.ToolStripMenuItem2.Text = "Proveedores"
         '
-        'PanelPrincipal
-        '
-        Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelPrincipal.Location = New System.Drawing.Point(125, 0)
-        Me.PanelPrincipal.Name = "PanelPrincipal"
-        Me.PanelPrincipal.Size = New System.Drawing.Size(659, 439)
-        Me.PanelPrincipal.TabIndex = 1
-        '
         'VendedoresToolStripMenuItem1
         '
         Me.VendedoresToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight
@@ -115,6 +85,14 @@ Partial Class FormPrincipal
         Me.VendedoresToolStripMenuItem1.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
         Me.VendedoresToolStripMenuItem1.Size = New System.Drawing.Size(112, 59)
         Me.VendedoresToolStripMenuItem1.Text = "Vendedores"
+        '
+        'PanelPrincipal
+        '
+        Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelPrincipal.Location = New System.Drawing.Point(125, 0)
+        Me.PanelPrincipal.Name = "PanelPrincipal"
+        Me.PanelPrincipal.Size = New System.Drawing.Size(659, 439)
+        Me.PanelPrincipal.TabIndex = 1
         '
         'FormPrincipal
         '
@@ -138,9 +116,6 @@ Partial Class FormPrincipal
     Friend WithEvents MenuStripPpal As System.Windows.Forms.MenuStrip
     Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InsumosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AñadirInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EditarInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EliminarInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PanelPrincipal As System.Windows.Forms.Panel
     Friend WithEvents ToolStripMenuItem7 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem

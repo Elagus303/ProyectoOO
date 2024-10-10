@@ -132,3 +132,6 @@ C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\
 C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.modificar.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.clientes.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.modificar.resources
