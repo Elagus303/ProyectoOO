@@ -52,7 +52,7 @@
             End If
         Else
             txtNombre.Clear() : txtContraseña.Clear()
-            MsgBox("Revise y complete los datos")
+            MsgBox("Revise y complete los datos") 'erhhvv
         End If
     End Sub
 End Class
