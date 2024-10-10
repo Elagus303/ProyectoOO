@@ -38,13 +38,13 @@ Partial Class FormVentasAltas
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.rBtnSimple = New System.Windows.Forms.RadioButton()
         Me.rBtnDoble = New System.Windows.Forms.RadioButton()
-        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.cBoxAnillado = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.VendedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter()
         Me.VendedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         IdLabel = New System.Windows.Forms.Label()
         CantidadLabel = New System.Windows.Forms.Label()
         Id_vendedorLabel = New System.Windows.Forms.Label()
@@ -58,7 +58,7 @@ Partial Class FormVentasAltas
         'IdLabel
         '
         IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(101, 15)
+        IdLabel.Location = New System.Drawing.Point(55, 15)
         IdLabel.Name = "IdLabel"
         IdLabel.Size = New System.Drawing.Size(18, 13)
         IdLabel.TabIndex = 1
@@ -67,11 +67,20 @@ Partial Class FormVentasAltas
         'CantidadLabel
         '
         CantidadLabel.AutoSize = True
-        CantidadLabel.Location = New System.Drawing.Point(101, 174)
+        CantidadLabel.Location = New System.Drawing.Point(50, 270)
         CantidadLabel.Name = "CantidadLabel"
         CantidadLabel.Size = New System.Drawing.Size(51, 13)
         CantidadLabel.TabIndex = 9
         CantidadLabel.Text = "cantidad:"
+        '
+        'Id_vendedorLabel
+        '
+        Id_vendedorLabel.AutoSize = True
+        Id_vendedorLabel.Location = New System.Drawing.Point(55, 41)
+        Id_vendedorLabel.Name = "Id_vendedorLabel"
+        Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
+        Id_vendedorLabel.TabIndex = 11
+        Id_vendedorLabel.Text = "id vendedor:"
         '
         'BD_ImprentaDataSet
         '
@@ -101,17 +110,17 @@ Partial Class FormVentasAltas
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(192, 12)
+        Me.IdTextBox.Location = New System.Drawing.Point(146, 12)
         Me.IdTextBox.Name = "IdTextBox"
-        Me.IdTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.IdTextBox.Size = New System.Drawing.Size(121, 20)
         Me.IdTextBox.TabIndex = 2
         '
         'CantidadTextBox
         '
         Me.CantidadTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VentaBindingSource, "cantidad", True))
-        Me.CantidadTextBox.Location = New System.Drawing.Point(192, 171)
+        Me.CantidadTextBox.Location = New System.Drawing.Point(116, 267)
         Me.CantidadTextBox.Name = "CantidadTextBox"
-        Me.CantidadTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.CantidadTextBox.Size = New System.Drawing.Size(121, 20)
         Me.CantidadTextBox.TabIndex = 10
         '
         'rBtnBlancoNegro
@@ -140,23 +149,23 @@ Partial Class FormVentasAltas
         '
         Me.GroupBox1.Controls.Add(Me.rBtnBlancoNegro)
         Me.GroupBox1.Controls.Add(Me.rBtnColor)
-        Me.GroupBox1.Location = New System.Drawing.Point(76, 65)
+        Me.GroupBox1.Location = New System.Drawing.Point(93, 68)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(146, 100)
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.GroupBox1.Text = "Tipo de tinta"
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.rBtnSimple)
         Me.GroupBox2.Controls.Add(Me.rBtnDoble)
-        Me.GroupBox2.Location = New System.Drawing.Point(246, 65)
+        Me.GroupBox2.Location = New System.Drawing.Point(93, 186)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(146, 100)
+        Me.GroupBox2.Size = New System.Drawing.Size(146, 72)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.GroupBox2.Text = "Tipo de impresión"
         '
         'rBtnSimple
         '
@@ -180,19 +189,10 @@ Partial Class FormVentasAltas
         Me.rBtnDoble.Text = "Doble"
         Me.rBtnDoble.UseVisualStyleBackColor = True
         '
-        'btnGuardar
-        '
-        Me.btnGuardar.Location = New System.Drawing.Point(223, 248)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.btnGuardar.TabIndex = 20
-        Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = True
-        '
         'cBoxAnillado
         '
         Me.cBoxAnillado.AutoSize = True
-        Me.cBoxAnillado.Location = New System.Drawing.Point(183, 197)
+        Me.cBoxAnillado.Location = New System.Drawing.Point(67, 290)
         Me.cBoxAnillado.Name = "cBoxAnillado"
         Me.cBoxAnillado.Size = New System.Drawing.Size(63, 17)
         Me.cBoxAnillado.TabIndex = 21
@@ -202,7 +202,7 @@ Partial Class FormVentasAltas
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(206, 221)
+        Me.Label1.Location = New System.Drawing.Point(90, 314)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 13)
         Me.Label1.TabIndex = 22
@@ -211,7 +211,7 @@ Partial Class FormVentasAltas
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(290, 221)
+        Me.Label2.Location = New System.Drawing.Point(174, 314)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 13)
         Me.Label2.TabIndex = 23
@@ -226,36 +226,41 @@ Partial Class FormVentasAltas
         Me.VendedoresBindingSource.DataMember = "Vendedores"
         Me.VendedoresBindingSource.DataSource = Me.BD_ImprentaDataSet
         '
-        'Id_vendedorLabel
-        '
-        Id_vendedorLabel.AutoSize = True
-        Id_vendedorLabel.Location = New System.Drawing.Point(101, 41)
-        Id_vendedorLabel.Name = "Id_vendedorLabel"
-        Id_vendedorLabel.Size = New System.Drawing.Size(66, 13)
-        Id_vendedorLabel.TabIndex = 11
-        Id_vendedorLabel.Text = "id vendedor:"
-        '
         'ComboBox1
         '
         Me.ComboBox1.DataSource = Me.VendedoresBindingSource
         Me.ComboBox1.DisplayMember = "nombre"
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(192, 41)
+        Me.ComboBox1.Location = New System.Drawing.Point(146, 41)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 24
         Me.ComboBox1.ValueMember = "id"
         '
+        'btnGuardar
+        '
+        Me.btnGuardar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnGuardar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Location = New System.Drawing.Point(109, 340)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(87, 29)
+        Me.btnGuardar.TabIndex = 25
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = False
+        '
         'FormVentasAltas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(580, 291)
+        Me.BackColor = System.Drawing.Color.LemonChiffon
+        Me.ClientSize = New System.Drawing.Size(298, 381)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cBoxAnillado)
-        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(IdLabel)
@@ -263,8 +268,12 @@ Partial Class FormVentasAltas
         Me.Controls.Add(CantidadLabel)
         Me.Controls.Add(Me.CantidadTextBox)
         Me.Controls.Add(Id_vendedorLabel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "FormVentasAltas"
-        Me.Text = "FormVentasAltas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Agregar venta"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -288,11 +297,11 @@ Partial Class FormVentasAltas
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents rBtnSimple As System.Windows.Forms.RadioButton
     Friend WithEvents rBtnDoble As System.Windows.Forms.RadioButton
-    Friend WithEvents btnGuardar As System.Windows.Forms.Button
     Friend WithEvents cBoxAnillado As System.Windows.Forms.CheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents VendedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter
     Friend WithEvents VendedoresBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents btnGuardar As System.Windows.Forms.Button
 End Class

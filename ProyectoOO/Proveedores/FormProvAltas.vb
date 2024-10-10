@@ -34,6 +34,7 @@
             Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores)
             FormProv.ProveedoresTableAdapter.Fill(FormProv.BD_ImprentaDataSet.Proveedores)
             Me.ProveedoresBindingSource.AddNew()
+
             MsgBox("Se añadió correctamente el proveedor")
         Catch ex As System.Data.NoNullAllowedException
             MsgBox("El campo 'Nombre' es obligatorio")

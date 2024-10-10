@@ -82,6 +82,9 @@ Partial Class FormProv
         '
         Me.ProveedoresDataGridView.AllowUserToAddRows = False
         Me.ProveedoresDataGridView.AllowUserToDeleteRows = False
+        Me.ProveedoresDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ProveedoresDataGridView.AutoGenerateColumns = False
         Me.ProveedoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProveedoresDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
@@ -145,6 +148,7 @@ Partial Class FormProv
         '
         'btnEliminar
         '
+        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnEliminar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnEliminar.FlatAppearance.BorderSize = 0
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -158,6 +162,7 @@ Partial Class FormProv
         '
         'btnEditar
         '
+        Me.btnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnEditar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnEditar.FlatAppearance.BorderSize = 0
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -171,6 +176,7 @@ Partial Class FormProv
         '
         'btnAnadir
         '
+        Me.btnAnadir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAnadir.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnadir.FlatAppearance.BorderSize = 0
         Me.btnAnadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -198,6 +204,7 @@ Partial Class FormProv
         'pbTxtBuscar
         '
         Me.pbTxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.pbTxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.pbTxtBuscar.Location = New System.Drawing.Point(12, 14)
         Me.pbTxtBuscar.Name = "pbTxtBuscar"
         Me.pbTxtBuscar.Size = New System.Drawing.Size(254, 29)
@@ -216,16 +223,19 @@ Partial Class FormProv
         '
         'lblTabla
         '
-        Me.lblTabla.AutoSize = True
-        Me.lblTabla.Location = New System.Drawing.Point(415, 96)
+        Me.lblTabla.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTabla.Location = New System.Drawing.Point(12, 92)
         Me.lblTabla.Name = "lblTabla"
-        Me.lblTabla.Size = New System.Drawing.Size(155, 15)
+        Me.lblTabla.Size = New System.Drawing.Size(919, 20)
         Me.lblTabla.TabIndex = 20
         Me.lblTabla.Text = "Sin resultados compatibles"
+        Me.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblTabla.Visible = False
         '
         'cbFiltrar
         '
+        Me.cbFiltrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFiltrar.FormattingEnabled = True
         Me.cbFiltrar.Items.AddRange(New Object() {"Razon", "Localidad", "Favoritos"})
@@ -236,6 +246,7 @@ Partial Class FormProv
         '
         'btnFiltrar
         '
+        Me.btnFiltrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnFiltrar.FlatAppearance.BorderSize = 0
         Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -249,6 +260,7 @@ Partial Class FormProv
         '
         'btnPrimero
         '
+        Me.btnPrimero.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnPrimero.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnPrimero.FlatAppearance.BorderSize = 0
         Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -262,6 +274,7 @@ Partial Class FormProv
         '
         'btnAnt
         '
+        Me.btnAnt.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnt.FlatAppearance.BorderSize = 0
         Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -275,6 +288,7 @@ Partial Class FormProv
         '
         'btnSig
         '
+        Me.btnSig.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSig.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnSig.FlatAppearance.BorderSize = 0
         Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -288,6 +302,7 @@ Partial Class FormProv
         '
         'btnUltimo
         '
+        Me.btnUltimo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnUltimo.FlatAppearance.BorderSize = 0
         Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat

@@ -1,12 +1,4 @@
 ﻿Public Class FormProvEdicion
-
-    Private Sub ProveedoresBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-        Me.ProveedoresBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
-
-    End Sub
-
     Private Sub FormProvEdicion_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores) 'Llenar datos, mover puntero al comienzo
         Dim fila As Integer = Me.ProveedoresBindingSource.Find("id",
