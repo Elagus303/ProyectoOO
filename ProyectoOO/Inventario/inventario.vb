@@ -1,30 +1,29 @@
-﻿Public Class inventario
-    Dim canthojas As Integer
-    Dim canttinta As Integer
-    Dim cantanillos As Integer
-    Dim cantaposc As Integer
-    Dim cantaptrans As Integer
+﻿Public Class Inventario
 
-
-    Private Sub inventario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Hojas.Text += canthojas.ToString
-
+    Private Sub InsumoBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Validate()
+        Me.InsumoBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
 
     End Sub
 
-    Private Sub Hojas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Hojas.Click
+    Private Sub Inventario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Insumo' Puede moverla o quitarla según sea necesario.
+        Me.InsumoTableAdapter.Fill(Me.BD_ImprentaDataSet.Insumo)
 
     End Sub
 
-    Private Sub PrecHoja_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrecHoja.Click
+    Private Sub Addbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Addbutton.Click
+        Agregarinventario.Show()
 
     End Sub
 
-    Private Sub inventario_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+    Private Sub modbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles modbutton.Click
+        ModificarProductoExistente.Show()
 
     End Sub
 
-    Private Sub Prichangehoj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Prichangehoj.Click
-
+    Private Sub delbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delbutton.Click
+        Consultacambio.Show()
     End Sub
 End Class
