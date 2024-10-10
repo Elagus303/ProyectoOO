@@ -1,4 +1,6 @@
 ﻿Module Module1
+    'Variables del sistema
+    Public usuarioEsAdmin As Boolean
     'Variables de Colores
     Public ColorBase As Color = Color.LemonChiffon
     Public ColorControl As Color = Color.PaleGoldenrod

@@ -32,6 +32,10 @@ Public Class FormPrincipal
     Private Sub Principal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MenuStripPpal.Renderer = New RenderPersonalizadoMenuStrip() 'Instanciar para poder cambiar Render
         MostrarFormPanel(FormVentas) 'Cargar automaticamente la ventana de ventas
+        'If Not usuarioEsAdmin Then
+        '    InsumosToolStripMenuItem.Visible = False
+
+        'End If
     End Sub
 
     Private Sub FinanzasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)

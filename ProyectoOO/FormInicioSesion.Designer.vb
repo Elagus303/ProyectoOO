@@ -22,6 +22,7 @@ Partial Class FormInicioSesion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.pbTxtNombre = New System.Windows.Forms.PictureBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
@@ -30,8 +31,14 @@ Partial Class FormInicioSesion
         Me.pbTxtContrasena = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
+        Me.VendedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VendedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter()
+        Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         CType(Me.pbTxtNombre, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbTxtContrasena, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -113,6 +120,31 @@ Partial Class FormInicioSesion
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "No puedo iniciar sesión"
         '
+        'BD_ImprentaDataSet
+        '
+        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
+        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'VendedoresBindingSource
+        '
+        Me.VendedoresBindingSource.DataMember = "Vendedores"
+        Me.VendedoresBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'VendedoresTableAdapter
+        '
+        Me.VendedoresTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClientesTableAdapter = Nothing
+        Me.TableAdapterManager.InsumoTableAdapter = Nothing
+        Me.TableAdapterManager.ProveedoresTableAdapter = Nothing
+        Me.TableAdapterManager.RolesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.VendedoresTableAdapter = Me.VendedoresTableAdapter
+        Me.TableAdapterManager.VentaTableAdapter = Nothing
+        '
         'FormInicioSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -133,6 +165,8 @@ Partial Class FormInicioSesion
         Me.Text = "Iniciar Sesión"
         CType(Me.pbTxtNombre, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbTxtContrasena, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -145,4 +179,8 @@ Partial Class FormInicioSesion
     Friend WithEvents pbTxtContrasena As System.Windows.Forms.PictureBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents BD_ImprentaDataSet As ProyectoOO.BD_ImprentaDataSet
+    Friend WithEvents VendedoresBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents VendedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter
+    Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
 End Class
