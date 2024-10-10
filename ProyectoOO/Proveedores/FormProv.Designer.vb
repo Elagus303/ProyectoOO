@@ -334,6 +334,7 @@ Partial Class FormProv
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnAnadir)
         Me.Controls.Add(Me.ProveedoresDataGridView)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormProv"

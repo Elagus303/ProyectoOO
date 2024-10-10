@@ -12,8 +12,10 @@
         form.TopLevel = False 'Para que pueda ser contenido por el pnl
         form.FormBorderStyle = Windows.Forms.FormBorderStyle.None 'Quitar bordes
         form.Dock = DockStyle.Fill 'Expandir totalmente
+        FormPrincipal.PanelPrincipal.SuspendLayout()
         FormPrincipal.PanelPrincipal.Controls.Add(form) 'Agregar el form como control del pnl
         form.Show()
+        FormPrincipal.PanelPrincipal.ResumeLayout()
     End Sub
 
     Public Sub limpiar(ByVal formx As Form)

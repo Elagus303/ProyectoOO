@@ -90,8 +90,4 @@
         End If
         Label1.Text = "Precio: $ " & precio_total
     End Sub
-
-    Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
 End Class
