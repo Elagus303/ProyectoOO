@@ -132,6 +132,10 @@ C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\
 C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.modificar.resources
+<<<<<<< HEAD
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Editar.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.PrinVendedores.resources
+=======
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.clientes.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.modificar.resources
@@ -163,7 +167,11 @@ C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\Proyecto
 C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Agregarinventario.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
+<<<<<<< HEAD
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\bin\Debug\ProyectoOO.exe.config
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+=======
+>>>>>>> ba5ad9a37c4cdab50866115a6016cfdf6e7ff0bf
+>>>>>>> f74ef00b59c0db68d2022b92623560a285857eb5

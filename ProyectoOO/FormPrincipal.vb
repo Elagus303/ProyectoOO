@@ -8,7 +8,7 @@ Public Class FormPrincipal
     End Sub
 
     'Click en el Menu Strip Proveedores
-    Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem2.Click
+    Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem.Click, ToolStripMenuItem2.Click
         FormVentas.Close() : FormVentas.Dispose()
         clientes.Close() : clientes.Dispose()
         MostrarFormPanel(FormProv)
@@ -32,21 +32,9 @@ Public Class FormPrincipal
     Private Sub Principal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         MenuStripPpal.Renderer = New RenderPersonalizadoMenuStrip() 'Instanciar para poder cambiar Render
         MostrarFormPanel(FormVentas) 'Cargar automaticamente la ventana de ventas
-        'If Not usuarioEsAdmin Then
-        '    InsumosToolStripMenuItem.Visible = False
-
-        'End If
     End Sub
 
     Private Sub FinanzasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MsgBox(Me.ClientSize.Width & " : " & Me.ClientSize.Height)
-    End Sub
-
-    Private Sub VendedoresToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendedoresToolStripMenuItem1.Click
-        Vendedores.Show()
-    End Sub
-
-    Private Sub InsumosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InsumosToolStripMenuItem.Click
-        inventario.Show()
     End Sub
 End Class

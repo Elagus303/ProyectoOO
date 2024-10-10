@@ -17,7 +17,7 @@
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
-        Me.VendedoresBindingSource.Current("id_rol") = ComboBox1.SelectedValue
+
         Me.VendedoresBindingSource.AddNew()
         NombreTextBox.Focus()
     End Sub
@@ -27,10 +27,13 @@
             MsgBox("No deje los campos vacios en NOMBRE")
 
         Else
+            Me.VendedoresBindingSource.Current("id_rol") = ComboBox1.SelectedValue
             Me.VendedoresBindingSource.EndEdit() 'cierro la base
             Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'guardo
 
             Me.VendedoresTableAdapter.Fill(BD_ImprentaDataSet.Vendedores) 'actualizo la tabla de datos
+            PrinVendedores.VendedoresTableAdapter.Fill(PrinVendedores.BD_ImprentaDataSet.Vendedores)
+
             'sos agustin?
             'cambios en minrama1
             Me.VendedoresBindingSource.AddNew()
@@ -41,11 +44,33 @@
 
 
 
-    Private Sub btnFiltrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFiltrar.Click
-        cbFiltrar.DroppedDown = True
+    Private Sub btnFiltrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+
+        ' Cancelamos cualquier edición pendiente en el BindingSource
+        If VendedoresBindingSource.Current IsNot Nothing Then
+            VendedoresBindingSource.CancelEdit()
+        End If
+
+        MessageBox.Show("El nuevo registro ha sido cancelado.")
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
 End Class

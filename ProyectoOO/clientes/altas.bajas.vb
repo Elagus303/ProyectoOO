@@ -32,6 +32,7 @@
 
         Else
             Me.ClientesBindingSource.EndEdit() 'cierro la base
+
             Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'guardo
 
             Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos

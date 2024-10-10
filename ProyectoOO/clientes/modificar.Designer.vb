@@ -183,9 +183,9 @@ Partial Class modificar
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(12, 220)
+        Me.Button2.Location = New System.Drawing.Point(12, 233)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(154, 53)
+        Me.Button2.Size = New System.Drawing.Size(124, 40)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Guardar edicion"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -195,9 +195,9 @@ Partial Class modificar
         '
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(172, 220)
+        Me.Button1.Location = New System.Drawing.Point(142, 233)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(154, 53)
+        Me.Button1.Size = New System.Drawing.Size(124, 40)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "salir"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -207,7 +207,7 @@ Partial Class modificar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(345, 285)
+        Me.ClientSize = New System.Drawing.Size(289, 285)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(IdLabel)
