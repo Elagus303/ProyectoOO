@@ -262,9 +262,10 @@ Partial Class altas
         Me.Controls.Add(Me.CorreoTextBox)
         Me.Controls.Add(CorreoLabel)
         Me.Controls.Add(IdLabel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "altas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "altas/bajas clientes"
+        Me.Text = "Agregar cliente"
         Me.TransparencyKey = System.Drawing.Color.Maroon
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
