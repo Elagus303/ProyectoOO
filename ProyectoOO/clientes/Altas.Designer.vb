@@ -29,11 +29,6 @@ Partial Class AltasClientes
         Dim CorreoLabel As System.Windows.Forms.Label
         Dim IdLabel As System.Windows.Forms.Label
         Dim DireccionLabel As System.Windows.Forms.Label
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.Designer.vb
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(altas))
-=======
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AltasClientes))
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.Designer.vb
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter()
@@ -62,104 +57,59 @@ Partial Class AltasClientes
         'ApellidoLabel
         '
         ApellidoLabel.AutoSize = True
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.Designer.vb
-        ApellidoLabel.Location = New System.Drawing.Point(84, 101)
-        ApellidoLabel.Name = "ApellidoLabel"
-        ApellidoLabel.Size = New System.Drawing.Size(46, 13)
-        ApellidoLabel.TabIndex = 6
-        ApellidoLabel.Text = "apellido:"
-=======
         ApellidoLabel.Location = New System.Drawing.Point(95, 87)
         ApellidoLabel.Name = "ApellidoLabel"
         ApellidoLabel.Size = New System.Drawing.Size(47, 13)
         ApellidoLabel.TabIndex = 6
         ApellidoLabel.Text = "Apellido:"
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.Designer.vb
         '
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.Designer.vb
-        TelefonoLabel.Location = New System.Drawing.Point(84, 127)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(48, 13)
-        TelefonoLabel.TabIndex = 8
-        TelefonoLabel.Text = "telefono:"
-=======
+
         TelefonoLabel.Location = New System.Drawing.Point(95, 113)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(52, 13)
         TelefonoLabel.TabIndex = 8
         TelefonoLabel.Text = "Teléfono:"
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.Designer.vb
         '
         'NombreLabel
         '
         NombreLabel.AutoSize = True
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.Designer.vb
-        NombreLabel.Location = New System.Drawing.Point(84, 75)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
-        NombreLabel.TabIndex = 4
-        NombreLabel.Text = "nombre:"
-=======
         NombreLabel.Location = New System.Drawing.Point(95, 61)
         NombreLabel.Name = "NombreLabel"
         NombreLabel.Size = New System.Drawing.Size(47, 13)
         NombreLabel.TabIndex = 4
         NombreLabel.Text = "Nombre:"
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.Designer.vb
         '
         'CorreoLabel
         '
         CorreoLabel.AutoSize = True
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.Designer.vb
-        CorreoLabel.Location = New System.Drawing.Point(84, 153)
-        CorreoLabel.Name = "CorreoLabel"
-        CorreoLabel.Size = New System.Drawing.Size(40, 13)
-        CorreoLabel.TabIndex = 10
-        CorreoLabel.Text = "correo:"
-=======
         CorreoLabel.Location = New System.Drawing.Point(95, 139)
         CorreoLabel.Name = "CorreoLabel"
         CorreoLabel.Size = New System.Drawing.Size(41, 13)
         CorreoLabel.TabIndex = 10
         CorreoLabel.Text = "Correo:"
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.Designer.vb
         '
         'IdLabel
         '
         IdLabel.AutoSize = True
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.Designer.vb
-        IdLabel.Location = New System.Drawing.Point(84, 49)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 2
-        IdLabel.Text = "id:"
-=======
         IdLabel.Location = New System.Drawing.Point(95, 35)
         IdLabel.Name = "IdLabel"
         IdLabel.Size = New System.Drawing.Size(19, 13)
         IdLabel.TabIndex = 2
         IdLabel.Text = "Id:"
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.Designer.vb
+
         '
         'DireccionLabel
         '
         DireccionLabel.AutoSize = True
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.Designer.vb
-        DireccionLabel.Location = New System.Drawing.Point(84, 179)
-        DireccionLabel.Name = "DireccionLabel"
-        DireccionLabel.Size = New System.Drawing.Size(53, 13)
-        DireccionLabel.TabIndex = 12
-        DireccionLabel.Text = "direccion:"
-=======
+
         DireccionLabel.Location = New System.Drawing.Point(95, 165)
         DireccionLabel.Name = "DireccionLabel"
         DireccionLabel.Size = New System.Drawing.Size(55, 13)
         DireccionLabel.TabIndex = 12
         DireccionLabel.Text = "Direccion:"
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.Designer.vb
         '
         'BD_ImprentaDataSet
         '
@@ -242,7 +192,6 @@ Partial Class AltasClientes
         '
         'btnGuardar
         '
-        Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnGuardar.Location = New System.Drawing.Point(14, 217)
         Me.btnGuardar.Name = "btnGuardar"
@@ -252,22 +201,8 @@ Partial Class AltasClientes
         Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.Designer.vb
-        'Button3
-        '
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button3.Location = New System.Drawing.Point(172, 239)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(154, 52)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "Cancelar registro"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.UseVisualStyleBackColor = True
-=======
         'btnCancelar
         '
-        Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCancelar.Location = New System.Drawing.Point(174, 217)
         Me.btnCancelar.Name = "btnCancelar"
@@ -276,8 +211,6 @@ Partial Class AltasClientes
         Me.btnCancelar.Text = "Cancelar registro"
         Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnCancelar.UseVisualStyleBackColor = True
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.Designer.vb
-        '
         'DireccionTextBox
         '
         Me.DireccionTextBox.BackColor = System.Drawing.SystemColors.Control
@@ -286,9 +219,9 @@ Partial Class AltasClientes
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DireccionTextBox.TabIndex = 13
-        '
+
         'AltasClientes
-        '
+
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink

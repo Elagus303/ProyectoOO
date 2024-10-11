@@ -197,7 +197,6 @@ C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.Ven
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
-<<<<<<< HEAD
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
@@ -226,6 +225,5 @@ C:\Users\AGUS\Desktop\Nueva carpeta (3)\ProyectoOO\ProyectoOO\obj\x86\Debug\Proy
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
-=======
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.AltasClientes.resources
 >>>>>>> bfdd66c2259326445c6976675371257bd1ebe921
