@@ -7,24 +7,15 @@ Public Class FormPrincipal
         MostrarFormPanel(FormVentas)
     End Sub
 
-    'Click en el Menu Strip Proveedores
-    Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem.Click, ToolStripMenuItem2.Click
+    'Abrir formulario de vendedores
+    Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem.Click
         FormVentas.Close() : FormVentas.Dispose()
         clientes.Close() : clientes.Dispose()
         MostrarFormPanel(PrinVendedores)
-
     End Sub
-
     Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
         MostrarFormPanel(clientes)
-        clientes.Show()
     End Sub
-
-    Private Sub VendedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        MostrarFormPanel(PrinVendedores)
-        PrinVendedores.Show()
-    End Sub
-
     Private Sub FormPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Application.Exit() 'Cerrar definitivamente todas las ventanas
     End Sub
@@ -36,5 +27,9 @@ Public Class FormPrincipal
 
     Private Sub FinanzasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MsgBox(Me.ClientSize.Width & " : " & Me.ClientSize.Height)
+    End Sub
+    'Abrir formulario de proveedores
+    Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem2.Click
+        MostrarFormPanel(FormProv)
     End Sub
 End Class

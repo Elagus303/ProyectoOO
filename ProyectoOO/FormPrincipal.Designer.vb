@@ -62,7 +62,7 @@ Partial Class FormPrincipal
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         Me.ProveedoresToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
         Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(112, 59)
-        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
+        Me.ProveedoresToolStripMenuItem.Text = "Vendedores"
         '
         'ToolStripMenuItem7
         '
@@ -86,7 +86,7 @@ Partial Class FormPrincipal
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         Me.ToolStripMenuItem2.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
         Me.ToolStripMenuItem2.Size = New System.Drawing.Size(112, 59)
-        Me.ToolStripMenuItem2.Text = "Vendedores"
+        Me.ToolStripMenuItem2.Text = "Proveedores"
         '
         'PanelPrincipal
         '
