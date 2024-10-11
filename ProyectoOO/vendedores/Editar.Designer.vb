@@ -51,36 +51,36 @@ Partial Class Editar
         IdLabel.AutoSize = True
         IdLabel.Location = New System.Drawing.Point(54, 50)
         IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
+        IdLabel.Size = New System.Drawing.Size(19, 13)
         IdLabel.TabIndex = 1
-        IdLabel.Text = "id:"
+        IdLabel.Text = "Id:"
         '
         'ContraseñaLabel
         '
         ContraseñaLabel.AutoSize = True
         ContraseñaLabel.Location = New System.Drawing.Point(54, 76)
         ContraseñaLabel.Name = "ContraseñaLabel"
-        ContraseñaLabel.Size = New System.Drawing.Size(63, 13)
+        ContraseñaLabel.Size = New System.Drawing.Size(64, 13)
         ContraseñaLabel.TabIndex = 3
-        ContraseñaLabel.Text = "contraseña:"
+        ContraseñaLabel.Text = "Contraseña:"
         '
         'NombreLabel
         '
         NombreLabel.AutoSize = True
         NombreLabel.Location = New System.Drawing.Point(54, 102)
         NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
         NombreLabel.TabIndex = 5
-        NombreLabel.Text = "nombre:"
+        NombreLabel.Text = "Nombre:"
         '
         'Id_rolLabel
         '
         Id_rolLabel.AutoSize = True
         Id_rolLabel.Location = New System.Drawing.Point(54, 128)
         Id_rolLabel.Name = "Id_rolLabel"
-        Id_rolLabel.Size = New System.Drawing.Size(32, 13)
+        Id_rolLabel.Size = New System.Drawing.Size(26, 13)
         Id_rolLabel.TabIndex = 7
-        Id_rolLabel.Text = "id rol:"
+        Id_rolLabel.Text = "Rol:"
         '
         'BD_ImprentaDataSet
         '
@@ -150,7 +150,7 @@ Partial Class Editar
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(128, 37)
         Me.Button1.TabIndex = 18
-        Me.Button1.Text = "salir"
+        Me.Button1.Text = "Salir"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button1.UseVisualStyleBackColor = True
         '
@@ -162,7 +162,7 @@ Partial Class Editar
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(128, 37)
         Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Guardar edicion"
+        Me.Button2.Text = "Guardar"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = True
         '
