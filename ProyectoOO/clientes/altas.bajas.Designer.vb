@@ -28,8 +28,8 @@ Partial Class altas
         Dim NombreLabel As System.Windows.Forms.Label
         Dim CorreoLabel As System.Windows.Forms.Label
         Dim IdLabel As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(altas))
         Dim DireccionLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(altas))
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter()
@@ -55,6 +55,60 @@ Partial Class altas
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'ApellidoLabel
+        '
+        ApellidoLabel.AutoSize = True
+        ApellidoLabel.Location = New System.Drawing.Point(84, 101)
+        ApellidoLabel.Name = "ApellidoLabel"
+        ApellidoLabel.Size = New System.Drawing.Size(47, 13)
+        ApellidoLabel.TabIndex = 6
+        ApellidoLabel.Text = "Apellido:"
+        '
+        'TelefonoLabel
+        '
+        TelefonoLabel.AutoSize = True
+        TelefonoLabel.Location = New System.Drawing.Point(84, 127)
+        TelefonoLabel.Name = "TelefonoLabel"
+        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
+        TelefonoLabel.TabIndex = 8
+        TelefonoLabel.Text = "Teléfono:"
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(84, 75)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
+        NombreLabel.TabIndex = 4
+        NombreLabel.Text = "Nombre:"
+        '
+        'CorreoLabel
+        '
+        CorreoLabel.AutoSize = True
+        CorreoLabel.Location = New System.Drawing.Point(84, 153)
+        CorreoLabel.Name = "CorreoLabel"
+        CorreoLabel.Size = New System.Drawing.Size(41, 13)
+        CorreoLabel.TabIndex = 10
+        CorreoLabel.Text = "Correo:"
+        '
+        'IdLabel
+        '
+        IdLabel.AutoSize = True
+        IdLabel.Location = New System.Drawing.Point(84, 49)
+        IdLabel.Name = "IdLabel"
+        IdLabel.Size = New System.Drawing.Size(19, 13)
+        IdLabel.TabIndex = 2
+        IdLabel.Text = "Id:"
+        '
+        'DireccionLabel
+        '
+        DireccionLabel.AutoSize = True
+        DireccionLabel.Location = New System.Drawing.Point(84, 179)
+        DireccionLabel.Name = "DireccionLabel"
+        DireccionLabel.Size = New System.Drawing.Size(55, 13)
+        DireccionLabel.TabIndex = 12
+        DireccionLabel.Text = "Direccion:"
         '
         'BD_ImprentaDataSet
         '
@@ -90,15 +144,6 @@ Partial Class altas
         '
         Me.RolesTableAdapter.ClearBeforeFill = True
         '
-        'ApellidoLabel
-        '
-        ApellidoLabel.AutoSize = True
-        ApellidoLabel.Location = New System.Drawing.Point(84, 101)
-        ApellidoLabel.Name = "ApellidoLabel"
-        ApellidoLabel.Size = New System.Drawing.Size(46, 13)
-        ApellidoLabel.TabIndex = 6
-        ApellidoLabel.Text = "apellido:"
-        '
         'ApellidoTextBox
         '
         Me.ApellidoTextBox.BackColor = System.Drawing.SystemColors.Control
@@ -117,24 +162,6 @@ Partial Class altas
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 5
         '
-        'TelefonoLabel
-        '
-        TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(84, 127)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(48, 13)
-        TelefonoLabel.TabIndex = 8
-        TelefonoLabel.Text = "telefono:"
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(84, 75)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
-        NombreLabel.TabIndex = 4
-        NombreLabel.Text = "nombre:"
-        '
         'TelefonoTextBox
         '
         Me.TelefonoTextBox.BackColor = System.Drawing.SystemColors.Control
@@ -152,24 +179,6 @@ Partial Class altas
         Me.IdTextBox.Name = "IdTextBox"
         Me.IdTextBox.Size = New System.Drawing.Size(100, 20)
         Me.IdTextBox.TabIndex = 3
-        '
-        'CorreoLabel
-        '
-        CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(84, 153)
-        CorreoLabel.Name = "CorreoLabel"
-        CorreoLabel.Size = New System.Drawing.Size(40, 13)
-        CorreoLabel.TabIndex = 10
-        CorreoLabel.Text = "correo:"
-        '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(84, 49)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(18, 13)
-        IdLabel.TabIndex = 2
-        IdLabel.Text = "id:"
         '
         'CorreoTextBox
         '
@@ -191,15 +200,6 @@ Partial Class altas
         Me.Button2.Text = "Guardar registro"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'DireccionLabel
-        '
-        DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(84, 179)
-        DireccionLabel.Name = "DireccionLabel"
-        DireccionLabel.Size = New System.Drawing.Size(53, 13)
-        DireccionLabel.TabIndex = 12
-        DireccionLabel.Text = "direccion:"
         '
         'Button3
         '
@@ -244,9 +244,9 @@ Partial Class altas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.AutoValidate = System.Windows.Forms.AutoValidate.Disable
-        Me.BackColor = System.Drawing.SystemColors.Control
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(340, 388)
+        Me.ClientSize = New System.Drawing.Size(340, 355)
         Me.Controls.Add(ApellidoLabel)
         Me.Controls.Add(Me.ApellidoTextBox)
         Me.Controls.Add(Me.Button1)
