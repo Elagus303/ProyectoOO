@@ -66,7 +66,6 @@ Partial Class AltasClientes
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-
         TelefonoLabel.Location = New System.Drawing.Point(95, 113)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(52, 13)
@@ -99,12 +98,10 @@ Partial Class AltasClientes
         IdLabel.Size = New System.Drawing.Size(19, 13)
         IdLabel.TabIndex = 2
         IdLabel.Text = "Id:"
-
         '
         'DireccionLabel
         '
         DireccionLabel.AutoSize = True
-
         DireccionLabel.Location = New System.Drawing.Point(95, 165)
         DireccionLabel.Name = "DireccionLabel"
         DireccionLabel.Size = New System.Drawing.Size(55, 13)
@@ -147,7 +144,7 @@ Partial Class AltasClientes
         '
         'ApellidoTextBox
         '
-        Me.ApellidoTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.ApellidoTextBox.BackColor = System.Drawing.SystemColors.Window
         Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
         Me.ApellidoTextBox.Location = New System.Drawing.Point(154, 84)
         Me.ApellidoTextBox.Name = "ApellidoTextBox"
@@ -156,7 +153,7 @@ Partial Class AltasClientes
         '
         'NombreTextBox
         '
-        Me.NombreTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.NombreTextBox.BackColor = System.Drawing.SystemColors.Window
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
         Me.NombreTextBox.Location = New System.Drawing.Point(154, 58)
         Me.NombreTextBox.Name = "NombreTextBox"
@@ -165,7 +162,7 @@ Partial Class AltasClientes
         '
         'TelefonoTextBox
         '
-        Me.TelefonoTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.TelefonoTextBox.BackColor = System.Drawing.SystemColors.Window
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
         Me.TelefonoTextBox.Location = New System.Drawing.Point(154, 110)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
@@ -174,7 +171,7 @@ Partial Class AltasClientes
         '
         'IdTextBox
         '
-        Me.IdTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.IdTextBox.BackColor = System.Drawing.SystemColors.Window
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id", True))
         Me.IdTextBox.Location = New System.Drawing.Point(154, 32)
         Me.IdTextBox.Name = "IdTextBox"
@@ -183,7 +180,7 @@ Partial Class AltasClientes
         '
         'CorreoTextBox
         '
-        Me.CorreoTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.CorreoTextBox.BackColor = System.Drawing.SystemColors.Window
         Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "correo", True))
         Me.CorreoTextBox.Location = New System.Drawing.Point(154, 136)
         Me.CorreoTextBox.Name = "CorreoTextBox"
@@ -192,6 +189,9 @@ Partial Class AltasClientes
         '
         'btnGuardar
         '
+        Me.btnGuardar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnGuardar.Location = New System.Drawing.Point(14, 217)
         Me.btnGuardar.Name = "btnGuardar"
@@ -199,10 +199,13 @@ Partial Class AltasClientes
         Me.btnGuardar.TabIndex = 14
         Me.btnGuardar.Text = "Guardar registro"
         Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuardar.UseVisualStyleBackColor = True
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
+        Me.btnCancelar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnCancelar.FlatAppearance.BorderSize = 0
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCancelar.Location = New System.Drawing.Point(174, 217)
         Me.btnCancelar.Name = "btnCancelar"
@@ -210,18 +213,19 @@ Partial Class AltasClientes
         Me.btnCancelar.TabIndex = 15
         Me.btnCancelar.Text = "Cancelar registro"
         Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.btnCancelar.UseVisualStyleBackColor = False
+        '
         'DireccionTextBox
         '
-        Me.DireccionTextBox.BackColor = System.Drawing.SystemColors.Control
+        Me.DireccionTextBox.BackColor = System.Drawing.SystemColors.Window
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "direccion", True))
         Me.DireccionTextBox.Location = New System.Drawing.Point(154, 162)
         Me.DireccionTextBox.Name = "DireccionTextBox"
         Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
         Me.DireccionTextBox.TabIndex = 13
-
+        '
         'AltasClientes
-
+        '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
