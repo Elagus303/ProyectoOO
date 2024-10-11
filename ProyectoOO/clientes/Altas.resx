@@ -174,11 +174,7 @@
         0dX1HsuaOJmz7wzCAAAAAElFTkSuQmCC
 </value>
   </data>
-<<<<<<< HEAD:ProyectoOO/clientes/altas.bajas.resx
-  <data name="Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-=======
   <data name="btnCancelar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
->>>>>>> bfdd66c2259326445c6976675371257bd1ebe921:ProyectoOO/clientes/Altas.resx
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAnJJREFUWEetlz1LXEEUhi+miEYbwUI7SSNYKsRGf4YWQor8DiFVmqS0EGws9C8k
