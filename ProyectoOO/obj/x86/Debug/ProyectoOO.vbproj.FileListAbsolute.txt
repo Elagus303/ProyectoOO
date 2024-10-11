@@ -197,3 +197,4 @@ C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.Ven
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+C:\Users\Alex\Desktop\ProyectoOO - copia\ProyectoOO\obj\x86\Debug\ProyectoOO.AltasClientes.resources

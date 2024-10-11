@@ -41,7 +41,7 @@
     End Sub
 
     Private Sub btnAnadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnadir.Click
-        altas.Show()
+        AltasClientes.Show()
 
     End Sub
 

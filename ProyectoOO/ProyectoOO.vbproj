@@ -93,10 +93,10 @@
     <Compile Include="BD_ImprentaDataSet.vb">
       <DependentUpon>BD_ImprentaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="clientes\altas.bajas.Designer.vb">
-      <DependentUpon>altas.bajas.vb</DependentUpon>
+    <Compile Include="clientes\Altas.Designer.vb">
+      <DependentUpon>Altas.vb</DependentUpon>
     </Compile>
-    <Compile Include="clientes\altas.bajas.vb">
+    <Compile Include="clientes\Altas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BD_ImprentaDataSet.Designer.vb">
@@ -219,8 +219,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="clientes\altas.bajas.resx">
-      <DependentUpon>altas.bajas.vb</DependentUpon>
+    <EmbeddedResource Include="clientes\Altas.resx">
+      <DependentUpon>Altas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="clientes\clientes.resx">
       <DependentUpon>clientes.vb</DependentUpon>
