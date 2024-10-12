@@ -35,15 +35,18 @@ Partial Class Editar
         Me.IdTextBox = New System.Windows.Forms.TextBox()
         Me.ContraseñaTextBox = New System.Windows.Forms.TextBox()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.cBoxRoles = New System.Windows.Forms.ComboBox()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.RolesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RolesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.RolesTableAdapter()
         IdLabel = New System.Windows.Forms.Label()
         ContraseñaLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         Id_rolLabel = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IdLabel
@@ -131,49 +134,60 @@ Partial Class Editar
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 6
         '
-        'ComboBox1
+        'cBoxRoles
         '
-        Me.ComboBox1.DisplayMember = "nombre"
-        Me.ComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(123, 128)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(100, 21)
-        Me.ComboBox1.TabIndex = 10
-        Me.ComboBox1.ValueMember = "id"
+        Me.cBoxRoles.DataSource = Me.RolesBindingSource
+        Me.cBoxRoles.DisplayMember = "nombre"
+        Me.cBoxRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cBoxRoles.FormattingEnabled = True
+        Me.cBoxRoles.Location = New System.Drawing.Point(123, 128)
+        Me.cBoxRoles.Name = "cBoxRoles"
+        Me.cBoxRoles.Size = New System.Drawing.Size(100, 21)
+        Me.cBoxRoles.TabIndex = 10
+        Me.cBoxRoles.ValueMember = "id"
         '
-        'Button1
+        'btnSalir
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(141, 212)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(128, 37)
-        Me.Button1.TabIndex = 18
-        Me.Button1.Text = "Salir"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
+        Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSalir.Location = New System.Drawing.Point(141, 212)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(128, 37)
+        Me.btnSalir.TabIndex = 18
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSalir.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnGuardar
         '
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(7, 212)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(128, 37)
-        Me.Button2.TabIndex = 17
-        Me.Button2.Text = "Guardar"
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuardar.Location = New System.Drawing.Point(7, 212)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(128, 37)
+        Me.btnGuardar.TabIndex = 17
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
+        'RolesBindingSource
+        '
+        Me.RolesBindingSource.DataMember = "Roles"
+        Me.RolesBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'RolesTableAdapter
+        '
+        Me.RolesTableAdapter.ClearBeforeFill = True
         '
         'Editar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(279, 261)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnGuardar)
+        Me.Controls.Add(Me.cBoxRoles)
         Me.Controls.Add(IdLabel)
         Me.Controls.Add(Me.IdTextBox)
         Me.Controls.Add(ContraseñaLabel)
@@ -181,10 +195,12 @@ Partial Class Editar
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(Me.NombreTextBox)
         Me.Controls.Add(Id_rolLabel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Editar"
-        Me.Text = "Editar"
+        Me.Text = "Editar datos"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -196,7 +212,9 @@ Partial Class Editar
     Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
     Friend WithEvents ContraseñaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents NombreTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents cBoxRoles As System.Windows.Forms.ComboBox
+    Friend WithEvents btnSalir As System.Windows.Forms.Button
+    Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents RolesBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents RolesTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.RolesTableAdapter
 End Class
