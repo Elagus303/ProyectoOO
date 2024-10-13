@@ -113,6 +113,24 @@
     <Compile Include="clientes\modificar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Inventario\ModificarProductoExistente.Designer.vb">
+      <DependentUpon>ModificarProductoExistente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\ModificarProductoExistente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Agregarinventario.Designer.vb">
+      <DependentUpon>Agregarinventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Agregarinventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Inventario.Designer.vb">
+      <DependentUpon>Inventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Inventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormInicioSesion.Designer.vb">
       <DependentUpon>FormInicioSesion.vb</DependentUpon>
     </Compile>
@@ -140,12 +158,6 @@
       <DependentUpon>FormProvAltas.vb</DependentUpon>
     </Compile>
     <Compile Include="Proveedores\FormProvAltas.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inventario\inventario.Designer.vb">
-      <DependentUpon>inventario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Inventario\inventario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Module1.vb" />
@@ -204,11 +216,17 @@
     <EmbeddedResource Include="FormInicioSesion.resx">
       <DependentUpon>FormInicioSesion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Agregarinventario.resx">
+      <DependentUpon>Agregarinventario.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Consultacambio.resx">
       <DependentUpon>Consultacambio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario\inventario.resx">
-      <DependentUpon>inventario.vb</DependentUpon>
+    <EmbeddedResource Include="Inventario\Inventario.resx">
+      <DependentUpon>Inventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\ModificarProductoExistente.resx">
+      <DependentUpon>ModificarProductoExistente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -295,7 +313,9 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Finanzas\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
