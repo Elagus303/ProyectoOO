@@ -5,10 +5,7 @@
         Me.ClientesBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
 
-        ComboBox1.Items.Add("nombre")
-        ComboBox1.Items.Add("id")
-        ComboBox1.Items.Add("apellido")
-        ComboBox1.Text = "seleccione filtro"
+       
     End Sub
 
     Private Sub altas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -24,7 +21,7 @@
         NombreTextBox.Focus()
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.Close()
 
     End Sub
@@ -127,7 +124,7 @@
 
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim i As Integer
         Dim codigodeconsulta As String
         codigodeconsulta = InputBox("ingrese codigo de articulo")
@@ -164,55 +161,35 @@
     End Sub
 
 
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ClientesBindingSource.MoveLast()
 
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ClientesBindingSource.MoveFirst()
 
     End Sub
 
-    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ClientesBindingSource.MovePrevious()
 
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.ClientesBindingSource.MoveNext()
 
     End Sub
 
-    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button10.Click
-        If Me.ClientesDataGridView.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
-            Dim selectedRow = Me.ClientesDataGridView.SelectedRows(0)
-            Dim clientName As String = selectedRow.Cells(0).Value.ToString() ' Ajusta el índice de la columna si es necesario
-            Dim result As DialogResult = MessageBox.Show("¿Desea eliminar el registro de '" & clientName & "'?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+    Private Sub Button10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-            If result = DialogResult.Yes Then
-                Dim x As Integer
-                For x = Me.ClientesDataGridView.SelectedRows.Count - 1 To 0 Step -1
-                    ' Eliminar el elemento seleccionado
-                    Me.ClientesBindingSource.RemoveAt(Me.ClientesDataGridView.SelectedRows(x).Index)
-                Next
-                Me.ClientesBindingSource.EndEdit()
-                Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
-                MsgBox("Eliminación exitosa")
-            Else
-                ' El usuario eligió "No", no se realiza ninguna acción
-                MsgBox("Eliminación cancelada")
-            End If
-        Else
-            MsgBox("Seleccione, al menos, un elemento para borrar")
-        End If
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 End Class
