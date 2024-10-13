@@ -22,6 +22,7 @@ Partial Class Agregarinventario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.prodlab = New System.Windows.Forms.Label()
         Me.preclab = New System.Windows.Forms.Label()
         Me.cantlab = New System.Windows.Forms.Label()
@@ -32,6 +33,12 @@ Partial Class Agregarinventario
         Me.proovcant = New System.Windows.Forms.TextBox()
         Me.Aceptbutton = New System.Windows.Forms.Button()
         Me.Canbutton = New System.Windows.Forms.Button()
+        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
+        Me.InsumoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.InsumoTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter()
+        Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'prodlab
@@ -72,6 +79,7 @@ Partial Class Agregarinventario
         '
         'prodtext
         '
+        Me.prodtext.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "nombre", True))
         Me.prodtext.Location = New System.Drawing.Point(88, 28)
         Me.prodtext.Name = "prodtext"
         Me.prodtext.Size = New System.Drawing.Size(100, 20)
@@ -79,6 +87,7 @@ Partial Class Agregarinventario
         '
         'prectext
         '
+        Me.prectext.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "precio", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
         Me.prectext.Location = New System.Drawing.Point(88, 58)
         Me.prectext.Name = "prectext"
         Me.prectext.Size = New System.Drawing.Size(100, 20)
@@ -86,6 +95,7 @@ Partial Class Agregarinventario
         '
         'cantprec
         '
+        Me.cantprec.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "stock", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
         Me.cantprec.Location = New System.Drawing.Point(88, 85)
         Me.cantprec.Name = "cantprec"
         Me.cantprec.Size = New System.Drawing.Size(100, 20)
@@ -93,6 +103,7 @@ Partial Class Agregarinventario
         '
         'proovcant
         '
+        Me.proovcant.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "id_proovedor", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
         Me.proovcant.Location = New System.Drawing.Point(88, 111)
         Me.proovcant.Name = "proovcant"
         Me.proovcant.Size = New System.Drawing.Size(100, 20)
@@ -118,6 +129,30 @@ Partial Class Agregarinventario
         Me.Canbutton.Text = "Cancelar"
         Me.Canbutton.UseVisualStyleBackColor = True
         '
+        'BD_ImprentaDataSet
+        '
+        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'InsumoBindingSource
+        '
+        Me.InsumoBindingSource.DataMember = "Insumo"
+        Me.InsumoBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'InsumoTableAdapter
+        '
+        Me.InsumoTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClientesTableAdapter = Nothing
+        Me.TableAdapterManager.InsumoTableAdapter = Me.InsumoTableAdapter
+        Me.TableAdapterManager.ProveedoresTableAdapter = Nothing
+        Me.TableAdapterManager.RolesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.VendedoresTableAdapter = Nothing
+        Me.TableAdapterManager.VentaTableAdapter = Nothing
+        '
         'Agregarinventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -136,6 +171,8 @@ Partial Class Agregarinventario
         Me.Controls.Add(Me.prodlab)
         Me.Name = "Agregarinventario"
         Me.Text = "Agregar nuevo producto"
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -150,4 +187,8 @@ Partial Class Agregarinventario
     Friend WithEvents proovcant As System.Windows.Forms.TextBox
     Friend WithEvents Aceptbutton As System.Windows.Forms.Button
     Friend WithEvents Canbutton As System.Windows.Forms.Button
+    Friend WithEvents BD_ImprentaDataSet As ProyectoOO.BD_ImprentaDataSet
+    Friend WithEvents InsumoBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents InsumoTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter
+    Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
 End Class

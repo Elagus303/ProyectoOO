@@ -12,4 +12,18 @@
         Me.InsumoTableAdapter.Fill(Me.BD_ImprentaDataSet.Insumo)
 
     End Sub
+
+    Private Sub Addbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Addbutton.Click
+        Agregarinventario.Show()
+
+    End Sub
+
+    Private Sub modbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles modbutton.Click
+        ModificarProductoExistente.Show()
+
+    End Sub
+
+    Private Sub delbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delbutton.Click
+        Consultacambio.Show()
+    End Sub
 End Class

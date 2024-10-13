@@ -90,6 +90,9 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BD_ImprentaDataSet.vb">
+      <DependentUpon>BD_ImprentaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="clientes\altas.bajas.Designer.vb">
       <DependentUpon>altas.bajas.vb</DependentUpon>
     </Compile>

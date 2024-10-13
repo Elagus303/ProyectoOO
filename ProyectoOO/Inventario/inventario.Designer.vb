@@ -37,8 +37,6 @@ Partial Class Inventario
         Me.modbutton = New System.Windows.Forms.Button()
         Me.delbutton = New System.Windows.Forms.Button()
         Me.Inventariolab = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,7 +44,6 @@ Partial Class Inventario
         '
         'BD_ImprentaDataSet
         '
-        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
         Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'InsumoBindingSource
@@ -77,6 +74,7 @@ Partial Class Inventario
         Me.InsumoDataGridView.DataSource = Me.InsumoBindingSource
         Me.InsumoDataGridView.Location = New System.Drawing.Point(3, 47)
         Me.InsumoDataGridView.Name = "InsumoDataGridView"
+        Me.InsumoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.InsumoDataGridView.Size = New System.Drawing.Size(542, 220)
         Me.InsumoDataGridView.TabIndex = 1
         '
@@ -150,30 +148,12 @@ Partial Class Inventario
         Me.Inventariolab.TabIndex = 5
         Me.Inventariolab.Text = "Inventario"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(650, 76)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 6
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(650, 107)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 7
-        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Info
         Me.ClientSize = New System.Drawing.Size(846, 380)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Inventariolab)
         Me.Controls.Add(Me.delbutton)
         Me.Controls.Add(Me.modbutton)
@@ -202,6 +182,4 @@ Partial Class Inventario
     Friend WithEvents modbutton As System.Windows.Forms.Button
     Friend WithEvents delbutton As System.Windows.Forms.Button
     Friend WithEvents Inventariolab As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
 End Class
