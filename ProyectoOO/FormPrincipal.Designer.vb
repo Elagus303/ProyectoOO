@@ -24,8 +24,8 @@ Partial Class FormPrincipal
     Private Sub InitializeComponent()
         Me.MenuStripPpal = New System.Windows.Forms.MenuStrip()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+<<<<<<< HEAD
         Me.AñadirInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditarInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EliminarInsumoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +37,12 @@ Partial Class FormPrincipal
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelPrincipal = New System.Windows.Forms.Panel()
         Me.VendedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+=======
+        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VendedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PanelPrincipal = New System.Windows.Forms.Panel()
+>>>>>>> ba5ad9a37c4cdab50866115a6016cfdf6e7ff0bf
         Me.MenuStripPpal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,7 +51,11 @@ Partial Class FormPrincipal
         Me.MenuStripPpal.AutoSize = False
         Me.MenuStripPpal.BackColor = System.Drawing.Color.Black
         Me.MenuStripPpal.Dock = System.Windows.Forms.DockStyle.Left
+<<<<<<< HEAD
         Me.MenuStripPpal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ToolStripMenuItem7, Me.ToolStripMenuItem3, Me.ToolStripMenuItem2, Me.VendedoresToolStripMenuItem})
+=======
+        Me.MenuStripPpal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ToolStripMenuItem7, Me.ToolStripMenuItem2, Me.VendedoresToolStripMenuItem1})
+>>>>>>> ba5ad9a37c4cdab50866115a6016cfdf6e7ff0bf
         Me.MenuStripPpal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow
         Me.MenuStripPpal.Location = New System.Drawing.Point(0, 0)
         Me.MenuStripPpal.Name = "MenuStripPpal"
@@ -62,23 +72,15 @@ Partial Class FormPrincipal
         Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(112, 59)
         Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
-        'ProveedoresToolStripMenuItem
-        '
-        Me.ProveedoresToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(112, 59)
-        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
-        '
         'InsumosToolStripMenuItem
         '
-        Me.InsumosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AñadirInsumoToolStripMenuItem, Me.EditarInsumoToolStripMenuItem, Me.EliminarInsumoToolStripMenuItem})
         Me.InsumosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
         Me.InsumosToolStripMenuItem.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
         Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(112, 59)
         Me.InsumosToolStripMenuItem.Text = "Insumos"
         '
+<<<<<<< HEAD
         'AñadirInsumoToolStripMenuItem
         '
         Me.AñadirInsumoToolStripMenuItem.Name = "AñadirInsumoToolStripMenuItem"
@@ -133,6 +135,9 @@ Partial Class FormPrincipal
         Me.ToolStripMenuItem6.Text = "Eliminar insumo"
         '
         'ToolStripMenuItem2
+=======
+        'ToolStripMenuItem7
+>>>>>>> ba5ad9a37c4cdab50866115a6016cfdf6e7ff0bf
         '
         Me.ToolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
@@ -155,14 +160,39 @@ Partial Class FormPrincipal
         Me.VendedoresToolStripMenuItem.Size = New System.Drawing.Size(112, 19)
         Me.VendedoresToolStripMenuItem.Text = "Vendedores"
         '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(112, 59)
+        Me.ToolStripMenuItem2.Text = "Proveedores"
+        '
+        'VendedoresToolStripMenuItem1
+        '
+        Me.VendedoresToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.VendedoresToolStripMenuItem1.Name = "VendedoresToolStripMenuItem1"
+        Me.VendedoresToolStripMenuItem1.Padding = New System.Windows.Forms.Padding(4, 20, 4, 20)
+        Me.VendedoresToolStripMenuItem1.Size = New System.Drawing.Size(112, 59)
+        Me.VendedoresToolStripMenuItem1.Text = "Vendedores"
+        '
+        'PanelPrincipal
+        '
+        Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelPrincipal.Location = New System.Drawing.Point(125, 0)
+        Me.PanelPrincipal.Name = "PanelPrincipal"
+        Me.PanelPrincipal.Size = New System.Drawing.Size(659, 439)
+        Me.PanelPrincipal.TabIndex = 1
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(784, 439)
         Me.Controls.Add(Me.PanelPrincipal)
         Me.Controls.Add(Me.MenuStripPpal)
+        Me.DoubleBuffered = True
         Me.MainMenuStrip = Me.MenuStripPpal
         Me.MinimumSize = New System.Drawing.Size(800, 400)
         Me.Name = "FormPrincipal"
@@ -175,17 +205,13 @@ Partial Class FormPrincipal
     End Sub
     Friend WithEvents MenuStripPpal As System.Windows.Forms.MenuStrip
     Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ProveedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents InsumosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AñadirInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EditarInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents EliminarInsumoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PanelPrincipal As System.Windows.Forms.Panel
     Friend WithEvents ToolStripMenuItem7 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem3 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem5 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem6 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
+<<<<<<< HEAD
     Friend WithEvents VendedoresToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+=======
+    Friend WithEvents VendedoresToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+>>>>>>> ba5ad9a37c4cdab50866115a6016cfdf6e7ff0bf
 End Class

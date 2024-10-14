@@ -38,6 +38,7 @@ Partial Class Consultacambio
         '
         'Confchange
         '
+        Me.Confchange.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Confchange.Location = New System.Drawing.Point(24, 81)
         Me.Confchange.Name = "Confchange"
         Me.Confchange.Size = New System.Drawing.Size(75, 23)
@@ -47,6 +48,7 @@ Partial Class Consultacambio
         '
         'Canchange
         '
+        Me.Canchange.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Canchange.Location = New System.Drawing.Point(158, 81)
         Me.Canchange.Name = "Canchange"
         Me.Canchange.Size = New System.Drawing.Size(75, 23)
@@ -54,16 +56,17 @@ Partial Class Consultacambio
         Me.Canchange.Text = "Cancelar"
         Me.Canchange.UseVisualStyleBackColor = True
         '
-        'Form1
+        'Consultacambio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(271, 116)
+        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.ClientSize = New System.Drawing.Size(271, 114)
         Me.Controls.Add(Me.Canchange)
         Me.Controls.Add(Me.Confchange)
         Me.Controls.Add(Me.Changquest)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "Consultacambio"
+        Me.Text = "Cambios"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

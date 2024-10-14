@@ -12,7 +12,7 @@
     End Sub
 
 
-    '2) BOTONES 
+    '2) BOTONES DEL FORMULARIO
     '2.1) Click en botón añadir
     Private Sub btnAnadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnadir.Click
         FormProvAltas.ShowDialog()
@@ -123,7 +123,17 @@
 
 
     '5) COMPORTAMIENTO DEL FILTRO DE RESULTADOS
+    '5.1) Evento click en el btn Filtrar (Mascara) 
     Private Sub btnFiltrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnFiltrar.Click
-        cbFiltrar.DroppedDown = True
+        cbFiltrar.DroppedDown = True 'Abrir menu del ComboBox
+    End Sub
+    '5.2) Evento al seleccionar alguna de las opciones del ComboBox
+    Private Sub cbFiltrar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbFiltrar.SelectedIndexChanged
+        Select Case cbFiltrar.SelectedIndex
+            Case 0
+                Me.ProveedoresBindingSource.Sort = "nombre ASC"
+            Case 1
+                Me.ProveedoresBindingSource.Sort = "localidad ASC"
+        End Select
     End Sub
 End Class

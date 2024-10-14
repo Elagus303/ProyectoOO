@@ -238,7 +238,7 @@ Partial Class FormProv
         Me.cbFiltrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFiltrar.FormattingEnabled = True
-        Me.cbFiltrar.Items.AddRange(New Object() {"Razon", "Localidad", "Favoritos"})
+        Me.cbFiltrar.Items.AddRange(New Object() {"Razon", "Localidad"})
         Me.cbFiltrar.Location = New System.Drawing.Point(751, 20)
         Me.cbFiltrar.Name = "cbFiltrar"
         Me.cbFiltrar.Size = New System.Drawing.Size(87, 23)
@@ -255,7 +255,7 @@ Partial Class FormProv
         Me.btnFiltrar.Size = New System.Drawing.Size(87, 29)
         Me.btnFiltrar.TabIndex = 22
         Me.btnFiltrar.TabStop = False
-        Me.btnFiltrar.Text = "Filtrar"
+        Me.btnFiltrar.Text = "Ordenar"
         Me.btnFiltrar.UseVisualStyleBackColor = False
         '
         'btnPrimero
@@ -334,6 +334,7 @@ Partial Class FormProv
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnAnadir)
         Me.Controls.Add(Me.ProveedoresDataGridView)
+        Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "FormProv"
