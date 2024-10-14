@@ -8,7 +8,7 @@ Public Class FormPrincipal
     End Sub
 
     'Click en el Menu Strip Proveedores
-    Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem2.Click
+    Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem.Click, ToolStripMenuItem2.Click
         FormVentas.Close() : FormVentas.Dispose()
         clientes.Close() : clientes.Dispose()
         MostrarFormPanel(FormProv)
@@ -30,37 +30,11 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub Principal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Vendedores' Puede moverla o quitarla según sea necesario.
-
         MenuStripPpal.Renderer = New RenderPersonalizadoMenuStrip() 'Instanciar para poder cambiar Render
         MostrarFormPanel(FormVentas) 'Cargar automaticamente la ventana de ventas
-        'If Not usuarioEsAdmin Then
-        '    InsumosToolStripMenuItem.Visible = False
-
-        'End If
     End Sub
 
     Private Sub FinanzasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MsgBox(Me.ClientSize.Width & " : " & Me.ClientSize.Height)
-    End Sub
-
-<<<<<<< HEAD
-    Private Sub VendedoresToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendedoresToolStripMenuItem.Click
-        MostrarFormPanel(PrinVendedores)
-        PrinVendedores.Show()
-    End Sub
-
-    Private Sub VendedoresBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-       
-
-=======
-    Private Sub VendedoresToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendedoresToolStripMenuItem1.Click
-        Vendedores.Show()
-    End Sub
-
-    Private Sub InsumosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InsumosToolStripMenuItem.Click
-        inventario.Show()
->>>>>>> ba5ad9a37c4cdab50866115a6016cfdf6e7ff0bf
     End Sub
 End Class
