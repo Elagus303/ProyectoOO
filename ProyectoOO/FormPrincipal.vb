@@ -30,11 +30,24 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub Principal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Vendedores' Puede moverla o quitarla según sea necesario.
+
         MenuStripPpal.Renderer = New RenderPersonalizadoMenuStrip() 'Instanciar para poder cambiar Render
         MostrarFormPanel(FormVentas) 'Cargar automaticamente la ventana de ventas
     End Sub
 
     Private Sub FinanzasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MsgBox(Me.ClientSize.Width & " : " & Me.ClientSize.Height)
+    End Sub
+
+    Private Sub VendedoresToolStripMenuItem_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles VendedoresToolStripMenuItem.Click
+        MostrarFormPanel(PrinVendedores)
+        PrinVendedores.Show()
+    End Sub
+
+    Private Sub VendedoresBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Me.Validate()
+       
+
     End Sub
 End Class

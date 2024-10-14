@@ -172,6 +172,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RenderPersonalizadoMenuStrip.vb" />
+    <Compile Include="vendedores\Editar.Designer.vb">
+      <DependentUpon>Editar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vendedores\Editar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vendedores\PrinVendedores.Designer.vb">
+      <DependentUpon>PrinVendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vendedores\PrinVendedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vendedores\vendedores.Designer.vb">
       <DependentUpon>vendedores.vb</DependentUpon>
     </Compile>
@@ -227,6 +239,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores\FormProvEdicion.resx">
       <DependentUpon>FormProvEdicion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendedores\Editar.resx">
+      <DependentUpon>Editar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendedores\PrinVendedores.resx">
+      <DependentUpon>PrinVendedores.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vendedores\vendedores.resx">
       <DependentUpon>vendedores.vb</DependentUpon>
