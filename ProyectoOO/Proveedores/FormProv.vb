@@ -136,4 +136,12 @@
                 Me.ProveedoresBindingSource.Sort = "localidad ASC"
         End Select
     End Sub
+
+    Private Sub lblTabla_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblTabla.Click
+
+    End Sub
+
+    Private Sub ProveedoresDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ProveedoresDataGridView.CellContentClick
+
+    End Sub
 End Class

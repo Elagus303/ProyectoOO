@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProyectoOO.BD_ImprentaDataSet" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAAA5EAARpABAAAQAAAAggmTJpAABBAA4EABBA=</HashCode>
+      <FileName>BD_ImprentaDataSet.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.altas" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAaECAHAAIBIAAACAgDoKARjAcI8AAAQQABAEAIA=</HashCode>
+      <FileName>clientes\altas.bajas.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.clientes" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAkAAGKCAAKAECCNhgQiKAEAEIgBABAAAAAYAAE=</HashCode>
+      <FileName>clientes\clientes.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.modificar" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAYAAAGAAIAIAAACAgBoCIQAAMIAAAAAQAAAAAAA=</HashCode>
+      <FileName>clientes\modificar.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.FormInicioSesion" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIIACAAAEGAAAQAQAACAAAACACAgAIAAAARAAAAgBAA=</HashCode>
+      <FileName>FormInicioSesion.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.FormPrincipal" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABQAAQEECAgAAIAABCAAAACAAQAAAACAAAAAAQAIAA=</HashCode>
+      <FileName>FormPrincipal.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.Agregarinventario" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ggBACQAEAGAAAAAAAADAAAACQBBACIIGBAAAAAAAAAA=</HashCode>
+      <FileName>Inventario\Agregarinventario.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.Consultacambio" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAECEAAAAAAACAAAACAAAAABAAgAAAQAAAAAA=</HashCode>
+      <FileName>Inventario\Consultacambio.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.Inventario" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBAAAEgAAGACAAAAAACAAgBCACAQCIIBggkgAAAAAAA=</HashCode>
+      <FileName>Inventario\Inventario.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.ModificarProductoExistente" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAGAACAAIAACAAAACAAACCIIAAAAQAAAACAA=</HashCode>
+      <FileName>Inventario\ModificarProductoExistente.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.FormProv" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACEEwEAGKGAAHgQAiNBAQiCCAQEIABAhEAAACZIgA=</HashCode>
+      <FileName>Proveedores\FormProv.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.FormProvAltas" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQAQAAAGAAIJAAAACJAAQCAABAEIIAAAAQAAAAAAA=</HashCode>
+      <FileName>Proveedores\FormProvAltas.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.FormProvEdicion" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQAQAAAGEAKBQAAACIAAECAAAAEIAAAAAQAAAAABA=</HashCode>
+      <FileName>Proveedores\FormProvEdicion.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.RenderPersonalizadoMenuStrip" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RenderPersonalizadoMenuStrip.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.Editar" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAAAWAIAAAAAACAEBgCBAAgAIAAAAAQAAAAAAA=</HashCode>
+      <FileName>vendedores\Editar.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.PrinVendedores" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACDEAAAGCIBACAAACJRDwCCCAwAIAAAhAQAAAYAAA=</HashCode>
+      <FileName>vendedores\PrinVendedores.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.Vendedores" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFACIAAAWAIAAAAAACAEDACAAhgcIAAAJAYABAEAAA=</HashCode>
+      <FileName>vendedores\vendedores.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.FormVentas" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQCAkABAGCCAADiQAjIBAACBCBQAIAAApEIAAAYAAA=</HashCode>
+      <FileName>Ventas\FormVentas.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.FormVentasAltas" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QgAACoYAEGAAAACSAACQEAECEAAgIIAAAhBQIABAgAI=</HashCode>
+      <FileName>Ventas\FormVentasAltas.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.BD_ImprentaDataSetTableAdapters.RolesTableAdapter" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.BD_ImprentaDataSetTableAdapters.ProveedoresTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAACSAAAADABAMDACAIMAAgAAASgAKAAAQQAAAEBAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.My.MyApplication" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProyectoOO.My.MySettings" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAQAABAAIAAABAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Module Name="ProyectoOO.Module1" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAAACAAAAEAAAAAAIABAAACAAAoAAgQAAAAA=</HashCode>
+      <FileName>Module1.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="ProyectoOO.My.MySettingsProperty" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="ProyectoOO.My.Resources.Resources" Collapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

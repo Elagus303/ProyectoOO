@@ -89,9 +89,9 @@ Partial Class clientes
         '
         Me.lblTabla.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblTabla.Location = New System.Drawing.Point(-7, 118)
+        Me.lblTabla.Location = New System.Drawing.Point(7, 82)
         Me.lblTabla.Name = "lblTabla"
-        Me.lblTabla.Size = New System.Drawing.Size(965, 20)
+        Me.lblTabla.Size = New System.Drawing.Size(943, 20)
         Me.lblTabla.TabIndex = 28
         Me.lblTabla.Text = "Sin resultados compatibles"
         Me.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -100,7 +100,7 @@ Partial Class clientes
         'txtBuscar
         '
         Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBuscar.Location = New System.Drawing.Point(13, 36)
+        Me.txtBuscar.Location = New System.Drawing.Point(15, 18)
         Me.txtBuscar.MaxLength = 20
         Me.txtBuscar.Multiline = True
         Me.txtBuscar.Name = "txtBuscar"
@@ -111,7 +111,7 @@ Partial Class clientes
         '
         Me.pbTxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.pbTxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.pbTxtBuscar.Location = New System.Drawing.Point(8, 30)
+        Me.pbTxtBuscar.Location = New System.Drawing.Point(10, 12)
         Me.pbTxtBuscar.Name = "pbTxtBuscar"
         Me.pbTxtBuscar.Size = New System.Drawing.Size(254, 29)
         Me.pbTxtBuscar.TabIndex = 26
@@ -122,7 +122,7 @@ Partial Class clientes
         Me.btnBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnBuscar.FlatAppearance.BorderSize = 0
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Location = New System.Drawing.Point(262, 30)
+        Me.btnBuscar.Location = New System.Drawing.Point(264, 12)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(87, 29)
         Me.btnBuscar.TabIndex = 25
@@ -171,7 +171,7 @@ Partial Class clientes
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle5
         Me.ClientesDataGridView.GridColor = System.Drawing.SystemColors.ControlText
-        Me.ClientesDataGridView.Location = New System.Drawing.Point(-4, 99)
+        Me.ClientesDataGridView.Location = New System.Drawing.Point(7, 65)
         Me.ClientesDataGridView.Name = "ClientesDataGridView"
         Me.ClientesDataGridView.ReadOnly = True
         Me.ClientesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -179,7 +179,7 @@ Partial Class clientes
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
         Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.ClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ClientesDataGridView.Size = New System.Drawing.Size(962, 239)
+        Me.ClientesDataGridView.Size = New System.Drawing.Size(943, 239)
         Me.ClientesDataGridView.TabIndex = 31
         '
         'IdDataGridViewTextBoxColumn
