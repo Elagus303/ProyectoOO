@@ -6,19 +6,22 @@
         Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
         EstilosDataGridView(Me.VendedoresDataGridView) 'EstilosDataGridView
 
-        If Me.VendedoresBindingSource.Count = 0 Then
-            lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
-        End If
+        
     End Sub
 
     Private Sub PrinVendedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Vendedores' Puede moverla o quitarla según sea necesario.
         Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
+        EstilosDataGridView(Me.VendedoresDataGridView) 'EstilosDataGridView
+        If Me.VendedoresBindingSource.Count = 0 Then
+            lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
+        End If
 
     End Sub
 
     Private Sub btnAnadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnadir.Click
-        Vendedores.Show()
+        Vendedores.ShowDialog()
+        Vendedores.NombreTextBox.Focus()
 
     End Sub
 
@@ -43,7 +46,7 @@
                     Me.VendedoresBindingSource.RemoveAt(Me.VendedoresDataGridView.SelectedRows(x).Index)
                 Next
                 Me.VendedoresBindingSource.EndEdit()
-
+                Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
                 MsgBox("Eliminación exitosa")
             Else
                 ' El usuario eligió "No", no se realiza ninguna acción
@@ -67,5 +70,24 @@
 
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
         Editar.ShowDialog()
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.VendedoresBindingSource.MoveFirst()
+
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        Me.VendedoresBindingSource.MoveLast()
+
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Me.VendedoresBindingSource.MoveNext()
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Me.VendedoresBindingSource.MovePrevious()
+
     End Sub
 End Class

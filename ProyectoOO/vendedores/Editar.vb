@@ -10,6 +10,8 @@
         Dim idRol As Integer = Me.VendedoresBindingSource.Current("id_rol") 'Seleccionar el Id_Rol del Vendedor
         'Seleccionar elemento según idRol
         cBoxRoles.SelectedValue = idRol
+        NombreTextBox.Focus()
+
     End Sub
 
 
@@ -22,14 +24,55 @@
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
         'Impedir valores nulos...
         If NombreTextBox.Text <> "" And ContraseñaTextBox.Text <> "" Then
-            Me.VendedoresBindingSource.Current("id_rol") = cBoxRoles.SelectedValue
-            Me.VendedoresBindingSource.EndEdit()
-            Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
-            Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
-            PrinVendedores.VendedoresTableAdapter.Fill(PrinVendedores.BD_ImprentaDataSet.Vendedores)
-            MsgBox("Se guardaron los cambios")
+            If TextBox1.Text = ContraseñaTextBox.Text Then
+
+                Me.VendedoresBindingSource.Current("id_rol") = cBoxRoles.SelectedValue
+                Me.VendedoresBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
+                Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
+                PrinVendedores.VendedoresTableAdapter.Fill(PrinVendedores.BD_ImprentaDataSet.Vendedores)
+                MsgBox("Se guardaron los cambios")
+            Else
+                MsgBox("las contraseñas no son iguales")
+            End If
+           
         Else
             MsgBox("Los campos Nombre y Contraseña son obligatorios")
         End If
+    End Sub
+
+    Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+        cBoxRoles.DroppedDown = True
+    End Sub
+
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub NombreTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles NombreTextBox.KeyPress
+        e.KeyChar = ChrW(SoloLetras(e))
+        If e.KeyChar = Chr(13) Then
+            ContraseñaTextBox.Focus()
+
+        End If
+        ' Si es Enter, movemos el foco al siguiente TextBox (en este caso, TextBox2)
+
+        ' Evitamos que se procese la tecla Enter en el TextBox1
+        e.Handled = True
+    End Sub
+
+    Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NombreTextBox.TextChanged
+
+    End Sub
+
+    Private Sub ContraseñaTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ContraseñaTextBox.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBox1.Focus()
+
+        End If
+    End Sub
+
+    Private Sub ContraseñaTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ContraseñaTextBox.TextChanged
+
     End Sub
 End Class

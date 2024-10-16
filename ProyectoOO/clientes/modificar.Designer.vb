@@ -187,6 +187,9 @@ Partial Class modificar
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button2.Location = New System.Drawing.Point(12, 233)
@@ -195,11 +198,13 @@ Partial Class modificar
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Guardar edicion"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button1.Location = New System.Drawing.Point(142, 233)
         Me.Button1.Name = "Button1"
@@ -207,7 +212,7 @@ Partial Class modificar
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "salir"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'modificar
         '
@@ -229,6 +234,7 @@ Partial Class modificar
         Me.Controls.Add(Me.CorreoTextBox)
         Me.Controls.Add(DireccionLabel)
         Me.Controls.Add(Me.DireccionTextBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "modificar"
         Me.Text = "modificar"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
