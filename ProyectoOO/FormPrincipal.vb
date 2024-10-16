@@ -2,8 +2,6 @@
 Public Class FormPrincipal
     'Click en el Menu Strip Ventas
     Private Sub VentasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem7.Click
-        FormProv.Close() : FormProv.Dispose()
-        AltasClientes.Close() : AltasClientes.Dispose()
         MostrarFormPanel(FormVentas)
     End Sub
 

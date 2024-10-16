@@ -31,7 +31,6 @@ C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
-C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
@@ -214,3 +213,10 @@ C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.AltasClientes.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.clientes.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.modificar.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Agregarinventario.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Editar.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.PrinVendedores.resources
