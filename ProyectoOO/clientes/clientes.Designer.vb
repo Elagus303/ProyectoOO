@@ -23,9 +23,9 @@ Partial Class clientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnFiltrar = New System.Windows.Forms.Button()
         Me.cbFiltrar = New System.Windows.Forms.ComboBox()
         Me.lblTabla = New System.Windows.Forms.Label()
@@ -34,9 +34,15 @@ Partial Class clientes
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnAnadir = New System.Windows.Forms.Button()
         Me.ClientesDataGridView = New System.Windows.Forms.DataGridView()
-        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
-        Me.BDImprentaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDImprentaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.ClientesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter()
         Me.btnPrimero = New System.Windows.Forms.Button()
         Me.btnAnt = New System.Windows.Forms.Button()
@@ -45,17 +51,11 @@ Partial Class clientes
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
-        Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ApellidoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnFiltrar
@@ -146,8 +146,8 @@ Partial Class clientes
         '
         Me.ClientesDataGridView.AllowUserToAddRows = False
         Me.ClientesDataGridView.AllowUserToDeleteRows = False
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientesDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientesDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.ClientesDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -160,40 +160,82 @@ Partial Class clientes
         Me.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClientesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.ClientesDataGridView.DataSource = Me.ClientesBindingSource
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle14
         Me.ClientesDataGridView.GridColor = System.Drawing.SystemColors.ControlText
         Me.ClientesDataGridView.Location = New System.Drawing.Point(8, 47)
         Me.ClientesDataGridView.Name = "ClientesDataGridView"
         Me.ClientesDataGridView.ReadOnly = True
         Me.ClientesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.ClientesDataGridView.RowHeadersVisible = False
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle15
         Me.ClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.ClientesDataGridView.Size = New System.Drawing.Size(943, 239)
         Me.ClientesDataGridView.TabIndex = 31
         '
-        'BD_ImprentaDataSet
+        'IdDataGridViewTextBoxColumn
         '
-        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
-        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
+        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
+        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
+        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NombreDataGridViewTextBoxColumn
+        '
+        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
+        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
+        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ApellidoDataGridViewTextBoxColumn
+        '
+        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido"
+        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "apellido"
+        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
+        Me.ApellidoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'TelefonoDataGridViewTextBoxColumn
+        '
+        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
+        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
+        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'CorreoDataGridViewTextBoxColumn
+        '
+        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "correo"
+        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "correo"
+        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
+        Me.CorreoDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'DireccionDataGridViewTextBoxColumn
+        '
+        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
+        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
+        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'ClientesBindingSource
+        '
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me.BDImprentaDataSetBindingSource
         '
         'BDImprentaDataSetBindingSource
         '
         Me.BDImprentaDataSetBindingSource.DataSource = Me.BD_ImprentaDataSet
         Me.BDImprentaDataSetBindingSource.Position = 0
         '
-        'ClientesBindingSource
+        'BD_ImprentaDataSet
         '
-        Me.ClientesBindingSource.DataMember = "Clientes"
-        Me.ClientesBindingSource.DataSource = Me.BDImprentaDataSetBindingSource
+        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
+        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ClientesTableAdapter
         '
@@ -219,12 +261,12 @@ Partial Class clientes
         Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnt.FlatAppearance.BorderSize = 0
         Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnt.Location = New System.Drawing.Point(828, 533)
+        Me.btnAnt.Location = New System.Drawing.Point(914, 533)
         Me.btnAnt.Name = "btnAnt"
         Me.btnAnt.Size = New System.Drawing.Size(37, 27)
         Me.btnAnt.TabIndex = 35
         Me.btnAnt.TabStop = False
-        Me.btnAnt.Text = "<"
+        Me.btnAnt.Text = ">>"
         Me.btnAnt.UseVisualStyleBackColor = False
         '
         'btnSig
@@ -247,12 +289,12 @@ Partial Class clientes
         Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnUltimo.FlatAppearance.BorderSize = 0
         Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUltimo.Location = New System.Drawing.Point(914, 532)
+        Me.btnUltimo.Location = New System.Drawing.Point(828, 533)
         Me.btnUltimo.Name = "btnUltimo"
         Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
         Me.btnUltimo.TabIndex = 37
         Me.btnUltimo.TabStop = False
-        Me.btnUltimo.Text = ">>"
+        Me.btnUltimo.Text = "<"
         Me.btnUltimo.UseVisualStyleBackColor = False
         '
         'btnEliminar
@@ -294,48 +336,6 @@ Partial Class clientes
         Me.TableAdapterManager.VendedoresTableAdapter = Nothing
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
-        'DireccionDataGridViewTextBoxColumn
-        '
-        Me.DireccionDataGridViewTextBoxColumn.DataPropertyName = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.HeaderText = "direccion"
-        Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
-        Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'CorreoDataGridViewTextBoxColumn
-        '
-        Me.CorreoDataGridViewTextBoxColumn.DataPropertyName = "correo"
-        Me.CorreoDataGridViewTextBoxColumn.HeaderText = "correo"
-        Me.CorreoDataGridViewTextBoxColumn.Name = "CorreoDataGridViewTextBoxColumn"
-        Me.CorreoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TelefonoDataGridViewTextBoxColumn
-        '
-        Me.TelefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.HeaderText = "telefono"
-        Me.TelefonoDataGridViewTextBoxColumn.Name = "TelefonoDataGridViewTextBoxColumn"
-        Me.TelefonoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'ApellidoDataGridViewTextBoxColumn
-        '
-        Me.ApellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.HeaderText = "apellido"
-        Me.ApellidoDataGridViewTextBoxColumn.Name = "ApellidoDataGridViewTextBoxColumn"
-        Me.ApellidoDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NombreDataGridViewTextBoxColumn
-        '
-        Me.NombreDataGridViewTextBoxColumn.DataPropertyName = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.HeaderText = "nombre"
-        Me.NombreDataGridViewTextBoxColumn.Name = "NombreDataGridViewTextBoxColumn"
-        Me.NombreDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'IdDataGridViewTextBoxColumn
-        '
-        Me.IdDataGridViewTextBoxColumn.DataPropertyName = "id"
-        Me.IdDataGridViewTextBoxColumn.HeaderText = "id"
-        Me.IdDataGridViewTextBoxColumn.Name = "IdDataGridViewTextBoxColumn"
-        Me.IdDataGridViewTextBoxColumn.ReadOnly = True
-        '
         'clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -360,9 +360,9 @@ Partial Class clientes
         Me.Text = "clientes"
         CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

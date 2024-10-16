@@ -80,6 +80,8 @@ Partial Class PrinVendedores
         '
         'VendedoresDataGridView
         '
+        Me.VendedoresDataGridView.AllowUserToAddRows = False
+        Me.VendedoresDataGridView.AllowUserToDeleteRows = False
         Me.VendedoresDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -88,8 +90,12 @@ Partial Class PrinVendedores
         Me.VendedoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.VendedoresDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.VendedoresDataGridView.DataSource = Me.VendedoresBindingSource
-        Me.VendedoresDataGridView.Location = New System.Drawing.Point(3, 63)
+        Me.VendedoresDataGridView.Location = New System.Drawing.Point(3, 48)
         Me.VendedoresDataGridView.Name = "VendedoresDataGridView"
+        Me.VendedoresDataGridView.ReadOnly = True
+        Me.VendedoresDataGridView.RowHeadersVisible = False
+        Me.VendedoresDataGridView.ScrollBars = System.Windows.Forms.ScrollBars.None
+        Me.VendedoresDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.VendedoresDataGridView.Size = New System.Drawing.Size(847, 248)
         Me.VendedoresDataGridView.TabIndex = 1
         '
@@ -123,7 +129,7 @@ Partial Class PrinVendedores
         Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnFiltrar.FlatAppearance.BorderSize = 0
         Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFiltrar.Location = New System.Drawing.Point(679, 12)
+        Me.btnFiltrar.Location = New System.Drawing.Point(679, 13)
         Me.btnFiltrar.Name = "btnFiltrar"
         Me.btnFiltrar.Size = New System.Drawing.Size(87, 29)
         Me.btnFiltrar.TabIndex = 42
@@ -136,7 +142,7 @@ Partial Class PrinVendedores
         Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFiltrar.FormattingEnabled = True
         Me.cbFiltrar.Items.AddRange(New Object() {"Nombre", "Apellido", "Id"})
-        Me.cbFiltrar.Location = New System.Drawing.Point(679, 18)
+        Me.cbFiltrar.Location = New System.Drawing.Point(679, 19)
         Me.cbFiltrar.Name = "cbFiltrar"
         Me.cbFiltrar.Size = New System.Drawing.Size(87, 21)
         Me.cbFiltrar.TabIndex = 41
@@ -268,12 +274,12 @@ Partial Class PrinVendedores
         Me.Button2.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(738, 331)
+        Me.Button2.Location = New System.Drawing.Point(781, 331)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(37, 27)
         Me.Button2.TabIndex = 52
         Me.Button2.TabStop = False
-        Me.Button2.Text = "<"
+        Me.Button2.Text = ">"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
@@ -282,12 +288,12 @@ Partial Class PrinVendedores
         Me.Button3.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(781, 331)
+        Me.Button3.Location = New System.Drawing.Point(738, 331)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(37, 27)
         Me.Button3.TabIndex = 53
         Me.Button3.TabStop = False
-        Me.Button3.Text = ">"
+        Me.Button3.Text = "<"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'Button4
@@ -296,7 +302,7 @@ Partial Class PrinVendedores
         Me.Button4.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Location = New System.Drawing.Point(824, 330)
+        Me.Button4.Location = New System.Drawing.Point(824, 331)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(37, 27)
         Me.Button4.TabIndex = 54
@@ -321,7 +327,7 @@ Partial Class PrinVendedores
         '
         Me.lblTabla.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblTabla.Location = New System.Drawing.Point(3, 84)
+        Me.lblTabla.Location = New System.Drawing.Point(3, 70)
         Me.lblTabla.Name = "lblTabla"
         Me.lblTabla.Size = New System.Drawing.Size(847, 23)
         Me.lblTabla.TabIndex = 56
@@ -333,6 +339,7 @@ Partial Class PrinVendedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(871, 370)
         Me.Controls.Add(Me.lblTabla)
         Me.Controls.Add(Me.btnBuscar)

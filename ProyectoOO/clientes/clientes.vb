@@ -24,7 +24,7 @@
                     Me.ClientesBindingSource.RemoveAt(Me.ClientesDataGridView.SelectedRows(x).Index)
                 Next
                 Me.ClientesBindingSource.EndEdit()
-
+                Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
                 MsgBox("Eliminación exitosa")
             Else
                 ' El usuario eligió "No", no se realiza ninguna acción
@@ -86,5 +86,26 @@
         Else
             modificar.ShowDialog()
         End If
+    End Sub
+
+    Private Sub btnPrimero_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrimero.Click
+        'arriba de todo
+        Me.ClientesBindingSource.MoveFirst()
+
+    End Sub
+
+    Private Sub btnAnt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnt.Click
+        Me.ClientesBindingSource.MoveLast() 'abajo de todo
+
+    End Sub
+
+    Private Sub btnSig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSig.Click
+        Me.ClientesBindingSource.MoveNext()
+        'siguiente
+    End Sub
+
+    Private Sub btnUltimo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUltimo.Click
+        Me.ClientesBindingSource.MovePrevious()
+        'anterior
     End Sub
 End Class

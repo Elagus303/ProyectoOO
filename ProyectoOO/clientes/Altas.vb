@@ -85,4 +85,8 @@
             End If
         End If
     End Sub
+
+    Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NombreTextBox.TextChanged
+
+    End Sub
 End Class

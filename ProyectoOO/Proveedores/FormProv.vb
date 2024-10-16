@@ -144,4 +144,8 @@
     Private Sub ProveedoresDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles ProveedoresDataGridView.CellContentClick
 
     End Sub
+
+    Private Sub btnPrimero_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrimero.Click
+
+    End Sub
 End Class
