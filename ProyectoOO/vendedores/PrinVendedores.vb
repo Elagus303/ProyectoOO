@@ -4,7 +4,11 @@
         Me.Validate()
         Me.VendedoresBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
+        EstilosDataGridView(Me.VendedoresDataGridView) 'EstilosDataGridView
 
+        If Me.VendedoresBindingSource.Count = 0 Then
+            lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
+        End If
     End Sub
 
     Private Sub PrinVendedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -23,30 +27,7 @@
     End Sub
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged
-        Dim vista As New DataView
-        vista.Table = Me.BD_ImprentaDataSet.Vendedores
-
-        ' Seleccionar la columna en base a la opción del ComboBox
-        Select Case cbFiltrar.Text.ToLower()
-            Case "nombre"
-                vista.RowFilter = "nombre LIKE '" & TextBox1.Text & "%'"
-
-            
-
-            Case "id"
-                ' Filtrar las ID que comiencen con el número ingresado
-                If IsNumeric(TextBox1.Text) Then
-                    vista.RowFilter = "Convert(id, 'System.String') LIKE '" & TextBox1.Text & "%'"
-                Else
-                    vista.RowFilter = "" ' Limpiar el filtro si el id no es válido
-                End If
-
-            Case Else
-                vista.RowFilter = "" ' Limpiar el filtro si no hay selección válida en ComboBox
-        End Select
-
-        ' Asignar la vista al DataGridView
-        Me.VendedoresDataGridView.DataSource = vista
+       
     End Sub
 
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
@@ -71,5 +52,20 @@
         Else
             MsgBox("Seleccione, al menos, un elemento para borrar")
         End If
+    End Sub
+
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+        If TextBox1.Text <> "" Then
+            Me.VendedoresBindingSource.Filter = "nombre LIKE '" & TextBox1.Text & "%'"
+            If Me.VendedoresDataGridView.RowCount <= 0 Then
+                lblTabla.Text = "Sin resultados compatibles" : lblTabla.Visible = True
+            Else
+                lblTabla.Visible = False
+            End If
+        End If
+    End Sub
+
+    Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
+        Editar.ShowDialog()
     End Sub
 End Class

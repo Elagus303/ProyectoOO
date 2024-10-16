@@ -11,10 +11,9 @@ Public Class FormPrincipal
     Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem.Click, ToolStripMenuItem2.Click
         FormVentas.Close() : FormVentas.Dispose()
         clientes.Close() : clientes.Dispose()
-        MostrarFormPanel(FormProv)
-        FormProv.Show()
-    End Sub
+        MostrarFormPanel(PrinVendedores)
 
+    End Sub
 
     Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
         MostrarFormPanel(clientes)
@@ -22,7 +21,8 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub VendedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Vendedores.Show()
+        MostrarFormPanel(PrinVendedores)
+        PrinVendedores.Show()
     End Sub
 
     Private Sub FormPrincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing

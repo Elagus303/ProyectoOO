@@ -44,6 +44,7 @@ Partial Class Inventario
         '
         'BD_ImprentaDataSet
         '
+        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
         Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'InsumoBindingSource

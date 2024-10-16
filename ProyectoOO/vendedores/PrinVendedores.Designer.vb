@@ -46,6 +46,8 @@ Partial Class PrinVendedores
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.lblTabla = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VendedoresDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,7 +88,7 @@ Partial Class PrinVendedores
         Me.VendedoresDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.VendedoresDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4})
         Me.VendedoresDataGridView.DataSource = Me.VendedoresBindingSource
-        Me.VendedoresDataGridView.Location = New System.Drawing.Point(12, 64)
+        Me.VendedoresDataGridView.Location = New System.Drawing.Point(3, 63)
         Me.VendedoresDataGridView.Name = "VendedoresDataGridView"
         Me.VendedoresDataGridView.Size = New System.Drawing.Size(847, 248)
         Me.VendedoresDataGridView.TabIndex = 1
@@ -121,7 +123,7 @@ Partial Class PrinVendedores
         Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnFiltrar.FlatAppearance.BorderSize = 0
         Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFiltrar.Location = New System.Drawing.Point(679, 13)
+        Me.btnFiltrar.Location = New System.Drawing.Point(679, 12)
         Me.btnFiltrar.Name = "btnFiltrar"
         Me.btnFiltrar.Size = New System.Drawing.Size(87, 29)
         Me.btnFiltrar.TabIndex = 42
@@ -302,11 +304,38 @@ Partial Class PrinVendedores
         Me.Button4.Text = ">>"
         Me.Button4.UseVisualStyleBackColor = False
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Location = New System.Drawing.Point(259, 12)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(87, 29)
+        Me.btnBuscar.TabIndex = 55
+        Me.btnBuscar.TabStop = False
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'lblTabla
+        '
+        Me.lblTabla.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblTabla.Location = New System.Drawing.Point(3, 84)
+        Me.lblTabla.Name = "lblTabla"
+        Me.lblTabla.Size = New System.Drawing.Size(847, 23)
+        Me.lblTabla.TabIndex = 56
+        Me.lblTabla.Text = "Sin resultados compatibles"
+        Me.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTabla.Visible = False
+        '
         'PrinVendedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(871, 370)
+        Me.Controls.Add(Me.lblTabla)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button3)
@@ -354,4 +383,6 @@ Partial Class PrinVendedores
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents btnBuscar As System.Windows.Forms.Button
+    Friend WithEvents lblTabla As System.Windows.Forms.Label
 End Class

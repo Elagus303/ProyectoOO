@@ -133,6 +133,7 @@ Partial Class modificar
         '
         'IdTextBox
         '
+        Me.IdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id", True))
         Me.IdTextBox.Location = New System.Drawing.Point(118, 43)
         Me.IdTextBox.Name = "IdTextBox"
@@ -141,6 +142,7 @@ Partial Class modificar
         '
         'NombreTextBox
         '
+        Me.NombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
         Me.NombreTextBox.Location = New System.Drawing.Point(118, 69)
         Me.NombreTextBox.Name = "NombreTextBox"
@@ -149,6 +151,7 @@ Partial Class modificar
         '
         'ApellidoTextBox
         '
+        Me.ApellidoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
         Me.ApellidoTextBox.Location = New System.Drawing.Point(118, 95)
         Me.ApellidoTextBox.Name = "ApellidoTextBox"
@@ -157,6 +160,7 @@ Partial Class modificar
         '
         'TelefonoTextBox
         '
+        Me.TelefonoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
         Me.TelefonoTextBox.Location = New System.Drawing.Point(118, 121)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
@@ -165,6 +169,7 @@ Partial Class modificar
         '
         'CorreoTextBox
         '
+        Me.CorreoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "correo", True))
         Me.CorreoTextBox.Location = New System.Drawing.Point(118, 147)
         Me.CorreoTextBox.Name = "CorreoTextBox"
@@ -173,6 +178,7 @@ Partial Class modificar
         '
         'DireccionTextBox
         '
+        Me.DireccionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "direccion", True))
         Me.DireccionTextBox.Location = New System.Drawing.Point(118, 173)
         Me.DireccionTextBox.Name = "DireccionTextBox"
@@ -207,6 +213,7 @@ Partial Class modificar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(289, 285)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
