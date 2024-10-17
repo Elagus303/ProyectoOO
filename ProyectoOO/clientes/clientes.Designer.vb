@@ -23,16 +23,13 @@ Partial Class clientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Me.btnFiltrar = New System.Windows.Forms.Button()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.cbFiltrar = New System.Windows.Forms.ComboBox()
         Me.lblTabla = New System.Windows.Forms.Label()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
-        Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
-        Me.btnAnadir = New System.Windows.Forms.Button()
         Me.ClientesDataGridView = New System.Windows.Forms.DataGridView()
         Me.IdDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NombreDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -51,43 +48,32 @@ Partial Class clientes
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
-        CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnFiltrar = New System.Windows.Forms.Button()
+        Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
+        Me.btnAnadir = New System.Windows.Forms.Button()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'btnFiltrar
-        '
-        Me.btnFiltrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.btnFiltrar.FlatAppearance.BorderSize = 0
-        Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFiltrar.Location = New System.Drawing.Point(765, 12)
-        Me.btnFiltrar.Name = "btnFiltrar"
-        Me.btnFiltrar.Size = New System.Drawing.Size(87, 29)
-        Me.btnFiltrar.TabIndex = 30
-        Me.btnFiltrar.TabStop = False
-        Me.btnFiltrar.Text = "Filtrar"
-        Me.btnFiltrar.UseVisualStyleBackColor = False
         '
         'cbFiltrar
         '
         Me.cbFiltrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFiltrar.FormattingEnabled = True
-        Me.cbFiltrar.Items.AddRange(New Object() {"id", "nombre", "apellido"})
-        Me.cbFiltrar.Location = New System.Drawing.Point(765, 18)
+        Me.cbFiltrar.Items.AddRange(New Object() {"nombre", "apellido"})
+        Me.cbFiltrar.Location = New System.Drawing.Point(774, 29)
         Me.cbFiltrar.Name = "cbFiltrar"
-        Me.cbFiltrar.Size = New System.Drawing.Size(87, 21)
+        Me.cbFiltrar.Size = New System.Drawing.Size(78, 21)
         Me.cbFiltrar.TabIndex = 29
         '
         'lblTabla
         '
         Me.lblTabla.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblTabla.Location = New System.Drawing.Point(8, 64)
+        Me.lblTabla.Location = New System.Drawing.Point(8, 76)
         Me.lblTabla.Name = "lblTabla"
         Me.lblTabla.Size = New System.Drawing.Size(943, 20)
         Me.lblTabla.TabIndex = 28
@@ -105,16 +91,6 @@ Partial Class clientes
         Me.txtBuscar.Size = New System.Drawing.Size(243, 20)
         Me.txtBuscar.TabIndex = 27
         '
-        'pbTxtBuscar
-        '
-        Me.pbTxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.pbTxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.pbTxtBuscar.Location = New System.Drawing.Point(10, 12)
-        Me.pbTxtBuscar.Name = "pbTxtBuscar"
-        Me.pbTxtBuscar.Size = New System.Drawing.Size(254, 29)
-        Me.pbTxtBuscar.TabIndex = 26
-        Me.pbTxtBuscar.TabStop = False
-        '
         'btnBuscar
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
@@ -128,26 +104,12 @@ Partial Class clientes
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
-        'btnAnadir
-        '
-        Me.btnAnadir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAnadir.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.btnAnadir.FlatAppearance.BorderSize = 0
-        Me.btnAnadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnadir.Location = New System.Drawing.Point(858, 12)
-        Me.btnAnadir.Name = "btnAnadir"
-        Me.btnAnadir.Size = New System.Drawing.Size(87, 29)
-        Me.btnAnadir.TabIndex = 24
-        Me.btnAnadir.TabStop = False
-        Me.btnAnadir.Text = "Agregar"
-        Me.btnAnadir.UseVisualStyleBackColor = False
-        '
         'ClientesDataGridView
         '
         Me.ClientesDataGridView.AllowUserToAddRows = False
         Me.ClientesDataGridView.AllowUserToDeleteRows = False
-        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientesDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientesDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.ClientesDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -160,24 +122,24 @@ Partial Class clientes
         Me.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClientesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
         Me.ClientesDataGridView.DataSource = Me.ClientesBindingSource
-        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle14
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle2
         Me.ClientesDataGridView.GridColor = System.Drawing.SystemColors.ControlText
-        Me.ClientesDataGridView.Location = New System.Drawing.Point(8, 47)
+        Me.ClientesDataGridView.Location = New System.Drawing.Point(8, 59)
         Me.ClientesDataGridView.Name = "ClientesDataGridView"
         Me.ClientesDataGridView.ReadOnly = True
         Me.ClientesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.ClientesDataGridView.RowHeadersVisible = False
-        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle15
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.ClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ClientesDataGridView.Size = New System.Drawing.Size(943, 239)
+        Me.ClientesDataGridView.Size = New System.Drawing.Size(943, 450)
         Me.ClientesDataGridView.TabIndex = 31
         '
         'IdDataGridViewTextBoxColumn
@@ -336,6 +298,46 @@ Partial Class clientes
         Me.TableAdapterManager.VendedoresTableAdapter = Nothing
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
+        'btnFiltrar
+        '
+        Me.btnFiltrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnFiltrar.FlatAppearance.BorderSize = 0
+        Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnFiltrar.Location = New System.Drawing.Point(766, 12)
+        Me.btnFiltrar.Name = "btnFiltrar"
+        Me.btnFiltrar.Size = New System.Drawing.Size(86, 38)
+        Me.btnFiltrar.TabIndex = 30
+        Me.btnFiltrar.TabStop = False
+        Me.btnFiltrar.Text = "ordenar"
+        Me.btnFiltrar.UseVisualStyleBackColor = False
+        '
+        'pbTxtBuscar
+        '
+        Me.pbTxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.pbTxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.pbTxtBuscar.Location = New System.Drawing.Point(10, 12)
+        Me.pbTxtBuscar.Name = "pbTxtBuscar"
+        Me.pbTxtBuscar.Size = New System.Drawing.Size(254, 29)
+        Me.pbTxtBuscar.TabIndex = 26
+        Me.pbTxtBuscar.TabStop = False
+        '
+        'btnAnadir
+        '
+        Me.btnAnadir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAnadir.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnAnadir.FlatAppearance.BorderSize = 0
+        Me.btnAnadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAnadir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAnadir.Location = New System.Drawing.Point(859, 12)
+        Me.btnAnadir.Name = "btnAnadir"
+        Me.btnAnadir.Size = New System.Drawing.Size(86, 38)
+        Me.btnAnadir.TabIndex = 24
+        Me.btnAnadir.TabStop = False
+        Me.btnAnadir.Text = "Agregar"
+        Me.btnAnadir.UseVisualStyleBackColor = False
+        '
         'clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -358,11 +360,11 @@ Partial Class clientes
         Me.Controls.Add(Me.btnAnadir)
         Me.Name = "clientes"
         Me.Text = "clientes"
-        CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -7,6 +7,7 @@
         Me.VendedoresBindingSource.Position = PrinVendedores.VendedoresBindingSource.Position 'Sincronizar putero
 
         'ComboBox
+
         Dim idRol As Integer = Me.VendedoresBindingSource.Current("id_rol") 'Seleccionar el Id_Rol del Vendedor
         'Seleccionar elemento según idRol
         cBoxRoles.SelectedValue = idRol
@@ -42,7 +43,12 @@
     End Sub
 
     Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
-        cBoxRoles.DroppedDown = True
+
+        If e.KeyChar = Chr(13) Then
+            cBoxRoles.DroppedDown = True
+
+
+        End If
     End Sub
 
     Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TextBox1.TextChanged

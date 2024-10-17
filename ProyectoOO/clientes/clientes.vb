@@ -12,22 +12,30 @@
     End Sub
     
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
-        If Me.ClientesDataGridView.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
+        If Me.ClientesDataGridView.SelectedRows.Count > 0 Then ' Si hay al menos una fila seleccionada
             Dim selectedRow = Me.ClientesDataGridView.SelectedRows(0)
             Dim clientName As String = selectedRow.Cells(0).Value.ToString() ' Ajusta el índice de la columna si es necesario
             Dim result As DialogResult = MessageBox.Show("¿Desea eliminar el registro de '" & clientName & "'?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
             If result = DialogResult.Yes Then
-                Dim x As Integer
-                For x = Me.ClientesDataGridView.SelectedRows.Count - 1 To 0 Step -1
-                    ' Eliminar el elemento seleccionado
-                    Me.ClientesBindingSource.RemoveAt(Me.ClientesDataGridView.SelectedRows(x).Index)
-                Next
-                Me.ClientesBindingSource.EndEdit()
-                Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
-                MsgBox("Eliminación exitosa")
+                Try
+                    For x As Integer = Me.ClientesDataGridView.SelectedRows.Count - 1 To 0 Step -1
+                        ' Eliminar el elemento seleccionado
+                        Me.ClientesBindingSource.RemoveAt(Me.ClientesDataGridView.SelectedRows(x).Index)
+                    Next
+
+                    Me.ClientesBindingSource.EndEdit() ' Confirma los cambios
+
+                    ' Guarda los cambios en la base de datos
+                    Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
+                    If Me.ClientesBindingSource.Count = 0 Then
+                        lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
+                    End If
+                    MsgBox("Eliminación exitosa")
+                Catch ex As Exception
+                    MsgBox("Ocurrió un error al intentar eliminar: " & ex.Message)
+                End Try
             Else
-                ' El usuario eligió "No", no se realiza ninguna acción
                 MsgBox("Eliminación cancelada")
             End If
         Else
@@ -59,11 +67,11 @@
                 lblTabla.Visible = False
             End If
         End If
-        
+
     End Sub
 
     Private Sub txtBuscar_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscar.TextChanged
-      
+
     End Sub
 
     Private Sub cbFiltrar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbFiltrar.SelectedIndexChanged

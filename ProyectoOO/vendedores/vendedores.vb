@@ -8,21 +8,21 @@
     End Sub
 
     Private Sub Vendedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        NombreTextBox.Focus()
+
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Roles' Puede moverla o quitarla según sea necesario.
         Me.RolesTableAdapter.Fill(Me.BD_ImprentaDataSet.Roles)
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Vendedores' Puede moverla o quitarla según sea necesario.
         Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
         Me.VendedoresBindingSource.AddNew()
 
-
+        NombreTextBox.Focus()
 
 
     End Sub
 
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Me.VendedoresBindingSource.AddNew()
-       
+
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
@@ -44,10 +44,13 @@
                 NombreTextBox.Focus()
                 MsgBox("Se a guardado con exito")
 
+                PrinVendedores.lblTabla.Visible = False
+
+
             Else
                 MsgBox("las contraseñas no son iguales")
             End If
-           
+
         End If
     End Sub
 
@@ -71,12 +74,8 @@
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
 
-        ' Cancelamos cualquier edición pendiente en el BindingSource
-        If VendedoresBindingSource.Current IsNot Nothing Then
-            VendedoresBindingSource.CancelEdit()
-        End If
+        Me.Close()
 
-        MessageBox.Show("El nuevo registro ha sido cancelado.")
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged

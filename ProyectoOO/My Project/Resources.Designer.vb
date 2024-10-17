@@ -69,5 +69,35 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property equalizer_filter_filtering_mixer_sorting_icon_123287() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("equalizer_filter_filtering_mixer_sorting_icon_123287", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property import_file_icon_256323() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("import_file_icon_256323", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property list_symbol_of_three_items_with_dots_icon_icons_com_72994() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("list-symbol-of-three-items-with-dots_icon-icons.com_72994", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace

@@ -40,7 +40,7 @@
         Me.Close()
     End Sub
 
-    Private Sub IdTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles IdTextBox.TextChanged
+    Private Sub IdTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
@@ -92,15 +92,25 @@
     End Sub
 
     Private Sub CorreoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CorreoTextBox.KeyPress
+
         If e.KeyChar = Chr(13) Then
             DireccionTextBox.Focus()
 
         End If
-        e.Handled = True
+
     End Sub
 
     Private Sub CorreoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CorreoTextBox.TextChanged
 
+    End Sub
+
+    Private Sub DireccionTextBox_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DireccionTextBox.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ' Simula el clic en el botón
+            Button2.PerformClick()
+            ' Opcionalmente, puedes evitar que el sonido de "ding" suene al presionar Enter
+            e.SuppressKeyPress = True
+        End If
     End Sub
 
     Private Sub DireccionTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles DireccionTextBox.KeyPress
@@ -108,7 +118,7 @@
             Button2.Focus()
 
         End If
-        e.Handled = True
+
     End Sub
 
     Private Sub DireccionTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DireccionTextBox.TextChanged

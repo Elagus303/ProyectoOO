@@ -314,6 +314,9 @@
     <Content Include="BD_Imprenta.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\equalizer_filter_filtering_mixer_sorting_icon_123287.png" />
+    <None Include="Resources\list-symbol-of-three-items-with-dots_icon-icons.com_72994.png" />
+    <None Include="Resources\import_file_icon_256323.png" />
     <None Include="Resources\borrar-usuario.png" />
     <None Include="Resources\borrar-usuario.ico" />
   </ItemGroup>

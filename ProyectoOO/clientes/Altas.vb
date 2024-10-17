@@ -24,7 +24,9 @@
             clientes.ClientesTableAdapter.Fill(clientes.BD_ImprentaDataSet.Clientes) 'actualizo la tabla clientes
             Me.ClientesBindingSource.AddNew()
             NombreTextBox.Focus()
+            clientes.lblTabla.Visible = False
             MsgBox("Se a guardado con exito")
+
         End If
     End Sub
     '2.2) Botón de cancelar nuevo registro
@@ -75,18 +77,26 @@
             DireccionTextBox.Focus()
         End If
     End Sub
+
+    Private Sub DireccionTextBox_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DireccionTextBox.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ' Simula el clic en el botón
+            btnGuardar.PerformClick()
+            ' Opcionalmente, puedes evitar que el sonido de "ding" suene al presionar Enter
+            e.SuppressKeyPress = True
+        End If
+    End Sub
     '3.5) Campo de dirección
     Private Sub DireccionTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles DireccionTextBox.KeyPress
-        If e.KeyChar = Chr(13) Then
+        
 
-        Else
-            If LetrasNumeros(e) Then
-                e.Handled = True ' Cancelamos la tecla si no es válida
-            End If
-        End If
     End Sub
 
     Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NombreTextBox.TextChanged
+
+    End Sub
+
+    Private Sub DireccionTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DireccionTextBox.TextChanged
 
     End Sub
 End Class

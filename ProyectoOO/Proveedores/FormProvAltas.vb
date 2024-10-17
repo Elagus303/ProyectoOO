@@ -49,4 +49,17 @@
             System.Media.SystemSounds.Exclamation.Play()
         End If
     End Sub
+
+    Private Sub LocalidadTextBox_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles LocalidadTextBox.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            ' Simula el clic en el botón
+            btnAnadir.PerformClick()
+            ' Opcionalmente, puedes evitar que el sonido de "ding" suene al presionar Enter
+            e.SuppressKeyPress = True
+        End If
+    End Sub
+
+    Private Sub LocalidadTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LocalidadTextBox.TextChanged
+
+    End Sub
 End Class

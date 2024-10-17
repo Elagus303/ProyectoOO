@@ -23,17 +23,14 @@ Partial Class Editar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim IdLabel As System.Windows.Forms.Label
         Dim ContraseñaLabel As System.Windows.Forms.Label
         Dim NombreLabel As System.Windows.Forms.Label
         Dim Id_rolLabel As System.Windows.Forms.Label
         Dim Label1 As System.Windows.Forms.Label
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Editar))
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.VendedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VendedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
-        Me.IdTextBox = New System.Windows.Forms.TextBox()
         Me.ContraseñaTextBox = New System.Windows.Forms.TextBox()
         Me.NombreTextBox = New System.Windows.Forms.TextBox()
         Me.cBoxRoles = New System.Windows.Forms.ComboBox()
@@ -42,7 +39,6 @@ Partial Class Editar
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.RolesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.RolesTableAdapter()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        IdLabel = New System.Windows.Forms.Label()
         ContraseñaLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         Id_rolLabel = New System.Windows.Forms.Label()
@@ -52,19 +48,10 @@ Partial Class Editar
         CType(Me.RolesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'IdLabel
-        '
-        IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(35, 50)
-        IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(19, 13)
-        IdLabel.TabIndex = 1
-        IdLabel.Text = "Id:"
-        '
         'ContraseñaLabel
         '
         ContraseñaLabel.AutoSize = True
-        ContraseñaLabel.Location = New System.Drawing.Point(35, 102)
+        ContraseñaLabel.Location = New System.Drawing.Point(31, 60)
         ContraseñaLabel.Name = "ContraseñaLabel"
         ContraseñaLabel.Size = New System.Drawing.Size(64, 13)
         ContraseñaLabel.TabIndex = 3
@@ -73,7 +60,7 @@ Partial Class Editar
         'NombreLabel
         '
         NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(35, 76)
+        NombreLabel.Location = New System.Drawing.Point(31, 34)
         NombreLabel.Name = "NombreLabel"
         NombreLabel.Size = New System.Drawing.Size(47, 13)
         NombreLabel.TabIndex = 5
@@ -82,7 +69,7 @@ Partial Class Editar
         'Id_rolLabel
         '
         Id_rolLabel.AutoSize = True
-        Id_rolLabel.Location = New System.Drawing.Point(35, 154)
+        Id_rolLabel.Location = New System.Drawing.Point(31, 112)
         Id_rolLabel.Name = "Id_rolLabel"
         Id_rolLabel.Size = New System.Drawing.Size(26, 13)
         Id_rolLabel.TabIndex = 7
@@ -91,7 +78,7 @@ Partial Class Editar
         'Label1
         '
         Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(35, 128)
+        Label1.Location = New System.Drawing.Point(31, 86)
         Label1.Name = "Label1"
         Label1.Size = New System.Drawing.Size(106, 13)
         Label1.TabIndex = 19
@@ -122,18 +109,11 @@ Partial Class Editar
         Me.TableAdapterManager.VendedoresTableAdapter = Me.VendedoresTableAdapter
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
-        'IdTextBox
-        '
-        Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VendedoresBindingSource, "id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(150, 47)
-        Me.IdTextBox.Name = "IdTextBox"
-        Me.IdTextBox.Size = New System.Drawing.Size(182, 20)
-        Me.IdTextBox.TabIndex = 2
-        '
         'ContraseñaTextBox
         '
         Me.ContraseñaTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VendedoresBindingSource, "contraseña", True))
-        Me.ContraseñaTextBox.Location = New System.Drawing.Point(150, 99)
+        Me.ContraseñaTextBox.Location = New System.Drawing.Point(146, 57)
+        Me.ContraseñaTextBox.MaxLength = 8
         Me.ContraseñaTextBox.Name = "ContraseñaTextBox"
         Me.ContraseñaTextBox.Size = New System.Drawing.Size(182, 20)
         Me.ContraseñaTextBox.TabIndex = 4
@@ -141,10 +121,11 @@ Partial Class Editar
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VendedoresBindingSource, "nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(150, 73)
+        Me.NombreTextBox.Location = New System.Drawing.Point(146, 31)
+        Me.NombreTextBox.MaxLength = 20
         Me.NombreTextBox.Name = "NombreTextBox"
         Me.NombreTextBox.Size = New System.Drawing.Size(182, 20)
-        Me.NombreTextBox.TabIndex = 6
+        Me.NombreTextBox.TabIndex = 2
         '
         'cBoxRoles
         '
@@ -152,7 +133,7 @@ Partial Class Editar
         Me.cBoxRoles.DisplayMember = "nombre"
         Me.cBoxRoles.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cBoxRoles.FormattingEnabled = True
-        Me.cBoxRoles.Location = New System.Drawing.Point(150, 151)
+        Me.cBoxRoles.Location = New System.Drawing.Point(146, 109)
         Me.cBoxRoles.Name = "cBoxRoles"
         Me.cBoxRoles.Size = New System.Drawing.Size(182, 21)
         Me.cBoxRoles.TabIndex = 10
@@ -168,14 +149,12 @@ Partial Class Editar
         Me.btnSalir.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnSalir.FlatAppearance.BorderSize = 0
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Image = CType(resources.GetObject("btnSalir.Image"), System.Drawing.Image)
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSalir.Location = New System.Drawing.Point(237, 212)
+        Me.btnSalir.Location = New System.Drawing.Point(210, 165)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(128, 37)
         Me.btnSalir.TabIndex = 18
         Me.btnSalir.Text = "Salir"
-        Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSalir.UseVisualStyleBackColor = False
         '
         'btnGuardar
@@ -183,14 +162,12 @@ Partial Class Editar
         Me.btnGuardar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnGuardar.FlatAppearance.BorderSize = 0
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnGuardar.Location = New System.Drawing.Point(12, 212)
+        Me.btnGuardar.Location = New System.Drawing.Point(76, 165)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(128, 37)
         Me.btnGuardar.TabIndex = 17
         Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
         'RolesTableAdapter
@@ -200,7 +177,8 @@ Partial Class Editar
         'TextBox1
         '
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.VendedoresBindingSource, "contraseña", True))
-        Me.TextBox1.Location = New System.Drawing.Point(150, 125)
+        Me.TextBox1.Location = New System.Drawing.Point(146, 83)
+        Me.TextBox1.MaxLength = 8
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(182, 20)
         Me.TextBox1.TabIndex = 20
@@ -210,14 +188,12 @@ Partial Class Editar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
-        Me.ClientSize = New System.Drawing.Size(377, 261)
+        Me.ClientSize = New System.Drawing.Size(352, 214)
         Me.Controls.Add(Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.cBoxRoles)
-        Me.Controls.Add(IdLabel)
-        Me.Controls.Add(Me.IdTextBox)
         Me.Controls.Add(ContraseñaLabel)
         Me.Controls.Add(Me.ContraseñaTextBox)
         Me.Controls.Add(NombreLabel)
@@ -237,7 +213,6 @@ Partial Class Editar
     Friend WithEvents VendedoresBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents VendedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter
     Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
-    Friend WithEvents IdTextBox As System.Windows.Forms.TextBox
     Friend WithEvents ContraseñaTextBox As System.Windows.Forms.TextBox
     Friend WithEvents NombreTextBox As System.Windows.Forms.TextBox
     Friend WithEvents cBoxRoles As System.Windows.Forms.ComboBox

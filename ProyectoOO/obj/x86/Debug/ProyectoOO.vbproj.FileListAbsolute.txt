@@ -179,7 +179,6 @@ C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.modificar.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormInicioSesion.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Agregarinventario.resources
-C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultacambio.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Inventario.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
@@ -248,3 +247,5 @@ C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.Gene
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.MainFinanzas.resources
+C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultaeliminar.resources
