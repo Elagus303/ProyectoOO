@@ -1,0 +1,138 @@
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Form1.resources
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\Proyecto OO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
+C:\Users\AGUS\Desktop\proyecto\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+G:\Vs Studio\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultacambio.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Principal.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
+G:\Vs Studio\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultacambio.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvEdicion.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Clientes.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultacambio.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Principal.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvEdicion.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
+C:\Users\AGUS\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultacambio.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvEdicion.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Vendedores.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Vendedores.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormInicioSesion.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormPrincipal.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.clientes.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormInicioSesion.resources
+C:\Users\AGUS\Desktop\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormPrincipal.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.altas.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.clientes.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormInicioSesion.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultacambio.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.inventario.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormPrincipal.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvEdicion.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Vendedores.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+C:\Users\AGUS\Desktop\Programacion\Orientada a objetos\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.modificar.resources
+C:\Users\AGUS\Desktop\ProyectoOO-6d7f76d58c21f12ac374f12bd4ef106f7bad80e6\ProyectoOO-6d7f76d58c21f12ac374f12bd4ef106f7bad80e6\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\AGUS\Desktop\ProyectoOO-6d7f76d58c21f12ac374f12bd4ef106f7bad80e6\ProyectoOO-6d7f76d58c21f12ac374f12bd4ef106f7bad80e6\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\AGUS\Desktop\ProyectoOO-6d7f76d58c21f12ac374f12bd4ef106f7bad80e6\ProyectoOO-6d7f76d58c21f12ac374f12bd4ef106f7bad80e6\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\AGUS\Desktop\ProyectoOO-6d7f76d58c21f12ac374f12bd4ef106f7bad80e6\ProyectoOO-6d7f76d58c21f12ac374f12bd4ef106f7bad80e6\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb

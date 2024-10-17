@@ -133,6 +133,7 @@ Partial Class modificar
         '
         'IdTextBox
         '
+        Me.IdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id", True))
         Me.IdTextBox.Location = New System.Drawing.Point(118, 43)
         Me.IdTextBox.Name = "IdTextBox"
@@ -141,6 +142,7 @@ Partial Class modificar
         '
         'NombreTextBox
         '
+        Me.NombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
         Me.NombreTextBox.Location = New System.Drawing.Point(118, 69)
         Me.NombreTextBox.Name = "NombreTextBox"
@@ -149,6 +151,7 @@ Partial Class modificar
         '
         'ApellidoTextBox
         '
+        Me.ApellidoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
         Me.ApellidoTextBox.Location = New System.Drawing.Point(118, 95)
         Me.ApellidoTextBox.Name = "ApellidoTextBox"
@@ -157,6 +160,7 @@ Partial Class modificar
         '
         'TelefonoTextBox
         '
+        Me.TelefonoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
         Me.TelefonoTextBox.Location = New System.Drawing.Point(118, 121)
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
@@ -165,6 +169,7 @@ Partial Class modificar
         '
         'CorreoTextBox
         '
+        Me.CorreoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "correo", True))
         Me.CorreoTextBox.Location = New System.Drawing.Point(118, 147)
         Me.CorreoTextBox.Name = "CorreoTextBox"
@@ -173,6 +178,7 @@ Partial Class modificar
         '
         'DireccionTextBox
         '
+        Me.DireccionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "direccion", True))
         Me.DireccionTextBox.Location = New System.Drawing.Point(118, 173)
         Me.DireccionTextBox.Name = "DireccionTextBox"
@@ -181,33 +187,39 @@ Partial Class modificar
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(12, 220)
+        Me.Button2.Location = New System.Drawing.Point(12, 233)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(154, 53)
+        Me.Button2.Size = New System.Drawing.Size(124, 40)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = "Guardar edicion"
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(172, 220)
+        Me.Button1.Location = New System.Drawing.Point(142, 233)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(154, 53)
+        Me.Button1.Size = New System.Drawing.Size(124, 40)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "salir"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'modificar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(345, 285)
+        Me.BackColor = System.Drawing.Color.LemonChiffon
+        Me.ClientSize = New System.Drawing.Size(289, 285)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(IdLabel)
@@ -222,6 +234,7 @@ Partial Class modificar
         Me.Controls.Add(Me.CorreoTextBox)
         Me.Controls.Add(DireccionLabel)
         Me.Controls.Add(Me.DireccionTextBox)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "modificar"
         Me.Text = "modificar"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()

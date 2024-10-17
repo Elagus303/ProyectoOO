@@ -23,9 +23,9 @@ Partial Class clientes
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnFiltrar = New System.Windows.Forms.Button()
         Me.cbFiltrar = New System.Windows.Forms.ComboBox()
         Me.lblTabla = New System.Windows.Forms.Label()
@@ -40,10 +40,9 @@ Partial Class clientes
         Me.TelefonoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CorreoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClientesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
-        Me.BDImprentaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BDImprentaDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.ClientesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter()
         Me.btnPrimero = New System.Windows.Forms.Button()
         Me.btnAnt = New System.Windows.Forms.Button()
@@ -54,10 +53,9 @@ Partial Class clientes
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnFiltrar
@@ -66,7 +64,7 @@ Partial Class clientes
         Me.btnFiltrar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnFiltrar.FlatAppearance.BorderSize = 0
         Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFiltrar.Location = New System.Drawing.Point(770, 30)
+        Me.btnFiltrar.Location = New System.Drawing.Point(765, 12)
         Me.btnFiltrar.Name = "btnFiltrar"
         Me.btnFiltrar.Size = New System.Drawing.Size(87, 29)
         Me.btnFiltrar.TabIndex = 30
@@ -80,7 +78,7 @@ Partial Class clientes
         Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFiltrar.FormattingEnabled = True
         Me.cbFiltrar.Items.AddRange(New Object() {"id", "nombre", "apellido"})
-        Me.cbFiltrar.Location = New System.Drawing.Point(770, 36)
+        Me.cbFiltrar.Location = New System.Drawing.Point(765, 18)
         Me.cbFiltrar.Name = "cbFiltrar"
         Me.cbFiltrar.Size = New System.Drawing.Size(87, 21)
         Me.cbFiltrar.TabIndex = 29
@@ -89,9 +87,9 @@ Partial Class clientes
         '
         Me.lblTabla.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblTabla.Location = New System.Drawing.Point(-7, 118)
+        Me.lblTabla.Location = New System.Drawing.Point(8, 64)
         Me.lblTabla.Name = "lblTabla"
-        Me.lblTabla.Size = New System.Drawing.Size(965, 20)
+        Me.lblTabla.Size = New System.Drawing.Size(943, 20)
         Me.lblTabla.TabIndex = 28
         Me.lblTabla.Text = "Sin resultados compatibles"
         Me.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -100,7 +98,7 @@ Partial Class clientes
         'txtBuscar
         '
         Me.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtBuscar.Location = New System.Drawing.Point(13, 36)
+        Me.txtBuscar.Location = New System.Drawing.Point(12, 20)
         Me.txtBuscar.MaxLength = 20
         Me.txtBuscar.Multiline = True
         Me.txtBuscar.Name = "txtBuscar"
@@ -111,7 +109,7 @@ Partial Class clientes
         '
         Me.pbTxtBuscar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.pbTxtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.pbTxtBuscar.Location = New System.Drawing.Point(8, 30)
+        Me.pbTxtBuscar.Location = New System.Drawing.Point(10, 12)
         Me.pbTxtBuscar.Name = "pbTxtBuscar"
         Me.pbTxtBuscar.Size = New System.Drawing.Size(254, 29)
         Me.pbTxtBuscar.TabIndex = 26
@@ -122,7 +120,7 @@ Partial Class clientes
         Me.btnBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnBuscar.FlatAppearance.BorderSize = 0
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Location = New System.Drawing.Point(262, 30)
+        Me.btnBuscar.Location = New System.Drawing.Point(264, 12)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(87, 29)
         Me.btnBuscar.TabIndex = 25
@@ -136,7 +134,7 @@ Partial Class clientes
         Me.btnAnadir.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnadir.FlatAppearance.BorderSize = 0
         Me.btnAnadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnadir.Location = New System.Drawing.Point(863, 30)
+        Me.btnAnadir.Location = New System.Drawing.Point(858, 12)
         Me.btnAnadir.Name = "btnAnadir"
         Me.btnAnadir.Size = New System.Drawing.Size(87, 29)
         Me.btnAnadir.TabIndex = 24
@@ -148,8 +146,8 @@ Partial Class clientes
         '
         Me.ClientesDataGridView.AllowUserToAddRows = False
         Me.ClientesDataGridView.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientesDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientesDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.ClientesDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -161,25 +159,25 @@ Partial Class clientes
         Me.ClientesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.ClientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ClientesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdDataGridViewTextBoxColumn, Me.NombreDataGridViewTextBoxColumn, Me.ApellidoDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.CorreoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn})
-        Me.ClientesDataGridView.DataSource = Me.ClientesBindingSource1
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle5
+        Me.ClientesDataGridView.DataSource = Me.ClientesBindingSource
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle14
         Me.ClientesDataGridView.GridColor = System.Drawing.SystemColors.ControlText
-        Me.ClientesDataGridView.Location = New System.Drawing.Point(-4, 99)
+        Me.ClientesDataGridView.Location = New System.Drawing.Point(8, 47)
         Me.ClientesDataGridView.Name = "ClientesDataGridView"
         Me.ClientesDataGridView.ReadOnly = True
         Me.ClientesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
         Me.ClientesDataGridView.RowHeadersVisible = False
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+        Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle15
         Me.ClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ClientesDataGridView.Size = New System.Drawing.Size(962, 239)
+        Me.ClientesDataGridView.Size = New System.Drawing.Size(943, 239)
         Me.ClientesDataGridView.TabIndex = 31
         '
         'IdDataGridViewTextBoxColumn
@@ -224,25 +222,20 @@ Partial Class clientes
         Me.DireccionDataGridViewTextBoxColumn.Name = "DireccionDataGridViewTextBoxColumn"
         Me.DireccionDataGridViewTextBoxColumn.ReadOnly = True
         '
-        'ClientesBindingSource1
+        'ClientesBindingSource
         '
-        Me.ClientesBindingSource1.DataMember = "Clientes"
-        Me.ClientesBindingSource1.DataSource = Me.BD_ImprentaDataSet
-        '
-        'BD_ImprentaDataSet
-        '
-        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
-        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me.BDImprentaDataSetBindingSource
         '
         'BDImprentaDataSetBindingSource
         '
         Me.BDImprentaDataSetBindingSource.DataSource = Me.BD_ImprentaDataSet
         Me.BDImprentaDataSetBindingSource.Position = 0
         '
-        'ClientesBindingSource
+        'BD_ImprentaDataSet
         '
-        Me.ClientesBindingSource.DataMember = "Clientes"
-        Me.ClientesBindingSource.DataSource = Me.BDImprentaDataSetBindingSource
+        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
+        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'ClientesTableAdapter
         '
@@ -268,12 +261,12 @@ Partial Class clientes
         Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnt.FlatAppearance.BorderSize = 0
         Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnt.Location = New System.Drawing.Point(828, 533)
+        Me.btnAnt.Location = New System.Drawing.Point(914, 533)
         Me.btnAnt.Name = "btnAnt"
         Me.btnAnt.Size = New System.Drawing.Size(37, 27)
         Me.btnAnt.TabIndex = 35
         Me.btnAnt.TabStop = False
-        Me.btnAnt.Text = "<"
+        Me.btnAnt.Text = ">>"
         Me.btnAnt.UseVisualStyleBackColor = False
         '
         'btnSig
@@ -296,12 +289,12 @@ Partial Class clientes
         Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnUltimo.FlatAppearance.BorderSize = 0
         Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUltimo.Location = New System.Drawing.Point(914, 532)
+        Me.btnUltimo.Location = New System.Drawing.Point(828, 533)
         Me.btnUltimo.Name = "btnUltimo"
         Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
         Me.btnUltimo.TabIndex = 37
         Me.btnUltimo.TabStop = False
-        Me.btnUltimo.Text = ">>"
+        Me.btnUltimo.Text = "<"
         Me.btnUltimo.UseVisualStyleBackColor = False
         '
         'btnEliminar
@@ -347,6 +340,7 @@ Partial Class clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(957, 571)
         Me.Controls.Add(Me.lblTabla)
         Me.Controls.Add(Me.btnPrimero)
@@ -366,10 +360,9 @@ Partial Class clientes
         Me.Text = "clientes"
         CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -392,12 +385,11 @@ Partial Class clientes
     Friend WithEvents btnUltimo As System.Windows.Forms.Button
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnEditar As System.Windows.Forms.Button
+    Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
     Friend WithEvents IdDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NombreDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ApellidoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CorreoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ClientesBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
 End Class

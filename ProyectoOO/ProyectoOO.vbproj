@@ -93,10 +93,10 @@
     <Compile Include="BD_ImprentaDataSet.vb">
       <DependentUpon>BD_ImprentaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="clientes\altas.bajas.Designer.vb">
-      <DependentUpon>altas.bajas.vb</DependentUpon>
+    <Compile Include="clientes\Altas.Designer.vb">
+      <DependentUpon>Altas.vb</DependentUpon>
     </Compile>
-    <Compile Include="clientes\altas.bajas.vb">
+    <Compile Include="clientes\Altas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BD_ImprentaDataSet.Designer.vb">
@@ -193,6 +193,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RenderPersonalizadoMenuStrip.vb" />
+    <Compile Include="vendedores\Editar.Designer.vb">
+      <DependentUpon>Editar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vendedores\Editar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vendedores\PrinVendedores.Designer.vb">
+      <DependentUpon>PrinVendedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vendedores\PrinVendedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vendedores\vendedores.Designer.vb">
       <DependentUpon>vendedores.vb</DependentUpon>
     </Compile>
@@ -213,8 +225,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="clientes\altas.bajas.resx">
-      <DependentUpon>altas.bajas.vb</DependentUpon>
+    <EmbeddedResource Include="clientes\Altas.resx">
+      <DependentUpon>Altas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="clientes\clientes.resx">
       <DependentUpon>clientes.vb</DependentUpon>
@@ -258,6 +270,12 @@
     <EmbeddedResource Include="Proveedores\FormProvEdicion.resx">
       <DependentUpon>FormProvEdicion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vendedores\Editar.resx">
+      <DependentUpon>Editar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vendedores\PrinVendedores.resx">
+      <DependentUpon>PrinVendedores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vendedores\vendedores.resx">
       <DependentUpon>vendedores.vb</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +299,7 @@
     <None Include="BD_ImprentaDataSet.xss">
       <DependentUpon>BD_ImprentaDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
