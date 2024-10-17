@@ -56,7 +56,7 @@ Partial Class Consultaeliminar
         Me.Canchange.Text = "Cancelar"
         Me.Canchange.UseVisualStyleBackColor = True
         '
-        'Consultacambio
+        'Consultaeliminar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -65,7 +65,9 @@ Partial Class Consultaeliminar
         Me.Controls.Add(Me.Canchange)
         Me.Controls.Add(Me.Confchange)
         Me.Controls.Add(Me.Changquest)
-        Me.Name = "Consultacambio"
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Name = "Consultaeliminar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cambios"
         Me.ResumeLayout(False)
         Me.PerformLayout()

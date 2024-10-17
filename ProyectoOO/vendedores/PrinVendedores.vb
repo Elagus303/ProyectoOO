@@ -115,14 +115,15 @@
         End If
     End Sub
 
-    Private Sub txtBuscar_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtBuscar.KeyPress
-        
-    End Sub
-
-
-
 
     Private Sub txtBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscar.TextChanged
-
+        If txtBuscar.Text = "" Then
+            Me.VendedoresBindingSource.RemoveFilter()
+            If Me.VendedoresBindingSource.Count <= 0 Then
+                lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
+            Else
+                lblTabla.Visible = False
+            End If
+        End If
     End Sub
 End Class

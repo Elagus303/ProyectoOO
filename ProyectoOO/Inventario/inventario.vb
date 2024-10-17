@@ -24,7 +24,7 @@
     End Sub
 
     Private Sub delbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delbutton.Click
-        Consultaeliminar.Show()
+        Consultaeliminar.ShowDialog()
     End Sub
 
     Private Sub InsumoDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles InsumoDataGridView.CellContentClick

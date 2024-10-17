@@ -28,17 +28,20 @@ Partial Class Agregarinventario
         Me.cantlab = New System.Windows.Forms.Label()
         Me.proovlab = New System.Windows.Forms.Label()
         Me.prodtext = New System.Windows.Forms.TextBox()
+        Me.InsumoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.prectext = New System.Windows.Forms.TextBox()
         Me.cantprec = New System.Windows.Forms.TextBox()
-        Me.proovcant = New System.Windows.Forms.TextBox()
         Me.Aceptbutton = New System.Windows.Forms.Button()
         Me.Canbutton = New System.Windows.Forms.Button()
-        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
-        Me.InsumoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InsumoTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
-        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.comboBoxProvs = New System.Windows.Forms.ComboBox()
+        Me.ProveedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProveedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ProveedoresTableAdapter()
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'prodlab
@@ -85,6 +88,16 @@ Partial Class Agregarinventario
         Me.prodtext.Size = New System.Drawing.Size(100, 20)
         Me.prodtext.TabIndex = 4
         '
+        'InsumoBindingSource
+        '
+        Me.InsumoBindingSource.DataMember = "Insumo"
+        Me.InsumoBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'BD_ImprentaDataSet
+        '
+        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
+        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'prectext
         '
         Me.prectext.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "precio", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
@@ -100,14 +113,6 @@ Partial Class Agregarinventario
         Me.cantprec.Name = "cantprec"
         Me.cantprec.Size = New System.Drawing.Size(100, 20)
         Me.cantprec.TabIndex = 6
-        '
-        'proovcant
-        '
-        Me.proovcant.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "id_proovedor", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
-        Me.proovcant.Location = New System.Drawing.Point(88, 111)
-        Me.proovcant.Name = "proovcant"
-        Me.proovcant.Size = New System.Drawing.Size(100, 20)
-        Me.proovcant.TabIndex = 7
         '
         'Aceptbutton
         '
@@ -129,15 +134,6 @@ Partial Class Agregarinventario
         Me.Canbutton.Text = "Cancelar"
         Me.Canbutton.UseVisualStyleBackColor = True
         '
-        'BD_ImprentaDataSet
-        '
-        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'InsumoBindingSource
-        '
-        Me.InsumoBindingSource.DataMember = "Insumo"
-        Me.InsumoBindingSource.DataSource = Me.BD_ImprentaDataSet
-        '
         'InsumoTableAdapter
         '
         Me.InsumoTableAdapter.ClearBeforeFill = True
@@ -153,15 +149,35 @@ Partial Class Agregarinventario
         Me.TableAdapterManager.VendedoresTableAdapter = Nothing
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
+        'comboBoxProvs
+        '
+        Me.comboBoxProvs.DataSource = Me.ProveedoresBindingSource
+        Me.comboBoxProvs.DisplayMember = "nombre"
+        Me.comboBoxProvs.FormattingEnabled = True
+        Me.comboBoxProvs.Location = New System.Drawing.Point(88, 115)
+        Me.comboBoxProvs.Name = "comboBoxProvs"
+        Me.comboBoxProvs.Size = New System.Drawing.Size(100, 21)
+        Me.comboBoxProvs.TabIndex = 10
+        Me.comboBoxProvs.ValueMember = "id"
+        '
+        'ProveedoresBindingSource
+        '
+        Me.ProveedoresBindingSource.DataMember = "Proveedores"
+        Me.ProveedoresBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'ProveedoresTableAdapter
+        '
+        Me.ProveedoresTableAdapter.ClearBeforeFill = True
+        '
         'Agregarinventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Info
         Me.ClientSize = New System.Drawing.Size(444, 214)
+        Me.Controls.Add(Me.comboBoxProvs)
         Me.Controls.Add(Me.Canbutton)
         Me.Controls.Add(Me.Aceptbutton)
-        Me.Controls.Add(Me.proovcant)
         Me.Controls.Add(Me.cantprec)
         Me.Controls.Add(Me.prectext)
         Me.Controls.Add(Me.prodtext)
@@ -171,8 +187,9 @@ Partial Class Agregarinventario
         Me.Controls.Add(Me.prodlab)
         Me.Name = "Agregarinventario"
         Me.Text = "Agregar nuevo producto"
-        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProveedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -184,11 +201,13 @@ Partial Class Agregarinventario
     Friend WithEvents prodtext As System.Windows.Forms.TextBox
     Friend WithEvents prectext As System.Windows.Forms.TextBox
     Friend WithEvents cantprec As System.Windows.Forms.TextBox
-    Friend WithEvents proovcant As System.Windows.Forms.TextBox
     Friend WithEvents Aceptbutton As System.Windows.Forms.Button
     Friend WithEvents Canbutton As System.Windows.Forms.Button
     Friend WithEvents BD_ImprentaDataSet As ProyectoOO.BD_ImprentaDataSet
     Friend WithEvents InsumoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents InsumoTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter
     Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
+    Friend WithEvents comboBoxProvs As System.Windows.Forms.ComboBox
+    Friend WithEvents ProveedoresBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ProveedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.ProveedoresTableAdapter
 End Class

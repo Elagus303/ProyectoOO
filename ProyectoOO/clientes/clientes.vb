@@ -71,7 +71,14 @@
     End Sub
 
     Private Sub txtBuscar_TextChanged_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscar.TextChanged
-
+        If txtBuscar.Text = "" Then
+            Me.ClientesBindingSource.RemoveFilter()
+            If Me.ClientesBindingSource.Count <= 0 Then
+                lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
+            Else
+                lblTabla.Visible = False
+            End If
+        End If
     End Sub
 
     Private Sub cbFiltrar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbFiltrar.SelectedIndexChanged
@@ -84,7 +91,7 @@
     End Sub
 
     Private Sub pbTxtBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles pbTxtBuscar.Click
-
+        txtBuscar.Focus()
     End Sub
 
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click

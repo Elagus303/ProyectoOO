@@ -202,6 +202,7 @@ Partial Class Vendedores
         Me.Controls.Add(Me.ContraseñaTextBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Vendedores"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Vendedores"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
