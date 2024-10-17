@@ -39,12 +39,11 @@ Partial Class FormVentasAltas
         Me.rBtnSimple = New System.Windows.Forms.RadioButton()
         Me.rBtnDoble = New System.Windows.Forms.RadioButton()
         Me.cBoxAnillado = New System.Windows.Forms.CheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblTotal = New System.Windows.Forms.Label()
+        Me.lblUnidad = New System.Windows.Forms.Label()
         Me.VendedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter()
         Me.VendedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cBoxHojas = New System.Windows.Forms.ComboBox()
         Me.InsumoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InsumoTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -211,23 +210,14 @@ Partial Class FormVentasAltas
         Me.cBoxAnillado.Text = "Anillado"
         Me.cBoxAnillado.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lblUnidad
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(209, 354)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 13)
-        Me.Label1.TabIndex = 22
-        Me.Label1.Text = "Precio: $ 0"
-        '
-        'lblTotal
-        '
-        Me.lblTotal.AutoSize = True
-        Me.lblTotal.Location = New System.Drawing.Point(23, 354)
-        Me.lblTotal.Name = "lblTotal"
-        Me.lblTotal.Size = New System.Drawing.Size(52, 13)
-        Me.lblTotal.TabIndex = 23
-        Me.lblTotal.Text = "Total: $ 0"
+        Me.lblUnidad.AutoSize = True
+        Me.lblUnidad.Location = New System.Drawing.Point(209, 354)
+        Me.lblUnidad.Name = "lblUnidad"
+        Me.lblUnidad.Size = New System.Drawing.Size(58, 13)
+        Me.lblUnidad.TabIndex = 22
+        Me.lblUnidad.Text = "Precio: $ 0"
         '
         'VendedoresTableAdapter
         '
@@ -251,16 +241,16 @@ Partial Class FormVentasAltas
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'ComboBox1
+        'cBoxHojas
         '
-        Me.ComboBox1.DataSource = Me.InsumoBindingSource
-        Me.ComboBox1.DisplayMember = "nombre"
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(58, 38)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(140, 21)
-        Me.ComboBox1.TabIndex = 1
-        Me.ComboBox1.ValueMember = "id"
+        Me.cBoxHojas.DataSource = Me.InsumoBindingSource
+        Me.cBoxHojas.DisplayMember = "nombre"
+        Me.cBoxHojas.FormattingEnabled = True
+        Me.cBoxHojas.Location = New System.Drawing.Point(58, 38)
+        Me.cBoxHojas.Name = "cBoxHojas"
+        Me.cBoxHojas.Size = New System.Drawing.Size(140, 21)
+        Me.cBoxHojas.TabIndex = 1
+        Me.cBoxHojas.ValueMember = "id"
         '
         'InsumoBindingSource
         '
@@ -316,10 +306,9 @@ Partial Class FormVentasAltas
         Me.ClientSize = New System.Drawing.Size(424, 426)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cBoxHojas)
         Me.Controls.Add(Me.btnGuardar)
-        Me.Controls.Add(Me.lblTotal)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblUnidad)
         Me.Controls.Add(Me.cBoxAnillado)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -361,12 +350,11 @@ Partial Class FormVentasAltas
     Friend WithEvents rBtnSimple As System.Windows.Forms.RadioButton
     Friend WithEvents rBtnDoble As System.Windows.Forms.RadioButton
     Friend WithEvents cBoxAnillado As System.Windows.Forms.CheckBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents lblTotal As System.Windows.Forms.Label
+    Friend WithEvents lblUnidad As System.Windows.Forms.Label
     Friend WithEvents VendedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter
     Friend WithEvents VendedoresBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cBoxHojas As System.Windows.Forms.ComboBox
     Friend WithEvents InsumoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents InsumoTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
