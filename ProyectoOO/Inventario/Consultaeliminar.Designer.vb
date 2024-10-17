@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Consultacambio
+Partial Class Consultaeliminar
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -32,9 +32,9 @@ Partial Class Consultacambio
         Me.Changquest.AutoSize = True
         Me.Changquest.Location = New System.Drawing.Point(21, 18)
         Me.Changquest.Name = "Changquest"
-        Me.Changquest.Size = New System.Drawing.Size(158, 13)
+        Me.Changquest.Size = New System.Drawing.Size(136, 13)
         Me.Changquest.TabIndex = 0
-        Me.Changquest.Text = "¿Desea conservar los cambios?"
+        Me.Changquest.Text = "¿Desea eliminar el registro?"
         '
         'Confchange
         '

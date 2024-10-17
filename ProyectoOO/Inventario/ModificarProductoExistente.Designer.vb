@@ -42,6 +42,33 @@ Partial Class ModificarProductoExistente
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(23, 54)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
+        NombreLabel.TabIndex = 7
+        NombreLabel.Text = "Nombre:"
+        '
+        'StockLabel
+        '
+        StockLabel.AutoSize = True
+        StockLabel.Location = New System.Drawing.Point(23, 82)
+        StockLabel.Name = "StockLabel"
+        StockLabel.Size = New System.Drawing.Size(52, 13)
+        StockLabel.TabIndex = 9
+        StockLabel.Text = "Cantidad:"
+        '
+        'PrecioLabel
+        '
+        PrecioLabel.AutoSize = True
+        PrecioLabel.Location = New System.Drawing.Point(23, 108)
+        PrecioLabel.Name = "PrecioLabel"
+        PrecioLabel.Size = New System.Drawing.Size(40, 13)
+        PrecioLabel.TabIndex = 11
+        PrecioLabel.Text = "Precio:"
+        '
         'BD_ImprentaDataSet
         '
         Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
@@ -67,15 +94,6 @@ Partial Class ModificarProductoExistente
         Me.TableAdapterManager.VendedoresTableAdapter = Nothing
         Me.TableAdapterManager.VentaTableAdapter = Nothing
         '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(23, 54)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(47, 13)
-        NombreLabel.TabIndex = 7
-        NombreLabel.Text = "Nombre:"
-        '
         'NombreTextBox
         '
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "nombre", True))
@@ -84,15 +102,6 @@ Partial Class ModificarProductoExistente
         Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
         Me.NombreTextBox.TabIndex = 8
         '
-        'StockLabel
-        '
-        StockLabel.AutoSize = True
-        StockLabel.Location = New System.Drawing.Point(23, 82)
-        StockLabel.Name = "StockLabel"
-        StockLabel.Size = New System.Drawing.Size(52, 13)
-        StockLabel.TabIndex = 9
-        StockLabel.Text = "Cantidad:"
-        '
         'StockTextBox
         '
         Me.StockTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "stock", True))
@@ -100,15 +109,6 @@ Partial Class ModificarProductoExistente
         Me.StockTextBox.Name = "StockTextBox"
         Me.StockTextBox.Size = New System.Drawing.Size(100, 20)
         Me.StockTextBox.TabIndex = 10
-        '
-        'PrecioLabel
-        '
-        PrecioLabel.AutoSize = True
-        PrecioLabel.Location = New System.Drawing.Point(23, 108)
-        PrecioLabel.Name = "PrecioLabel"
-        PrecioLabel.Size = New System.Drawing.Size(40, 13)
-        PrecioLabel.TabIndex = 11
-        PrecioLabel.Text = "Precio:"
         '
         'PrecioTextBox
         '

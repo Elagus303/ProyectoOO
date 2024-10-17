@@ -24,6 +24,6 @@
     End Sub
 
     Private Sub delbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delbutton.Click
-        Consultacambio.Show()
+        Consultaeliminar.Show()
     End Sub
 End Class

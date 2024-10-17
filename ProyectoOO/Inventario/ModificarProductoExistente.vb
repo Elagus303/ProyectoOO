@@ -14,4 +14,20 @@
 
 
     End Sub
+
+    Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NombreTextBox.TextChanged
+
+    End Sub
+
+    Private Sub acpbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles acpbutton.Click
+        Me.InsumoBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
+        Inventario.InsumoTableAdapter.Fill(Inventario.BD_ImprentaDataSet.Insumo)
+        Me.Close()
+
+    End Sub
+
+    Private Sub cncbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cncbutton.Click
+        Me.Close()
+    End Sub
 End Class

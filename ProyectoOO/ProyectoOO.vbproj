@@ -140,10 +140,10 @@
     <Compile Include="FormInicioSesion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventario\Consultacambio.Designer.vb">
-      <DependentUpon>Consultacambio.vb</DependentUpon>
+    <Compile Include="Inventario\Consultaeliminar.Designer.vb">
+      <DependentUpon>Consultaeliminar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Inventario\Consultacambio.vb">
+    <Compile Include="Inventario\Consultaeliminar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
@@ -222,8 +222,8 @@
     <EmbeddedResource Include="Inventario\Agregarinventario.resx">
       <DependentUpon>Agregarinventario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventario\Consultacambio.resx">
-      <DependentUpon>Consultacambio.vb</DependentUpon>
+    <EmbeddedResource Include="Inventario\Consultaeliminar.resx">
+      <DependentUpon>Consultaeliminar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Inventario.resx">
       <DependentUpon>Inventario.vb</DependentUpon>

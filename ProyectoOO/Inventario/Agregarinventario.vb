@@ -21,6 +21,7 @@
         Me.InsumoBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
         Inventario.InsumoTableAdapter.Fill(Inventario.BD_ImprentaDataSet.Insumo)
+        Me.Close()
 
     End Sub
 End Class
