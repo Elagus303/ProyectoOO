@@ -37,9 +37,9 @@ Partial Public Class BD_ImprentaDataSet
     
     Private tableVenta As VentaDataTable
     
-    Private relationFK_Vendedores_Venta As Global.System.Data.DataRelation
-    
     Private relationFK_Clientes_Venta As Global.System.Data.DataRelation
+    
+    Private relationFK_Vendedores_Venta As Global.System.Data.DataRelation
     
     Private relationFK_Roles_Vendedores As Global.System.Data.DataRelation
     
@@ -57,6 +57,7 @@ Partial Public Class BD_ImprentaDataSet
         AddHandler MyBase.Tables.CollectionChanged, schemaChangedHandler
         AddHandler MyBase.Relations.CollectionChanged, schemaChangedHandler
         Me.EndInit
+        Me.InitExpressions
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -68,6 +69,9 @@ Partial Public Class BD_ImprentaDataSet
             Dim schemaChangedHandler1 As Global.System.ComponentModel.CollectionChangeEventHandler = AddressOf Me.SchemaChanged
             AddHandler Me.Tables.CollectionChanged, schemaChangedHandler1
             AddHandler Me.Relations.CollectionChanged, schemaChangedHandler1
+            If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.ExcludeSchema) Then
+                Me.InitExpressions
+            End If
             Return
         End If
         Dim strSchema As String = CType(info.GetValue("XmlSchema", GetType(String)),String)
@@ -102,6 +106,7 @@ Partial Public Class BD_ImprentaDataSet
             Me.InitVars
         Else
             Me.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
+            Me.InitExpressions
         End If
         Me.GetSerializationData(info, context)
         Dim schemaChangedHandler As Global.System.ComponentModel.CollectionChangeEventHandler = AddressOf Me.SchemaChanged
@@ -213,6 +218,7 @@ Partial Public Class BD_ImprentaDataSet
     Public Overrides Function Clone() As Global.System.Data.DataSet
         Dim cln As BD_ImprentaDataSet = CType(MyBase.Clone,BD_ImprentaDataSet)
         cln.InitVars
+        cln.InitExpressions
         cln.SchemaSerializationMode = Me.SchemaSerializationMode
         Return cln
     End Function
@@ -322,8 +328,8 @@ Partial Public Class BD_ImprentaDataSet
                 Me.tableVenta.InitVars
             End If
         End If
-        Me.relationFK_Vendedores_Venta = Me.Relations("FK_Vendedores_Venta")
         Me.relationFK_Clientes_Venta = Me.Relations("FK_Clientes_Venta")
+        Me.relationFK_Vendedores_Venta = Me.Relations("FK_Vendedores_Venta")
         Me.relationFK_Roles_Vendedores = Me.Relations("FK_Roles_Vendedores")
         Me.relationFK_Proveedores_Insumo = Me.Relations("FK_Proveedores_Insumo")
     End Sub
@@ -344,25 +350,25 @@ Partial Public Class BD_ImprentaDataSet
         MyBase.Tables.Add(Me.tableClientes)
         Me.tableProveedores = New ProveedoresDataTable()
         MyBase.Tables.Add(Me.tableProveedores)
-        Me.tableInsumo = New InsumoDataTable()
+        Me.tableInsumo = New InsumoDataTable(false)
         MyBase.Tables.Add(Me.tableInsumo)
         Me.tableVenta = New VentaDataTable()
         MyBase.Tables.Add(Me.tableVenta)
         Dim fkc As Global.System.Data.ForeignKeyConstraint
-        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn})
-        Me.tableVenta.Constraints.Add(fkc)
-        fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
-        fkc.DeleteRule = Global.System.Data.Rule.Cascade
-        fkc.UpdateRule = Global.System.Data.Rule.Cascade
         fkc = New Global.System.Data.ForeignKeyConstraint("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn})
         Me.tableVenta.Constraints.Add(fkc)
         fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
         fkc.DeleteRule = Global.System.Data.Rule.Cascade
         fkc.UpdateRule = Global.System.Data.Rule.Cascade
-        Me.relationFK_Vendedores_Venta = New Global.System.Data.DataRelation("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn}, false)
-        Me.Relations.Add(Me.relationFK_Vendedores_Venta)
+        fkc = New Global.System.Data.ForeignKeyConstraint("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn})
+        Me.tableVenta.Constraints.Add(fkc)
+        fkc.AcceptRejectRule = Global.System.Data.AcceptRejectRule.None
+        fkc.DeleteRule = Global.System.Data.Rule.Cascade
+        fkc.UpdateRule = Global.System.Data.Rule.Cascade
         Me.relationFK_Clientes_Venta = New Global.System.Data.DataRelation("FK_Clientes_Venta", New Global.System.Data.DataColumn() {Me.tableClientes.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_clienteColumn}, false)
         Me.Relations.Add(Me.relationFK_Clientes_Venta)
+        Me.relationFK_Vendedores_Venta = New Global.System.Data.DataRelation("FK_Vendedores_Venta", New Global.System.Data.DataColumn() {Me.tableVendedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableVenta.id_vendedorColumn}, false)
+        Me.Relations.Add(Me.relationFK_Vendedores_Venta)
         Me.relationFK_Roles_Vendedores = New Global.System.Data.DataRelation("FK_Roles_Vendedores", New Global.System.Data.DataColumn() {Me.tableRoles.idColumn}, New Global.System.Data.DataColumn() {Me.tableVendedores.id_rolColumn}, false)
         Me.Relations.Add(Me.relationFK_Roles_Vendedores)
         Me.relationFK_Proveedores_Insumo = New Global.System.Data.DataRelation("FK_Proveedores_Insumo", New Global.System.Data.DataColumn() {Me.tableProveedores.idColumn}, New Global.System.Data.DataColumn() {Me.tableInsumo.id_proovedorColumn}, false)
@@ -462,6 +468,12 @@ Partial Public Class BD_ImprentaDataSet
         xs.Add(dsSchema)
         Return type
     End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Sub InitExpressions()
+        Me.Insumo.preciounidadColumn.Expression = "precio/stock"
+    End Sub
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub RolesRowChangeEventHandler(ByVal sender As Object, ByVal e As RolesRowChangeEvent)
@@ -1764,13 +1776,24 @@ Partial Public Class BD_ImprentaDataSet
         
         Private columnid_proovedor As Global.System.Data.DataColumn
         
+        Private columnpreciounidad As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
+            Me.New(false)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal initExpressions As Boolean)
             MyBase.New
             Me.TableName = "Insumo"
             Me.BeginInit
             Me.InitClass
+            If (initExpressions = true) Then
+                Me.InitExpressions
+            End If
             Me.EndInit
         End Sub
         
@@ -1840,6 +1863,14 @@ Partial Public Class BD_ImprentaDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property preciounidadColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnpreciounidad
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -1876,9 +1907,22 @@ Partial Public Class BD_ImprentaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddInsumoRow(ByVal nombre As String, ByVal stock As Integer, ByVal precio As Double, ByVal parentProveedoresRowByFK_Proveedores_Insumo As ProveedoresRow, ByVal preciounidad As String) As InsumoRow
+            Dim rowInsumoRow As InsumoRow = CType(Me.NewRow,InsumoRow)
+            Dim columnValuesArray() As Object = New Object() {Nothing, nombre, stock, precio, Nothing, preciounidad}
+            If (Not (parentProveedoresRowByFK_Proveedores_Insumo) Is Nothing) Then
+                columnValuesArray(4) = parentProveedoresRowByFK_Proveedores_Insumo(5)
+            End If
+            rowInsumoRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowInsumoRow)
+            Return rowInsumoRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overloads Function AddInsumoRow(ByVal nombre As String, ByVal stock As Integer, ByVal precio As Double, ByVal parentProveedoresRowByFK_Proveedores_Insumo As ProveedoresRow) As InsumoRow
             Dim rowInsumoRow As InsumoRow = CType(Me.NewRow,InsumoRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, nombre, stock, precio, Nothing}
+            Dim columnValuesArray() As Object = New Object() {Nothing, nombre, stock, precio, Nothing, Nothing}
             If (Not (parentProveedoresRowByFK_Proveedores_Insumo) Is Nothing) Then
                 columnValuesArray(4) = parentProveedoresRowByFK_Proveedores_Insumo(5)
             End If
@@ -1915,6 +1959,7 @@ Partial Public Class BD_ImprentaDataSet
             Me.columnstock = MyBase.Columns("stock")
             Me.columnprecio = MyBase.Columns("precio")
             Me.columnid_proovedor = MyBase.Columns("id_proovedor")
+            Me.columnpreciounidad = MyBase.Columns("preciounidad")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1930,6 +1975,8 @@ Partial Public Class BD_ImprentaDataSet
             MyBase.Columns.Add(Me.columnprecio)
             Me.columnid_proovedor = New Global.System.Data.DataColumn("id_proovedor", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnid_proovedor)
+            Me.columnpreciounidad = New Global.System.Data.DataColumn("preciounidad", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpreciounidad)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnid}, true))
             Me.columnid.AutoIncrement = true
             Me.columnid.AutoIncrementSeed = -1
@@ -1939,6 +1986,7 @@ Partial Public Class BD_ImprentaDataSet
             Me.columnid.Unique = true
             Me.columnnombre.MaxLength = 20
             Me.columnid_proovedor.AllowDBNull = false
+            Me.columnpreciounidad.ReadOnly = true
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1958,6 +2006,12 @@ Partial Public Class BD_ImprentaDataSet
         Protected Overrides Function GetRowType() As Global.System.Type
             Return GetType(InsumoRow)
         End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitExpressions()
+            Me.preciounidadColumn.Expression = "precio/stock"
+        End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -2918,6 +2972,21 @@ Partial Public Class BD_ImprentaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property preciounidad() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableInsumo.preciounidadColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'preciounidad' de la tabla 'Insumo' es DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableInsumo.preciounidadColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ProveedoresRow() As ProveedoresRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Proveedores_Insumo")),ProveedoresRow)
@@ -2961,6 +3030,18 @@ Partial Public Class BD_ImprentaDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetprecioNull()
             Me(Me.tableInsumo.precioColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspreciounidadNull() As Boolean
+            Return Me.IsNull(Me.tableInsumo.preciounidadColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetpreciounidadNull()
+            Me(Me.tableInsumo.preciounidadColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3047,23 +3128,23 @@ Partial Public Class BD_ImprentaDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property VendedoresRow() As VendedoresRow
-            Get
-                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Vendedores_Venta")),VendedoresRow)
-            End Get
-            Set
-                Me.SetParentRow(value, Me.Table.ParentRelations("FK_Vendedores_Venta"))
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property ClientesRow() As ClientesRow
             Get
                 Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Clientes_Venta")),ClientesRow)
             End Get
             Set
                 Me.SetParentRow(value, Me.Table.ParentRelations("FK_Clientes_Venta"))
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property VendedoresRow() As VendedoresRow
+            Get
+                Return CType(Me.GetParentRow(Me.Table.ParentRelations("FK_Vendedores_Venta")),VendedoresRow)
+            End Get
+            Set
+                Me.SetParentRow(value, Me.Table.ParentRelations("FK_Vendedores_Venta"))
             End Set
         End Property
     End Class
@@ -4805,7 +4886,7 @@ Namespace BD_ImprentaDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As BD_ImprentaDataSet.InsumoDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As BD_ImprentaDataSet.InsumoDataTable = New BD_ImprentaDataSet.InsumoDataTable()
+            Dim dataTable As BD_ImprentaDataSet.InsumoDataTable = New BD_ImprentaDataSet.InsumoDataTable(true)
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

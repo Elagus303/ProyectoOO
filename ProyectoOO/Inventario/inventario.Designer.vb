@@ -37,6 +37,7 @@ Partial Class Inventario
         Me.modbutton = New System.Windows.Forms.Button()
         Me.delbutton = New System.Windows.Forms.Button()
         Me.Inventariolab = New System.Windows.Forms.Label()
+        Me.preciounidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,6 +45,7 @@ Partial Class Inventario
         '
         'BD_ImprentaDataSet
         '
+        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
         Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'InsumoBindingSource
@@ -70,12 +72,12 @@ Partial Class Inventario
         '
         Me.InsumoDataGridView.AutoGenerateColumns = False
         Me.InsumoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.InsumoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
+        Me.InsumoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.preciounidad})
         Me.InsumoDataGridView.DataSource = Me.InsumoBindingSource
-        Me.InsumoDataGridView.Location = New System.Drawing.Point(3, 47)
+        Me.InsumoDataGridView.Location = New System.Drawing.Point(12, 47)
         Me.InsumoDataGridView.Name = "InsumoDataGridView"
         Me.InsumoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.InsumoDataGridView.Size = New System.Drawing.Size(542, 220)
+        Me.InsumoDataGridView.Size = New System.Drawing.Size(617, 220)
         Me.InsumoDataGridView.TabIndex = 1
         '
         'DataGridViewTextBoxColumn1
@@ -112,7 +114,7 @@ Partial Class Inventario
         'Addbutton
         '
         Me.Addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Addbutton.Location = New System.Drawing.Point(551, 47)
+        Me.Addbutton.Location = New System.Drawing.Point(635, 47)
         Me.Addbutton.Name = "Addbutton"
         Me.Addbutton.Size = New System.Drawing.Size(75, 23)
         Me.Addbutton.TabIndex = 2
@@ -122,7 +124,7 @@ Partial Class Inventario
         'modbutton
         '
         Me.modbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.modbutton.Location = New System.Drawing.Point(551, 76)
+        Me.modbutton.Location = New System.Drawing.Point(635, 76)
         Me.modbutton.Name = "modbutton"
         Me.modbutton.Size = New System.Drawing.Size(75, 23)
         Me.modbutton.TabIndex = 3
@@ -132,7 +134,7 @@ Partial Class Inventario
         'delbutton
         '
         Me.delbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.delbutton.Location = New System.Drawing.Point(551, 105)
+        Me.delbutton.Location = New System.Drawing.Point(635, 105)
         Me.delbutton.Name = "delbutton"
         Me.delbutton.Size = New System.Drawing.Size(75, 23)
         Me.delbutton.TabIndex = 4
@@ -147,6 +149,13 @@ Partial Class Inventario
         Me.Inventariolab.Size = New System.Drawing.Size(54, 13)
         Me.Inventariolab.TabIndex = 5
         Me.Inventariolab.Text = "Inventario"
+        '
+        'preciounidad
+        '
+        Me.preciounidad.DataPropertyName = "preciounidad"
+        Me.preciounidad.HeaderText = "preciounidad"
+        Me.preciounidad.Name = "preciounidad"
+        Me.preciounidad.ReadOnly = True
         '
         'Inventario
         '
@@ -182,4 +191,5 @@ Partial Class Inventario
     Friend WithEvents modbutton As System.Windows.Forms.Button
     Friend WithEvents delbutton As System.Windows.Forms.Button
     Friend WithEvents Inventariolab As System.Windows.Forms.Label
+    Friend WithEvents preciounidad As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

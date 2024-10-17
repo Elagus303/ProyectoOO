@@ -161,3 +161,4 @@ C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\Proyecto
 C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
 C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultaeliminar.resources
+C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.MainFinanzas.resources
