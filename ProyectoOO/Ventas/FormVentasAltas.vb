@@ -8,9 +8,18 @@
             precio_faz_doble As Integer
 
     Private Sub FormVentasAltas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
+        Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Insumo' Puede moverla o quitarla según sea necesario.
+        Me.InsumoTableAdapter.Fill(Me.BD_ImprentaDataSet.Insumo)
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Vendedores' Puede moverla o quitarla según sea necesario.
         Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
+        Me.InsumoBindingSource.Filter = "nombre LIKE '%hoj%'"
+        ComboBox1.SelectedIndex = -1 : ComboBox2.SelectedIndex = -1
+        ComboBox1.Text = "Seleccione una hoja"
 
+        Me.InsumosBindingSource1.Filter = "nombre LIKE '%anill%'"
+        ComboBox2.Text = "Seleccione un anillado"
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Venta' Puede moverla o quitarla según sea necesario.
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
         Me.VentaBindingSource.AddNew()
@@ -21,17 +30,20 @@
         precio_faz_simple = 0
         precio_faz_doble = 10
         precio_unidad_final = 0
+
     End Sub
 
 
     Private Sub cBoxAnillado_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cBoxAnillado.CheckedChanged
         If cBoxAnillado.Checked Then
             precio_total += precio_anillado
+
         Else
             precio_total -= precio_anillado
         End If
         Label1.Text = "Precio: $ " & precio_total
-        Label2.Text = "Precio: $ " & precio_unidad_final
+        lblTotal.Text = "Total: $ " & precio_unidad_final
+        ComboBox2.Enabled = cBoxAnillado.Checked
     End Sub
 
     Private Sub rBtnColor_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rBtnColor.CheckedChanged, rBtnBlancoNegro.CheckedChanged
@@ -53,7 +65,7 @@
             End If
         End If
         Label1.Text = "Precio: $ " & precio_total
-        Label2.Text = "Precio: $ " & precio_unidad_final
+        lblTotal.Text = "Total: $ " & precio_unidad_final
     End Sub
 
     Private Sub rBtnSimple_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles rBtnSimple.CheckedChanged, rBtnDoble.CheckedChanged
@@ -75,7 +87,7 @@
             End If
         End If
         Label1.Text = "Precio: $ " & precio_total
-        Label2.Text = "Precio: $ " & precio_unidad_final
+        lblTotal.Text = "Total: $ " & precio_unidad_final
     End Sub
 
     Private Sub CantidadTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CantidadTextBox.TextChanged
@@ -89,5 +101,45 @@
             precio_total += Val(CantidadTextBox.Text) * precio_unidad_final
         End If
         Label1.Text = "Precio: $ " & precio_total
+    End Sub
+    'Evento que se ejecuta cuando se abre el ComboBox
+    Private Sub ComboBox1_DropDown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.DropDown
+
+    End Sub
+
+    Private Sub ComboBox2_DropDown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox2.DropDown
+
+    End Sub
+
+    Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
+        If cBoxAnillado.Checked Then
+            If ComboBox1.SelectedIndex <> -1 And ComboBox2.SelectedIndex <> -1 Then
+                Me.VentaBindingSource.Current("fecha_venta") = DateTime.Now
+                Me.VentaBindingSource.Current("precio_venta") = precio_total
+                Me.VentaBindingSource.Current("id_vendedor") = 1
+                Me.VentaBindingSource.Current("id_cliente") = ComboBox3.SelectedValue
+                Me.VentaBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
+                Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
+                FormVentas.VentaTableAdapter.Fill(FormVentas.BD_ImprentaDataSet.Venta)
+                Me.VentaBindingSource.AddNew()
+            Else
+                MsgBox("Seleccione elementos ..")
+            End If
+        Else
+            If ComboBox1.SelectedIndex <> -1 Then
+                Me.VentaBindingSource.Current("fecha_venta") = DateTime.Now
+                Me.VentaBindingSource.Current("precio_venta") = precio_total
+                Me.VentaBindingSource.Current("id_vendedor") = 1
+                Me.VentaBindingSource.Current("id_cliente") = ComboBox3.SelectedValue
+                Me.VentaBindingSource.EndEdit()
+                Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
+                Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
+                FormVentas.VentaTableAdapter.Fill(FormVentas.BD_ImprentaDataSet.Venta)
+                Me.VentaBindingSource.AddNew()
+            Else
+                MsgBox("Seleccione elementos ..")
+            End If
+        End If
     End Sub
 End Class

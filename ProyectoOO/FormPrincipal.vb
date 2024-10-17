@@ -30,4 +30,8 @@ Public Class FormPrincipal
     Private Sub ToolStripMenuItem2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem2.Click
         MostrarFormPanel(FormProv)
     End Sub
+
+    Private Sub ToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem3.Click
+        Inventario.Show()
+    End Sub
 End Class
