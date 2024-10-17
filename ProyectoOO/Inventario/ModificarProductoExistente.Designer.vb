@@ -120,29 +120,33 @@ Partial Class ModificarProductoExistente
         '
         'acpbutton
         '
+        Me.acpbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.acpbutton.FlatAppearance.BorderSize = 0
         Me.acpbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.acpbutton.Location = New System.Drawing.Point(89, 193)
         Me.acpbutton.Name = "acpbutton"
         Me.acpbutton.Size = New System.Drawing.Size(75, 23)
         Me.acpbutton.TabIndex = 13
         Me.acpbutton.Text = "Aceptar"
-        Me.acpbutton.UseVisualStyleBackColor = True
+        Me.acpbutton.UseVisualStyleBackColor = False
         '
         'cncbutton
         '
+        Me.cncbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.cncbutton.FlatAppearance.BorderSize = 0
         Me.cncbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cncbutton.Location = New System.Drawing.Point(202, 193)
         Me.cncbutton.Name = "cncbutton"
         Me.cncbutton.Size = New System.Drawing.Size(75, 23)
         Me.cncbutton.TabIndex = 14
         Me.cncbutton.Text = "Cancelar"
-        Me.cncbutton.UseVisualStyleBackColor = True
+        Me.cncbutton.UseVisualStyleBackColor = False
         '
         'ModificarProductoExistente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(402, 228)
         Me.Controls.Add(Me.cncbutton)
         Me.Controls.Add(Me.acpbutton)

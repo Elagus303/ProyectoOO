@@ -62,4 +62,18 @@
 
 
 
+    Private Sub cbFiltrar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbFiltrar.SelectedIndexChanged
+        Select Case cbFiltrar.SelectedIndex
+            Case 0
+                Me.VentaBindingSource.Sort = "fecha_venta DESC"
+            Case 1
+                Me.VentaBindingSource.Sort = "id_vendedor ASC"
+            Case 2
+                Me.VentaBindingSource.Sort = "precio_venta DESC"
+        End Select
+    End Sub
+
+    Private Sub FormVentas_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
+        Me.VentaBindingSource.CancelEdit()
+    End Sub
 End Class

@@ -32,6 +32,7 @@ Public Class FormPrincipal
     End Sub
 
     Private Sub ToolStripMenuItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMenuItem3.Click
-        Inventario.Show()
+        MostrarFormPanel(Inventario)
+
     End Sub
 End Class

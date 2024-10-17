@@ -263,6 +263,7 @@ Partial Class FormVentas
         Me.btnEditar.TabStop = False
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = False
+        Me.btnEditar.Visible = False
         '
         'btnUltimo
         '

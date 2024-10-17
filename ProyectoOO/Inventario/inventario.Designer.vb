@@ -33,11 +33,11 @@ Partial Class Inventario
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.preciounidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Addbutton = New System.Windows.Forms.Button()
         Me.modbutton = New System.Windows.Forms.Button()
         Me.delbutton = New System.Windows.Forms.Button()
         Me.Inventariolab = New System.Windows.Forms.Label()
-        Me.preciounidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -111,35 +111,48 @@ Partial Class Inventario
         Me.DataGridViewTextBoxColumn5.HeaderText = "id_proovedor"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         '
+        'preciounidad
+        '
+        Me.preciounidad.DataPropertyName = "preciounidad"
+        Me.preciounidad.HeaderText = "preciounidad"
+        Me.preciounidad.Name = "preciounidad"
+        Me.preciounidad.ReadOnly = True
+        '
         'Addbutton
         '
+        Me.Addbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Addbutton.FlatAppearance.BorderSize = 0
         Me.Addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Addbutton.Location = New System.Drawing.Point(635, 47)
         Me.Addbutton.Name = "Addbutton"
         Me.Addbutton.Size = New System.Drawing.Size(75, 23)
         Me.Addbutton.TabIndex = 2
         Me.Addbutton.Text = "Agregar"
-        Me.Addbutton.UseVisualStyleBackColor = True
+        Me.Addbutton.UseVisualStyleBackColor = False
         '
         'modbutton
         '
+        Me.modbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.modbutton.FlatAppearance.BorderSize = 0
         Me.modbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.modbutton.Location = New System.Drawing.Point(635, 76)
         Me.modbutton.Name = "modbutton"
         Me.modbutton.Size = New System.Drawing.Size(75, 23)
         Me.modbutton.TabIndex = 3
         Me.modbutton.Text = "Modificar"
-        Me.modbutton.UseVisualStyleBackColor = True
+        Me.modbutton.UseVisualStyleBackColor = False
         '
         'delbutton
         '
+        Me.delbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.delbutton.FlatAppearance.BorderSize = 0
         Me.delbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.delbutton.Location = New System.Drawing.Point(635, 105)
         Me.delbutton.Name = "delbutton"
         Me.delbutton.Size = New System.Drawing.Size(75, 23)
         Me.delbutton.TabIndex = 4
         Me.delbutton.Text = "Eliminar"
-        Me.delbutton.UseVisualStyleBackColor = True
+        Me.delbutton.UseVisualStyleBackColor = False
         '
         'Inventariolab
         '
@@ -150,18 +163,11 @@ Partial Class Inventario
         Me.Inventariolab.TabIndex = 5
         Me.Inventariolab.Text = "Inventario"
         '
-        'preciounidad
-        '
-        Me.preciounidad.DataPropertyName = "preciounidad"
-        Me.preciounidad.HeaderText = "preciounidad"
-        Me.preciounidad.Name = "preciounidad"
-        Me.preciounidad.ReadOnly = True
-        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(846, 380)
         Me.Controls.Add(Me.Inventariolab)
         Me.Controls.Add(Me.delbutton)

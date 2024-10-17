@@ -84,6 +84,7 @@ Partial Class Agregarinventario
         '
         Me.prodtext.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "nombre", True))
         Me.prodtext.Location = New System.Drawing.Point(88, 28)
+        Me.prodtext.MaxLength = 20
         Me.prodtext.Name = "prodtext"
         Me.prodtext.Size = New System.Drawing.Size(100, 20)
         Me.prodtext.TabIndex = 4
@@ -102,6 +103,7 @@ Partial Class Agregarinventario
         '
         Me.prectext.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "precio", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
         Me.prectext.Location = New System.Drawing.Point(88, 58)
+        Me.prectext.MaxLength = 20
         Me.prectext.Name = "prectext"
         Me.prectext.Size = New System.Drawing.Size(100, 20)
         Me.prectext.TabIndex = 5
@@ -110,29 +112,34 @@ Partial Class Agregarinventario
         '
         Me.cantprec.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "stock", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
         Me.cantprec.Location = New System.Drawing.Point(88, 85)
+        Me.cantprec.MaxLength = 20
         Me.cantprec.Name = "cantprec"
         Me.cantprec.Size = New System.Drawing.Size(100, 20)
         Me.cantprec.TabIndex = 6
         '
         'Aceptbutton
         '
+        Me.Aceptbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Aceptbutton.FlatAppearance.BorderSize = 0
         Me.Aceptbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Aceptbutton.Location = New System.Drawing.Point(113, 179)
         Me.Aceptbutton.Name = "Aceptbutton"
         Me.Aceptbutton.Size = New System.Drawing.Size(75, 23)
         Me.Aceptbutton.TabIndex = 8
         Me.Aceptbutton.Text = "Aceptar"
-        Me.Aceptbutton.UseVisualStyleBackColor = True
+        Me.Aceptbutton.UseVisualStyleBackColor = False
         '
         'Canbutton
         '
+        Me.Canbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Canbutton.FlatAppearance.BorderSize = 0
         Me.Canbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Canbutton.Location = New System.Drawing.Point(225, 179)
         Me.Canbutton.Name = "Canbutton"
         Me.Canbutton.Size = New System.Drawing.Size(75, 23)
         Me.Canbutton.TabIndex = 9
         Me.Canbutton.Text = "Cancelar"
-        Me.Canbutton.UseVisualStyleBackColor = True
+        Me.Canbutton.UseVisualStyleBackColor = False
         '
         'InsumoTableAdapter
         '
@@ -173,7 +180,7 @@ Partial Class Agregarinventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(444, 214)
         Me.Controls.Add(Me.comboBoxProvs)
         Me.Controls.Add(Me.Canbutton)

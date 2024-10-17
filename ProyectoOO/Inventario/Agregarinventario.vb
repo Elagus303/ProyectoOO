@@ -20,11 +20,16 @@
     End Sub
 
     Private Sub Aceptbutton_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptbutton.Click
-        Me.InsumoBindingSource.Current("id_proovedor") = comboBoxProvs.SelectedValue
-        Me.InsumoBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
-        Inventario.InsumoTableAdapter.Fill(Inventario.BD_ImprentaDataSet.Insumo)
-        Me.Close()
+        If prodtext.Text = "" And prectext.Text = "" And cantlab.Text = "" Then
+            Me.InsumoBindingSource.Current("id_proovedor") = comboBoxProvs.SelectedValue
+            Me.InsumoBindingSource.EndEdit()
+            Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
+            Inventario.InsumoTableAdapter.Fill(Inventario.BD_ImprentaDataSet.Insumo)
+            Me.Close()
+        Else
+            MsgBox("no deje campos vacios")
+        End If
+       
 
     End Sub
 End Class
