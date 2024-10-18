@@ -76,4 +76,8 @@
     Private Sub FormVentas_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         Me.VentaBindingSource.CancelEdit()
     End Sub
+
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+
+    End Sub
 End Class

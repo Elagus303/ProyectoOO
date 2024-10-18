@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub Aceptbutton_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Aceptbutton.Click
-        If prodtext.Text = "" And prectext.Text = "" And cantlab.Text = "" Then
+        If prodtext.Text = "" And prectext.Text = "" Then
             Me.InsumoBindingSource.Current("id_proovedor") = comboBoxProvs.SelectedValue
             Me.InsumoBindingSource.EndEdit()
             Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)

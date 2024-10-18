@@ -26,6 +26,7 @@ Partial Class FormVentasAltas
         Dim IdLabel As System.Windows.Forms.Label
         Dim CantidadLabel As System.Windows.Forms.Label
         Dim Id_vendedorLabel As System.Windows.Forms.Label
+        Dim Label1 As System.Windows.Forms.Label
         Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.VentaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.VentaTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter()
@@ -54,6 +55,7 @@ Partial Class FormVentasAltas
         IdLabel = New System.Windows.Forms.Label()
         CantidadLabel = New System.Windows.Forms.Label()
         Id_vendedorLabel = New System.Windows.Forms.Label()
+        Label1 = New System.Windows.Forms.Label()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -298,12 +300,22 @@ Partial Class FormVentasAltas
         '
         Me.ClientesTableAdapter.ClearBeforeFill = True
         '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Location = New System.Drawing.Point(218, 41)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(39, 13)
+        Label1.TabIndex = 28
+        Label1.Text = "Cliente"
+        '
         'FormVentasAltas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(424, 426)
+        Me.Controls.Add(Label1)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.cBoxHojas)
