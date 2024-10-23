@@ -1,78 +1,55 @@
 ﻿Public Class modificar
-
-    Private Sub ClientesBindingNavigatorSaveItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Me.Validate()
-        Me.ClientesBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
-
-    End Sub
-
+    '1) FORMULARIO DE MODIFICAR CLIENTE
+    '1.1) Evento Load del formulario
     Private Sub modificar_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
-        Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
-
+        Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'Cargar datos
+    End Sub
+    '1.2) Devolver el Foco al primer campo
+    Private Sub modificar_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        NombreTextBox.Focus()
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        '
-    End Sub
-
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    '2) BOTONES DEL FORMULARIO
+    '2.1) Botón de guardar cambios
+    Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
         If NombreTextBox.Text = "" Or ApellidoTextBox.Text = "" Or TelefonoTextBox.Text = "" Then
-            MsgBox("No deje los campos vacios en NOMBRE, APELLIDO O TELEFONO ")
-
+            MsgBox("No deje los campos vacios en NOMBRE, APELLIDO O TELÉFONO ")
         Else
             Me.ClientesBindingSource.EndEdit() 'cierro la base
             Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'guardo
 
             Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
             clientes.ClientesTableAdapter.Fill(clientes.BD_ImprentaDataSet.Clientes)
-            'sos agustin?
-            'cambios en minrama1
-
-
             MsgBox("Se a modificado con exito")
         End If
     End Sub
-
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    '2.2) Botón de salir 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
         Me.Close()
     End Sub
 
-    Private Sub IdTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-    End Sub
 
+
+    '3) VALIDACIONES DE LOS TEXTBOXs
+    '3.1) Validación del Nombre
     Private Sub NombreTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles NombreTextBox.KeyPress
-        e.KeyChar = ChrW(SoloLetras(e))
+        e.KeyChar = ChrW(SoloLetras(e)) 'Permitido solo letras
         If e.KeyChar = Chr(13) Then
             ApellidoTextBox.Focus()
-
+            e.Handled = True
         End If
-        ' Si es Enter, movemos el foco al siguiente TextBox (en este caso, TextBox2)
-
-        ' Evitamos que se procese la tecla Enter en el TextBox1
-        e.Handled = True
     End Sub
-
-    Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NombreTextBox.TextChanged
-
-    End Sub
-
+    '3.2) Validación del Apellido
     Private Sub ApellidoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ApellidoTextBox.KeyPress
-        e.KeyChar = ChrW(SoloLetras(e))
+        e.KeyChar = ChrW(SoloLetras(e)) 'Permitido solo letras
         If e.KeyChar = Chr(13) Then
             TelefonoTextBox.Focus()
-
+            e.Handled = True
         End If
-        e.Handled = True
     End Sub
-
-    Private Sub ApellidoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ApellidoTextBox.TextChanged
-
-    End Sub
-
+    '3.3) Validación del Teléfono
     Private Sub TelefonoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TelefonoTextBox.KeyPress
         If e.KeyChar = Chr(13) Then
             ' Si es Enter, movemos el foco al siguiente TextBox (en este caso, TextBox2)
@@ -86,42 +63,19 @@
             End If
         End If
     End Sub
-
-    Private Sub TelefonoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TelefonoTextBox.TextChanged
-
-    End Sub
-
+    '3.4) Validación del Correo
     Private Sub CorreoTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CorreoTextBox.KeyPress
-
         If e.KeyChar = Chr(13) Then
             DireccionTextBox.Focus()
-
         End If
-
     End Sub
-
-    Private Sub CorreoTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CorreoTextBox.TextChanged
-
-    End Sub
-
+    '3.5) Validación de la Dirección
     Private Sub DireccionTextBox_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles DireccionTextBox.KeyDown
         If e.KeyCode = Keys.Enter Then
             ' Simula el clic en el botón
-            Button2.PerformClick()
+            btnGuardar.PerformClick()
             ' Opcionalmente, puedes evitar que el sonido de "ding" suene al presionar Enter
             e.SuppressKeyPress = True
         End If
-    End Sub
-
-    Private Sub DireccionTextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles DireccionTextBox.KeyPress
-        If e.KeyChar = Chr(13) Then
-            Button2.Focus()
-
-        End If
-
-    End Sub
-
-    Private Sub DireccionTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DireccionTextBox.TextChanged
-
     End Sub
 End Class

@@ -29,15 +29,18 @@
     '2.3) Click en botón eliminar
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
         If Me.ProveedoresDataGridView.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
-            Dim x As Integer
-            '1) Obtener la lista de elementos seleccionados
-            '2) Apuntar al ultimo elemento de esa lista
-            '3) Obtener el indice de ese elemento y eliminar
-            For x = Me.ProveedoresDataGridView.SelectedRows.Count - 1 To 0 Step -1
-                Me.ProveedoresBindingSource.RemoveAt(Me.ProveedoresDataGridView.SelectedRows(x).Index)
-            Next
-            Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
-            MsgBox("Eliminación exitosa")
+            Dim resultado As DialogResult = MessageBox.Show("¿Desea eliminar " & Me.ProveedoresDataGridView.SelectedRows.Count.ToString & " registro/s?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If resultado = Windows.Forms.DialogResult.Yes Then
+                Dim x As Integer
+                '1) Obtener la lista de elementos seleccionados
+                '2) Apuntar al ultimo elemento de esa lista
+                '3) Obtener el indice de ese elemento y eliminar
+                For x = Me.ProveedoresDataGridView.SelectedRows.Count - 1 To 0 Step -1
+                    Me.ProveedoresBindingSource.RemoveAt(Me.ProveedoresDataGridView.SelectedRows(x).Index)
+                Next
+                Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
+                MsgBox("Eliminación exitosa")
+            End If
         Else
             MsgBox("Seleccione, al menos, un elemento para borrar")
         End If

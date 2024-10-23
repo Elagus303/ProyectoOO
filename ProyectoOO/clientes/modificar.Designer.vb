@@ -37,8 +37,8 @@ Partial Class modificar
         Me.TelefonoTextBox = New System.Windows.Forms.TextBox()
         Me.CorreoTextBox = New System.Windows.Forms.TextBox()
         Me.DireccionTextBox = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidoLabel = New System.Windows.Forms.Label()
         TelefonoLabel = New System.Windows.Forms.Label()
@@ -51,47 +51,47 @@ Partial Class modificar
         'NombreLabel
         '
         NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(58, 31)
+        NombreLabel.Location = New System.Drawing.Point(32, 31)
         NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(45, 13)
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
         NombreLabel.TabIndex = 3
-        NombreLabel.Text = "nombre:"
+        NombreLabel.Text = "Nombre:"
         '
         'ApellidoLabel
         '
         ApellidoLabel.AutoSize = True
-        ApellidoLabel.Location = New System.Drawing.Point(58, 57)
+        ApellidoLabel.Location = New System.Drawing.Point(32, 57)
         ApellidoLabel.Name = "ApellidoLabel"
-        ApellidoLabel.Size = New System.Drawing.Size(46, 13)
+        ApellidoLabel.Size = New System.Drawing.Size(47, 13)
         ApellidoLabel.TabIndex = 5
-        ApellidoLabel.Text = "apellido:"
+        ApellidoLabel.Text = "Apellido:"
         '
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(58, 83)
+        TelefonoLabel.Location = New System.Drawing.Point(32, 83)
         TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(48, 13)
+        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
         TelefonoLabel.TabIndex = 7
-        TelefonoLabel.Text = "telefono:"
+        TelefonoLabel.Text = "Teléfono:"
         '
         'CorreoLabel
         '
         CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(58, 109)
+        CorreoLabel.Location = New System.Drawing.Point(32, 109)
         CorreoLabel.Name = "CorreoLabel"
-        CorreoLabel.Size = New System.Drawing.Size(40, 13)
+        CorreoLabel.Size = New System.Drawing.Size(41, 13)
         CorreoLabel.TabIndex = 9
-        CorreoLabel.Text = "correo:"
+        CorreoLabel.Text = "Correo:"
         '
         'DireccionLabel
         '
         DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(58, 135)
+        DireccionLabel.Location = New System.Drawing.Point(32, 135)
         DireccionLabel.Name = "DireccionLabel"
-        DireccionLabel.Size = New System.Drawing.Size(53, 13)
+        DireccionLabel.Size = New System.Drawing.Size(55, 13)
         DireccionLabel.TabIndex = 11
-        DireccionLabel.Text = "direccion:"
+        DireccionLabel.Text = "Dirección:"
         '
         'BD_ImprentaDataSet
         '
@@ -122,77 +122,77 @@ Partial Class modificar
         '
         Me.NombreTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NombreTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "nombre", True))
-        Me.NombreTextBox.Location = New System.Drawing.Point(117, 28)
+        Me.NombreTextBox.Location = New System.Drawing.Point(91, 28)
         Me.NombreTextBox.MaxLength = 20
         Me.NombreTextBox.Name = "NombreTextBox"
-        Me.NombreTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox.Size = New System.Drawing.Size(160, 20)
         Me.NombreTextBox.TabIndex = 2
         '
         'ApellidoTextBox
         '
         Me.ApellidoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ApellidoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "apellido", True))
-        Me.ApellidoTextBox.Location = New System.Drawing.Point(117, 54)
+        Me.ApellidoTextBox.Location = New System.Drawing.Point(91, 54)
         Me.ApellidoTextBox.MaxLength = 20
         Me.ApellidoTextBox.Name = "ApellidoTextBox"
-        Me.ApellidoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ApellidoTextBox.Size = New System.Drawing.Size(160, 20)
         Me.ApellidoTextBox.TabIndex = 6
         '
         'TelefonoTextBox
         '
         Me.TelefonoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TelefonoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "telefono", True))
-        Me.TelefonoTextBox.Location = New System.Drawing.Point(117, 80)
-        Me.TelefonoTextBox.MaxLength = 20
+        Me.TelefonoTextBox.Location = New System.Drawing.Point(91, 80)
+        Me.TelefonoTextBox.MaxLength = 12
         Me.TelefonoTextBox.Name = "TelefonoTextBox"
-        Me.TelefonoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TelefonoTextBox.Size = New System.Drawing.Size(160, 20)
         Me.TelefonoTextBox.TabIndex = 8
         '
         'CorreoTextBox
         '
         Me.CorreoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CorreoTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "correo", True))
-        Me.CorreoTextBox.Location = New System.Drawing.Point(117, 106)
+        Me.CorreoTextBox.Location = New System.Drawing.Point(91, 106)
         Me.CorreoTextBox.MaxLength = 50
         Me.CorreoTextBox.Name = "CorreoTextBox"
-        Me.CorreoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.CorreoTextBox.Size = New System.Drawing.Size(160, 20)
         Me.CorreoTextBox.TabIndex = 10
         '
         'DireccionTextBox
         '
         Me.DireccionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.DireccionTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "direccion", True))
-        Me.DireccionTextBox.Location = New System.Drawing.Point(117, 132)
+        Me.DireccionTextBox.Location = New System.Drawing.Point(91, 132)
         Me.DireccionTextBox.MaxLength = 40
         Me.DireccionTextBox.Name = "DireccionTextBox"
-        Me.DireccionTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.DireccionTextBox.Size = New System.Drawing.Size(160, 20)
         Me.DireccionTextBox.TabIndex = 12
         '
-        'Button1
+        'btnSalir
         '
-        Me.Button1.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.Location = New System.Drawing.Point(144, 176)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(124, 40)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "salir"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnSalir.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnSalir.FlatAppearance.BorderSize = 0
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSalir.Location = New System.Drawing.Point(144, 176)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(124, 40)
+        Me.btnSalir.TabIndex = 16
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnGuardar
         '
-        Me.Button2.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.Location = New System.Drawing.Point(14, 176)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(124, 40)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = "Guardar edicion"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnGuardar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGuardar.Location = New System.Drawing.Point(14, 176)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(124, 40)
+        Me.btnGuardar.TabIndex = 15
+        Me.btnGuardar.Text = "Guardar cambios"
+        Me.btnGuardar.UseVisualStyleBackColor = False
         '
         'modificar
         '
@@ -200,8 +200,8 @@ Partial Class modificar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
         Me.ClientSize = New System.Drawing.Size(289, 228)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(Me.NombreTextBox)
         Me.Controls.Add(ApellidoLabel)
@@ -214,7 +214,8 @@ Partial Class modificar
         Me.Controls.Add(Me.DireccionTextBox)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "modificar"
-        Me.Text = "modificar"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Modificar cliente"
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -230,6 +231,6 @@ Partial Class modificar
     Friend WithEvents TelefonoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents CorreoTextBox As System.Windows.Forms.TextBox
     Friend WithEvents DireccionTextBox As System.Windows.Forms.TextBox
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents btnSalir As System.Windows.Forms.Button
 End Class

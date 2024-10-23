@@ -41,7 +41,6 @@
             SoloLetras = AscW(teclas.KeyChar)
         Else
             SoloLetras = 0
-
         End If
 
 
@@ -58,6 +57,7 @@
             Return False
         Else
             ' Si no es un número o tecla especial, la cancelamos
+            System.Media.SystemSounds.Exclamation.Play()
             Return True
         End If
     End Function

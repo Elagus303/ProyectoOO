@@ -13,6 +13,7 @@
     Private Sub FormInicioSesion_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         If e.KeyCode = Keys.Enter Then
             btnIngresar_Click()
+            e.SuppressKeyPress = True
         End If
     End Sub
 
@@ -44,14 +45,17 @@
                     If VendedoresBindingSource.Current("id_rol") = 1 Then usuarioEsAdmin = True
                 Else
                     txtNombre.Clear() : txtContraseña.Clear()
+                    txtNombre.Focus()
                     MsgBox("Contraseña incorrecta")
                 End If
             Else
                 txtNombre.Clear() : txtContraseña.Clear()
+                txtNombre.Focus()
                 MsgBox("Nombre incorrecto")
             End If
         Else
             txtNombre.Clear() : txtContraseña.Clear()
+            txtNombre.Focus()
             MsgBox("Revise y complete los datos") 'erhhvv
         End If
     End Sub

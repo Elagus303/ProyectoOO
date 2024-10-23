@@ -46,7 +46,6 @@
     Private Sub TelefonoTextBox_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TelefonoTextBox.KeyPress
         If SoloNumeros(e) Then
             e.Handled = True ' Cancelamos la tecla si no es válida
-            System.Media.SystemSounds.Exclamation.Play()
         End If
     End Sub
 
