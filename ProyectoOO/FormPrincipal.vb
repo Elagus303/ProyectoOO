@@ -7,9 +7,14 @@ Public Class FormPrincipal
 
     'Abrir formulario de vendedores
     Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem.Click
-        FormVentas.Close() : FormVentas.Dispose()
-        clientes.Close() : clientes.Dispose()
-        MostrarFormPanel(PrinVendedores)
+        If usuarioEsAdminx Then
+            FormVentas.Close() : FormVentas.Dispose()
+            clientes.Close() : clientes.Dispose()
+            MostrarFormPanel(PrinVendedores)
+        Else
+            MsgBox("acceso denegado, no tienes permisos de administrador")
+        End If
+        
     End Sub
     Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
         MostrarFormPanel(clientes)

@@ -51,11 +51,14 @@ Partial Class clientes
         Me.btnFiltrar = New System.Windows.Forms.Button()
         Me.pbTxtBuscar = New System.Windows.Forms.PictureBox()
         Me.btnAnadir = New System.Windows.Forms.Button()
+        Me.VendedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VendedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter()
         CType(Me.ClientesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cbFiltrar
@@ -64,7 +67,7 @@ Partial Class clientes
         Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFiltrar.FormattingEnabled = True
         Me.cbFiltrar.Items.AddRange(New Object() {"Nombre", "Apellido"})
-        Me.cbFiltrar.Location = New System.Drawing.Point(766, 29)
+        Me.cbFiltrar.Location = New System.Drawing.Point(797, 29)
         Me.cbFiltrar.Name = "cbFiltrar"
         Me.cbFiltrar.Size = New System.Drawing.Size(86, 21)
         Me.cbFiltrar.TabIndex = 29
@@ -75,7 +78,7 @@ Partial Class clientes
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTabla.Location = New System.Drawing.Point(8, 78)
         Me.lblTabla.Name = "lblTabla"
-        Me.lblTabla.Size = New System.Drawing.Size(943, 20)
+        Me.lblTabla.Size = New System.Drawing.Size(974, 20)
         Me.lblTabla.TabIndex = 28
         Me.lblTabla.Text = "Sin resultados compatibles"
         Me.lblTabla.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -132,6 +135,7 @@ Partial Class clientes
         Me.ClientesDataGridView.DefaultCellStyle = DataGridViewCellStyle2
         Me.ClientesDataGridView.GridColor = System.Drawing.SystemColors.ControlText
         Me.ClientesDataGridView.Location = New System.Drawing.Point(8, 59)
+        Me.ClientesDataGridView.MultiSelect = False
         Me.ClientesDataGridView.Name = "ClientesDataGridView"
         Me.ClientesDataGridView.ReadOnly = True
         Me.ClientesDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
@@ -139,7 +143,7 @@ Partial Class clientes
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         Me.ClientesDataGridView.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.ClientesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.ClientesDataGridView.Size = New System.Drawing.Size(943, 450)
+        Me.ClientesDataGridView.Size = New System.Drawing.Size(974, 628)
         Me.ClientesDataGridView.TabIndex = 31
         '
         'IdDataGridViewTextBoxColumn
@@ -209,7 +213,7 @@ Partial Class clientes
         Me.btnPrimero.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnPrimero.FlatAppearance.BorderSize = 0
         Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrimero.Location = New System.Drawing.Point(785, 533)
+        Me.btnPrimero.Location = New System.Drawing.Point(816, 711)
         Me.btnPrimero.Name = "btnPrimero"
         Me.btnPrimero.Size = New System.Drawing.Size(37, 27)
         Me.btnPrimero.TabIndex = 34
@@ -223,7 +227,7 @@ Partial Class clientes
         Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnt.FlatAppearance.BorderSize = 0
         Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnt.Location = New System.Drawing.Point(914, 533)
+        Me.btnAnt.Location = New System.Drawing.Point(945, 711)
         Me.btnAnt.Name = "btnAnt"
         Me.btnAnt.Size = New System.Drawing.Size(37, 27)
         Me.btnAnt.TabIndex = 35
@@ -237,7 +241,7 @@ Partial Class clientes
         Me.btnSig.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnSig.FlatAppearance.BorderSize = 0
         Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSig.Location = New System.Drawing.Point(871, 533)
+        Me.btnSig.Location = New System.Drawing.Point(902, 711)
         Me.btnSig.Name = "btnSig"
         Me.btnSig.Size = New System.Drawing.Size(37, 27)
         Me.btnSig.TabIndex = 36
@@ -251,7 +255,7 @@ Partial Class clientes
         Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnUltimo.FlatAppearance.BorderSize = 0
         Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUltimo.Location = New System.Drawing.Point(828, 533)
+        Me.btnUltimo.Location = New System.Drawing.Point(859, 711)
         Me.btnUltimo.Name = "btnUltimo"
         Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
         Me.btnUltimo.TabIndex = 37
@@ -265,7 +269,7 @@ Partial Class clientes
         Me.btnEliminar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnEliminar.FlatAppearance.BorderSize = 0
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminar.Location = New System.Drawing.Point(9, 530)
+        Me.btnEliminar.Location = New System.Drawing.Point(9, 708)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(87, 29)
         Me.btnEliminar.TabIndex = 33
@@ -279,7 +283,7 @@ Partial Class clientes
         Me.btnEditar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnEditar.FlatAppearance.BorderSize = 0
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditar.Location = New System.Drawing.Point(102, 530)
+        Me.btnEditar.Location = New System.Drawing.Point(102, 708)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(87, 29)
         Me.btnEditar.TabIndex = 32
@@ -305,7 +309,7 @@ Partial Class clientes
         Me.btnFiltrar.FlatAppearance.BorderSize = 0
         Me.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnFiltrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnFiltrar.Location = New System.Drawing.Point(766, 12)
+        Me.btnFiltrar.Location = New System.Drawing.Point(797, 12)
         Me.btnFiltrar.Name = "btnFiltrar"
         Me.btnFiltrar.Size = New System.Drawing.Size(86, 38)
         Me.btnFiltrar.TabIndex = 30
@@ -330,7 +334,7 @@ Partial Class clientes
         Me.btnAnadir.FlatAppearance.BorderSize = 0
         Me.btnAnadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAnadir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnAnadir.Location = New System.Drawing.Point(859, 12)
+        Me.btnAnadir.Location = New System.Drawing.Point(890, 12)
         Me.btnAnadir.Name = "btnAnadir"
         Me.btnAnadir.Size = New System.Drawing.Size(86, 38)
         Me.btnAnadir.TabIndex = 24
@@ -338,12 +342,22 @@ Partial Class clientes
         Me.btnAnadir.Text = "Agregar"
         Me.btnAnadir.UseVisualStyleBackColor = False
         '
+        'VendedoresBindingSource
+        '
+        Me.VendedoresBindingSource.DataMember = "Vendedores"
+        Me.VendedoresBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'VendedoresTableAdapter
+        '
+        Me.VendedoresTableAdapter.ClearBeforeFill = True
+        '
         'clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.LemonChiffon
-        Me.ClientSize = New System.Drawing.Size(957, 571)
+        Me.ClientSize = New System.Drawing.Size(988, 749)
         Me.Controls.Add(Me.lblTabla)
         Me.Controls.Add(Me.btnPrimero)
         Me.Controls.Add(Me.btnAnt)
@@ -365,6 +379,7 @@ Partial Class clientes
         CType(Me.BDImprentaDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbTxtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -394,4 +409,6 @@ Partial Class clientes
     Friend WithEvents TelefonoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents CorreoDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DireccionDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents VendedoresBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents VendedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter
 End Class

@@ -2,6 +2,8 @@
     '1) FORMULARIO DE CLIENTES
     '1.1) Evento Load del formulario
     Private Sub clientes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Vendedores' Puede moverla o quitarla según sea necesario.
+        Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
         Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'Cargar datos
         EstilosDataGridView(Me.ClientesDataGridView) 'EstilosDataGridView
 
@@ -16,35 +18,45 @@
     '2) BOTONES DEL FORMULARIO
     '2.1) Boton de eliminar elemento
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
-        If Me.ClientesDataGridView.SelectedRows.Count > 0 Then ' Si hay al menos una fila seleccionada
-            Dim selectedRow = Me.ClientesDataGridView.SelectedRows(0)
-            Dim clientName As String = selectedRow.Cells(0).Value.ToString() ' Ajusta el índice de la columna si es necesario
-            Dim result As DialogResult = MessageBox.Show("¿Desea eliminar el registro de '" & clientName & "'?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If usuarioEsAdminx Then
+            ' Permitir acceso a la funcionalidad si es administrador
 
-            If result = DialogResult.Yes Then
-                Try
-                    For x As Integer = Me.ClientesDataGridView.SelectedRows.Count - 1 To 0 Step -1
-                        ' Eliminar el elemento seleccionado
-                        Me.ClientesBindingSource.RemoveAt(Me.ClientesDataGridView.SelectedRows(x).Index)
-                    Next
+            ' Aquí agregas el código que realiza la acción solo para administradores
+            If Me.ClientesDataGridView.SelectedRows.Count > 0 Then ' Si hay al menos una fila seleccionada
+                Dim selectedRow = Me.ClientesDataGridView.SelectedRows(0)
+                Dim clientName As String = selectedRow.Cells(0).Value.ToString() ' Ajusta el índice de la columna si es necesario
+                Dim result As DialogResult = MessageBox.Show("¿Desea eliminar el registro de '" & clientName & "'?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
-                    Me.ClientesBindingSource.EndEdit() ' Confirma los cambios
+                If result = DialogResult.Yes Then
+                    Try
+                        For x As Integer = Me.ClientesDataGridView.SelectedRows.Count - 1 To 0 Step -1
+                            ' Eliminar el elemento seleccionado
+                            Me.ClientesBindingSource.RemoveAt(Me.ClientesDataGridView.SelectedRows(x).Index)
+                        Next
 
-                    ' Guarda los cambios en la base de datos
-                    Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
-                    If Me.ClientesBindingSource.Count = 0 Then
-                        lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
-                    End If
-                    MsgBox("Eliminación exitosa")
-                Catch ex As Exception
-                    MsgBox("Ocurrió un error al intentar eliminar: " & ex.Message)
-                End Try
+                        Me.ClientesBindingSource.EndEdit() ' Confirma los cambios
+
+                        ' Guarda los cambios en la base de datos
+                        Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
+                        If Me.ClientesBindingSource.Count = 0 Then
+                            lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
+                        End If
+                        MsgBox("Eliminación exitosa")
+                    Catch ex As Exception
+                        MsgBox("Ocurrió un error al intentar eliminar: " & ex.Message)
+                    End Try
+                Else
+                    MsgBox("Eliminación cancelada")
+                End If
             Else
-                MsgBox("Eliminación cancelada")
+                MsgBox("Seleccione, al menos, un elemento para borrar")
             End If
         Else
-            MsgBox("Seleccione, al menos, un elemento para borrar")
+            ' Denegar acceso si no es administrador
+            MsgBox("Acceso denegado. Solo los administradores pueden realizar esta acción.")
         End If
+
+        
     End Sub
     '2.2) Boton de añadir elemento
     Private Sub btnAnadir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnadir.Click
@@ -52,12 +64,17 @@
     End Sub
     '2.3) Boton de editar elemento
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click
-        'Seleccionar un elemento para editar
-        If Me.ClientesDataGridView.SelectedRows.Count < 1 Then
-            MsgBox("Seleccione un elemento para editar")
+        If usuarioEsAdminx Then
+            'Seleccionar un elemento para editar
+            If Me.ClientesDataGridView.SelectedRows.Count < 1 Then
+                MsgBox("Seleccione un elemento para editar")
+            Else
+                modificar.ShowDialog()
+            End If
         Else
-            modificar.ShowDialog()
+            MsgBox("acceso denegado solo los administradores pueden acceder a esta funcion")
         End If
+       
     End Sub
     '2.4) Boton de mover al primer elemento
     Private Sub btnPrimero_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrimero.Click

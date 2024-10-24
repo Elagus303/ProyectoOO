@@ -32,31 +32,54 @@
 
     '4) BOTÓN DE INGRESAR A LA APLICACIÓN 
     Private Sub btnIngresar_Click() Handles btnIngresar.Click
+        ' Verifica si el nombre y la contraseña son correctos
         If txtNombre.Text = "agustin" And txtContraseña.Text = "1234" Then
-            Me.Hide() 'cma
+            ' Usuario predefinido
+            usuarioEsAdminx = True  ' Si deseas que Agustin sea un administrador
+            usuarioNombre = "Agustin"
+            usuarioID = 0 ' O un valor que quieras asignar como id para el usuario predefinido
+
+            ' Ocultar el formulario de login y mostrar el principal
+            Me.Hide()
             FormPrincipal.Show()
-        ElseIf txtContraseña.Text <> "" AndAlso txtNombre.Text <> "" Then
+        ElseIf txtNombre.Text <> "" And txtContraseña.Text <> "" Then
+            ' Busca el nombre en la base de datos
             Dim indice_fila As Integer = Me.VendedoresBindingSource.Find("nombre", txtNombre.Text)
+
             If indice_fila >= 0 Then
                 VendedoresBindingSource.Position = indice_fila
-                If txtContraseña.Text = VendedoresBindingSource.Current("contraseña") Then
+
+                ' Verifica si la contraseña es correcta
+                If txtContraseña.Text = VendedoresBindingSource.Current("contraseña").ToString() Then
+                    ' Asignar el rol del usuario
+                    Dim idRol As Integer = CInt(VendedoresBindingSource.Current("id_rol"))
+
+                    ' Verificar el rol
+                    If idRol = 1 Then
+                        usuarioEsAdminx = True  ' Es administrador
+                    ElseIf idRol = 2 Then
+                        usuarioEsAdminx = False  ' Es usuario estándar
+                    End If
+
+                    ' Guardar el nombre del usuario logueado
+                    usuarioNombre = VendedoresBindingSource.Current("nombre").ToString()
+                    usuarioID = CInt(VendedoresBindingSource.Current("id")) ' Asignar el id correctamente
+
+                    ' Ocultar el formulario de login y mostrar el principal
                     Me.Hide()
                     FormPrincipal.Show()
-                    If VendedoresBindingSource.Current("id_rol") = 1 Then usuarioEsAdmin = True
                 Else
-                    txtNombre.Clear() : txtContraseña.Clear()
-                    txtNombre.Focus()
                     MsgBox("Contraseña incorrecta")
+                    txtContraseña.Clear()
+                    txtContraseña.Focus()
                 End If
             Else
-                txtNombre.Clear() : txtContraseña.Clear()
-                txtNombre.Focus()
                 MsgBox("Nombre incorrecto")
+                txtNombre.Clear()
+                txtNombre.Focus()
             End If
         Else
-            txtNombre.Clear() : txtContraseña.Clear()
-            txtNombre.Focus()
-            MsgBox("Revise y complete los datos") 'erhhvv
+            MsgBox("Revise y complete los datos")
         End If
     End Sub
 End Class

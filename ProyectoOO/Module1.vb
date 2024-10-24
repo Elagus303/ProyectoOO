@@ -97,4 +97,5 @@
         x.RowsDefaultCellStyle.SelectionForeColor = ColorTextoPrimario
         x.GridColor = ColorSobreBase
     End Sub
+    
 End Module

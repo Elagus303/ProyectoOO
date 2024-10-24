@@ -14,19 +14,24 @@
     End Sub
     '2.2) Evento click en btn eliminar
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
-        If Me.VentaDataGridView.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
-            Dim x As Integer
-            '1) Obtener la lista de elementos seleccionados
-            '2) Apuntar al ultimo elemento de esa lista
-            '3) Obtener el indice de ese elemento y eliminar
-            For x = Me.VentaDataGridView.SelectedRows.Count - 1 To 0 Step -1
-                Me.VentaBindingSource.RemoveAt(Me.VentaDataGridView.SelectedRows(x).Index)
-            Next
-            Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
-            MsgBox("Eliminación exitosa")
+        If usuarioEsAdminx Then
+            If Me.VentaDataGridView.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
+                Dim x As Integer
+                '1) Obtener la lista de elementos seleccionados
+                '2) Apuntar al ultimo elemento de esa lista
+                '3) Obtener el indice de ese elemento y eliminar
+                For x = Me.VentaDataGridView.SelectedRows.Count - 1 To 0 Step -1
+                    Me.VentaBindingSource.RemoveAt(Me.VentaDataGridView.SelectedRows(x).Index)
+                Next
+                Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
+                MsgBox("Eliminación exitosa")
+            Else
+                MsgBox("Seleccione, al menos, un elemento para borrar")
+            End If
         Else
-            MsgBox("Seleccione, al menos, un elemento para borrar")
+            MsgBox("acceso denegado, solo los administradores pueden usar esta funcion")
         End If
+       
     End Sub
     '2.3) Evento click en btn editar
     Private Sub btnEditar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditar.Click

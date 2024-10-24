@@ -103,6 +103,7 @@ Partial Class FormVentas
         Me.VentaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.VentaDataGridView.DataSource = Me.VentaBindingSource
         Me.VentaDataGridView.Location = New System.Drawing.Point(12, 47)
+        Me.VentaDataGridView.MultiSelect = False
         Me.VentaDataGridView.Name = "VentaDataGridView"
         Me.VentaDataGridView.ReadOnly = True
         Me.VentaDataGridView.Size = New System.Drawing.Size(868, 253)
