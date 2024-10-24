@@ -54,30 +54,41 @@
         Me.VentaBindingSource.MoveLast()
     End Sub
 
+
+
     '3) COMPORTAMIENTO ORDENAR DATAGRIDVIEW
     '3.1) Evento click en btn ordenar (Mascara)
     Private Sub btnFiltrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOrdenar.Click
         cbFiltrar.DroppedDown = True 'Desplegar lista
     End Sub
-
-
-
+    '3.2) Ordenamiento según la selección del elemento
     Private Sub cbFiltrar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbFiltrar.SelectedIndexChanged
         Select Case cbFiltrar.SelectedIndex
             Case 0
                 Me.VentaBindingSource.Sort = "fecha_venta DESC"
             Case 1
-                Me.VentaBindingSource.Sort = "id_vendedor ASC"
+                Me.VentaBindingSource.Sort = "id_vendedor ASC, fecha_venta DESC"
             Case 2
                 Me.VentaBindingSource.Sort = "precio_venta DESC"
         End Select
     End Sub
 
-    Private Sub FormVentas_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
-        Me.VentaBindingSource.CancelEdit()
-    End Sub
 
+
+
+    '4)COMPORTAMIENTO DE FILTRADO POR FECHAS
+    '4.1) Evento Click en el boton de buscar
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+        'Parametros de fecha inicial y final
+        Dim fechaInicio As String = dTimePickerInicio.Value.ToString("yyyy-MM-dd")
+        Dim fechaFinal As String = dTimePickerFinal.Value.AddDays(1).ToString("yyyy-MM-dd") 'Para incluir el último día
 
+        Me.VentaBindingSource.Filter = "fecha_venta >= #" & fechaInicio & "# AND fecha_venta < #" & fechaFinal & "#" 'Sacar el <= por el <, por el cambio anterior
+        Me.btnRemoverFiltro.Visible = True
+    End Sub
+    '4.2) Evento Click en quitar filtro
+    Private Sub RemoverFiltro_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemoverFiltro.Click
+        Me.VentaBindingSource.RemoveFilter() 'Quitar filtro de busqueda de ventas por fechas
+        Me.btnRemoverFiltro.Visible = False
     End Sub
 End Class

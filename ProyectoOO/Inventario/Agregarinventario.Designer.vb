@@ -47,7 +47,7 @@ Partial Class Agregarinventario
         'prodlab
         '
         Me.prodlab.AutoSize = True
-        Me.prodlab.Location = New System.Drawing.Point(7, 36)
+        Me.prodlab.Location = New System.Drawing.Point(31, 36)
         Me.prodlab.Name = "prodlab"
         Me.prodlab.Size = New System.Drawing.Size(50, 13)
         Me.prodlab.TabIndex = 0
@@ -56,7 +56,7 @@ Partial Class Agregarinventario
         'preclab
         '
         Me.preclab.AutoSize = True
-        Me.preclab.Location = New System.Drawing.Point(7, 65)
+        Me.preclab.Location = New System.Drawing.Point(31, 65)
         Me.preclab.Name = "preclab"
         Me.preclab.Size = New System.Drawing.Size(37, 13)
         Me.preclab.TabIndex = 1
@@ -65,7 +65,7 @@ Partial Class Agregarinventario
         'cantlab
         '
         Me.cantlab.AutoSize = True
-        Me.cantlab.Location = New System.Drawing.Point(7, 89)
+        Me.cantlab.Location = New System.Drawing.Point(31, 89)
         Me.cantlab.Name = "cantlab"
         Me.cantlab.Size = New System.Drawing.Size(49, 13)
         Me.cantlab.TabIndex = 2
@@ -74,7 +74,7 @@ Partial Class Agregarinventario
         'proovlab
         '
         Me.proovlab.AutoSize = True
-        Me.proovlab.Location = New System.Drawing.Point(6, 118)
+        Me.proovlab.Location = New System.Drawing.Point(30, 118)
         Me.proovlab.Name = "proovlab"
         Me.proovlab.Size = New System.Drawing.Size(56, 13)
         Me.proovlab.TabIndex = 3
@@ -83,10 +83,10 @@ Partial Class Agregarinventario
         'prodtext
         '
         Me.prodtext.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "nombre", True))
-        Me.prodtext.Location = New System.Drawing.Point(88, 28)
+        Me.prodtext.Location = New System.Drawing.Point(112, 28)
         Me.prodtext.MaxLength = 20
         Me.prodtext.Name = "prodtext"
-        Me.prodtext.Size = New System.Drawing.Size(100, 20)
+        Me.prodtext.Size = New System.Drawing.Size(146, 20)
         Me.prodtext.TabIndex = 4
         '
         'InsumoBindingSource
@@ -102,19 +102,19 @@ Partial Class Agregarinventario
         'prectext
         '
         Me.prectext.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "precio", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "C2"))
-        Me.prectext.Location = New System.Drawing.Point(88, 58)
+        Me.prectext.Location = New System.Drawing.Point(112, 58)
         Me.prectext.MaxLength = 20
         Me.prectext.Name = "prectext"
-        Me.prectext.Size = New System.Drawing.Size(100, 20)
+        Me.prectext.Size = New System.Drawing.Size(101, 20)
         Me.prectext.TabIndex = 5
         '
         'cantprec
         '
         Me.cantprec.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.InsumoBindingSource, "stock", True, System.Windows.Forms.DataSourceUpdateMode.OnValidation, Nothing, "N0"))
-        Me.cantprec.Location = New System.Drawing.Point(88, 85)
+        Me.cantprec.Location = New System.Drawing.Point(112, 85)
         Me.cantprec.MaxLength = 20
         Me.cantprec.Name = "cantprec"
-        Me.cantprec.Size = New System.Drawing.Size(100, 20)
+        Me.cantprec.Size = New System.Drawing.Size(101, 20)
         Me.cantprec.TabIndex = 6
         '
         'Aceptbutton
@@ -122,9 +122,9 @@ Partial Class Agregarinventario
         Me.Aceptbutton.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.Aceptbutton.FlatAppearance.BorderSize = 0
         Me.Aceptbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Aceptbutton.Location = New System.Drawing.Point(113, 179)
+        Me.Aceptbutton.Location = New System.Drawing.Point(45, 174)
         Me.Aceptbutton.Name = "Aceptbutton"
-        Me.Aceptbutton.Size = New System.Drawing.Size(75, 23)
+        Me.Aceptbutton.Size = New System.Drawing.Size(87, 29)
         Me.Aceptbutton.TabIndex = 8
         Me.Aceptbutton.Text = "Aceptar"
         Me.Aceptbutton.UseVisualStyleBackColor = False
@@ -134,9 +134,9 @@ Partial Class Agregarinventario
         Me.Canbutton.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.Canbutton.FlatAppearance.BorderSize = 0
         Me.Canbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Canbutton.Location = New System.Drawing.Point(225, 179)
+        Me.Canbutton.Location = New System.Drawing.Point(157, 174)
         Me.Canbutton.Name = "Canbutton"
-        Me.Canbutton.Size = New System.Drawing.Size(75, 23)
+        Me.Canbutton.Size = New System.Drawing.Size(87, 29)
         Me.Canbutton.TabIndex = 9
         Me.Canbutton.Text = "Cancelar"
         Me.Canbutton.UseVisualStyleBackColor = False
@@ -161,9 +161,9 @@ Partial Class Agregarinventario
         Me.comboBoxProvs.DataSource = Me.ProveedoresBindingSource
         Me.comboBoxProvs.DisplayMember = "nombre"
         Me.comboBoxProvs.FormattingEnabled = True
-        Me.comboBoxProvs.Location = New System.Drawing.Point(88, 115)
+        Me.comboBoxProvs.Location = New System.Drawing.Point(112, 115)
         Me.comboBoxProvs.Name = "comboBoxProvs"
-        Me.comboBoxProvs.Size = New System.Drawing.Size(100, 21)
+        Me.comboBoxProvs.Size = New System.Drawing.Size(146, 21)
         Me.comboBoxProvs.TabIndex = 10
         Me.comboBoxProvs.ValueMember = "id"
         '
@@ -181,7 +181,7 @@ Partial Class Agregarinventario
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
-        Me.ClientSize = New System.Drawing.Size(444, 214)
+        Me.ClientSize = New System.Drawing.Size(289, 214)
         Me.Controls.Add(Me.comboBoxProvs)
         Me.Controls.Add(Me.Canbutton)
         Me.Controls.Add(Me.Aceptbutton)
@@ -192,7 +192,9 @@ Partial Class Agregarinventario
         Me.Controls.Add(Me.cantlab)
         Me.Controls.Add(Me.preclab)
         Me.Controls.Add(Me.prodlab)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Agregarinventario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Agregar nuevo producto"
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()

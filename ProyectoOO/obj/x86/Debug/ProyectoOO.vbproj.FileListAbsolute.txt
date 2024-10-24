@@ -249,3 +249,4 @@ C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.MainFinanzas.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultaeliminar.resources
+C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache

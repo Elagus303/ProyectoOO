@@ -18,7 +18,7 @@
         cBoxHojas.SelectedIndex = -1 : ComboBox2.SelectedIndex = -1
         cBoxHojas.Text = "Seleccione una hoja"
 
-        Me.InsumosBindingSource1.Filter = "nombre LIKE '%anill%'"
+        'Me.InsumosBindingSource1.Filter = "nombre LIKE '%anill%'"
         ComboBox2.Text = "Seleccione un anillado"
         'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Venta' Puede moverla o quitarla según sea necesario.
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
@@ -110,31 +110,32 @@
     End Sub
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
-        If cBoxAnillado.Checked Then
-            If cBoxHojas.SelectedIndex <> -1 And ComboBox2.SelectedIndex <> -1 Then
-                anadirNuevaVenta()
-            Else
-                MsgBox("Seleccione elementos ..")
-            End If
-        Else
-            If cBoxHojas.SelectedIndex <> -1 Then
-                anadirNuevaVenta()
-            Else
-                MsgBox("Seleccione elementos ..")
-            End If
-        End If
+        'If cBoxAnillado.Checked Then
+        '    If cBoxHojas.SelectedIndex <> -1 And ComboBox2.SelectedIndex <> -1 Then
+        anadirNuevaVenta()
+        '    Else
+        '        MsgBox("Seleccione elementos ..")
+        '    End If
+        'Else
+        '    If cBoxHojas.SelectedIndex <> -1 Then
+        '        anadirNuevaVenta()
+        '    Else
+        '        MsgBox("Seleccione elementos ..")
+        '    End If
+        'End If
+
     End Sub
 
 
 
 
     Private Sub anadirNuevaVenta()
-        Dim cant As Integer = CantidadTextBox.Text
+        Dim cant As Integer = Val(CantidadTextBox.Text)
         Me.VentaBindingSource.Current("fecha_venta") = DateTime.Now
         Me.VentaBindingSource.Current("precio_venta") = precio_total
         Me.VentaBindingSource.Current("id_vendedor") = 1
-        Me.VentaBindingSource.Current("id_cliente") = ComboBox3.SelectedValue
-        Me.VentaBindingSource.EndEdit()
+        Me.VentaBindingSource.Current("id_cliente") = cBoxClientes.SelectedValue
+        Me.VentaBindingSource.EndEdit() '-------- Terminar edicion de Ventas ------------
 
 
 
@@ -142,14 +143,25 @@
 
         Dim x As Integer = Me.InsumoBindingSource.Find("id", cBoxHojas.SelectedValue)
         Me.InsumoBindingSource.Position = x
-
+        MsgBox(Me.InsumoBindingSource.Current("stock") - cant)
+        MsgBox(x)
         Me.InsumoBindingSource.Current("stock") -= cant
-        Me.InsumoBindingSource.EndEdit()
+        'InsumoBindingSource.Current("nombre") = "hoj"
+        Me.InsumoBindingSource.EndEdit() '-------- Terminar edicion del Stock ------------
 
-        Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet)
+
+
+        Me.InsumoTableAdapter.Update(BD_ImprentaDataSet.Insumo)
+        Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
+        Me.InsumoTableAdapter.Fill(Me.BD_ImprentaDataSet.Insumo)
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
         FormVentas.VentaTableAdapter.Fill(FormVentas.BD_ImprentaDataSet.Venta)
-        Inventario.InsumoTableAdapter.Fill(Inventario.BD_ImprentaDataSet.Insumo)
+
+        'Me.ProveedoresBindingSource.EndEdit()
+        'Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
+        'Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores)
+        'FormProv.ProveedoresTableAdapter.Fill(FormProv.BD_ImprentaDataSet.Proveedores)
+
 
         Me.VentaBindingSource.AddNew()
         rBtnBlancoNegro.Checked = False

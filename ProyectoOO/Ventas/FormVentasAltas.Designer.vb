@@ -48,10 +48,16 @@ Partial Class FormVentasAltas
         Me.InsumoBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.InsumoTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.InsumosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.cBoxClientes = New System.Windows.Forms.ComboBox()
         Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ClientesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter()
+        Me.InsumoDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         IdLabel = New System.Windows.Forms.Label()
         CantidadLabel = New System.Windows.Forms.Label()
         Id_vendedorLabel = New System.Windows.Forms.Label()
@@ -62,8 +68,8 @@ Partial Class FormVentasAltas
         Me.GroupBox2.SuspendLayout()
         CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.InsumosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.InsumoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IdLabel
@@ -92,6 +98,15 @@ Partial Class FormVentasAltas
         Id_vendedorLabel.Size = New System.Drawing.Size(34, 13)
         Id_vendedorLabel.TabIndex = 11
         Id_vendedorLabel.Text = "Hojas"
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Location = New System.Drawing.Point(218, 41)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(39, 13)
+        Label1.TabIndex = 28
+        Label1.Text = "Cliente"
         '
         'BD_ImprentaDataSet
         '
@@ -236,7 +251,7 @@ Partial Class FormVentasAltas
         Me.btnGuardar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnGuardar.FlatAppearance.BorderSize = 0
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Location = New System.Drawing.Point(235, 380)
+        Me.btnGuardar.Location = New System.Drawing.Point(641, 380)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(87, 29)
         Me.btnGuardar.TabIndex = 4
@@ -265,8 +280,6 @@ Partial Class FormVentasAltas
         '
         'ComboBox2
         '
-        Me.ComboBox2.DataSource = Me.InsumosBindingSource1
-        Me.ComboBox2.DisplayMember = "nombre"
         Me.ComboBox2.Enabled = False
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(97, 299)
@@ -275,21 +288,16 @@ Partial Class FormVentasAltas
         Me.ComboBox2.TabIndex = 3
         Me.ComboBox2.ValueMember = "id"
         '
-        'InsumosBindingSource1
+        'cBoxClientes
         '
-        Me.InsumosBindingSource1.DataMember = "Insumo"
-        Me.InsumosBindingSource1.DataSource = Me.BD_ImprentaDataSet
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.DataSource = Me.ClientesBindingSource
-        Me.ComboBox3.DisplayMember = "nombre"
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(269, 38)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox3.TabIndex = 27
-        Me.ComboBox3.ValueMember = "id"
+        Me.cBoxClientes.DataSource = Me.ClientesBindingSource
+        Me.cBoxClientes.DisplayMember = "nombre"
+        Me.cBoxClientes.FormattingEnabled = True
+        Me.cBoxClientes.Location = New System.Drawing.Point(269, 38)
+        Me.cBoxClientes.Name = "cBoxClientes"
+        Me.cBoxClientes.Size = New System.Drawing.Size(121, 21)
+        Me.cBoxClientes.TabIndex = 27
+        Me.cBoxClientes.ValueMember = "id"
         '
         'ClientesBindingSource
         '
@@ -300,23 +308,64 @@ Partial Class FormVentasAltas
         '
         Me.ClientesTableAdapter.ClearBeforeFill = True
         '
-        'Label1
+        'InsumoDataGridView
         '
-        Label1.AutoSize = True
-        Label1.Location = New System.Drawing.Point(218, 41)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(39, 13)
-        Label1.TabIndex = 28
-        Label1.Text = "Cliente"
+        Me.InsumoDataGridView.AutoGenerateColumns = False
+        Me.InsumoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.InsumoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
+        Me.InsumoDataGridView.DataSource = Me.InsumoBindingSource
+        Me.InsumoDataGridView.Location = New System.Drawing.Point(456, 87)
+        Me.InsumoDataGridView.Name = "InsumoDataGridView"
+        Me.InsumoDataGridView.Size = New System.Drawing.Size(322, 220)
+        Me.InsumoDataGridView.TabIndex = 28
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "stock"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "stock"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "precio"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "precio"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "id_proovedor"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "id_proovedor"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "preciounidad"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "preciounidad"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
         '
         'FormVentasAltas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
-        Me.ClientSize = New System.Drawing.Size(424, 426)
+        Me.ClientSize = New System.Drawing.Size(830, 429)
+        Me.Controls.Add(Me.InsumoDataGridView)
         Me.Controls.Add(Label1)
-        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.cBoxClientes)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.cBoxHojas)
         Me.Controls.Add(Me.btnGuardar)
@@ -343,8 +392,8 @@ Partial Class FormVentasAltas
         Me.GroupBox2.PerformLayout()
         CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.InsumosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.InsumoDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -370,8 +419,14 @@ Partial Class FormVentasAltas
     Friend WithEvents InsumoBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents InsumoTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents InsumosBindingSource1 As System.Windows.Forms.BindingSource
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents cBoxClientes As System.Windows.Forms.ComboBox
     Friend WithEvents ClientesBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents ClientesTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter
+    Friend WithEvents InsumoDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
