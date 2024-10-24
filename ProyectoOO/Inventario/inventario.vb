@@ -14,7 +14,7 @@
     End Sub
 
     Private Sub Addbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Addbutton.Click
-        Agregarinventario.Show()
+        Agregarinventario.ShowDialog()
 
     End Sub
 

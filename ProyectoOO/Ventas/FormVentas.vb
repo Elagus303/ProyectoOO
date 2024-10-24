@@ -2,10 +2,57 @@
     '1) FORMULARIO VENTAS
     '1.1) Load del formulario ventas
     Private Sub FormVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Vendedores' Puede moverla o quitarla según sea necesario.
+        Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
+        Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
+        Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta) 'Llenar datos en DataGridView
-        EstilosDataGridView(Me.VentaDataGridView) 'Estilizar DataGridView
-    End Sub
+        EstilosDataGridView(Me.TablaVentas) 'Estilizar DataGridView
 
+
+        LlenarTablaVentas()
+    End Sub
+    '1.2) Función para llenar la tabla compuesta de Ventas
+    Private Sub LlenarTablaVentas()
+        Dim fila As Integer = 0 'Valor de fila
+        Dim x As Integer = 0 'Contador para usar en el bucle
+        Dim totVentas As Long = 0
+        Me.VentaBindingSource.MoveFirst() 'Mover al primer elemento
+        If Me.VentaBindingSource.Count >= 1 Then
+            Do
+                Me.TablaVentas.Rows.Add()
+                Me.TablaVentas.Item(0, fila).Value = Me.VentaBindingSource.Current("id")
+                Me.TablaVentas.Item(1, fila).Value = Me.VentaBindingSource.Current("fecha_venta")
+
+                
+
+                If Me.VentaBindingSource.Current("id_vendedor") <> 0 Then
+                    Me.VendedoresBindingSource.Position = Me.VendedoresBindingSource.Find("id", Me.VentaBindingSource.Current("id_vendedor"))
+                    Me.TablaVentas.Item(2, fila).Value = Me.VendedoresBindingSource.Current("nombre")
+                Else
+                    Me.TablaVentas.Item(2, fila).Value = "Agustin"
+                End If
+
+
+                Me.ClientesBindingSource.Position = Me.ClientesBindingSource.Find("id", Me.VentaBindingSource.Current("id_cliente"))
+                Me.TablaVentas.Item(3, fila).Value = Me.ClientesBindingSource.Current("nombre") & Me.ClientesBindingSource.Current("apellido")
+
+                Me.TablaVentas.Item(4, fila).Value = Me.VentaBindingSource.Current("cantidad")
+                Me.TablaVentas.Item(5, fila).Value = "$ " & Me.VentaBindingSource.Current("precio_venta")
+
+                totVentas += Val(Me.VentaBindingSource.Current("precio_venta"))
+                fila += 1 'Para seguir a llenar la siguiente fila
+                x += 1 'Incrementar el contador del bucle
+                Me.VentaBindingSource.MoveNext() 'Necesario para seguir avanzando en el llenado
+            Loop Until x = Me.VentaBindingSource.Count
+
+            Me.TablaVentas.Rows.Add()
+            Me.TablaVentas.Item(4, fila).Value = "TOTAL:"
+            Me.TablaVentas.Item(5, fila).Value = "$" & totVentas
+        End If
+    End Sub
 
     '2) BOTONES DEL FORMULARIO
     '2.1) Evento click en btn agregar
@@ -59,30 +106,42 @@
         Me.VentaBindingSource.MoveLast()
     End Sub
 
+
+
     '3) COMPORTAMIENTO ORDENAR DATAGRIDVIEW
     '3.1) Evento click en btn ordenar (Mascara)
     Private Sub btnFiltrar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOrdenar.Click
         cbFiltrar.DroppedDown = True 'Desplegar lista
     End Sub
-
-
-
+    '3.2) Ordenamiento según la selección del elemento
     Private Sub cbFiltrar_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbFiltrar.SelectedIndexChanged
         Select Case cbFiltrar.SelectedIndex
             Case 0
                 Me.VentaBindingSource.Sort = "fecha_venta DESC"
             Case 1
-                Me.VentaBindingSource.Sort = "id_vendedor ASC"
+                Me.VentaBindingSource.Sort = "id_vendedor ASC, fecha_venta DESC"
             Case 2
-                Me.VentaBindingSource.Sort = "precio_venta DESC"
+                Me.VentaBindingSource.Sort = "precio_venta DESC, fecha_venta DESC"
         End Select
     End Sub
 
-    Private Sub FormVentas_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
-        Me.VentaBindingSource.CancelEdit()
-    End Sub
 
+
+
+    '4)COMPORTAMIENTO DE FILTRADO POR FECHAS
+    '4.1) Evento Click en el boton de buscar
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+        'Parametros de fecha inicial y final
+        Dim fechaInicio As String = dTimePickerInicio.Value.ToString("yyyy-MM-dd")
+        Dim fechaFinal As String = dTimePickerFinal.Value.AddDays(1).ToString("yyyy-MM-dd") 'Para incluir el último día
 
+        Me.VentaBindingSource.Filter = "fecha_venta >= #" & fechaInicio & "# AND fecha_venta < #" & fechaFinal & "#" 'Sacar el <= por el <, por el cambio anterior
+        Me.btnRemoverFiltro.Visible = True
     End Sub
+    '4.2) Evento Click en quitar filtro
+    Private Sub RemoverFiltro_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemoverFiltro.Click
+        Me.VentaBindingSource.RemoveFilter() 'Quitar filtro de busqueda de ventas por fechas
+        Me.btnRemoverFiltro.Visible = False
+    End Sub
+
 End Class

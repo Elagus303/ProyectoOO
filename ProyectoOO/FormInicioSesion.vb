@@ -34,6 +34,7 @@
     Private Sub btnIngresar_Click() Handles btnIngresar.Click
         ' Verifica si el nombre y la contraseña son correctos
         If txtNombre.Text = "agustin" And txtContraseña.Text = "1234" Then
+<<<<<<< HEAD
             ' Usuario predefinido
             usuarioEsAdminx = True  ' Si deseas que Agustin sea un administrador
             usuarioNombre = "Agustin"
@@ -41,6 +42,10 @@
 
             ' Ocultar el formulario de login y mostrar el principal
             Me.Hide()
+=======
+            Me.Hide()
+            Id_Global_Vendedor = 0
+>>>>>>> 0181cd6b0704dd72cdd2a9ecc846eee1f05629ff
             FormPrincipal.Show()
         ElseIf txtNombre.Text <> "" And txtContraseña.Text <> "" Then
             ' Busca el nombre en la base de datos
@@ -67,6 +72,7 @@
 
                     ' Ocultar el formulario de login y mostrar el principal
                     Me.Hide()
+                    Id_Global_Vendedor = Me.VendedoresBindingSource.Current("id")
                     FormPrincipal.Show()
                 Else
                     MsgBox("Contraseña incorrecta")

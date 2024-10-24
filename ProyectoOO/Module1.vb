@@ -1,5 +1,6 @@
 ﻿Module Module1
     'Variables del sistema
+    Public Id_Global_Vendedor As Integer = -1
     Public usuarioEsAdmin As Boolean
     'Variables de Colores
     Public ColorBase As Color = Color.LemonChiffon

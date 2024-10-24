@@ -219,6 +219,8 @@ C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\Proyecto
 C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
 C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultaeliminar.resources
 C:\Users\hombr\Desktop\Proyecto POO\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.MainFinanzas.resources
+C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.MainFinanzas.resources
+C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultaeliminar.resources
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
@@ -247,6 +249,7 @@ C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.Gene
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+<<<<<<< HEAD
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.MainFinanzas.resources
 C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultaeliminar.resources
 C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
@@ -278,3 +281,5 @@ C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Vendedores
 C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
 C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+=======
+>>>>>>> 0181cd6b0704dd72cdd2a9ecc846eee1f05629ff
