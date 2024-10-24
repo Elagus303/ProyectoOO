@@ -143,8 +143,8 @@
 
         Dim x As Integer = Me.InsumoBindingSource.Find("id", cBoxHojas.SelectedValue)
         Me.InsumoBindingSource.Position = x
-        MsgBox(Me.InsumoBindingSource.Current("stock") - cant)
-        MsgBox(x)
+        'MsgBox(Me.InsumoBindingSource.Current("stock") - cant)
+        'MsgBox(x)
         Me.InsumoBindingSource.Current("stock") -= cant
         'InsumoBindingSource.Current("nombre") = "hoj"
         Me.InsumoBindingSource.EndEdit() '-------- Terminar edicion del Stock ------------

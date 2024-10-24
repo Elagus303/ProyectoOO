@@ -28,16 +28,16 @@ Partial Class Inventario
         Me.InsumoTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         Me.InsumoDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.preciounidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Addbutton = New System.Windows.Forms.Button()
         Me.modbutton = New System.Windows.Forms.Button()
         Me.delbutton = New System.Windows.Forms.Button()
         Me.Inventariolab = New System.Windows.Forms.Label()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precioTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.InsumoDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -72,9 +72,11 @@ Partial Class Inventario
         '
         Me.InsumoDataGridView.AllowUserToAddRows = False
         Me.InsumoDataGridView.AllowUserToDeleteRows = False
+        Me.InsumoDataGridView.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.InsumoDataGridView.AutoGenerateColumns = False
         Me.InsumoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.InsumoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.preciounidad})
+        Me.InsumoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.precioTotal, Me.DataGridViewTextBoxColumn5})
         Me.InsumoDataGridView.DataSource = Me.InsumoBindingSource
         Me.InsumoDataGridView.Location = New System.Drawing.Point(12, 47)
         Me.InsumoDataGridView.Name = "InsumoDataGridView"
@@ -82,6 +84,54 @@ Partial Class Inventario
         Me.InsumoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.InsumoDataGridView.Size = New System.Drawing.Size(617, 220)
         Me.InsumoDataGridView.TabIndex = 1
+        '
+        'Addbutton
+        '
+        Me.Addbutton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Addbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.Addbutton.FlatAppearance.BorderSize = 0
+        Me.Addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Addbutton.Location = New System.Drawing.Point(635, 47)
+        Me.Addbutton.Name = "Addbutton"
+        Me.Addbutton.Size = New System.Drawing.Size(75, 23)
+        Me.Addbutton.TabIndex = 2
+        Me.Addbutton.Text = "Agregar"
+        Me.Addbutton.UseVisualStyleBackColor = False
+        '
+        'modbutton
+        '
+        Me.modbutton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.modbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.modbutton.FlatAppearance.BorderSize = 0
+        Me.modbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.modbutton.Location = New System.Drawing.Point(635, 76)
+        Me.modbutton.Name = "modbutton"
+        Me.modbutton.Size = New System.Drawing.Size(75, 23)
+        Me.modbutton.TabIndex = 3
+        Me.modbutton.Text = "Modificar"
+        Me.modbutton.UseVisualStyleBackColor = False
+        '
+        'delbutton
+        '
+        Me.delbutton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.delbutton.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.delbutton.FlatAppearance.BorderSize = 0
+        Me.delbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.delbutton.Location = New System.Drawing.Point(635, 105)
+        Me.delbutton.Name = "delbutton"
+        Me.delbutton.Size = New System.Drawing.Size(75, 23)
+        Me.delbutton.TabIndex = 4
+        Me.delbutton.Text = "Eliminar"
+        Me.delbutton.UseVisualStyleBackColor = False
+        '
+        'Inventariolab
+        '
+        Me.Inventariolab.AutoSize = True
+        Me.Inventariolab.Location = New System.Drawing.Point(12, 9)
+        Me.Inventariolab.Name = "Inventariolab"
+        Me.Inventariolab.Size = New System.Drawing.Size(54, 13)
+        Me.Inventariolab.TabIndex = 5
+        Me.Inventariolab.Text = "Inventario"
         '
         'DataGridViewTextBoxColumn1
         '
@@ -111,6 +161,13 @@ Partial Class Inventario
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
         Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
+        'precioTotal
+        '
+        Me.precioTotal.DataPropertyName = "precioTotal"
+        Me.precioTotal.HeaderText = "precioTotal"
+        Me.precioTotal.Name = "precioTotal"
+        Me.precioTotal.ReadOnly = True
+        '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "id_proovedor"
@@ -118,64 +175,12 @@ Partial Class Inventario
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
         Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
-        'preciounidad
-        '
-        Me.preciounidad.DataPropertyName = "preciounidad"
-        Me.preciounidad.HeaderText = "preciounidad"
-        Me.preciounidad.Name = "preciounidad"
-        Me.preciounidad.ReadOnly = True
-        '
-        'Addbutton
-        '
-        Me.Addbutton.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.Addbutton.FlatAppearance.BorderSize = 0
-        Me.Addbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Addbutton.Location = New System.Drawing.Point(635, 47)
-        Me.Addbutton.Name = "Addbutton"
-        Me.Addbutton.Size = New System.Drawing.Size(75, 23)
-        Me.Addbutton.TabIndex = 2
-        Me.Addbutton.Text = "Agregar"
-        Me.Addbutton.UseVisualStyleBackColor = False
-        '
-        'modbutton
-        '
-        Me.modbutton.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.modbutton.FlatAppearance.BorderSize = 0
-        Me.modbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.modbutton.Location = New System.Drawing.Point(635, 76)
-        Me.modbutton.Name = "modbutton"
-        Me.modbutton.Size = New System.Drawing.Size(75, 23)
-        Me.modbutton.TabIndex = 3
-        Me.modbutton.Text = "Modificar"
-        Me.modbutton.UseVisualStyleBackColor = False
-        '
-        'delbutton
-        '
-        Me.delbutton.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.delbutton.FlatAppearance.BorderSize = 0
-        Me.delbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.delbutton.Location = New System.Drawing.Point(635, 105)
-        Me.delbutton.Name = "delbutton"
-        Me.delbutton.Size = New System.Drawing.Size(75, 23)
-        Me.delbutton.TabIndex = 4
-        Me.delbutton.Text = "Eliminar"
-        Me.delbutton.UseVisualStyleBackColor = False
-        '
-        'Inventariolab
-        '
-        Me.Inventariolab.AutoSize = True
-        Me.Inventariolab.Location = New System.Drawing.Point(12, 9)
-        Me.Inventariolab.Name = "Inventariolab"
-        Me.Inventariolab.Size = New System.Drawing.Size(54, 13)
-        Me.Inventariolab.TabIndex = 5
-        Me.Inventariolab.Text = "Inventario"
-        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LemonChiffon
-        Me.ClientSize = New System.Drawing.Size(846, 380)
+        Me.ClientSize = New System.Drawing.Size(723, 380)
         Me.Controls.Add(Me.Inventariolab)
         Me.Controls.Add(Me.delbutton)
         Me.Controls.Add(Me.modbutton)
@@ -195,14 +200,14 @@ Partial Class Inventario
     Friend WithEvents InsumoTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.InsumoTableAdapter
     Friend WithEvents TableAdapterManager As ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager
     Friend WithEvents InsumoDataGridView As System.Windows.Forms.DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Addbutton As System.Windows.Forms.Button
     Friend WithEvents modbutton As System.Windows.Forms.Button
     Friend WithEvents delbutton As System.Windows.Forms.Button
     Friend WithEvents Inventariolab As System.Windows.Forms.Label
-    Friend WithEvents preciounidad As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precioTotal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

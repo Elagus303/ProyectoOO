@@ -113,10 +113,6 @@ Partial Class FormVentas
         Me.VentaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.VentaDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn6})
         Me.VentaDataGridView.DataSource = Me.VentaBindingSource
-<<<<<<< HEAD
-        Me.VentaDataGridView.Location = New System.Drawing.Point(12, 47)
-        Me.VentaDataGridView.MultiSelect = False
-=======
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -126,11 +122,12 @@ Partial Class FormVentas
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.VentaDataGridView.DefaultCellStyle = DataGridViewCellStyle2
         Me.VentaDataGridView.Location = New System.Drawing.Point(16, 308)
->>>>>>> 0181cd6b0704dd72cdd2a9ecc846eee1f05629ff
+        Me.VentaDataGridView.MultiSelect = False
         Me.VentaDataGridView.Name = "VentaDataGridView"
         Me.VentaDataGridView.ReadOnly = True
         Me.VentaDataGridView.Size = New System.Drawing.Size(909, 639)
         Me.VentaDataGridView.TabIndex = 2
+        Me.VentaDataGridView.Visible = False
         '
         'DataGridViewTextBoxColumn1
         '
