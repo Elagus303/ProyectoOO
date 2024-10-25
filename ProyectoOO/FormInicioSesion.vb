@@ -33,7 +33,8 @@
     '4) BOTÓN DE INGRESAR A LA APLICACIÓN 
     Private Sub btnIngresar_Click() Handles btnIngresar.Click
         If txtNombre.Text = "agustin" And txtContraseña.Text = "1234" Then
-            Me.Hide() 'cma
+            Me.Hide()
+            Id_Global_Vendedor = 0
             FormPrincipal.Show()
         ElseIf txtContraseña.Text <> "" AndAlso txtNombre.Text <> "" Then
             Dim indice_fila As Integer = Me.VendedoresBindingSource.Find("nombre", txtNombre.Text)
@@ -41,8 +42,8 @@
                 VendedoresBindingSource.Position = indice_fila
                 If txtContraseña.Text = VendedoresBindingSource.Current("contraseña") Then
                     Me.Hide()
+                    Id_Global_Vendedor = Me.VendedoresBindingSource.Current("id")
                     FormPrincipal.Show()
-                    If VendedoresBindingSource.Current("id_rol") = 1 Then usuarioEsAdmin = True
                 Else
                     txtNombre.Clear() : txtContraseña.Clear()
                     txtNombre.Focus()

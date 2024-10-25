@@ -133,7 +133,7 @@
         Dim cant As Integer = Val(CantidadTextBox.Text)
         Me.VentaBindingSource.Current("fecha_venta") = DateTime.Now
         Me.VentaBindingSource.Current("precio_venta") = precio_total
-        Me.VentaBindingSource.Current("id_vendedor") = 1
+        Me.VentaBindingSource.Current("id_vendedor") = Id_Global_Vendedor
         Me.VentaBindingSource.Current("id_cliente") = cBoxClientes.SelectedValue
         Me.VentaBindingSource.EndEdit() '-------- Terminar edicion de Ventas ------------
 
@@ -154,6 +154,7 @@
         Me.InsumoTableAdapter.Update(BD_ImprentaDataSet.Insumo)
         Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
         Me.InsumoTableAdapter.Fill(Me.BD_ImprentaDataSet.Insumo)
+        Inventario.InsumoTableAdapter.Fill(Inventario.BD_ImprentaDataSet.Insumo)
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
         FormVentas.VentaTableAdapter.Fill(FormVentas.BD_ImprentaDataSet.Venta)
 

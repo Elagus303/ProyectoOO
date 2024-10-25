@@ -2,10 +2,57 @@
     '1) FORMULARIO VENTAS
     '1.1) Load del formulario ventas
     Private Sub FormVentas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Vendedores' Puede moverla o quitarla según sea necesario.
+        Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
+        Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
+        'TODO: esta línea de código carga datos en la tabla 'BD_ImprentaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
+        Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes)
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta) 'Llenar datos en DataGridView
-        EstilosDataGridView(Me.VentaDataGridView) 'Estilizar DataGridView
-    End Sub
+        EstilosDataGridView(Me.TablaVentas) 'Estilizar DataGridView
 
+
+        LlenarTablaVentas()
+    End Sub
+    '1.2) Función para llenar la tabla compuesta de Ventas
+    Private Sub LlenarTablaVentas()
+        Dim fila As Integer = 0 'Valor de fila
+        Dim x As Integer = 0 'Contador para usar en el bucle
+        Dim totVentas As Long = 0
+        Me.VentaBindingSource.MoveFirst() 'Mover al primer elemento
+        If Me.VentaBindingSource.Count >= 1 Then
+            Do
+                Me.TablaVentas.Rows.Add()
+                Me.TablaVentas.Item(0, fila).Value = Me.VentaBindingSource.Current("id")
+                Me.TablaVentas.Item(1, fila).Value = Me.VentaBindingSource.Current("fecha_venta")
+
+                
+
+                If Me.VentaBindingSource.Current("id_vendedor") <> 0 Then
+                    Me.VendedoresBindingSource.Position = Me.VendedoresBindingSource.Find("id", Me.VentaBindingSource.Current("id_vendedor"))
+                    Me.TablaVentas.Item(2, fila).Value = Me.VendedoresBindingSource.Current("nombre")
+                Else
+                    Me.TablaVentas.Item(2, fila).Value = "Agustin"
+                End If
+
+
+                Me.ClientesBindingSource.Position = Me.ClientesBindingSource.Find("id", Me.VentaBindingSource.Current("id_cliente"))
+                Me.TablaVentas.Item(3, fila).Value = Me.ClientesBindingSource.Current("nombre") & Me.ClientesBindingSource.Current("apellido")
+
+                Me.TablaVentas.Item(4, fila).Value = Me.VentaBindingSource.Current("cantidad")
+                Me.TablaVentas.Item(5, fila).Value = "$ " & Me.VentaBindingSource.Current("precio_venta")
+
+                totVentas += Val(Me.VentaBindingSource.Current("precio_venta"))
+                fila += 1 'Para seguir a llenar la siguiente fila
+                x += 1 'Incrementar el contador del bucle
+                Me.VentaBindingSource.MoveNext() 'Necesario para seguir avanzando en el llenado
+            Loop Until x = Me.VentaBindingSource.Count
+
+            Me.TablaVentas.Rows.Add()
+            Me.TablaVentas.Item(4, fila).Value = "TOTAL:"
+            Me.TablaVentas.Item(5, fila).Value = "$" & totVentas
+        End If
+    End Sub
 
     '2) BOTONES DEL FORMULARIO
     '2.1) Evento click en btn agregar
@@ -69,7 +116,7 @@
             Case 1
                 Me.VentaBindingSource.Sort = "id_vendedor ASC, fecha_venta DESC"
             Case 2
-                Me.VentaBindingSource.Sort = "precio_venta DESC"
+                Me.VentaBindingSource.Sort = "precio_venta DESC, fecha_venta DESC"
         End Select
     End Sub
 
@@ -91,4 +138,5 @@
         Me.VentaBindingSource.RemoveFilter() 'Quitar filtro de busqueda de ventas por fechas
         Me.btnRemoverFiltro.Visible = False
     End Sub
+
 End Class

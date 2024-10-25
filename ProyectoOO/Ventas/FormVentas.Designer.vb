@@ -30,6 +30,14 @@ Partial Class FormVentas
         Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.VentaDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VentaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnOrdenar = New System.Windows.Forms.Button()
         Me.cbFiltrar = New System.Windows.Forms.ComboBox()
@@ -45,27 +53,31 @@ Partial Class FormVentas
         Me.lblHasta = New System.Windows.Forms.Label()
         Me.btnRemoverFiltro = New System.Windows.Forms.Button()
         Me.ToolTipPpal = New System.Windows.Forms.ToolTip(Me.components)
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.VentaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BD_ImprentaDataSet = New ProyectoOO.BD_ImprentaDataSet()
         Me.VentaTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VentaTableAdapter()
         Me.TableAdapterManager = New ProyectoOO.BD_ImprentaDataSetTableAdapters.TableAdapterManager()
         Me.TablaVentas = New System.Windows.Forms.DataGridView()
+        Me.id_venta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fecha_venta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.vendedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cliente = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.cant = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio_total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ContextMenuStripVentas = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.calcTot = New System.Windows.Forms.ToolStripMenuItem()
         Me.calcProm = New System.Windows.Forms.ToolStripMenuItem()
         Me.MinMonto = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaxMonto = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ClientesTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter()
+        Me.VendedoresBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.VendedoresTableAdapter = New ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter()
         CType(Me.VentaDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.VentaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TablaVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStripVentas.SuspendLayout()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnAgregar
@@ -74,7 +86,7 @@ Partial Class FormVentas
         Me.btnAgregar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAgregar.FlatAppearance.BorderSize = 0
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAgregar.Location = New System.Drawing.Point(793, 12)
+        Me.btnAgregar.Location = New System.Drawing.Point(834, 12)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(87, 29)
         Me.btnAgregar.TabIndex = 2
@@ -111,8 +123,66 @@ Partial Class FormVentas
         Me.VentaDataGridView.Location = New System.Drawing.Point(16, 308)
         Me.VentaDataGridView.Name = "VentaDataGridView"
         Me.VentaDataGridView.ReadOnly = True
-        Me.VentaDataGridView.Size = New System.Drawing.Size(868, 253)
+        Me.VentaDataGridView.Size = New System.Drawing.Size(909, 647)
         Me.VentaDataGridView.TabIndex = 2
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
+        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.DataPropertyName = "fecha_venta"
+        Me.DataGridViewTextBoxColumn2.HeaderText = "fecha_venta"
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.DataPropertyName = "precio_venta"
+        Me.DataGridViewTextBoxColumn3.HeaderText = "precio_venta"
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
+        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidad"
+        Me.DataGridViewTextBoxColumn4.HeaderText = "cantidad"
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.DataPropertyName = "id_vendedor"
+        Me.DataGridViewTextBoxColumn5.HeaderText = "id_vendedor"
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
+        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'DataGridViewTextBoxColumn6
+        '
+        Me.DataGridViewTextBoxColumn6.DataPropertyName = "id_cliente"
+        Me.DataGridViewTextBoxColumn6.HeaderText = "id_cliente"
+        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
+        Me.DataGridViewTextBoxColumn6.ReadOnly = True
+        Me.DataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'VentaBindingSource
+        '
+        Me.VentaBindingSource.DataMember = "Venta"
+        Me.VentaBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'BD_ImprentaDataSet
+        '
+        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
+        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'btnBuscar
         '
@@ -133,7 +203,7 @@ Partial Class FormVentas
         Me.btnOrdenar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnOrdenar.FlatAppearance.BorderSize = 0
         Me.btnOrdenar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnOrdenar.Location = New System.Drawing.Point(700, 12)
+        Me.btnOrdenar.Location = New System.Drawing.Point(741, 12)
         Me.btnOrdenar.Name = "btnOrdenar"
         Me.btnOrdenar.Size = New System.Drawing.Size(87, 29)
         Me.btnOrdenar.TabIndex = 24
@@ -147,7 +217,7 @@ Partial Class FormVentas
         Me.cbFiltrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbFiltrar.FormattingEnabled = True
         Me.cbFiltrar.Items.AddRange(New Object() {"Fecha", "Vendedor", "Monto"})
-        Me.cbFiltrar.Location = New System.Drawing.Point(700, 18)
+        Me.cbFiltrar.Location = New System.Drawing.Point(741, 18)
         Me.cbFiltrar.Name = "cbFiltrar"
         Me.cbFiltrar.Size = New System.Drawing.Size(87, 21)
         Me.cbFiltrar.TabIndex = 23
@@ -158,7 +228,7 @@ Partial Class FormVentas
         Me.btnPrimero.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnPrimero.FlatAppearance.BorderSize = 0
         Me.btnPrimero.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPrimero.Location = New System.Drawing.Point(714, 308)
+        Me.btnPrimero.Location = New System.Drawing.Point(755, 702)
         Me.btnPrimero.Name = "btnPrimero"
         Me.btnPrimero.Size = New System.Drawing.Size(37, 27)
         Me.btnPrimero.TabIndex = 25
@@ -172,7 +242,7 @@ Partial Class FormVentas
         Me.btnAnt.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnAnt.FlatAppearance.BorderSize = 0
         Me.btnAnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAnt.Location = New System.Drawing.Point(757, 308)
+        Me.btnAnt.Location = New System.Drawing.Point(798, 702)
         Me.btnAnt.Name = "btnAnt"
         Me.btnAnt.Size = New System.Drawing.Size(37, 27)
         Me.btnAnt.TabIndex = 26
@@ -186,7 +256,7 @@ Partial Class FormVentas
         Me.btnSig.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnSig.FlatAppearance.BorderSize = 0
         Me.btnSig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSig.Location = New System.Drawing.Point(800, 308)
+        Me.btnSig.Location = New System.Drawing.Point(841, 702)
         Me.btnSig.Name = "btnSig"
         Me.btnSig.Size = New System.Drawing.Size(37, 27)
         Me.btnSig.TabIndex = 27
@@ -200,7 +270,7 @@ Partial Class FormVentas
         Me.btnEliminar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnEliminar.FlatAppearance.BorderSize = 0
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminar.Location = New System.Drawing.Point(12, 306)
+        Me.btnEliminar.Location = New System.Drawing.Point(12, 700)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(87, 29)
         Me.btnEliminar.TabIndex = 30
@@ -214,7 +284,7 @@ Partial Class FormVentas
         Me.btnEditar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnEditar.FlatAppearance.BorderSize = 0
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEditar.Location = New System.Drawing.Point(105, 306)
+        Me.btnEditar.Location = New System.Drawing.Point(105, 700)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(87, 29)
         Me.btnEditar.TabIndex = 29
@@ -229,7 +299,7 @@ Partial Class FormVentas
         Me.btnUltimo.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.btnUltimo.FlatAppearance.BorderSize = 0
         Me.btnUltimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnUltimo.Location = New System.Drawing.Point(843, 308)
+        Me.btnUltimo.Location = New System.Drawing.Point(884, 702)
         Me.btnUltimo.Name = "btnUltimo"
         Me.btnUltimo.Size = New System.Drawing.Size(37, 27)
         Me.btnUltimo.TabIndex = 31
@@ -291,64 +361,6 @@ Partial Class FormVentas
         Me.btnRemoverFiltro.UseVisualStyleBackColor = False
         Me.btnRemoverFiltro.Visible = False
         '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "id"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "id"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "fecha_venta"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "fecha_venta"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        Me.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "precio_venta"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "precio_venta"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.ReadOnly = True
-        Me.DataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.DataPropertyName = "cantidad"
-        Me.DataGridViewTextBoxColumn4.HeaderText = "cantidad"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        Me.DataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.DataPropertyName = "id_vendedor"
-        Me.DataGridViewTextBoxColumn5.HeaderText = "id_vendedor"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        Me.DataGridViewTextBoxColumn5.ReadOnly = True
-        Me.DataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'DataGridViewTextBoxColumn6
-        '
-        Me.DataGridViewTextBoxColumn6.DataPropertyName = "id_cliente"
-        Me.DataGridViewTextBoxColumn6.HeaderText = "id_cliente"
-        Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
-        Me.DataGridViewTextBoxColumn6.ReadOnly = True
-        Me.DataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
-        '
-        'VentaBindingSource
-        '
-        Me.VentaBindingSource.DataMember = "Venta"
-        Me.VentaBindingSource.DataSource = Me.BD_ImprentaDataSet
-        '
-        'BD_ImprentaDataSet
-        '
-        Me.BD_ImprentaDataSet.DataSetName = "BD_ImprentaDataSet"
-        Me.BD_ImprentaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'VentaTableAdapter
         '
         Me.VentaTableAdapter.ClearBeforeFill = True
@@ -366,6 +378,10 @@ Partial Class FormVentas
         '
         'TablaVentas
         '
+        Me.TablaVentas.AllowUserToAddRows = False
+        Me.TablaVentas.AllowUserToDeleteRows = False
+        Me.TablaVentas.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -375,6 +391,7 @@ Partial Class FormVentas
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.TablaVentas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.TablaVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TablaVentas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_venta, Me.fecha_venta, Me.vendedor, Me.cliente, Me.cant, Me.precio_total})
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -383,8 +400,9 @@ Partial Class FormVentas
         DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.TablaVentas.DefaultCellStyle = DataGridViewCellStyle4
-        Me.TablaVentas.Location = New System.Drawing.Point(16, 55)
+        Me.TablaVentas.Location = New System.Drawing.Point(12, 48)
         Me.TablaVentas.Name = "TablaVentas"
+        Me.TablaVentas.ReadOnly = True
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -393,14 +411,50 @@ Partial Class FormVentas
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.TablaVentas.RowHeadersDefaultCellStyle = DataGridViewCellStyle5
-        Me.TablaVentas.Size = New System.Drawing.Size(735, 150)
+        Me.TablaVentas.Size = New System.Drawing.Size(909, 150)
         Me.TablaVentas.TabIndex = 37
+        '
+        'id_venta
+        '
+        Me.id_venta.HeaderText = "Nro. venta"
+        Me.id_venta.Name = "id_venta"
+        Me.id_venta.ReadOnly = True
+        '
+        'fecha_venta
+        '
+        Me.fecha_venta.HeaderText = "Fecha"
+        Me.fecha_venta.Name = "fecha_venta"
+        Me.fecha_venta.ReadOnly = True
+        '
+        'vendedor
+        '
+        Me.vendedor.HeaderText = "Vendedor"
+        Me.vendedor.Name = "vendedor"
+        Me.vendedor.ReadOnly = True
+        '
+        'cliente
+        '
+        Me.cliente.HeaderText = "Cliente"
+        Me.cliente.Name = "cliente"
+        Me.cliente.ReadOnly = True
+        '
+        'cant
+        '
+        Me.cant.HeaderText = "Cantidad"
+        Me.cant.Name = "cant"
+        Me.cant.ReadOnly = True
+        '
+        'precio_total
+        '
+        Me.precio_total.HeaderText = "Precio"
+        Me.precio_total.Name = "precio_total"
+        Me.precio_total.ReadOnly = True
         '
         'ContextMenuStripVentas
         '
         Me.ContextMenuStripVentas.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.calcTot, Me.calcProm, Me.MinMonto, Me.MaxMonto})
         Me.ContextMenuStripVentas.Name = "ContextMenuStripVentas"
-        Me.ContextMenuStripVentas.Size = New System.Drawing.Size(173, 114)
+        Me.ContextMenuStripVentas.Size = New System.Drawing.Size(173, 92)
         '
         'calcTot
         '
@@ -426,12 +480,31 @@ Partial Class FormVentas
         Me.MaxMonto.Size = New System.Drawing.Size(172, 22)
         Me.MaxMonto.Text = "Mayor monto"
         '
+        'ClientesBindingSource
+        '
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'ClientesTableAdapter
+        '
+        Me.ClientesTableAdapter.ClearBeforeFill = True
+        '
+        'VendedoresBindingSource
+        '
+        Me.VendedoresBindingSource.DataMember = "Vendedores"
+        Me.VendedoresBindingSource.DataSource = Me.BD_ImprentaDataSet
+        '
+        'VendedoresTableAdapter
+        '
+        Me.VendedoresTableAdapter.ClearBeforeFill = True
+        '
         'FormVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.LemonChiffon
-        Me.ClientSize = New System.Drawing.Size(892, 347)
+        Me.ClientSize = New System.Drawing.Size(933, 741)
         Me.Controls.Add(Me.TablaVentas)
         Me.Controls.Add(Me.btnRemoverFiltro)
         Me.Controls.Add(Me.lblHasta)
@@ -458,6 +531,8 @@ Partial Class FormVentas
         CType(Me.BD_ImprentaDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TablaVentas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStripVentas.ResumeLayout(False)
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VendedoresBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -498,4 +573,14 @@ Partial Class FormVentas
     Friend WithEvents calcProm As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MinMonto As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MaxMonto As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents id_venta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fecha_venta As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents vendedor As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cliente As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents cant As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents precio_total As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ClientesBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ClientesTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.ClientesTableAdapter
+    Friend WithEvents VendedoresBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents VendedoresTableAdapter As ProyectoOO.BD_ImprentaDataSetTableAdapters.VendedoresTableAdapter
 End Class

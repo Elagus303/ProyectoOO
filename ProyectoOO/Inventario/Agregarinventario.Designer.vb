@@ -138,6 +138,7 @@ Partial Class Agregarinventario
         Me.Canbutton.Name = "Canbutton"
         Me.Canbutton.Size = New System.Drawing.Size(87, 29)
         Me.Canbutton.TabIndex = 9
+        Me.Canbutton.TabStop = False
         Me.Canbutton.Text = "Cancelar"
         Me.Canbutton.UseVisualStyleBackColor = False
         '
@@ -164,7 +165,7 @@ Partial Class Agregarinventario
         Me.comboBoxProvs.Location = New System.Drawing.Point(112, 115)
         Me.comboBoxProvs.Name = "comboBoxProvs"
         Me.comboBoxProvs.Size = New System.Drawing.Size(146, 21)
-        Me.comboBoxProvs.TabIndex = 10
+        Me.comboBoxProvs.TabIndex = 7
         Me.comboBoxProvs.ValueMember = "id"
         '
         'ProveedoresBindingSource

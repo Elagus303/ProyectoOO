@@ -70,12 +70,15 @@ Partial Class Inventario
         '
         'InsumoDataGridView
         '
+        Me.InsumoDataGridView.AllowUserToAddRows = False
+        Me.InsumoDataGridView.AllowUserToDeleteRows = False
         Me.InsumoDataGridView.AutoGenerateColumns = False
         Me.InsumoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.InsumoDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.preciounidad})
         Me.InsumoDataGridView.DataSource = Me.InsumoBindingSource
         Me.InsumoDataGridView.Location = New System.Drawing.Point(12, 47)
         Me.InsumoDataGridView.Name = "InsumoDataGridView"
+        Me.InsumoDataGridView.ReadOnly = True
         Me.InsumoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.InsumoDataGridView.Size = New System.Drawing.Size(617, 220)
         Me.InsumoDataGridView.TabIndex = 1
@@ -92,24 +95,28 @@ Partial Class Inventario
         Me.DataGridViewTextBoxColumn2.DataPropertyName = "nombre"
         Me.DataGridViewTextBoxColumn2.HeaderText = "nombre"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.DataPropertyName = "stock"
         Me.DataGridViewTextBoxColumn3.HeaderText = "stock"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.DataPropertyName = "precio"
         Me.DataGridViewTextBoxColumn4.HeaderText = "precio"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'DataGridViewTextBoxColumn5
         '
         Me.DataGridViewTextBoxColumn5.DataPropertyName = "id_proovedor"
         Me.DataGridViewTextBoxColumn5.HeaderText = "id_proovedor"
         Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        Me.DataGridViewTextBoxColumn5.ReadOnly = True
         '
         'preciounidad
         '
