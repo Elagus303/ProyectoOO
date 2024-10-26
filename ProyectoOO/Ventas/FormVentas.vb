@@ -15,18 +15,20 @@
         LlenarTablaVentas()
     End Sub
     '1.2) Función para llenar la tabla compuesta de Ventas
-    Private Sub LlenarTablaVentas()
+    Public Sub LlenarTablaVentas()
         Dim fila As Integer = 0 'Valor de fila
         Dim x As Integer = 0 'Contador para usar en el bucle
         Dim totVentas As Long = 0
         Me.VentaBindingSource.MoveFirst() 'Mover al primer elemento
+        Me.TablaVentas.Rows.Clear() 'Eliminar todas las filas
         If Me.VentaBindingSource.Count >= 1 Then
+            lblTabla.Visible = False 'Si hay min un elemento ocultar cartel
             Do
                 Me.TablaVentas.Rows.Add()
                 Me.TablaVentas.Item(0, fila).Value = Me.VentaBindingSource.Current("id")
                 Me.TablaVentas.Item(1, fila).Value = Me.VentaBindingSource.Current("fecha_venta")
 
-                
+
 
                 If Me.VentaBindingSource.Current("id_vendedor") <> 0 Then
                     Me.VendedoresBindingSource.Position = Me.VendedoresBindingSource.Find("id", Me.VentaBindingSource.Current("id_vendedor"))
@@ -37,7 +39,7 @@
 
 
                 Me.ClientesBindingSource.Position = Me.ClientesBindingSource.Find("id", Me.VentaBindingSource.Current("id_cliente"))
-                Me.TablaVentas.Item(3, fila).Value = Me.ClientesBindingSource.Current("nombre") & Me.ClientesBindingSource.Current("apellido")
+                Me.TablaVentas.Item(3, fila).Value = Me.ClientesBindingSource.Current("nombre") & " " & Me.ClientesBindingSource.Current("apellido")
 
                 Me.TablaVentas.Item(4, fila).Value = Me.VentaBindingSource.Current("cantidad")
                 Me.TablaVentas.Item(5, fila).Value = "$ " & Me.VentaBindingSource.Current("precio_venta")
@@ -51,6 +53,8 @@
             Me.TablaVentas.Rows.Add()
             Me.TablaVentas.Item(4, fila).Value = "TOTAL:"
             Me.TablaVentas.Item(5, fila).Value = "$" & totVentas
+        Else
+            lblTabla.Text = "No hay registros cargados" : lblTabla.Visible = True
         End If
     End Sub
 
@@ -61,16 +65,19 @@
     End Sub
     '2.2) Evento click en btn eliminar
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
-        If Me.VentaDataGridView.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
-            Dim x As Integer
-            '1) Obtener la lista de elementos seleccionados
-            '2) Apuntar al ultimo elemento de esa lista
-            '3) Obtener el indice de ese elemento y eliminar
-            For x = Me.VentaDataGridView.SelectedRows.Count - 1 To 0 Step -1
-                Me.VentaBindingSource.RemoveAt(Me.VentaDataGridView.SelectedRows(x).Index)
-            Next
-            Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
-            MsgBox("Eliminación exitosa")
+        If Me.TablaVentas.SelectedRows.Count > 0 Then 'Si hay por lo menos una fila seleccionada
+            Dim resultado As DialogResult = MessageBox.Show("¿Desea eliminar " & Me.TablaVentas.SelectedRows.Count.ToString & " registro/s?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If resultado = Windows.Forms.DialogResult.Yes Then
+                Dim x As Integer 'Contador para bucle
+
+                For x = Me.TablaVentas.SelectedRows.Count - 1 To 0 Step -1 'Indiced del último al primero (0)
+                    Me.VentaBindingSource.Position = Me.VentaBindingSource.Find("id", Me.TablaVentas.SelectedRows(x).Cells("id_venta").Value)
+                    Me.VentaBindingSource.RemoveAt(Me.VentaBindingSource.Position)
+                Next
+                Me.TableAdapterManager.UpdateAll(Me.BD_ImprentaDataSet) 'Confirmar cambios en el DataSet
+                LlenarTablaVentas()
+                MsgBox("Eliminación exitosa")
+            End If
         Else
             MsgBox("Seleccione, al menos, un elemento para borrar")
         End If
@@ -86,19 +93,25 @@
     End Sub
     '2.4) Evento click en btn mover al primer elemento
     Private Sub btnPrimero_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrimero.Click
-        Me.VentaBindingSource.MoveFirst()
+        Me.TablaVentas.CurrentCell = Me.TablaVentas.Rows(0).Cells(0) 'Mover a la primera fila
     End Sub
     '2.5) Evento click en btn mover al anterior elemento
     Private Sub btnAnt_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnt.Click
-        Me.VentaBindingSource.MovePrevious()
+        If Me.TablaVentas.CurrentRow.Index > 0 Then
+            'Mover a la anterior fila
+            Me.TablaVentas.CurrentCell = Me.TablaVentas.Rows(Me.TablaVentas.CurrentRow.Index - 1).Cells(0)
+        End If
     End Sub
     '2.6) Evento click en btn mover al siguiente elemento
     Private Sub btnSig_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSig.Click
-        Me.VentaBindingSource.MoveNext()
+        If Me.TablaVentas.CurrentRow.Index < Me.TablaVentas.Rows.Count - 1 Then
+            'Mover a la siguiente fila
+            Me.TablaVentas.CurrentCell = Me.TablaVentas.Rows(Me.TablaVentas.CurrentRow.Index + 1).Cells(0)
+        End If
     End Sub
     '2.7) Evento click en btn mover al ultimo elemento
     Private Sub btnUltimo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUltimo.Click
-        Me.VentaBindingSource.MoveLast()
+        Me.TablaVentas.CurrentCell = Me.TablaVentas.Rows(Me.TablaVentas.Rows.Count - 1).Cells(0) 'Mover a la ultima fila
     End Sub
 
 
@@ -139,4 +152,16 @@
         Me.btnRemoverFiltro.Visible = False
     End Sub
 
+
+
+
+    ''5) VENTAS BINDING SOURCE
+    ''5.1) Evento cuando cambia el binding source
+    'Private Sub VentaBindingSource_ListChanged(ByVal sender As System.Object, ByVal e As System.ComponentModel.ListChangedEventArgs) Handles VentaBindingSource.ListChanged
+    '    'Condicional para detectar que se agregó y que no se eliminó o editó
+    '    If e.ListChangedType = System.ComponentModel.ListChangedType.ItemAdded Then
+    '        LlenarTablaVentas() 'Volver a llenar los datos en la tabla
+    '        MsgBox(1)
+    '    End If
+    'End Sub
 End Class

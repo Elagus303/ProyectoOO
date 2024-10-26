@@ -4,6 +4,7 @@
     Private Sub FormProv_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores) 'Cargar datos en la tabla
         EstilosDataGridView(Me.ProveedoresDataGridView) 'EstilosDataGridView
+        cbFiltrar.SelectedIndex = -1
 
         'Segun cantidad de elementos del binding source...
         If Me.ProveedoresBindingSource.Count = 0 Then

@@ -158,10 +158,8 @@
         Me.VentaTableAdapter.Fill(Me.BD_ImprentaDataSet.Venta)
         FormVentas.VentaTableAdapter.Fill(FormVentas.BD_ImprentaDataSet.Venta)
 
-        'Me.ProveedoresBindingSource.EndEdit()
-        'Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
-        'Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores)
-        'FormProv.ProveedoresTableAdapter.Fill(FormProv.BD_ImprentaDataSet.Proveedores)
+        FormVentas.LlenarTablaVentas() 'Volver a llenar los datos en la tabla
+
 
 
         Me.VentaBindingSource.AddNew()

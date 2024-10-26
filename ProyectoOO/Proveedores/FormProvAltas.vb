@@ -1,7 +1,7 @@
 ﻿Public Class FormProvAltas
     Private Sub FormProvAltas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores) 'Cargar datos 
-        Me.ProveedoresBindingSource.AddNew()
+        Me.ProveedoresBindingSource.AddNew() 'Iniciar al cargar
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
@@ -29,6 +29,7 @@
                 Exit Sub
             End If
             Me.ProveedoresBindingSource.EndEdit()
+            Me.ProveedoresTableAdapter.Update(BD_ImprentaDataSet.Proveedores)
             Me.TableAdapterManager.UpdateAll(BD_ImprentaDataSet)
             Me.ProveedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Proveedores)
             FormProv.ProveedoresTableAdapter.Fill(FormProv.BD_ImprentaDataSet.Proveedores)
