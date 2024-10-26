@@ -19,12 +19,22 @@
     End Sub
 
     Private Sub modbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles modbutton.Click
-        ModificarProductoExistente.Show()
+        If usuarioEsAdminx Then
+            ModificarProductoExistente.Show()
+        Else
+            MsgBox("acceso denegado solo los administradores pueden acceder a esta funcion")
+        End If
+
 
     End Sub
 
     Private Sub delbutton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delbutton.Click
-        Consultaeliminar.ShowDialog()
+        If usuarioEsAdminx Then
+            Consultaeliminar.ShowDialog()
+        Else
+            MsgBox("acceso denegado, solo los amdinistradores pueden acceder a esta funcion")
+        End If
+
     End Sub
 
     Private Sub InsumoDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles InsumoDataGridView.CellContentClick

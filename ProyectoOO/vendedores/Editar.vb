@@ -33,6 +33,8 @@
                 Me.VendedoresTableAdapter.Fill(Me.BD_ImprentaDataSet.Vendedores)
                 PrinVendedores.VendedoresTableAdapter.Fill(PrinVendedores.BD_ImprentaDataSet.Vendedores)
                 MsgBox("Se guardaron los cambios")
+                Me.Close()
+
             Else
                 MsgBox("las contraseñas no son iguales")
             End If
@@ -64,7 +66,7 @@
         ' Si es Enter, movemos el foco al siguiente TextBox (en este caso, TextBox2)
 
         ' Evitamos que se procese la tecla Enter en el TextBox1
-        e.Handled = True
+
     End Sub
 
     Private Sub NombreTextBox_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NombreTextBox.TextChanged

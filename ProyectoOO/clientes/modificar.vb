@@ -22,6 +22,8 @@
             Me.ClientesTableAdapter.Fill(Me.BD_ImprentaDataSet.Clientes) 'actualizo la tabla de datos
             clientes.ClientesTableAdapter.Fill(clientes.BD_ImprentaDataSet.Clientes)
             MsgBox("Se a modificado con exito")
+            Me.Close()
+
         End If
     End Sub
     '2.2) Botón de salir 

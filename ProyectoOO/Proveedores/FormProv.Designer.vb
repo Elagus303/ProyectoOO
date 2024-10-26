@@ -90,6 +90,7 @@ Partial Class FormProv
         Me.ProveedoresDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5})
         Me.ProveedoresDataGridView.DataSource = Me.ProveedoresBindingSource
         Me.ProveedoresDataGridView.Location = New System.Drawing.Point(12, 49)
+        Me.ProveedoresDataGridView.MultiSelect = False
         Me.ProveedoresDataGridView.Name = "ProveedoresDataGridView"
         Me.ProveedoresDataGridView.ReadOnly = True
         Me.ProveedoresDataGridView.Size = New System.Drawing.Size(919, 291)

@@ -249,6 +249,7 @@ C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.Gene
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
 C:\Users\Alex\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+<<<<<<< HEAD
 C:\Users\Alex\Desktop\Proyecto\ProyectoOO\bin\Debug\ProyectoOO.exe.config
 C:\Users\Alex\Desktop\Proyecto\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
 C:\Users\Alex\Desktop\Proyecto\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
@@ -277,3 +278,39 @@ C:\Users\Alex\Desktop\Proyecto\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.re
 C:\Users\Alex\Desktop\Proyecto\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
 C:\Users\Alex\Desktop\Proyecto\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
 C:\Users\Alex\Desktop\Proyecto\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+=======
+<<<<<<< HEAD
+C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.MainFinanzas.resources
+C:\Users\AGUS\Desktop\Nueva carpeta (3)\Nueva carpeta\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultaeliminar.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe.config
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.exe
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.xml
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.pdb
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\bin\Debug\BD_Imprenta.sdf
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.exe
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.pdb
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\bin\Debug\ProyectoOO.xml
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbprojResolveAssemblyReference.cache
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.AltasClientes.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.clientes.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.modificar.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.MainFinanzas.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormInicioSesion.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Agregarinventario.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Consultaeliminar.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Inventario.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.ModificarProductoExistente.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Resources.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormPrincipal.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProv.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvAltas.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormProvEdicion.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Editar.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.PrinVendedores.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.Vendedores.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentas.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.FormVentasAltas.resources
+C:\Users\orono\Desktop\ProyectoOO\ProyectoOO\obj\x86\Debug\ProyectoOO.vbproj.GenerateResource.Cache
+=======
+>>>>>>> 0181cd6b0704dd72cdd2a9ecc846eee1f05629ff
+>>>>>>> bbd23672514508db511e48a767a0656eb3d9db73

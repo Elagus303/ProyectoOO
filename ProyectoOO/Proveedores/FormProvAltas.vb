@@ -19,7 +19,7 @@
             If NombreTextBox.Text <> "" And
                 TelefonoTextBox.Text <> "" And
                 TelefonoTextBox.Text.Length < 10 Then
-                MsgBox("Ingrese un telefono válido")
+                MsgBox("Ingrese un telefono válido de 10 digitos")
                 Exit Sub
             End If
             If NombreTextBox.Text <> "" And
